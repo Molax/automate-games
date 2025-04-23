@@ -1,7 +1,8 @@
 """
-Main GUI for the Priston Tale Potion Bot
----------------------------------------
-This module contains the main GUI class that integrates all UI components.
+Main GUI for the Priston Tale Potion Bot with improved layout
+---------------------------------------------------------
+This module contains the main GUI class with practical horizontal layout
+that maintains all functionality in a single window.
 """
 
 import time
@@ -9,6 +10,8 @@ import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox
 import logging
 from app.ui.components import ScrollableFrame
+
+# Import our improved UI components
 from app.ui.bar_selector_ui import BarSelectorUI
 from app.ui.settings_ui import SettingsUI
 from app.ui.bot_controller import BotControllerUI
@@ -16,46 +19,105 @@ from app.ui.config_manager_ui import ConfigManagerUI
 
 logger = logging.getLogger('PristonBot')
 
+# Global reference to the main application instance
+main_app = None
+
 class PristonTaleBot:
-    """Main application class for the Priston Tale Potion Bot"""
+    """Improved application class for the Priston Tale Potion Bot"""
     
     def __init__(self, root):
         """
-        Initialize the application
+        Initialize the application with improved UI
         
         Args:
             root: tkinter root window
         """
+        global main_app
+        main_app = self
+        
         logger.info("Initializing Priston Tale Potion Bot")
         self.root = root
-        self.root.geometry("550x750")  # Base size
-        self.root.minsize(550, 600)    # Minimum size
+        self.root.geometry("900x700")  # Wider initial size for better horizontal layout
+        self.root.minsize(800, 600)    # Minimum size
         
-        # Create scrollable main frame
-        scroll_container = ScrollableFrame(root)
-        scroll_container.pack(fill=tk.BOTH, expand=True)
+        # Create main container
+        main_frame = ttk.Frame(root)
+        main_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
         
-        # Use the scrollable frame as our main container
-        main_frame = scroll_container.scrollable_frame
+        # Create title with version
+        title_frame = ttk.Frame(main_frame)
+        title_frame.pack(fill=tk.X, pady=(0, 10))
         
-        # Create title label
-        title_label = ttk.Label(main_frame, text="Priston Tale Potion Bot", font=("Arial", 16, "bold"))
-        title_label.pack(pady=10)
+        title_label = ttk.Label(title_frame, text="Priston Tale Potion Bot", font=("Arial", 16, "bold"))
+        title_label.pack(side=tk.LEFT)
         
-        # Create log frame
-        log_frame = ttk.LabelFrame(main_frame, text="Log", padding=10)
-        log_frame.pack(fill=tk.X, padx=5, pady=5)
+        version_label = ttk.Label(title_frame, text="v1.0.0", font=("Arial", 10))
+        version_label.pack(side=tk.RIGHT, padx=5)
         
-        # Log text - using scrolledtext for better handling
-        self.log_text = scrolledtext.ScrolledText(log_frame, height=10, width=50, wrap=tk.WORD)
-        self.log_text.pack(fill=tk.BOTH, pady=5)
+        # Create two-column layout
+        content_frame = ttk.Frame(main_frame)
+        content_frame.pack(fill=tk.BOTH, expand=True)
+        
+        # Left column - Bar selection
+        left_column = ttk.Frame(content_frame)
+        left_column.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(0, 5))
+        
+        # Right column - Settings and controls
+        right_column = ttk.Frame(content_frame)
+        right_column.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=(5, 0))
+        
+        # Create game window selection frame in left column
+        window_frame = ttk.LabelFrame(left_column, text="Game Window", padding=5)
+        window_frame.pack(fill=tk.X, pady=(0, 5))
+        
+        window_content = ttk.Frame(window_frame)
+        window_content.pack(fill=tk.X, pady=5)
+        
+        # Window preview
+        preview_frame = ttk.Frame(window_content)
+        preview_frame.pack(side=tk.LEFT, fill=tk.Y, padx=(0, 5))
+        
+        self.window_preview_label = ttk.Label(preview_frame, text="Not Selected", 
+                                             borderwidth=1, relief="solid",
+                                             width=25, height=8)
+        self.window_preview_label.pack(padx=5, pady=5)
+        
+        # Window selection button
+        button_frame = ttk.Frame(window_content)
+        button_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        
+        ttk.Button(button_frame, text="Select Game Window", 
+                  command=self.start_window_selection).pack(fill=tk.X, pady=5)
+        
+        # Create bar selection frame in left column
+        bars_frame = ttk.LabelFrame(left_column, text="Bar Selection", padding=5)
+        bars_frame.pack(fill=tk.BOTH, expand=True, pady=5)
+        
+        # Create log frame at the bottom of left column
+        log_frame = ttk.LabelFrame(left_column, text="Log", padding=5)
+        log_frame.pack(fill=tk.BOTH, expand=True, pady=(5, 0))
+        
+        # Log text area
+        log_container = ttk.Frame(log_frame)
+        log_container.pack(fill=tk.BOTH, expand=True, pady=5)
+        
+        self.log_text = scrolledtext.ScrolledText(log_container, height=10, width=40, wrap=tk.WORD)
+        self.log_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        
+        # Create settings frame in right column
+        settings_frame = ttk.LabelFrame(right_column, text="Settings", padding=5)
+        settings_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 5))
+        
+        # Create bot control frame in right column
+        control_frame = ttk.LabelFrame(right_column, text="Bot Control", padding=5)
+        control_frame.pack(fill=tk.X, pady=(5, 0))
         
         # Initialize components
-        # Bar selector UI
-        self.bar_selector_ui = BarSelectorUI(main_frame, root, self.log)
+        # Bar selector UI (in bars_frame)
+        self.bar_selector_ui = BarSelectorUI(bars_frame, root, self.log)
         
-        # Settings UI
-        self.settings_ui = SettingsUI(main_frame, self.save_config)
+        # Settings UI (in settings_frame)
+        self.settings_ui = SettingsUI(settings_frame, self.save_config)
         
         # Config manager
         self.config_manager = ConfigManagerUI(
@@ -64,9 +126,9 @@ class PristonTaleBot:
             self.log
         )
         
-        # Bot controller
+        # Bot controller (in control_frame)
         self.bot_controller = BotControllerUI(
-            main_frame, 
+            control_frame, 
             root,
             self.bar_selector_ui.hp_bar_selector,
             self.bar_selector_ui.mp_bar_selector,
@@ -101,6 +163,10 @@ class PristonTaleBot:
         # Also log to the logger
         logger.info(message)
     
+    def start_window_selection(self):
+        """Start the game window selection process"""
+        self.bar_selector_ui.start_window_selection()
+    
     def check_bar_config(self):
         """Check if all bars are configured and enable the start button if they are"""
         # Count configured bars
@@ -124,7 +190,8 @@ class PristonTaleBot:
     
     def save_config(self):
         """Save the configuration"""
-        self.config_manager.save_bar_config()
+        if self.config_manager.save_bar_config():
+            self.log("Configuration saved successfully")
     
     def on_closing(self):
         """Handle window closing event"""

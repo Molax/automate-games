@@ -1,7 +1,8 @@
 """
-Bot Controller UI for the Priston Tale Potion Bot
---------------------------------------------
-This module handles the bot control UI and bot logic.
+Improved Bot Controller UI for the Priston Tale Potion Bot
+-------------------------------------------------------
+This module handles the bot control UI with better visibility
+and practical monitoring features in a single window.
 """
 
 import tkinter as tk
@@ -15,7 +16,7 @@ from app.bar_selector import BarDetector, HEALTH_COLOR_RANGE, MANA_COLOR_RANGE, 
 logger = logging.getLogger('PristonBot')
 
 class BotControllerUI:
-    """Class that handles the bot control UI and logic"""
+    """Class that handles the bot control UI and logic with improved visibility"""
     
     def __init__(self, parent, root, hp_bar, mp_bar, sp_bar, settings_ui, log_callback):
         """
@@ -52,49 +53,130 @@ class BotControllerUI:
         self.prev_mp_percent = 100.0
         self.prev_sp_percent = 100.0
         
+        # Statistics
+        self.hp_potions_used = 0
+        self.mp_potions_used = 0
+        self.sp_potions_used = 0
+        self.spells_cast = 0
+        self.start_time = None
+        
         # Create the UI
         self._create_ui()
     
     def _create_ui(self):
-        """Create the UI components"""
-        # Status frame
-        status_frame = ttk.LabelFrame(self.parent, text="Status", padding=10)
+        """Create the UI components with improved layout"""
+        # Status section
+        status_frame = ttk.Frame(self.parent)
         status_frame.pack(fill=tk.X, padx=5, pady=5)
         
-        # Status label
-        self.status_var = tk.StringVar()
-        self.status_var.set("Ready to configure")
-        self.status_label = ttk.Label(status_frame, textvariable=self.status_var, font=("Arial", 10))
-        self.status_label.pack(fill=tk.X, pady=5)
+        # Status
+        self.status_var = tk.StringVar(value="Ready to configure")
+        status_label = ttk.Label(status_frame, textvariable=self.status_var, font=("Arial", 10, "bold"))
+        status_label.pack(side=tk.LEFT, padx=5)
+        
+        # Current values section
+        values_frame = ttk.Frame(self.parent)
+        values_frame.pack(fill=tk.X, padx=5, pady=5)
+        
+        # Two-column layout for current values
+        values_left = ttk.Frame(values_frame)
+        values_left.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        
+        values_right = ttk.Frame(values_frame)
+        values_right.pack(side=tk.RIGHT, fill=tk.X, expand=True)
+        
+        # HP current value
+        hp_frame = ttk.Frame(values_left)
+        hp_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(hp_frame, text="Health:", foreground="#e74c3c", width=10).pack(side=tk.LEFT)
+        self.hp_value_var = tk.StringVar(value="100.0%")
+        ttk.Label(hp_frame, textvariable=self.hp_value_var).pack(side=tk.LEFT)
+        
+        # MP current value
+        mp_frame = ttk.Frame(values_left)
+        mp_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(mp_frame, text="Mana:", foreground="#3498db", width=10).pack(side=tk.LEFT)
+        self.mp_value_var = tk.StringVar(value="100.0%")
+        ttk.Label(mp_frame, textvariable=self.mp_value_var).pack(side=tk.LEFT)
+        
+        # HP potions used
+        hp_pot_frame = ttk.Frame(values_right)
+        hp_pot_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(hp_pot_frame, text="HP Potions:", width=12).pack(side=tk.LEFT)
+        self.hp_potions_var = tk.StringVar(value="0")
+        ttk.Label(hp_pot_frame, textvariable=self.hp_potions_var).pack(side=tk.LEFT)
+        
+        # MP potions used
+        mp_pot_frame = ttk.Frame(values_right)
+        mp_pot_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(mp_pot_frame, text="MP Potions:", width=12).pack(side=tk.LEFT)
+        self.mp_potions_var = tk.StringVar(value="0")
+        ttk.Label(mp_pot_frame, textvariable=self.mp_potions_var).pack(side=tk.LEFT)
+        
+        # SP current value
+        sp_frame = ttk.Frame(values_left)
+        sp_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(sp_frame, text="Stamina:", foreground="#2ecc71", width=10).pack(side=tk.LEFT)
+        self.sp_value_var = tk.StringVar(value="100.0%")
+        ttk.Label(sp_frame, textvariable=self.sp_value_var).pack(side=tk.LEFT)
+        
+        # Runtime display
+        runtime_frame = ttk.Frame(values_left)
+        runtime_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(runtime_frame, text="Runtime:", width=10).pack(side=tk.LEFT)
+        self.runtime_var = tk.StringVar(value="00:00:00")
+        ttk.Label(runtime_frame, textvariable=self.runtime_var).pack(side=tk.LEFT)
+        
+        # SP potions used
+        sp_pot_frame = ttk.Frame(values_right)
+        sp_pot_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(sp_pot_frame, text="SP Potions:", width=12).pack(side=tk.LEFT)
+        self.sp_potions_var = tk.StringVar(value="0")
+        ttk.Label(sp_pot_frame, textvariable=self.sp_potions_var).pack(side=tk.LEFT)
+        
+        # Spells cast
+        spell_frame = ttk.Frame(values_right)
+        spell_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(spell_frame, text="Spells Cast:", width=12).pack(side=tk.LEFT)
+        self.spells_var = tk.StringVar(value="0")
+        ttk.Label(spell_frame, textvariable=self.spells_var).pack(side=tk.LEFT)
         
         # Control buttons
-        control_frame = ttk.Frame(self.parent)
-        control_frame.pack(fill=tk.X, pady=10)
+        button_frame = ttk.Frame(self.parent)
+        button_frame.pack(fill=tk.X, pady=10)
         
-        # Create buttons with normal styling to ensure text visibility
+        # Create custom button styles with Tkinter for more control and visibility
         self.start_button = tk.Button(
-            control_frame, 
+            button_frame, 
             text="START BOT",
-            font=("Arial", 12, "bold"),
-            bg="#4CAF50",  # Green
-            fg="white",
             command=self.start_bot, 
-            state=tk.DISABLED,
-            height=2
+            bg="#4CAF50",  # Green background
+            fg="black",    # Black text (more visible)
+            font=("Arial", 12, "bold"),
+            height=2,
+            state=tk.DISABLED
         )
-        self.start_button.pack(side=tk.LEFT, padx=5, pady=5, fill=tk.X, expand=True)
+        self.start_button.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=5)
         
         self.stop_button = tk.Button(
-            control_frame, 
+            button_frame, 
             text="STOP BOT",
-            font=("Arial", 12, "bold"),
-            bg="#F44336",  # Red
-            fg="white",
             command=self.stop_bot, 
-            state=tk.DISABLED,
-            height=2
+            bg="#F44336",  # Red background
+            fg="black",    # Black text (more visible)
+            font=("Arial", 12, "bold"),
+            height=2,
+            state=tk.DISABLED
         )
-        self.stop_button.pack(side=tk.LEFT, padx=5, pady=5, fill=tk.X, expand=True)
+        self.stop_button.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=5)
     
     def start_bot(self):
         """Start the bot"""
@@ -104,14 +186,37 @@ class BotControllerUI:
         
         self.log_callback("Starting bot...")
         self.running = True
+        
+        # Reset statistics
+        self.hp_potions_used = 0
+        self.mp_potions_used = 0
+        self.sp_potions_used = 0
+        self.spells_cast = 0
+        
+        self.hp_potions_var.set("0")
+        self.mp_potions_var.set("0")
+        self.sp_potions_var.set("0")
+        self.spells_var.set("0")
+        
+        # Store start time
+        self.start_time = time.time()
+        
+        # Start runtime updater
+        self._update_runtime()
+        
+        # Start the bot thread
         self.bot_thread = threading.Thread(target=self.bot_loop)
         self.bot_thread.daemon = True
         self.bot_thread.start()
         
         logger.info("Bot thread started")
         
-        self.start_button.config(state=tk.DISABLED)
-        self.stop_button.config(state=tk.NORMAL)
+        # Update button states
+        self.start_button.config(state=tk.DISABLED, bg="#a0a0a0")  # Gray out when disabled
+        self.stop_button.config(state=tk.NORMAL, bg="#F44336")
+        
+        # Update status
+        self.status_var.set("Bot is running")
     
     def stop_bot(self):
         """Stop the bot"""
@@ -125,17 +230,36 @@ class BotControllerUI:
             self.bot_thread.join(1.0)
             logger.info("Bot thread joined")
         
-        self.start_button.config(state=tk.NORMAL)
-        self.stop_button.config(state=tk.DISABLED)
+        # Update button states
+        self.start_button.config(state=tk.NORMAL, bg="#4CAF50")
+        self.stop_button.config(state=tk.DISABLED, bg="#a0a0a0")  # Gray out when disabled
+        
+        # Update status
+        self.status_var.set("Bot is stopped")
+    
+    def _update_runtime(self):
+        """Update the runtime display"""
+        if self.running and self.start_time:
+            # Calculate elapsed time
+            elapsed = time.time() - self.start_time
+            hours = int(elapsed // 3600)
+            minutes = int((elapsed % 3600) // 60)
+            seconds = int(elapsed % 60)
+            
+            # Update display
+            self.runtime_var.set(f"{hours:02d}:{minutes:02d}:{seconds:02d}")
+            
+            # Schedule next update
+            self.root.after(1000, self._update_runtime)
     
     def enable_start_button(self):
         """Enable the start button"""
-        self.start_button.config(state=tk.NORMAL)
+        self.start_button.config(state=tk.NORMAL, bg="#4CAF50")
         self.status_var.set("Ready to start")
     
     def disable_start_button(self):
         """Disable the start button"""
-        self.start_button.config(state=tk.DISABLED)
+        self.start_button.config(state=tk.DISABLED, bg="#a0a0a0")
     
     def set_status(self, message):
         """Set the status message"""
@@ -165,7 +289,6 @@ class BotControllerUI:
         loop_count = 0
         
         self.log_callback("Bot started")
-        self.status_var.set("Bot is running")
         logger.info("Bot loop started")
         
         # Get the settings
@@ -238,6 +361,11 @@ class BotControllerUI:
                     self.prev_hp_percent = hp_percent
                     self.prev_mp_percent = mp_percent
                     self.prev_sp_percent = sp_percent
+                    
+                    # Update UI values
+                    self.hp_value_var.set(f"{hp_percent:.1f}%")
+                    self.mp_value_var.set(f"{mp_percent:.1f}%")
+                    self.sp_value_var.set(f"{sp_percent:.1f}%")
                 
                 # Use Health potion if needed
                 if hp_percent < hp_threshold and current_time - last_hp_potion > potion_cooldown:
@@ -246,6 +374,10 @@ class BotControllerUI:
                     logger.info(f"Using health potion - HP: {hp_percent:.1f}% < {hp_threshold}%")
                     press_key(None, hp_key)
                     last_hp_potion = current_time
+                    
+                    # Update statistics
+                    self.hp_potions_used += 1
+                    self.hp_potions_var.set(str(self.hp_potions_used))
                 
                 # Use Mana potion if needed
                 if mp_percent < mp_threshold and current_time - last_mp_potion > potion_cooldown:
@@ -254,6 +386,10 @@ class BotControllerUI:
                     logger.info(f"Using mana potion - MP: {mp_percent:.1f}% < {mp_threshold}%")
                     press_key(None, mp_key)
                     last_mp_potion = current_time
+                    
+                    # Update statistics
+                    self.mp_potions_used += 1
+                    self.mp_potions_var.set(str(self.mp_potions_used))
                 
                 # Use Stamina potion if needed
                 if sp_percent < sp_threshold and current_time - last_sp_potion > potion_cooldown:
@@ -262,6 +398,10 @@ class BotControllerUI:
                     logger.info(f"Using stamina potion - SP: {sp_percent:.1f}% < {sp_threshold}%")
                     press_key(None, sp_key)
                     last_sp_potion = current_time
+                    
+                    # Update statistics
+                    self.sp_potions_used += 1
+                    self.sp_potions_var.set(str(self.sp_potions_used))
                 
                 # Check if spellcasting is enabled and it's time to cast
                 if settings["spellcasting"]["enabled"]:
@@ -282,6 +422,10 @@ class BotControllerUI:
                         press_right_mouse(None)
                         
                         last_spell_cast = current_time
+                        
+                        # Update statistics
+                        self.spells_cast += 1
+                        self.spells_var.set(str(self.spells_cast))
                 
                 # Wait for next scan
                 scan_interval = settings["scan_interval"]
@@ -293,5 +437,4 @@ class BotControllerUI:
                 time.sleep(1)
         
         self.log_callback("Bot stopped")
-        self.status_var.set("Bot is stopped")
         logger.info("Bot loop stopped")

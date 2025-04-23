@@ -1,7 +1,7 @@
 """
-Settings UI for the Priston Tale Potion Bot
----------------------------------------
-This module contains the settings UI components.
+Improved Settings UI for the Priston Tale Potion Bot
+------------------------------------------------
+This module contains the settings UI components with better use of space.
 """
 
 import tkinter as tk
@@ -11,7 +11,7 @@ import logging
 logger = logging.getLogger('PristonBot')
 
 class SettingsUI:
-    """Class that handles the settings UI"""
+    """Class that handles the settings UI with horizontal layout"""
     
     def __init__(self, parent, save_callback):
         """
@@ -28,107 +28,233 @@ class SettingsUI:
         self._create_ui()
         
     def _create_ui(self):
-        """Create the UI components"""
-        # Create settings frame
-        settings_frame = ttk.LabelFrame(self.parent, text="Settings", padding=10)
-        settings_frame.pack(fill=tk.X, padx=5, pady=5)
+        """Create the UI components with horizontal layout"""
+        # Create notebook (tabs) for settings categories
+        self.notebook = ttk.Notebook(self.parent)
+        self.notebook.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
         
-        # Create percentage thresholds
-        thresholds_frame = ttk.Frame(settings_frame)
-        thresholds_frame.pack(fill=tk.X, pady=5)
+        # Potion settings tab
+        potion_tab = ttk.Frame(self.notebook)
+        self.notebook.add(potion_tab, text="Potion Settings")
         
-        # HP threshold
-        ttk.Label(thresholds_frame, text="Health %:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.hp_threshold = ttk.Spinbox(thresholds_frame, from_=1, to=99, width=5)
+        # Spell settings tab
+        spell_tab = ttk.Frame(self.notebook)
+        self.notebook.add(spell_tab, text="Spell Settings")
+        
+        # Advanced settings tab
+        adv_tab = ttk.Frame(self.notebook)
+        self.notebook.add(adv_tab, text="Advanced")
+        
+        # Create potion settings
+        self._create_potion_settings(potion_tab)
+        
+        # Create spell settings
+        self._create_spell_settings(spell_tab)
+        
+        # Create advanced settings
+        self._create_advanced_settings(adv_tab)
+        
+        # Save button at the bottom
+        save_frame = ttk.Frame(self.parent)
+        save_frame.pack(fill=tk.X, pady=5)
+        
+        self.save_button = tk.Button(
+            save_frame,
+            text="Save Configuration",
+            command=self.save_callback,
+            bg="#4CAF50",  # Green background
+            fg="black",    # Black text for visibility
+            font=("Arial", 10, "bold"),
+            height=1
+        )
+        self.save_button.pack(fill=tk.X, pady=5)
+    
+    def _create_potion_settings(self, parent):
+        """Create the potion settings UI"""
+        # Thresholds frame
+        thresholds_frame = ttk.LabelFrame(parent, text="Potion Thresholds", padding=5)
+        thresholds_frame.pack(fill=tk.X, pady=5, padx=5)
+        
+        # Brief help text
+        ttk.Label(thresholds_frame, 
+                 text="Set when potions should be used (percentage of bar remaining)").pack(
+                     anchor=tk.W, pady=(0, 5))
+        
+        # Two columns for thresholds
+        threshold_frame = ttk.Frame(thresholds_frame)
+        threshold_frame.pack(fill=tk.X, pady=5)
+        
+        # Health threshold
+        hp_frame = ttk.Frame(threshold_frame)
+        hp_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(hp_frame, text="Health %:", width=12).pack(side=tk.LEFT)
+        self.hp_threshold = ttk.Spinbox(hp_frame, from_=1, to=99, width=5)
         self.hp_threshold.set(50)
-        self.hp_threshold.grid(row=0, column=1, padx=5, pady=5, sticky=tk.W)
+        self.hp_threshold.pack(side=tk.LEFT)
         
-        # MP threshold
-        ttk.Label(thresholds_frame, text="Mana %:").grid(row=1, column=0, padx=5, pady=5, sticky=tk.W)
-        self.mp_threshold = ttk.Spinbox(thresholds_frame, from_=1, to=99, width=5)
+        # Mana threshold
+        mp_frame = ttk.Frame(threshold_frame)
+        mp_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(mp_frame, text="Mana %:", width=12).pack(side=tk.LEFT)
+        self.mp_threshold = ttk.Spinbox(mp_frame, from_=1, to=99, width=5)
         self.mp_threshold.set(30)
-        self.mp_threshold.grid(row=1, column=1, padx=5, pady=5, sticky=tk.W)
+        self.mp_threshold.pack(side=tk.LEFT)
         
-        # SP threshold
-        ttk.Label(thresholds_frame, text="Stamina %:").grid(row=2, column=0, padx=5, pady=5, sticky=tk.W)
-        self.sp_threshold = ttk.Spinbox(thresholds_frame, from_=1, to=99, width=5)
+        # Stamina threshold
+        sp_frame = ttk.Frame(threshold_frame)
+        sp_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(sp_frame, text="Stamina %:", width=12).pack(side=tk.LEFT)
+        self.sp_threshold = ttk.Spinbox(sp_frame, from_=1, to=99, width=5)
         self.sp_threshold.set(40)
-        self.sp_threshold.grid(row=2, column=1, padx=5, pady=5, sticky=tk.W)
+        self.sp_threshold.pack(side=tk.LEFT)
         
-        # Keys frame
-        keys_frame = ttk.Frame(settings_frame)
-        keys_frame.pack(fill=tk.X, pady=5)
+        # Potion keys frame
+        keys_frame = ttk.LabelFrame(parent, text="Potion Keys", padding=5)
+        keys_frame.pack(fill=tk.X, pady=5, padx=5)
         
-        # HP key
-        ttk.Label(keys_frame, text="Health Potion Key:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.hp_key = ttk.Combobox(keys_frame, values=list("123456789"), width=3)
+        # Brief help text
+        ttk.Label(keys_frame, 
+                 text="Set which keyboard keys are used for each potion type").pack(
+                     anchor=tk.W, pady=(0, 5))
+        
+        # Two columns for keys
+        key_frame = ttk.Frame(keys_frame)
+        key_frame.pack(fill=tk.X, pady=5)
+        
+        # Health key
+        hp_key_frame = ttk.Frame(key_frame)
+        hp_key_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(hp_key_frame, text="Health Key:", width=12).pack(side=tk.LEFT)
+        self.hp_key = ttk.Combobox(hp_key_frame, values=list("123456789"), width=3)
         self.hp_key.set("1")
-        self.hp_key.grid(row=0, column=1, padx=5, pady=5, sticky=tk.W)
+        self.hp_key.pack(side=tk.LEFT)
         
-        # MP key
-        ttk.Label(keys_frame, text="Mana Potion Key:").grid(row=1, column=0, padx=5, pady=5, sticky=tk.W)
-        self.mp_key = ttk.Combobox(keys_frame, values=list("123456789"), width=3)
+        # Mana key
+        mp_key_frame = ttk.Frame(key_frame)
+        mp_key_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(mp_key_frame, text="Mana Key:", width=12).pack(side=tk.LEFT)
+        self.mp_key = ttk.Combobox(mp_key_frame, values=list("123456789"), width=3)
         self.mp_key.set("3")
-        self.mp_key.grid(row=1, column=1, padx=5, pady=5, sticky=tk.W)
+        self.mp_key.pack(side=tk.LEFT)
         
-        # SP key
-        ttk.Label(keys_frame, text="Stamina Potion Key:").grid(row=2, column=0, padx=5, pady=5, sticky=tk.W)
-        self.sp_key = ttk.Combobox(keys_frame, values=list("123456789"), width=3)
+        # Stamina key
+        sp_key_frame = ttk.Frame(key_frame)
+        sp_key_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(sp_key_frame, text="Stamina Key:", width=12).pack(side=tk.LEFT)
+        self.sp_key = ttk.Combobox(sp_key_frame, values=list("123456789"), width=3)
         self.sp_key.set("2")
-        self.sp_key.grid(row=2, column=1, padx=5, pady=5, sticky=tk.W)
-        
+        self.sp_key.pack(side=tk.LEFT)
+    
+    def _create_spell_settings(self, parent):
+        """Create the spell settings UI"""
         # Spellcasting frame
-        spellcast_frame = ttk.LabelFrame(settings_frame, text="Spellcasting", padding=10)
-        spellcast_frame.pack(fill=tk.X, pady=5)
+        spell_frame = ttk.LabelFrame(parent, text="Auto Spellcasting", padding=5)
+        spell_frame.pack(fill=tk.X, pady=5, padx=5)
         
-        # Enable spellcasting checkbox
+        # Brief help text
+        ttk.Label(spell_frame, 
+                 text="Configure automatic spell casting at regular intervals").pack(
+                     anchor=tk.W, pady=(0, 5))
+        
+        # Enable spellcasting
+        enable_frame = ttk.Frame(spell_frame)
+        enable_frame.pack(fill=tk.X, pady=5)
+        
         self.spellcast_enabled = tk.BooleanVar(value=False)
-        ttk.Checkbutton(
-            spellcast_frame, 
+        enable_check = ttk.Checkbutton(
+            enable_frame, 
             text="Enable Auto Spellcasting", 
             variable=self.spellcast_enabled
-        ).pack(anchor=tk.W, pady=5)
+        )
+        enable_check.pack(anchor=tk.W)
         
-        # Spell key selection
-        spell_key_frame = ttk.Frame(spellcast_frame)
-        spell_key_frame.pack(fill=tk.X, pady=5)
+        # Spell key
+        key_frame = ttk.Frame(spell_frame)
+        key_frame.pack(fill=tk.X, pady=2)
         
-        ttk.Label(spell_key_frame, text="Spell Key:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
+        ttk.Label(key_frame, text="Spell Key:", width=12).pack(side=tk.LEFT)
         self.spell_key = ttk.Combobox(
-            spell_key_frame, 
+            key_frame, 
             values=["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12"], 
             width=5
         )
         self.spell_key.set("F5")
-        self.spell_key.grid(row=0, column=1, padx=5, pady=5, sticky=tk.W)
+        self.spell_key.pack(side=tk.LEFT)
         
-        # Spellcasting interval
-        ttk.Label(spell_key_frame, text="Cast Interval (sec):").grid(row=1, column=0, padx=5, pady=5, sticky=tk.W)
-        self.spell_interval = ttk.Spinbox(spell_key_frame, from_=0.5, to=10.0, increment=0.5, width=5)
+        # Spell interval
+        interval_frame = ttk.Frame(spell_frame)
+        interval_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(interval_frame, text="Cast Interval:", width=12).pack(side=tk.LEFT)
+        self.spell_interval = ttk.Spinbox(interval_frame, from_=0.5, to=10.0, increment=0.5, width=5)
         self.spell_interval.set(3.0)
-        self.spell_interval.grid(row=1, column=1, padx=5, pady=5, sticky=tk.W)
+        self.spell_interval.pack(side=tk.LEFT, padx=(0, 5))
+        ttk.Label(interval_frame, text="seconds").pack(side=tk.LEFT)
         
-        # Advanced settings
-        adv_frame = ttk.Frame(settings_frame)
-        adv_frame.pack(fill=tk.X, pady=5)
+        # Spell targets
+        target_frame = ttk.LabelFrame(parent, text="Spell Target (optional)", padding=5)
+        target_frame.pack(fill=tk.X, pady=5, padx=5)
+        
+        ttk.Label(target_frame, 
+                 text="Configure where to click after pressing the spell key").pack(
+                     anchor=tk.W, pady=(0, 5))
+        
+        # Target coordinates (placeholder for future enhancement)
+        coord_frame = ttk.Frame(target_frame)
+        coord_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(coord_frame, text="Uses right mouse click at current cursor position").pack(
+            anchor=tk.W, pady=5)
+    
+    def _create_advanced_settings(self, parent):
+        """Create the advanced settings UI"""
+        # Scanning parameters
+        scan_frame = ttk.LabelFrame(parent, text="Scanning Parameters", padding=5)
+        scan_frame.pack(fill=tk.X, pady=5, padx=5)
+        
+        # Brief help text
+        ttk.Label(scan_frame, 
+                 text="Configure how frequently the bot checks bar values").pack(
+                     anchor=tk.W, pady=(0, 5))
         
         # Scan interval
-        ttk.Label(adv_frame, text="Scan Interval (seconds):").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.scan_interval = ttk.Spinbox(adv_frame, from_=0.1, to=5.0, increment=0.1, width=5)
+        interval_frame = ttk.Frame(scan_frame)
+        interval_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(interval_frame, text="Scan Interval:", width=12).pack(side=tk.LEFT)
+        self.scan_interval = ttk.Spinbox(interval_frame, from_=0.1, to=2.0, increment=0.1, width=5)
         self.scan_interval.set(0.5)
-        self.scan_interval.grid(row=0, column=1, padx=5, pady=5, sticky=tk.W)
+        self.scan_interval.pack(side=tk.LEFT, padx=(0, 5))
+        ttk.Label(interval_frame, text="seconds").pack(side=tk.LEFT)
         
-        # Debug mode checkbox
+        # Potion cooldown
+        cooldown_frame = ttk.Frame(scan_frame)
+        cooldown_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(cooldown_frame, text="Potion Cooldown:", width=12).pack(side=tk.LEFT)
+        self.potion_cooldown = ttk.Spinbox(cooldown_frame, from_=1.0, to=10.0, increment=0.5, width=5)
+        self.potion_cooldown.set(3.0)
+        self.potion_cooldown.pack(side=tk.LEFT, padx=(0, 5))
+        ttk.Label(cooldown_frame, text="seconds").pack(side=tk.LEFT)
+        
+        # Debug options
+        debug_frame = ttk.LabelFrame(parent, text="Debug Options", padding=5)
+        debug_frame.pack(fill=tk.X, pady=5, padx=5)
+        
+        # Debug mode
         self.debug_var = tk.BooleanVar(value=True)
-        ttk.Checkbutton(settings_frame, text="Enable Debug Mode", variable=self.debug_var).pack(anchor=tk.W, pady=5)
-        
-        # Add Save Configuration button
-        save_config_btn = ttk.Button(
-            settings_frame, 
-            text="Save Configuration", 
-            command=self.save_callback
+        debug_check = ttk.Checkbutton(
+            debug_frame, 
+            text="Enable Debug Mode (saves screenshots and logs extra information)", 
+            variable=self.debug_var
         )
-        save_config_btn.pack(fill=tk.X, pady=10)
+        debug_check.pack(anchor=tk.W, pady=5)
     
     def get_settings(self):
         """Get current settings as a dictionary"""
