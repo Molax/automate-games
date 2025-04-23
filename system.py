@@ -11,8 +11,45 @@ import sys
 import logging
 import tkinter as tk
 from tkinter import ttk, messagebox
-from app.config import setup_logging
-from app.gui import PristonTaleBot
+
+# Setup logging before importing other modules
+def setup_logging():
+    """Set up basic logging configuration"""
+    # Create logs directory if it doesn't exist
+    if not os.path.exists('logs'):
+        os.makedirs('logs')
+    
+    # Configure root logger
+    logger = logging.getLogger('PristonBot')
+    logger.setLevel(logging.INFO)
+    
+    # Create formatters
+    file_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    
+    # Create handlers
+    # File handler with rotation
+    import time
+    from logging.handlers import RotatingFileHandler
+    log_file = os.path.join('logs', f'priston_bot_{time.strftime("%Y%m%d_%H%M%S")}.log')
+    file_handler = RotatingFileHandler(
+        log_file, 
+        maxBytes=5*1024*1024,  # 5MB
+        backupCount=5
+    )
+    file_handler.setLevel(logging.INFO)
+    file_handler.setFormatter(file_formatter)
+    
+    # Add handlers to logger
+    logger.addHandler(file_handler)
+    
+    # Add console handler
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.DEBUG)
+    console_handler.setFormatter(logging.Formatter('%(levelname)s - %(message)s'))
+    logger.addHandler(console_handler)
+    
+    logger.info("Logging initialized")
+    return logger
 
 def check_dependencies():
     """Check for required libraries"""
@@ -86,6 +123,9 @@ def main():
         if not os.path.exists(directory):
             os.makedirs(directory)
             logger.info(f"Created directory: {directory}")
+    
+    # Import the GUI after checking dependencies and setting up logging
+    from app.gui import PristonTaleBot
     
     # Start the application
     try:
