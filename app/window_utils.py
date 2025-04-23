@@ -432,13 +432,8 @@ def press_right_mouse(hwnd=None, method=None):
 
     # Dictionary of available methods
     click_methods = {
-        "SendMessage": lambda: _click_method_send_message(hwnd),
-        "PostMessage": lambda: _click_method_post_message(hwnd),
-        "mouse_event": lambda: _click_method_mouse_event(),
         "SendInput": lambda: _click_method_send_input(),
-        "SetCursorPos": lambda: _click_method_set_cursor_pos(hwnd),
-        "SendInputAbsolute": lambda: _click_method_send_input_absolute(hwnd),
-        "KeyCombination": lambda: _click_method_key_combination()
+        "SendInputAbsolute": lambda: _click_method_send_input_absolute(hwnd)
     }
     
     # If a specific method is requested
@@ -454,10 +449,7 @@ def press_right_mouse(hwnd=None, method=None):
     
     # Try methods in order (most likely to work first)
     methods_to_try = [
-        "SendInput",            # Most reliable cross-application
-        "mouse_event",          # Legacy but still works in many cases
-        "SetCursorPos",         # Physical cursor movement
-        "SendInputAbsolute",    # Positioned click
+        "SendInput"          # Most reliable cross-application
     ]
     
     # Add window-specific methods if we have a window handle

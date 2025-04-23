@@ -1,5 +1,5 @@
 """
-Bar selection UI components for Priston Tale Potion Bot
+Improved Bar selection UI components for Priston Tale Potion Bot
 ------------------------------------------------------
 This module handles the UI for selecting and previewing health, mana, and stamina bars.
 """
@@ -75,7 +75,7 @@ class BarSelectorUI:
         self.log_callback = log_callback
         
         # Create bar selection frame
-        self.bars_frame = ttk.LabelFrame(main_frame, text="Bar Selection", padding=10)
+        self.bars_frame = ttk.LabelFrame(main_frame, text="Bar Selection", padding=5)
         self.bars_frame.pack(fill=tk.X, padx=5, pady=5)
         
         # Create bar selectors
@@ -93,42 +93,56 @@ class BarSelectorUI:
         self.mp_bar = BarAdapter(self.mp_bar_selector)
         self.sp_bar = BarAdapter(self.sp_bar_selector)
         
-        # Create preview area for each bar
+        # Create horizontal layout for the bar previews
         preview_frame = ttk.Frame(self.bars_frame)
-        preview_frame.pack(fill=tk.X, pady=5)
+        preview_frame.pack(fill=tk.X, pady=2)
         
         # Health bar preview
-        hp_frame = ttk.LabelFrame(preview_frame, text="Health Bar")
-        hp_frame.grid(row=0, column=0, padx=5, pady=5, sticky=tk.EW)
+        hp_frame = ttk.LabelFrame(preview_frame, text="Health")
+        hp_frame.grid(row=0, column=0, padx=2, pady=2, sticky=tk.NSEW)
         self.hp_preview_label = ttk.Label(hp_frame, text="Not Selected")
-        self.hp_preview_label.pack(padx=5, pady=5)
+        self.hp_preview_label.pack(padx=2, pady=2)
         
         # Mana bar preview
-        mp_frame = ttk.LabelFrame(preview_frame, text="Mana Bar")
-        mp_frame.grid(row=0, column=1, padx=5, pady=5, sticky=tk.EW)
+        mp_frame = ttk.LabelFrame(preview_frame, text="Mana")
+        mp_frame.grid(row=0, column=1, padx=2, pady=2, sticky=tk.NSEW)
         self.mp_preview_label = ttk.Label(mp_frame, text="Not Selected")
-        self.mp_preview_label.pack(padx=5, pady=5)
+        self.mp_preview_label.pack(padx=2, pady=2)
         
         # Stamina bar preview
-        sp_frame = ttk.LabelFrame(preview_frame, text="Stamina Bar")
-        sp_frame.grid(row=0, column=2, padx=5, pady=5, sticky=tk.EW)
+        sp_frame = ttk.LabelFrame(preview_frame, text="Stamina")
+        sp_frame.grid(row=0, column=2, padx=2, pady=2, sticky=tk.NSEW)
         self.sp_preview_label = ttk.Label(sp_frame, text="Not Selected")
-        self.sp_preview_label.pack(padx=5, pady=5)
+        self.sp_preview_label.pack(padx=2, pady=2)
         
-        # Create bar selection buttons
+        # Configure grid column weights for equal sizing
+        preview_frame.columnconfigure(0, weight=1)
+        preview_frame.columnconfigure(1, weight=1)
+        preview_frame.columnconfigure(2, weight=1)
+        
+        # Create compact horizontal layout for selection buttons
         selection_buttons_frame = ttk.Frame(self.bars_frame)
-        selection_buttons_frame.pack(fill=tk.X, pady=5)
+        selection_buttons_frame.pack(fill=tk.X, pady=2)
         
-        ttk.Button(selection_buttons_frame, text="Select Health Bar", 
-                 command=lambda: self.start_bar_selection("Health", "red")).pack(fill=tk.X, pady=5)
+        # Grid layout for the buttons (one row, three columns)
+        ttk.Button(selection_buttons_frame, text="Select Health", 
+                 command=lambda: self.start_bar_selection("Health", "red")).grid(
+                     row=0, column=0, padx=2, pady=2, sticky=tk.EW)
         
-        ttk.Button(selection_buttons_frame, text="Select Mana Bar", 
-                 command=lambda: self.start_bar_selection("Mana", "blue")).pack(fill=tk.X, pady=5)
+        ttk.Button(selection_buttons_frame, text="Select Mana", 
+                 command=lambda: self.start_bar_selection("Mana", "blue")).grid(
+                     row=0, column=1, padx=2, pady=2, sticky=tk.EW)
         
-        ttk.Button(selection_buttons_frame, text="Select Stamina Bar", 
-                 command=lambda: self.start_bar_selection("Stamina", "green")).pack(fill=tk.X, pady=5)
+        ttk.Button(selection_buttons_frame, text="Select Stamina", 
+                 command=lambda: self.start_bar_selection("Stamina", "green")).grid(
+                     row=0, column=2, padx=2, pady=2, sticky=tk.EW)
         
-        # Schedule initial preview updates - this is important for loading saved configurations
+        # Configure grid column weights for equal sizing
+        selection_buttons_frame.columnconfigure(0, weight=1)
+        selection_buttons_frame.columnconfigure(1, weight=1)
+        selection_buttons_frame.columnconfigure(2, weight=1)
+        
+        # Schedule initial preview updates - important for loading saved configurations
         self.root.after(1000, self.update_all_previews)
     
     def update_all_previews(self):
@@ -173,7 +187,7 @@ class BarSelectorUI:
                     preview_img = selector.preview_image_rotated if hasattr(selector, 'preview_image_rotated') and selector.preview_image_rotated is not None else selector.preview_image
                     
                     # Resize the image to fit in the label
-                    preview_size = (120, 30)  # Width, height
+                    preview_size = (100, 20)  # Width, height (smaller for more compact UI)
                     resized_img = preview_img.resize(preview_size, Image.LANCZOS)
                     preview_photo = ImageTk.PhotoImage(resized_img)
                     label.config(image=preview_photo, text="")
@@ -187,7 +201,7 @@ class BarSelectorUI:
                     # If resize fails, show coords
                     logger.error(f"Error displaying preview image: {e}")
                     title = selector.title if hasattr(selector, 'title') else "Bar"
-                    label.config(text=f"Selected: ({selector.x1},{selector.y1}) to ({selector.x2},{selector.y2})")
+                    label.config(text=f"Selected")
             else:
                 # If no preview image, try to capture one
                 try:
@@ -205,7 +219,7 @@ class BarSelectorUI:
                 
                 # If we couldn't get a preview image, just show coords
                 title = selector.title if hasattr(selector, 'title') else "Bar"
-                label.config(text=f"Selected: ({selector.x1},{selector.y1}) to ({selector.x2},{selector.y2})")
+                label.config(text="Selected")
         else:
             label.config(text="Not Selected")
             
