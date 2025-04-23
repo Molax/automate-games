@@ -77,9 +77,9 @@ class PristonTaleBot:
         preview_frame = ttk.Frame(window_content)
         preview_frame.pack(side=tk.LEFT, fill=tk.Y, padx=(0, 5))
         
-        self.window_preview_label = ttk.Label(preview_frame, text="Not Selected", 
-                                             borderwidth=1, relief="solid",
-                                             width=25, height=8)
+        self.window_preview_label = tk.Label(preview_frame, text="Not Selected", 
+                                            borderwidth=1, relief="solid",
+                                            width=25, height=8)
         self.window_preview_label.pack(padx=5, pady=5)
         
         # Window selection button
