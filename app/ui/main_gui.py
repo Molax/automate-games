@@ -17,13 +17,133 @@ from app.ui.settings_ui import SettingsUI
 from app.bot.potion_bot import PotionBot
 from app.bot.config_manager import ConfigManager
 from app.window_utils import test_click_methods, find_game_window
-
 logger = logging.getLogger('PristonBot')
 
 class PristonTaleBot:
     """Main application class for the Priston Tale Potion Bot"""
     
     def __init__(self, root):
+        """
+        Initialize the application
+        
+        Args:
+            root: tkinter root window
+        """
+        logger.info("Initializing Priston Tale Potion Bot")
+        self.root = root
+        self.root.geometry("550x750")  # Base size
+        self.root.minsize(550, 600)    # Minimum size
+        
+        # Create scrollable main frame
+        scroll_container = ScrollableFrame(root)
+        scroll_container.pack(fill=tk.BOTH, expand=True)
+        
+        # Use the scrollable frame as our main container
+        main_frame = scroll_container.scrollable_frame
+        
+        # Create title label
+        title_label = ttk.Label(main_frame, text="Priston Tale Potion Bot", font=("Arial", 16, "bold"))
+        title_label.pack(pady=10)
+        
+        # Create log text widget early but don't pack it yet
+        # Log frame
+        log_frame = ttk.LabelFrame(main_frame, text="Log", padding=10)
+        
+        # Log text - using scrolledtext for better handling
+        self.log_text = scrolledtext.ScrolledText(log_frame, height=10, width=50, wrap=tk.WORD)
+        self.log_text.pack(fill=tk.BOTH, pady=5)
+        
+        # Initialize UI components
+        self.window_selector_ui = WindowSelectorUI(root, main_frame, self.log)
+        self.bar_selector_ui = BarSelectorUI(root, main_frame, self.log)
+        self.settings_ui = SettingsUI(main_frame)
+        
+        # Add Save Configuration button
+        save_config_btn = ttk.Button(
+            self.settings_ui.settings_frame, 
+            text="Save Configuration", 
+            command=self.save_config
+        )
+        save_config_btn.pack(fill=tk.X, pady=10)
+        
+        # Status frame
+        status_frame = ttk.LabelFrame(main_frame, text="Status", padding=10)
+        status_frame.pack(fill=tk.X, padx=5, pady=5)
+        
+        # Status label
+        self.status_var = tk.StringVar()
+        self.status_var.set("Ready to configure")
+        self.status_label = ttk.Label(status_frame, textvariable=self.status_var, font=("Arial", 10))
+        self.status_label.pack(fill=tk.X, pady=5)
+        
+        # Control buttons
+        control_frame = ttk.Frame(main_frame)
+        control_frame.pack(fill=tk.X, pady=10)
+        
+        # Create buttons with normal styling to ensure text visibility
+        self.start_button = tk.Button(
+            control_frame, 
+            text="START BOT",
+            font=("Arial", 12, "bold"),
+            bg="#4CAF50",  # Green
+            fg="white",
+            command=self.start_bot, 
+            state=tk.DISABLED,
+            height=2
+        )
+        self.start_button.pack(side=tk.LEFT, padx=5, pady=5, fill=tk.X, expand=True)
+        
+        self.stop_button = tk.Button(
+            control_frame, 
+            text="STOP BOT",
+            font=("Arial", 12, "bold"),
+            bg="#F44336",  # Red
+            fg="white",
+            command=self.stop_bot, 
+            state=tk.DISABLED,
+            height=2
+        )
+        self.stop_button.pack(side=tk.LEFT, padx=5, pady=5, fill=tk.X, expand=True)
+        
+        # Add a separator between control buttons and test buttons
+        ttk.Separator(main_frame, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=10)
+
+        # Test tools frame
+        test_frame = ttk.LabelFrame(main_frame, text="Testing Tools", padding=10)
+        test_frame.pack(fill=tk.X, padx=5, pady=5)
+
+        # Test click methods button
+        test_click_button = ttk.Button(
+            test_frame,
+            text="Test Click Methods",
+            command=self.test_click_methods
+        )
+        test_click_button.pack(fill=tk.X, padx=5, pady=5)
+        
+        # Now pack the log frame at the end
+        log_frame.pack(fill=tk.X, padx=5, pady=5)
+        
+        # Store a reference to bar_selector_ui for config_manager to use
+        # This is important for correctly updating UI after loading configuration
+        scroll_container.bar_selector_ui = self.bar_selector_ui
+        
+        # Initialize bot and config manager
+        self.potion_bot = PotionBot(
+            self.bar_selector_ui.hp_bar,
+            self.bar_selector_ui.mp_bar,
+            self.bar_selector_ui.sp_bar,
+            self.settings_ui,
+            self.log
+        )
+        
+        self.config_manager = ConfigManager(
+            self.settings_ui, 
+            self.bar_selector_ui.hp_bar,
+            self.bar_selector_ui.mp_bar,
+            self.bar_selector_ui.sp_bar,
+            self.window_selector_ui, 
+            self.log
+        )
         """
         Initialize the application
         
