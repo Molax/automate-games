@@ -1,0 +1,51 @@
+{
+    "potion_keys": {
+        "health": "1",
+        "mana": "3",
+        "stamina": "2"
+    },
+    "thresholds": {
+        "health": 50.0,
+        "mana": 51.0,
+        "stamina": 50.0
+    },
+    "scan_interval": 0.5,
+    "potion_cooldown": 3.0,
+    "window_name": "Priston Tale",
+    "debug_enabled": true,
+    "spellcasting": {
+        "enabled": true,
+        "spell_key": "F2",
+        "spell_interval": 2.5
+    },
+    "bars": {
+        "game_window": {
+            "x1": 261,
+            "y1": 74,
+            "x2": 1541,
+            "y2": 1071,
+            "configured": true
+        },
+        "health_bar": {
+            "x1": 665,
+            "y1": 945,
+            "x2": 675,
+            "y2": 1060,
+            "configured": true
+        },
+        "mana_bar": {
+            "x1": 846,
+            "y1": 944,
+            "x2": 858,
+            "y2": 1063,
+            "configured": true
+        },
+        "stamina_bar": {
+            "x1": 643,
+            "y1": 968,
+            "x2": 648,
+            "y2": 1057,
+            "configured": true
+        }
+    }
+}

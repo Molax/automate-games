@@ -1,0 +1,729 @@
+2025-04-23 10:18:24,574 - PristonBot - INFO - Logging initialized
+2025-04-23 10:18:24,575 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 10:18:24,625 - PristonBot - INFO - Icon file not found
+2025-04-23 10:18:24,626 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 10:18:24,644 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 10:18:24,645 - PristonBot - INFO - Please select the Health, Mana, and Stamina bars to continue
+2025-04-23 10:18:24,646 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 10:18:24,647 - PristonBot - INFO - Application started successfully
+2025-04-23 10:18:24,648 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 10:18:24,649 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 10:18:24,650 - PristonBot - INFO - Step 3: Configure spell casting (optional)
+2025-04-23 10:18:24,651 - PristonBot - INFO - Step 4: Click Start Bot to begin monitoring
+2025-04-23 10:18:31,515 - PristonBot - INFO - Starting selection: Game Window
+2025-04-23 10:18:31,516 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 10:18:33,833 - PristonBot - DEBUG - Started selection at (1552, 554)
+2025-04-23 10:18:33,924 - PristonBot - DEBUG - Completed selection to (1664, 688)
+2025-04-23 10:18:33,925 - PristonBot - DEBUG - Captured preview image: 112x134
+2025-04-23 10:18:35,367 - PristonBot - INFO - Game Window selection canceled, retrying
+2025-04-23 10:18:36,350 - PristonBot - DEBUG - Started selection at (1282, 799)
+2025-04-23 10:18:36,416 - PristonBot - DEBUG - Completed selection to (1560, 914)
+2025-04-23 10:18:36,417 - PristonBot - DEBUG - Captured preview image: 278x115
+2025-04-23 10:18:37,321 - PristonBot - INFO - Game Window selection confirmed: (1282, 799) to (1560, 914)
+2025-04-23 10:18:37,683 - PristonBot - INFO - Game window selected: (1282,799) to (1560,914)
+2025-04-23 10:18:39,092 - PristonBot - INFO - Starting selection: Game Window
+2025-04-23 10:18:39,092 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 10:18:40,995 - PristonBot - DEBUG - Started selection at (206, 127)
+2025-04-23 10:18:41,854 - PristonBot - DEBUG - Completed selection to (994, 778)
+2025-04-23 10:18:41,855 - PristonBot - DEBUG - Captured preview image: 788x651
+2025-04-23 10:18:43,080 - PristonBot - INFO - Game Window selection canceled, retrying
+2025-04-23 10:18:43,511 - PristonBot - DEBUG - Started selection at (1254, 447)
+2025-04-23 10:18:43,608 - PristonBot - DEBUG - Completed selection to (1443, 547)
+2025-04-23 10:18:43,609 - PristonBot - DEBUG - Captured preview image: 189x100
+2025-04-23 10:18:44,440 - PristonBot - INFO - Game Window selection confirmed: (1254, 447) to (1443, 547)
+2025-04-23 10:18:45,222 - PristonBot - INFO - Game window selected: (1254,447) to (1443,547)
+2025-04-23 10:18:50,950 - PristonBot - INFO - Starting selection: Game Window
+2025-04-23 10:18:50,950 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 10:18:54,622 - PristonBot - DEBUG - Started selection at (253, 55)
+2025-04-23 10:19:00,114 - PristonBot - DEBUG - Completed selection to (1532, 1076)
+2025-04-23 10:19:00,116 - PristonBot - DEBUG - Captured preview image: 1279x1021
+2025-04-23 10:19:01,599 - PristonBot - INFO - Game Window selection confirmed: (253, 55) to (1532, 1076)
+2025-04-23 10:19:02,108 - PristonBot - INFO - Game window selected: (253,55) to (1532,1076)
+2025-04-23 10:19:03,180 - PristonBot - INFO - Starting selection: Health Bar
+2025-04-23 10:19:03,181 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 10:19:06,442 - PristonBot - DEBUG - Started selection at (652, 950)
+2025-04-23 10:19:08,187 - PristonBot - DEBUG - Completed selection to (664, 1070)
+2025-04-23 10:19:08,188 - PristonBot - DEBUG - Captured preview image: 12x120
+2025-04-23 10:19:08,189 - PristonBot - INFO - Detected vertical bar
+2025-04-23 10:19:09,383 - PristonBot - INFO - Health Bar selection confirmed: (652, 950) to (664, 1070)
+2025-04-23 10:19:10,317 - PristonBot - INFO - Health Bar selected: (652,950) to (664,1070)
+2025-04-23 10:19:11,357 - PristonBot - INFO - Starting selection: Mana Bar
+2025-04-23 10:19:11,358 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 10:19:15,749 - PristonBot - DEBUG - Started selection at (839, 951)
+2025-04-23 10:19:17,464 - PristonBot - DEBUG - Completed selection to (845, 1071)
+2025-04-23 10:19:17,465 - PristonBot - DEBUG - Captured preview image: 6x120
+2025-04-23 10:19:17,465 - PristonBot - INFO - Detected vertical bar
+2025-04-23 10:19:18,446 - PristonBot - INFO - Mana Bar selection confirmed: (839, 951) to (845, 1071)
+2025-04-23 10:19:18,518 - PristonBot - INFO - Mana Bar selected: (839,951) to (845,1071)
+2025-04-23 10:19:19,402 - PristonBot - INFO - Starting selection: Stamina Bar
+2025-04-23 10:19:19,403 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 10:19:22,442 - PristonBot - DEBUG - Started selection at (631, 974)
+2025-04-23 10:19:23,897 - PristonBot - DEBUG - Completed selection to (639, 1067)
+2025-04-23 10:19:23,898 - PristonBot - DEBUG - Captured preview image: 8x93
+2025-04-23 10:19:23,899 - PristonBot - INFO - Detected vertical bar
+2025-04-23 10:19:24,898 - PristonBot - INFO - Stamina Bar selection confirmed: (631, 974) to (639, 1067)
+2025-04-23 10:19:25,522 - PristonBot - INFO - Stamina Bar selected: (631,974) to (639,1067)
+2025-04-23 10:19:25,879 - PristonBot - INFO - All bars configured! You can now start the bot.
+2025-04-23 10:19:25,882 - PristonBot - INFO - All bars configured, start button enabled
+2025-04-23 10:19:43,662 - PristonBot - INFO - Starting bot...
+2025-04-23 10:19:43,663 - PristonBot - INFO - Bot thread started
+2025-04-23 10:19:43,664 - PristonBot - INFO - Bot started
+2025-04-23 10:19:43,665 - PristonBot - INFO - Bot loop started
+2025-04-23 10:19:43,667 - PristonBot - INFO - Auto spellcasting enabled with key F1 at 2.0s interval
+2025-04-23 10:19:43,667 - PristonBot - INFO - Spellcasting enabled: Key=F1, Interval=2.0s
+2025-04-23 10:19:43,668 - PristonBot - DEBUG - Bot loop iteration 1
+2025-04-23 10:19:43,736 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:43,809 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:43,879 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:43,881 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:43,881 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:43,881 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:19:43,881 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:19:43,881 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:19:44,034 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:19:44,094 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:19:44,597 - PristonBot - DEBUG - Bot loop iteration 2
+2025-04-23 10:19:44,684 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:44,766 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:44,844 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:44,854 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:44,854 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:45,356 - PristonBot - DEBUG - Bot loop iteration 3
+2025-04-23 10:19:45,435 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:45,498 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:45,567 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:45,570 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:45,572 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:46,074 - PristonBot - DEBUG - Bot loop iteration 4
+2025-04-23 10:19:46,142 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:46,244 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:46,342 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:46,342 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:46,344 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:46,344 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:19:46,345 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:19:46,345 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:19:46,496 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:19:46,562 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:19:47,063 - PristonBot - DEBUG - Bot loop iteration 5
+2025-04-23 10:19:47,172 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:47,245 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:47,315 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:47,318 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:47,319 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:47,820 - PristonBot - DEBUG - Bot loop iteration 6
+2025-04-23 10:19:47,892 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:47,963 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:48,026 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:48,027 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:48,027 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:48,529 - PristonBot - DEBUG - Bot loop iteration 7
+2025-04-23 10:19:48,604 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:48,666 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:48,729 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:48,730 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:48,732 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:48,733 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:19:48,734 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:19:48,734 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:19:48,885 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:19:48,972 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:19:49,473 - PristonBot - DEBUG - Bot loop iteration 8
+2025-04-23 10:19:49,545 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:49,617 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:49,679 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:49,681 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:49,682 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:50,183 - PristonBot - DEBUG - Bot loop iteration 9
+2025-04-23 10:19:50,250 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:50,314 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:50,387 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:50,388 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:50,388 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:50,889 - PristonBot - DEBUG - Bot loop iteration 10
+2025-04-23 10:19:50,956 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:51,022 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:51,090 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:51,092 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:51,093 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:51,095 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:19:51,096 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:19:51,096 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:19:51,248 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:19:51,315 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:19:51,816 - PristonBot - DEBUG - Bot loop iteration 11
+2025-04-23 10:19:51,885 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:51,948 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:52,015 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:52,017 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:52,017 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:52,518 - PristonBot - DEBUG - Bot loop iteration 12
+2025-04-23 10:19:52,587 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:52,653 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:52,729 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:52,732 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:52,732 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:53,233 - PristonBot - DEBUG - Bot loop iteration 13
+2025-04-23 10:19:53,306 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:53,385 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:53,449 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:53,452 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:53,452 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:53,454 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:19:53,454 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:19:53,454 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:19:53,605 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:19:53,675 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:19:54,178 - PristonBot - DEBUG - Bot loop iteration 14
+2025-04-23 10:19:54,241 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:54,297 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:54,368 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:54,370 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:54,370 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:54,872 - PristonBot - DEBUG - Bot loop iteration 15
+2025-04-23 10:19:54,936 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:54,996 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:55,065 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:55,067 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:55,067 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:55,569 - PristonBot - DEBUG - Bot loop iteration 16
+2025-04-23 10:19:55,641 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:55,699 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:55,765 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:55,767 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:55,768 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:55,769 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:19:55,770 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:19:55,770 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:19:55,922 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:19:55,982 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:19:56,484 - PristonBot - DEBUG - Bot loop iteration 17
+2025-04-23 10:19:56,553 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:56,623 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:56,689 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:56,690 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:56,691 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:57,192 - PristonBot - DEBUG - Bot loop iteration 18
+2025-04-23 10:19:57,254 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:57,323 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:57,384 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:57,386 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:57,387 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:57,888 - PristonBot - DEBUG - Bot loop iteration 19
+2025-04-23 10:19:57,955 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:58,017 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:58,088 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:58,088 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:58,089 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:58,089 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:19:58,091 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:19:58,091 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:19:58,242 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:19:58,300 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:19:58,803 - PristonBot - DEBUG - Bot loop iteration 20
+2025-04-23 10:19:58,885 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:58,960 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:59,048 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:59,049 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:59,050 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:59,551 - PristonBot - DEBUG - Bot loop iteration 21
+2025-04-23 10:19:59,623 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:19:59,686 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:19:59,751 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:19:59,752 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:59,753 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:00,254 - PristonBot - DEBUG - Bot loop iteration 22
+2025-04-23 10:20:00,335 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:00,409 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:00,472 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:00,473 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:00,473 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:00,475 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:00,475 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:00,476 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:00,627 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:00,684 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:01,185 - PristonBot - DEBUG - Bot loop iteration 23
+2025-04-23 10:20:01,264 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:01,318 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:01,384 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:01,385 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:01,385 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:01,887 - PristonBot - DEBUG - Bot loop iteration 24
+2025-04-23 10:20:01,960 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:02,019 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:02,101 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:02,113 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:02,115 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:02,644 - PristonBot - DEBUG - Bot loop iteration 25
+2025-04-23 10:20:02,710 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:02,768 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:02,855 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:02,856 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:02,856 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:02,859 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:02,859 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:02,859 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:03,010 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:03,069 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:03,570 - PristonBot - DEBUG - Bot loop iteration 26
+2025-04-23 10:20:03,650 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:03,720 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:03,784 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:03,786 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:03,787 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:04,288 - PristonBot - DEBUG - Bot loop iteration 27
+2025-04-23 10:20:04,357 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:04,422 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:04,486 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:04,488 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:04,488 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:04,989 - PristonBot - DEBUG - Bot loop iteration 28
+2025-04-23 10:20:05,069 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:05,141 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:05,208 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:05,209 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:05,210 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:05,210 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:05,211 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:05,211 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:05,363 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:05,414 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:05,915 - PristonBot - DEBUG - Bot loop iteration 29
+2025-04-23 10:20:05,987 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:06,059 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:06,126 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:06,127 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:06,128 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:06,629 - PristonBot - DEBUG - Bot loop iteration 30
+2025-04-23 10:20:06,698 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:06,755 - PristonBot - DEBUG - Mana bar percentage: 93.3%
+2025-04-23 10:20:06,834 - PristonBot - DEBUG - Stamina bar percentage: 93.5%
+2025-04-23 10:20:06,835 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 93.3% (Thrs: 30.0%) | Stamina: 93.5% (Thrs: 40.0%)
+2025-04-23 10:20:06,836 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 93.3% (Thrs: 30.0%) | Stamina: 93.5% (Thrs: 40.0%)
+2025-04-23 10:20:07,338 - PristonBot - DEBUG - Bot loop iteration 31
+2025-04-23 10:20:07,413 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:07,472 - PristonBot - DEBUG - Mana bar percentage: 94.2%
+2025-04-23 10:20:07,539 - PristonBot - DEBUG - Stamina bar percentage: 94.6%
+2025-04-23 10:20:07,540 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 94.2% (Thrs: 30.0%) | Stamina: 94.6% (Thrs: 40.0%)
+2025-04-23 10:20:07,540 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 94.2% (Thrs: 30.0%) | Stamina: 94.6% (Thrs: 40.0%)
+2025-04-23 10:20:07,540 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:07,541 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:07,541 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:07,693 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:07,744 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:08,245 - PristonBot - DEBUG - Bot loop iteration 32
+2025-04-23 10:20:08,314 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:08,373 - PristonBot - DEBUG - Mana bar percentage: 95.0%
+2025-04-23 10:20:08,455 - PristonBot - DEBUG - Stamina bar percentage: 94.6%
+2025-04-23 10:20:08,457 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 95.0% (Thrs: 30.0%) | Stamina: 94.6% (Thrs: 40.0%)
+2025-04-23 10:20:08,458 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 95.0% (Thrs: 30.0%) | Stamina: 94.6% (Thrs: 40.0%)
+2025-04-23 10:20:08,960 - PristonBot - DEBUG - Bot loop iteration 33
+2025-04-23 10:20:09,033 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:09,091 - PristonBot - DEBUG - Mana bar percentage: 95.0%
+2025-04-23 10:20:09,156 - PristonBot - DEBUG - Stamina bar percentage: 96.8%
+2025-04-23 10:20:09,158 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 95.0% (Thrs: 30.0%) | Stamina: 96.8% (Thrs: 40.0%)
+2025-04-23 10:20:09,158 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 95.0% (Thrs: 30.0%) | Stamina: 96.8% (Thrs: 40.0%)
+2025-04-23 10:20:09,659 - PristonBot - DEBUG - Bot loop iteration 34
+2025-04-23 10:20:09,731 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:09,801 - PristonBot - DEBUG - Mana bar percentage: 95.8%
+2025-04-23 10:20:09,862 - PristonBot - DEBUG - Stamina bar percentage: 97.8%
+2025-04-23 10:20:09,864 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 95.8% (Thrs: 30.0%) | Stamina: 97.8% (Thrs: 40.0%)
+2025-04-23 10:20:09,864 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 95.8% (Thrs: 30.0%) | Stamina: 97.8% (Thrs: 40.0%)
+2025-04-23 10:20:09,865 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:09,867 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:09,868 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:10,020 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:10,090 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:10,592 - PristonBot - DEBUG - Bot loop iteration 35
+2025-04-23 10:20:10,673 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:10,742 - PristonBot - DEBUG - Mana bar percentage: 95.8%
+2025-04-23 10:20:10,809 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:10,810 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 95.8% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:10,810 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 95.8% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:11,311 - PristonBot - DEBUG - Bot loop iteration 36
+2025-04-23 10:20:11,382 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:11,443 - PristonBot - DEBUG - Mana bar percentage: 95.8%
+2025-04-23 10:20:11,510 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:11,512 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 95.8% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:11,514 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 95.8% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:12,015 - PristonBot - DEBUG - Bot loop iteration 37
+2025-04-23 10:20:12,085 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:12,159 - PristonBot - DEBUG - Mana bar percentage: 96.7%
+2025-04-23 10:20:12,228 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:12,235 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 96.7% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:12,236 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 96.7% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:12,237 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:12,237 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:12,237 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:12,388 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:12,439 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:12,940 - PristonBot - DEBUG - Bot loop iteration 38
+2025-04-23 10:20:13,046 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:13,130 - PristonBot - DEBUG - Mana bar percentage: 96.7%
+2025-04-23 10:20:13,199 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:13,200 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 96.7% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:13,200 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 96.7% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:13,702 - PristonBot - DEBUG - Bot loop iteration 39
+2025-04-23 10:20:13,773 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:13,843 - PristonBot - DEBUG - Mana bar percentage: 98.3%
+2025-04-23 10:20:13,912 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:13,912 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 98.3% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:13,914 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 98.3% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:14,415 - PristonBot - DEBUG - Bot loop iteration 40
+2025-04-23 10:20:14,488 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:14,564 - PristonBot - DEBUG - Mana bar percentage: 98.3%
+2025-04-23 10:20:14,628 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:14,632 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 98.3% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:14,632 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 98.3% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:14,632 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:14,633 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:14,634 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:14,787 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:14,857 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:15,362 - PristonBot - DEBUG - Bot loop iteration 41
+2025-04-23 10:20:15,437 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:15,496 - PristonBot - DEBUG - Mana bar percentage: 98.3%
+2025-04-23 10:20:15,565 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:15,567 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 98.3% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:15,567 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 98.3% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:16,068 - PristonBot - DEBUG - Bot loop iteration 42
+2025-04-23 10:20:16,154 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:16,222 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:16,304 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:16,304 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:16,305 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:16,807 - PristonBot - DEBUG - Bot loop iteration 43
+2025-04-23 10:20:16,889 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:16,979 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:17,051 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:17,053 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:17,054 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:17,056 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:17,058 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:17,058 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:17,210 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:17,275 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:17,776 - PristonBot - DEBUG - Bot loop iteration 44
+2025-04-23 10:20:17,853 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:17,913 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:17,982 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:17,983 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:17,984 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:18,485 - PristonBot - DEBUG - Bot loop iteration 45
+2025-04-23 10:20:18,554 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:18,616 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:18,680 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:18,681 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:18,681 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:19,167 - PristonBot - INFO - Stopping bot...
+2025-04-23 10:20:20,172 - PristonBot - INFO - Bot thread joined
+2025-04-23 10:20:20,175 - PristonBot - INFO - Bot stopped
+2025-04-23 10:20:20,183 - PristonBot - INFO - Bot loop stopped
+2025-04-23 10:20:35,319 - PristonBot - INFO - Starting bot...
+2025-04-23 10:20:35,320 - PristonBot - INFO - Bot thread started
+2025-04-23 10:20:35,320 - PristonBot - INFO - Bot started
+2025-04-23 10:20:35,322 - PristonBot - INFO - Bot loop started
+2025-04-23 10:20:35,325 - PristonBot - INFO - Auto spellcasting enabled with key F1 at 2.0s interval
+2025-04-23 10:20:35,325 - PristonBot - INFO - Spellcasting enabled: Key=F1, Interval=2.0s
+2025-04-23 10:20:35,325 - PristonBot - DEBUG - Bot loop iteration 1
+2025-04-23 10:20:35,388 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:35,452 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:35,514 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:35,516 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:35,516 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:35,517 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:35,518 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:35,518 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:35,671 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:35,735 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:36,240 - PristonBot - DEBUG - Bot loop iteration 2
+2025-04-23 10:20:36,305 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:36,367 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:36,432 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:36,440 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:36,441 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:36,943 - PristonBot - DEBUG - Bot loop iteration 3
+2025-04-23 10:20:37,014 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:37,090 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:37,160 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:37,161 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:37,162 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:37,663 - PristonBot - DEBUG - Bot loop iteration 4
+2025-04-23 10:20:37,725 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:37,786 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:37,852 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:37,855 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:37,856 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:37,858 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:37,862 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:37,863 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:38,016 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:38,087 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:38,588 - PristonBot - DEBUG - Bot loop iteration 5
+2025-04-23 10:20:38,659 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:38,717 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:38,787 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:38,788 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:38,788 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:39,289 - PristonBot - DEBUG - Bot loop iteration 6
+2025-04-23 10:20:39,365 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:39,440 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:39,506 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:39,513 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:39,534 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:40,036 - PristonBot - DEBUG - Bot loop iteration 7
+2025-04-23 10:20:40,120 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:40,189 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:40,254 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:40,255 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:40,256 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:40,256 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:40,256 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:40,256 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:40,408 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:40,488 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:40,990 - PristonBot - DEBUG - Bot loop iteration 8
+2025-04-23 10:20:41,077 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:41,143 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:41,210 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:41,211 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:41,211 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:41,712 - PristonBot - DEBUG - Bot loop iteration 9
+2025-04-23 10:20:41,799 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:41,874 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:41,937 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:41,945 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:41,960 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:42,461 - PristonBot - DEBUG - Bot loop iteration 10
+2025-04-23 10:20:42,527 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:42,587 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:42,654 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:42,654 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:42,655 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:42,656 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:42,656 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:42,656 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:42,807 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:42,858 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:43,386 - PristonBot - DEBUG - Bot loop iteration 11
+2025-04-23 10:20:43,456 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:43,526 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:43,592 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:43,613 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:43,614 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:44,116 - PristonBot - DEBUG - Bot loop iteration 12
+2025-04-23 10:20:44,201 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:44,278 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:44,337 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:44,338 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:44,338 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:44,839 - PristonBot - DEBUG - Bot loop iteration 13
+2025-04-23 10:20:44,924 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:44,989 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:45,061 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:45,062 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:45,063 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:45,064 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:45,065 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:45,066 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:45,219 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:45,270 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:45,772 - PristonBot - DEBUG - Bot loop iteration 14
+2025-04-23 10:20:45,847 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:45,903 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:45,972 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:45,973 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:45,973 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:46,474 - PristonBot - DEBUG - Bot loop iteration 15
+2025-04-23 10:20:46,565 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:46,630 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:46,694 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:46,696 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:46,696 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:47,197 - PristonBot - DEBUG - Bot loop iteration 16
+2025-04-23 10:20:47,275 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:47,343 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:47,408 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:47,410 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:47,410 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:47,410 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:47,410 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:47,410 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:47,562 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:47,623 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:48,123 - PristonBot - DEBUG - Bot loop iteration 17
+2025-04-23 10:20:48,197 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:48,257 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:48,324 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:48,325 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:48,325 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:48,828 - PristonBot - DEBUG - Bot loop iteration 18
+2025-04-23 10:20:48,891 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:48,958 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:49,027 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:49,091 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:49,096 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:49,598 - PristonBot - DEBUG - Bot loop iteration 19
+2025-04-23 10:20:49,664 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:49,726 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:49,797 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:49,797 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:49,798 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:49,798 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:49,798 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:49,799 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:49,950 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:50,009 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:50,511 - PristonBot - DEBUG - Bot loop iteration 20
+2025-04-23 10:20:50,580 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:50,647 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:50,708 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:50,709 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:50,709 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:51,210 - PristonBot - DEBUG - Bot loop iteration 21
+2025-04-23 10:20:51,285 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:51,343 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:51,406 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:51,414 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:51,419 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:51,921 - PristonBot - DEBUG - Bot loop iteration 22
+2025-04-23 10:20:52,001 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:52,061 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:52,135 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:52,136 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:52,138 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:52,140 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:52,140 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:52,140 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:52,291 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:52,343 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:52,844 - PristonBot - DEBUG - Bot loop iteration 23
+2025-04-23 10:20:52,974 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:53,044 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:53,108 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:53,109 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:53,109 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:53,612 - PristonBot - DEBUG - Bot loop iteration 24
+2025-04-23 10:20:53,683 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:53,744 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:53,817 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:53,818 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:53,819 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:54,320 - PristonBot - DEBUG - Bot loop iteration 25
+2025-04-23 10:20:54,383 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:54,437 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 10:20:54,488 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 10:20:54,490 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:54,491 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:54,491 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:54,492 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:54,492 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:54,644 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:54,695 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:55,196 - PristonBot - DEBUG - Bot loop iteration 26
+2025-04-23 10:20:55,300 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:55,356 - PristonBot - DEBUG - Mana bar percentage: 94.2%
+2025-04-23 10:20:55,426 - PristonBot - DEBUG - Stamina bar percentage: 93.5%
+2025-04-23 10:20:55,427 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 94.2% (Thrs: 30.0%) | Stamina: 93.5% (Thrs: 40.0%)
+2025-04-23 10:20:55,428 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 94.2% (Thrs: 30.0%) | Stamina: 93.5% (Thrs: 40.0%)
+2025-04-23 10:20:55,929 - PristonBot - DEBUG - Bot loop iteration 27
+2025-04-23 10:20:56,000 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:56,057 - PristonBot - DEBUG - Mana bar percentage: 94.2%
+2025-04-23 10:20:56,124 - PristonBot - DEBUG - Stamina bar percentage: 93.5%
+2025-04-23 10:20:56,125 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 94.2% (Thrs: 30.0%) | Stamina: 93.5% (Thrs: 40.0%)
+2025-04-23 10:20:56,126 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 94.2% (Thrs: 30.0%) | Stamina: 93.5% (Thrs: 40.0%)
+2025-04-23 10:20:56,627 - PristonBot - DEBUG - Bot loop iteration 28
+2025-04-23 10:20:56,703 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:56,758 - PristonBot - DEBUG - Mana bar percentage: 88.3%
+2025-04-23 10:20:56,836 - PristonBot - DEBUG - Stamina bar percentage: 88.2%
+2025-04-23 10:20:56,837 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 88.3% (Thrs: 30.0%) | Stamina: 88.2% (Thrs: 40.0%)
+2025-04-23 10:20:56,838 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 88.3% (Thrs: 30.0%) | Stamina: 88.2% (Thrs: 40.0%)
+2025-04-23 10:20:56,839 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:56,840 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:56,840 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:56,991 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:57,043 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:57,544 - PristonBot - DEBUG - Bot loop iteration 29
+2025-04-23 10:20:57,618 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:57,697 - PristonBot - DEBUG - Mana bar percentage: 88.3%
+2025-04-23 10:20:57,767 - PristonBot - DEBUG - Stamina bar percentage: 90.3%
+2025-04-23 10:20:57,768 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 88.3% (Thrs: 30.0%) | Stamina: 90.3% (Thrs: 40.0%)
+2025-04-23 10:20:57,769 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 88.3% (Thrs: 30.0%) | Stamina: 90.3% (Thrs: 40.0%)
+2025-04-23 10:20:58,270 - PristonBot - DEBUG - Bot loop iteration 30
+2025-04-23 10:20:58,349 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:58,420 - PristonBot - DEBUG - Mana bar percentage: 90.0%
+2025-04-23 10:20:58,476 - PristonBot - DEBUG - Stamina bar percentage: 90.3%
+2025-04-23 10:20:58,478 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 90.0% (Thrs: 30.0%) | Stamina: 90.3% (Thrs: 40.0%)
+2025-04-23 10:20:58,478 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 90.0% (Thrs: 30.0%) | Stamina: 90.3% (Thrs: 40.0%)
+2025-04-23 10:20:58,979 - PristonBot - DEBUG - Bot loop iteration 31
+2025-04-23 10:20:59,055 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:20:59,109 - PristonBot - DEBUG - Mana bar percentage: 90.0%
+2025-04-23 10:20:59,185 - PristonBot - DEBUG - Stamina bar percentage: 91.4%
+2025-04-23 10:20:59,187 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 90.0% (Thrs: 30.0%) | Stamina: 91.4% (Thrs: 40.0%)
+2025-04-23 10:20:59,187 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 90.0% (Thrs: 30.0%) | Stamina: 91.4% (Thrs: 40.0%)
+2025-04-23 10:20:59,188 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:59,189 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:59,189 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:59,341 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:59,392 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:59,893 - PristonBot - DEBUG - Bot loop iteration 32
+2025-04-23 10:20:59,966 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:21:00,029 - PristonBot - DEBUG - Mana bar percentage: 90.0%
+2025-04-23 10:21:00,096 - PristonBot - DEBUG - Stamina bar percentage: 91.4%
+2025-04-23 10:21:00,098 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 90.0% (Thrs: 30.0%) | Stamina: 91.4% (Thrs: 40.0%)
+2025-04-23 10:21:00,099 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 90.0% (Thrs: 30.0%) | Stamina: 91.4% (Thrs: 40.0%)
+2025-04-23 10:21:00,600 - PristonBot - DEBUG - Bot loop iteration 33
+2025-04-23 10:21:00,668 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:21:00,736 - PristonBot - DEBUG - Mana bar percentage: 90.8%
+2025-04-23 10:21:00,798 - PristonBot - DEBUG - Stamina bar percentage: 90.3%
+2025-04-23 10:21:00,799 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 90.8% (Thrs: 30.0%) | Stamina: 90.3% (Thrs: 40.0%)
+2025-04-23 10:21:00,800 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 90.8% (Thrs: 30.0%) | Stamina: 90.3% (Thrs: 40.0%)
+2025-04-23 10:21:01,300 - PristonBot - DEBUG - Bot loop iteration 34
+2025-04-23 10:21:01,369 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:21:01,436 - PristonBot - DEBUG - Mana bar percentage: 90.8%
+2025-04-23 10:21:01,515 - PristonBot - DEBUG - Stamina bar percentage: 90.3%
+2025-04-23 10:21:01,516 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 90.8% (Thrs: 30.0%) | Stamina: 90.3% (Thrs: 40.0%)
+2025-04-23 10:21:01,517 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 90.8% (Thrs: 30.0%) | Stamina: 90.3% (Thrs: 40.0%)
+2025-04-23 10:21:01,518 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:21:01,518 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:21:01,518 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:21:01,670 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:21:01,721 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:21:02,222 - PristonBot - DEBUG - Bot loop iteration 35
+2025-04-23 10:21:02,284 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:21:02,360 - PristonBot - DEBUG - Mana bar percentage: 91.7%
+2025-04-23 10:21:02,426 - PristonBot - DEBUG - Stamina bar percentage: 88.2%
+2025-04-23 10:21:02,428 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 91.7% (Thrs: 30.0%) | Stamina: 88.2% (Thrs: 40.0%)
+2025-04-23 10:21:02,430 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 91.7% (Thrs: 30.0%) | Stamina: 88.2% (Thrs: 40.0%)
+2025-04-23 10:21:02,946 - PristonBot - DEBUG - Bot loop iteration 36
+2025-04-23 10:21:03,025 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:21:03,097 - PristonBot - DEBUG - Mana bar percentage: 91.7%
+2025-04-23 10:21:03,162 - PristonBot - DEBUG - Stamina bar percentage: 87.1%
+2025-04-23 10:21:03,164 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 91.7% (Thrs: 30.0%) | Stamina: 87.1% (Thrs: 40.0%)
+2025-04-23 10:21:03,165 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 91.7% (Thrs: 30.0%) | Stamina: 87.1% (Thrs: 40.0%)
+2025-04-23 10:21:03,667 - PristonBot - DEBUG - Bot loop iteration 37
+2025-04-23 10:21:03,792 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:21:03,871 - PristonBot - DEBUG - Mana bar percentage: 91.7%
+2025-04-23 10:21:03,930 - PristonBot - DEBUG - Stamina bar percentage: 87.1%
+2025-04-23 10:21:03,932 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 91.7% (Thrs: 30.0%) | Stamina: 87.1% (Thrs: 40.0%)
+2025-04-23 10:21:03,932 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 91.7% (Thrs: 30.0%) | Stamina: 87.1% (Thrs: 40.0%)
+2025-04-23 10:21:03,932 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:21:03,932 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:21:03,933 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:21:04,085 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:21:04,139 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:21:04,643 - PristonBot - DEBUG - Bot loop iteration 38
+2025-04-23 10:21:04,700 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:21:04,771 - PristonBot - DEBUG - Mana bar percentage: 93.3%
+2025-04-23 10:21:04,831 - PristonBot - DEBUG - Stamina bar percentage: 86.0%
+2025-04-23 10:21:04,832 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 93.3% (Thrs: 30.0%) | Stamina: 86.0% (Thrs: 40.0%)
+2025-04-23 10:21:04,833 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 93.3% (Thrs: 30.0%) | Stamina: 86.0% (Thrs: 40.0%)
+2025-04-23 10:21:05,334 - PristonBot - DEBUG - Bot loop iteration 39
+2025-04-23 10:21:05,402 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 10:21:05,461 - PristonBot - DEBUG - Mana bar percentage: 93.3%
+2025-04-23 10:21:05,525 - PristonBot - INFO - Stopping bot...
+2025-04-23 10:21:05,530 - PristonBot - DEBUG - Stamina bar percentage: 87.1%
+2025-04-23 10:21:06,525 - PristonBot - INFO - Bot thread joined
+2025-04-23 10:21:06,529 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 93.3% (Thrs: 30.0%) | Stamina: 87.1% (Thrs: 40.0%)
+2025-04-23 10:21:06,530 - PristonBot - DEBUG - Health: 100.0% (Thrs: 50.0%) | Mana: 93.3% (Thrs: 30.0%) | Stamina: 87.1% (Thrs: 40.0%)

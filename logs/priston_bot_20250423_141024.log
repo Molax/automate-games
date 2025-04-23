@@ -1,0 +1,50 @@
+2025-04-23 14:10:24,730 - PristonBot - INFO - Logging initialized
+2025-04-23 14:10:24,731 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 14:10:24,851 - PristonBot - INFO - Icon file not found
+2025-04-23 14:10:24,852 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 14:10:24,870 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 14:10:24,872 - PristonBot - INFO - Configuration loaded from file
+2025-04-23 14:10:24,872 - PristonBot - INFO - Selection configured from saved coordinates: (261,74) to (1541,1071)
+2025-04-23 14:10:24,876 - PristonBot - INFO - Loaded game window configuration: (261,74) to (1541,1071)
+2025-04-23 14:10:24,998 - PristonBot - INFO - Created preview image for game window
+2025-04-23 14:10:25,014 - PristonBot - INFO - Game window selected: (261,74) to (1541,1071)
+2025-04-23 14:10:25,015 - PristonBot - INFO - Health Bar configured from saved coordinates: (665,945) to (675,1060)
+2025-04-23 14:10:25,015 - PristonBot - INFO - Loaded health bar configuration: (665,945) to (675,1060)
+2025-04-23 14:10:25,089 - PristonBot - INFO - Created preview image for health bar
+2025-04-23 14:10:25,090 - PristonBot - INFO - Mana Bar configured from saved coordinates: (846,944) to (858,1063)
+2025-04-23 14:10:25,091 - PristonBot - INFO - Loaded mana bar configuration: (846,944) to (858,1063)
+2025-04-23 14:10:25,161 - PristonBot - INFO - Created preview image for mana bar
+2025-04-23 14:10:25,161 - PristonBot - INFO - Stamina Bar configured from saved coordinates: (643,968) to (648,1057)
+2025-04-23 14:10:25,162 - PristonBot - INFO - Loaded stamina bar configuration: (643,968) to (648,1057)
+2025-04-23 14:10:25,224 - PristonBot - INFO - Created preview image for stamina bar
+2025-04-23 14:10:25,226 - PristonBot - INFO - Loaded 3/3 bars from saved configuration
+2025-04-23 14:10:25,226 - PristonBot - INFO - Loaded 3/3 bars from saved configuration
+2025-04-23 14:10:25,228 - PristonBot - INFO - Loaded saved configuration
+2025-04-23 14:10:25,230 - PristonBot - INFO - Health Bar selected: (665,945) to (675,1060)
+2025-04-23 14:10:25,232 - PristonBot - INFO - Mana Bar selected: (846,944) to (858,1063)
+2025-04-23 14:10:25,234 - PristonBot - INFO - Stamina Bar selected: (643,968) to (648,1057)
+2025-04-23 14:10:25,244 - PristonBot - INFO - Game window selected: (261,74) to (1541,1071)
+2025-04-23 14:10:25,247 - PristonBot - INFO - All bars configured! You can now start the bot.
+2025-04-23 14:10:25,247 - PristonBot - INFO - All bars configured, start button enabled
+2025-04-23 14:10:25,247 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 14:10:25,249 - PristonBot - INFO - Application started successfully
+2025-04-23 14:10:25,251 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 14:10:25,252 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 14:10:25,254 - PristonBot - INFO - Step 3: Configure spell casting (optional)
+2025-04-23 14:10:25,255 - PristonBot - INFO - Step 4: Click Start Bot to begin monitoring
+2025-04-23 14:10:25,741 - PristonBot - INFO - Game window selected: (261,74) to (1541,1071)
+2025-04-23 14:10:25,742 - PristonBot - INFO - Health Bar selected: (665,945) to (675,1060)
+2025-04-23 14:10:25,743 - PristonBot - INFO - Mana Bar selected: (846,944) to (858,1063)
+2025-04-23 14:10:25,744 - PristonBot - INFO - Stamina Bar selected: (643,968) to (648,1057)
+2025-04-23 14:10:25,874 - PristonBot - INFO - Health Bar selected: (665,945) to (675,1060)
+2025-04-23 14:10:25,876 - PristonBot - INFO - Mana Bar selected: (846,944) to (858,1063)
+2025-04-23 14:10:25,878 - PristonBot - INFO - Stamina Bar selected: (643,968) to (648,1057)
+2025-04-23 14:10:26,655 - PristonBot - ERROR - Unhandled exception
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\system.py", line 144, in <module>
+    main()
+  File "C:\repositories\microsoft\system.py", line 130, in main
+    root.mainloop()
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1505, in mainloop
+    self.tk.mainloop(n)
+KeyboardInterrupt

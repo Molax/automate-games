@@ -1,0 +1,279 @@
+2025-04-23 10:18:24,574 - PristonBot - INFO - Logging initialized
+2025-04-23 10:18:24,575 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 10:18:24,625 - PristonBot - INFO - Icon file not found
+2025-04-23 10:18:24,626 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 10:18:24,644 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 10:18:24,645 - PristonBot - INFO - Please select the Health, Mana, and Stamina bars to continue
+2025-04-23 10:18:24,646 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 10:18:24,647 - PristonBot - INFO - Application started successfully
+2025-04-23 10:18:24,648 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 10:18:24,649 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 10:18:24,650 - PristonBot - INFO - Step 3: Configure spell casting (optional)
+2025-04-23 10:18:24,651 - PristonBot - INFO - Step 4: Click Start Bot to begin monitoring
+2025-04-23 10:18:31,515 - PristonBot - INFO - Starting selection: Game Window
+2025-04-23 10:18:35,367 - PristonBot - INFO - Game Window selection canceled, retrying
+2025-04-23 10:18:37,321 - PristonBot - INFO - Game Window selection confirmed: (1282, 799) to (1560, 914)
+2025-04-23 10:18:37,683 - PristonBot - INFO - Game window selected: (1282,799) to (1560,914)
+2025-04-23 10:18:39,092 - PristonBot - INFO - Starting selection: Game Window
+2025-04-23 10:18:43,080 - PristonBot - INFO - Game Window selection canceled, retrying
+2025-04-23 10:18:44,440 - PristonBot - INFO - Game Window selection confirmed: (1254, 447) to (1443, 547)
+2025-04-23 10:18:45,222 - PristonBot - INFO - Game window selected: (1254,447) to (1443,547)
+2025-04-23 10:18:50,950 - PristonBot - INFO - Starting selection: Game Window
+2025-04-23 10:19:01,599 - PristonBot - INFO - Game Window selection confirmed: (253, 55) to (1532, 1076)
+2025-04-23 10:19:02,108 - PristonBot - INFO - Game window selected: (253,55) to (1532,1076)
+2025-04-23 10:19:03,180 - PristonBot - INFO - Starting selection: Health Bar
+2025-04-23 10:19:08,189 - PristonBot - INFO - Detected vertical bar
+2025-04-23 10:19:09,383 - PristonBot - INFO - Health Bar selection confirmed: (652, 950) to (664, 1070)
+2025-04-23 10:19:10,317 - PristonBot - INFO - Health Bar selected: (652,950) to (664,1070)
+2025-04-23 10:19:11,357 - PristonBot - INFO - Starting selection: Mana Bar
+2025-04-23 10:19:17,465 - PristonBot - INFO - Detected vertical bar
+2025-04-23 10:19:18,446 - PristonBot - INFO - Mana Bar selection confirmed: (839, 951) to (845, 1071)
+2025-04-23 10:19:18,518 - PristonBot - INFO - Mana Bar selected: (839,951) to (845,1071)
+2025-04-23 10:19:19,402 - PristonBot - INFO - Starting selection: Stamina Bar
+2025-04-23 10:19:23,899 - PristonBot - INFO - Detected vertical bar
+2025-04-23 10:19:24,898 - PristonBot - INFO - Stamina Bar selection confirmed: (631, 974) to (639, 1067)
+2025-04-23 10:19:25,522 - PristonBot - INFO - Stamina Bar selected: (631,974) to (639,1067)
+2025-04-23 10:19:25,879 - PristonBot - INFO - All bars configured! You can now start the bot.
+2025-04-23 10:19:25,882 - PristonBot - INFO - All bars configured, start button enabled
+2025-04-23 10:19:43,662 - PristonBot - INFO - Starting bot...
+2025-04-23 10:19:43,663 - PristonBot - INFO - Bot thread started
+2025-04-23 10:19:43,664 - PristonBot - INFO - Bot started
+2025-04-23 10:19:43,665 - PristonBot - INFO - Bot loop started
+2025-04-23 10:19:43,667 - PristonBot - INFO - Auto spellcasting enabled with key F1 at 2.0s interval
+2025-04-23 10:19:43,667 - PristonBot - INFO - Spellcasting enabled: Key=F1, Interval=2.0s
+2025-04-23 10:19:43,881 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:43,881 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:19:43,881 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:19:43,881 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:19:44,034 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:19:44,094 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:19:44,854 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:45,570 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:46,342 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:46,344 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:19:46,345 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:19:46,345 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:19:46,496 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:19:46,562 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:19:47,318 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:48,027 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:48,730 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:48,733 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:19:48,734 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:19:48,734 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:19:48,885 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:19:48,972 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:19:49,681 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:50,388 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:51,092 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:51,095 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:19:51,096 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:19:51,096 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:19:51,248 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:19:51,315 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:19:52,017 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:52,732 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:53,452 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:53,454 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:19:53,454 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:19:53,454 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:19:53,605 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:19:53,675 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:19:54,370 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:55,067 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:55,767 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:55,769 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:19:55,770 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:19:55,770 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:19:55,922 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:19:55,982 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:19:56,690 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:57,386 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:58,088 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:58,089 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:19:58,091 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:19:58,091 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:19:58,242 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:19:58,300 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:19:59,049 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:19:59,752 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:00,473 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:00,475 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:00,475 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:00,476 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:00,627 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:00,684 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:01,385 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:02,113 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:02,856 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:02,859 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:02,859 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:02,859 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:03,010 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:03,069 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:03,786 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:04,488 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:05,209 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:05,210 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:05,211 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:05,211 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:05,363 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:05,414 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:06,127 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:06,835 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 93.3% (Thrs: 30.0%) | Stamina: 93.5% (Thrs: 40.0%)
+2025-04-23 10:20:07,540 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 94.2% (Thrs: 30.0%) | Stamina: 94.6% (Thrs: 40.0%)
+2025-04-23 10:20:07,540 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:07,541 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:07,541 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:07,693 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:07,744 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:08,457 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 95.0% (Thrs: 30.0%) | Stamina: 94.6% (Thrs: 40.0%)
+2025-04-23 10:20:09,158 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 95.0% (Thrs: 30.0%) | Stamina: 96.8% (Thrs: 40.0%)
+2025-04-23 10:20:09,864 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 95.8% (Thrs: 30.0%) | Stamina: 97.8% (Thrs: 40.0%)
+2025-04-23 10:20:09,865 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:09,867 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:09,868 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:10,020 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:10,090 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:10,810 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 95.8% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:11,512 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 95.8% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:12,235 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 96.7% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:12,237 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:12,237 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:12,237 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:12,388 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:12,439 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:13,200 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 96.7% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:13,912 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 98.3% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:14,632 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 98.3% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:14,632 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:14,633 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:14,634 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:14,787 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:14,857 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:15,567 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 98.3% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:16,304 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:17,053 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:17,056 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:17,058 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:17,058 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:17,210 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:17,275 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:17,983 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:18,681 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:19,167 - PristonBot - INFO - Stopping bot...
+2025-04-23 10:20:20,172 - PristonBot - INFO - Bot thread joined
+2025-04-23 10:20:20,175 - PristonBot - INFO - Bot stopped
+2025-04-23 10:20:20,183 - PristonBot - INFO - Bot loop stopped
+2025-04-23 10:20:35,319 - PristonBot - INFO - Starting bot...
+2025-04-23 10:20:35,320 - PristonBot - INFO - Bot thread started
+2025-04-23 10:20:35,320 - PristonBot - INFO - Bot started
+2025-04-23 10:20:35,322 - PristonBot - INFO - Bot loop started
+2025-04-23 10:20:35,325 - PristonBot - INFO - Auto spellcasting enabled with key F1 at 2.0s interval
+2025-04-23 10:20:35,325 - PristonBot - INFO - Spellcasting enabled: Key=F1, Interval=2.0s
+2025-04-23 10:20:35,516 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:35,517 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:35,518 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:35,518 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:35,671 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:35,735 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:36,440 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:37,161 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:37,855 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:37,858 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:37,862 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:37,863 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:38,016 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:38,087 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:38,788 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:39,513 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:40,255 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:40,256 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:40,256 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:40,256 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:40,408 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:40,488 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:41,211 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:41,945 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:42,654 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:42,656 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:42,656 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:42,656 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:42,807 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:42,858 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:43,613 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:44,338 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:45,062 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:45,064 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:45,065 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:45,066 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:45,219 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:45,270 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:45,973 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:46,696 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:47,410 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:47,410 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:47,410 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:47,410 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:47,562 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:47,623 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:48,325 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:49,091 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:49,797 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:49,798 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:49,798 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:49,799 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:49,950 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:50,009 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:50,709 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:51,414 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:52,136 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:52,140 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:52,140 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:52,140 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:52,291 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:52,343 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:53,109 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:53,818 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:54,490 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:20:54,491 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:54,492 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:54,492 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:54,644 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:54,695 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:55,427 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 94.2% (Thrs: 30.0%) | Stamina: 93.5% (Thrs: 40.0%)
+2025-04-23 10:20:56,125 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 94.2% (Thrs: 30.0%) | Stamina: 93.5% (Thrs: 40.0%)
+2025-04-23 10:20:56,837 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 88.3% (Thrs: 30.0%) | Stamina: 88.2% (Thrs: 40.0%)
+2025-04-23 10:20:56,839 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:56,840 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:56,840 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:56,991 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:57,043 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:20:57,768 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 88.3% (Thrs: 30.0%) | Stamina: 90.3% (Thrs: 40.0%)
+2025-04-23 10:20:58,478 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 90.0% (Thrs: 30.0%) | Stamina: 90.3% (Thrs: 40.0%)
+2025-04-23 10:20:59,187 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 90.0% (Thrs: 30.0%) | Stamina: 91.4% (Thrs: 40.0%)
+2025-04-23 10:20:59,188 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:20:59,189 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:20:59,189 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:20:59,341 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:20:59,392 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:21:00,098 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 90.0% (Thrs: 30.0%) | Stamina: 91.4% (Thrs: 40.0%)
+2025-04-23 10:21:00,799 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 90.8% (Thrs: 30.0%) | Stamina: 90.3% (Thrs: 40.0%)
+2025-04-23 10:21:01,516 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 90.8% (Thrs: 30.0%) | Stamina: 90.3% (Thrs: 40.0%)
+2025-04-23 10:21:01,518 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:21:01,518 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:21:01,518 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:21:01,670 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:21:01,721 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:21:02,428 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 91.7% (Thrs: 30.0%) | Stamina: 88.2% (Thrs: 40.0%)
+2025-04-23 10:21:03,164 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 91.7% (Thrs: 30.0%) | Stamina: 87.1% (Thrs: 40.0%)
+2025-04-23 10:21:03,932 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 91.7% (Thrs: 30.0%) | Stamina: 87.1% (Thrs: 40.0%)
+2025-04-23 10:21:03,932 - PristonBot - INFO - Casting spell (F1)
+2025-04-23 10:21:03,932 - PristonBot - INFO - Casting spell with key F1
+2025-04-23 10:21:03,933 - PristonBot - INFO - Sending key 'F1' (VK: 112) using SendInput
+2025-04-23 10:21:04,085 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:21:04,139 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:21:04,832 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 93.3% (Thrs: 30.0%) | Stamina: 86.0% (Thrs: 40.0%)
+2025-04-23 10:21:05,525 - PristonBot - INFO - Stopping bot...
+2025-04-23 10:21:06,525 - PristonBot - INFO - Bot thread joined
+2025-04-23 10:21:06,529 - PristonBot - INFO - Health: 100.0% (Thrs: 50.0%) | Mana: 93.3% (Thrs: 30.0%) | Stamina: 87.1% (Thrs: 40.0%)

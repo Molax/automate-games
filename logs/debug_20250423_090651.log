@@ -1,0 +1,71 @@
+2025-04-23 09:06:51,046 - PristonBot - INFO - Logging initialized
+2025-04-23 09:06:51,047 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 09:06:51,099 - PristonBot - INFO - Icon file not found
+2025-04-23 09:06:51,099 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 09:06:51,103 - PristonBot - INFO - Initialized Health bar selector
+2025-04-23 09:06:51,103 - PristonBot - INFO - Initialized Mana bar selector
+2025-04-23 09:06:51,103 - PristonBot - INFO - Initialized Stamina bar selector
+2025-04-23 09:06:51,115 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 09:06:51,117 - PristonBot - INFO - Please select the Health, Mana, and Stamina bars to continue
+2025-04-23 09:06:51,117 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 09:06:51,118 - PristonBot - INFO - Application started successfully
+2025-04-23 09:06:51,120 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 09:06:51,121 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 09:06:51,122 - PristonBot - INFO - Step 3: Click Start Bot to begin monitoring
+2025-04-23 09:06:57,019 - PristonBot - INFO - Starting Health bar selection
+2025-04-23 09:06:57,020 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:06:58,359 - PristonBot - DEBUG - Started Health bar selection at (481, 763)
+2025-04-23 09:06:59,756 - PristonBot - DEBUG - Completed Health bar selection to (497, 863)
+2025-04-23 09:06:59,837 - PristonBot - DEBUG - Captured preview image for Health bar: 16x100
+2025-04-23 09:07:00,993 - PristonBot - INFO - Health bar selection confirmed: (481, 763) to (497, 863)
+2025-04-23 09:07:01,224 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:02,241 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:03,207 - PristonBot - INFO - Starting Mana bar selection
+2025-04-23 09:07:03,208 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:07:03,350 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:04,350 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:04,353 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:04,940 - PristonBot - DEBUG - Started Mana bar selection at (587, 745)
+2025-04-23 09:07:05,356 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:05,541 - PristonBot - DEBUG - Completed Mana bar selection to (699, 863)
+2025-04-23 09:07:05,621 - PristonBot - DEBUG - Captured preview image for Mana bar: 112x118
+2025-04-23 09:07:06,367 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:06,776 - PristonBot - INFO - Mana bar selection confirmed: (587, 745) to (699, 863)
+2025-04-23 09:07:07,371 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:07,374 - PristonBot - INFO - Mana bar at screen coords: (587,745) to (699,863)
+2025-04-23 09:07:08,379 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:08,382 - PristonBot - INFO - Mana bar at screen coords: (587,745) to (699,863)
+2025-04-23 09:07:09,389 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:09,393 - PristonBot - INFO - Mana bar at screen coords: (587,745) to (699,863)
+2025-04-23 09:07:09,955 - PristonBot - INFO - Starting Stamina bar selection
+2025-04-23 09:07:09,956 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:07:10,396 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:10,398 - PristonBot - INFO - Mana bar at screen coords: (587,745) to (699,863)
+2025-04-23 09:07:11,113 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:11,115 - PristonBot - INFO - Mana bar at screen coords: (587,745) to (699,863)
+2025-04-23 09:07:11,405 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:11,408 - PristonBot - INFO - Mana bar at screen coords: (587,745) to (699,863)
+2025-04-23 09:07:11,960 - PristonBot - DEBUG - Started Stamina bar selection at (465, 782)
+2025-04-23 09:07:12,414 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:12,419 - PristonBot - INFO - Mana bar at screen coords: (587,745) to (699,863)
+2025-04-23 09:07:13,429 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:13,435 - PristonBot - INFO - Mana bar at screen coords: (587,745) to (699,863)
+2025-04-23 09:07:13,529 - PristonBot - DEBUG - Completed Stamina bar selection to (476, 868)
+2025-04-23 09:07:13,604 - PristonBot - DEBUG - Captured preview image for Stamina bar: 11x86
+2025-04-23 09:07:14,440 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:14,443 - PristonBot - INFO - Mana bar at screen coords: (587,745) to (699,863)
+2025-04-23 09:07:14,840 - PristonBot - INFO - Stamina bar selection confirmed: (465, 782) to (476, 868)
+2025-04-23 09:07:15,458 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:15,462 - PristonBot - INFO - Mana bar at screen coords: (587,745) to (699,863)
+2025-04-23 09:07:15,464 - PristonBot - INFO - Stamina bar at screen coords: (465,782) to (476,868)
+2025-04-23 09:07:15,466 - PristonBot - INFO - All bars configured! You can now start the bot.
+2025-04-23 09:07:15,466 - PristonBot - INFO - All bars configured, start button enabled
+2025-04-23 09:07:16,476 - PristonBot - INFO - Starting Mana bar selection
+2025-04-23 09:07:16,477 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:07:17,636 - PristonBot - INFO - Health bar at screen coords: (481,763) to (497,863)
+2025-04-23 09:07:17,639 - PristonBot - INFO - Mana bar at screen coords: (587,745) to (699,863)
+2025-04-23 09:07:17,642 - PristonBot - INFO - Stamina bar at screen coords: (465,782) to (476,868)
+2025-04-23 09:07:18,242 - PristonBot - DEBUG - Started Mana bar selection at (627, 765)
+2025-04-23 09:07:19,559 - PristonBot - DEBUG - Completed Mana bar selection to (644, 864)
+2025-04-23 09:07:19,631 - PristonBot - DEBUG - Captured preview image for Mana bar: 17x99
+2025-04-23 09:07:20,701 - PristonBot - INFO - Mana bar selection confirmed: (627, 765) to (644, 864)

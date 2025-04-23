@@ -1,0 +1,52 @@
+2025-04-23 09:31:24,974 - PristonBot - INFO - Logging initialized
+2025-04-23 09:31:24,975 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 09:31:25,034 - PristonBot - INFO - Icon file not found
+2025-04-23 09:31:25,035 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 09:31:25,057 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 09:31:25,059 - PristonBot - INFO - Please select the Health, Mana, and Stamina bars to continue
+2025-04-23 09:31:25,059 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 09:31:25,060 - PristonBot - INFO - Application started successfully
+2025-04-23 09:31:25,066 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 09:31:25,068 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 09:31:25,070 - PristonBot - INFO - Step 3: Click Start Bot to begin monitoring
+2025-04-23 09:31:29,612 - PristonBot - INFO - Starting selection: Game Window
+2025-04-23 09:31:29,614 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:31:35,071 - PristonBot - DEBUG - Started selection at (435, 106)
+2025-04-23 09:31:38,279 - PristonBot - DEBUG - Completed selection to (1714, 1101)
+2025-04-23 09:31:38,282 - PristonBot - DEBUG - Captured preview image: 1279x995
+2025-04-23 09:31:39,632 - PristonBot - INFO - Game Window selection confirmed: (435, 106) to (1714, 1101)
+2025-04-23 09:31:39,832 - PristonBot - INFO - Game window selected: (435,106) to (1714,1101)
+2025-04-23 09:31:48,874 - PristonBot - INFO - Starting selection: Health Bar
+2025-04-23 09:31:48,875 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:31:50,543 - PristonBot - DEBUG - Started selection at (1677, 471)
+2025-04-23 09:31:50,747 - PristonBot - DEBUG - Completed selection to (1708, 548)
+2025-04-23 09:31:50,748 - PristonBot - DEBUG - Captured preview image: 31x77
+2025-04-23 09:31:50,749 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:31:52,337 - PristonBot - INFO - Health Bar selection confirmed: (1677, 471) to (1708, 548)
+2025-04-23 09:31:53,004 - PristonBot - INFO - Health Bar selected: (1677,471) to (1708,548)
+2025-04-23 09:31:59,117 - PristonBot - INFO - Starting selection: Health Bar
+2025-04-23 09:31:59,118 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:32:00,238 - PristonBot - INFO - Health Bar selected: (1677,471) to (1708,548)
+2025-04-23 09:32:03,941 - PristonBot - DEBUG - Started selection at (834, 966)
+2025-04-23 09:32:05,582 - PristonBot - DEBUG - Completed selection to (854, 1093)
+2025-04-23 09:32:05,583 - PristonBot - DEBUG - Captured preview image: 20x127
+2025-04-23 09:32:05,584 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:32:06,854 - PristonBot - INFO - Health Bar selection confirmed: (834, 966) to (854, 1093)
+2025-04-23 09:32:08,105 - PristonBot - INFO - Starting selection: Mana Bar
+2025-04-23 09:32:08,106 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:32:09,809 - PristonBot - DEBUG - Started selection at (1015, 970)
+2025-04-23 09:32:11,536 - PristonBot - DEBUG - Completed selection to (1039, 1094)
+2025-04-23 09:32:11,537 - PristonBot - DEBUG - Captured preview image: 24x124
+2025-04-23 09:32:11,538 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:32:12,592 - PristonBot - INFO - Mana Bar selection confirmed: (1015, 970) to (1039, 1094)
+2025-04-23 09:32:13,223 - PristonBot - INFO - Mana Bar selected: (1015,970) to (1039,1094)
+2025-04-23 09:32:14,045 - PristonBot - INFO - Starting selection: Stamina Bar
+2025-04-23 09:32:14,046 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:32:15,953 - PristonBot - DEBUG - Started selection at (812, 990)
+2025-04-23 09:32:17,167 - PristonBot - DEBUG - Completed selection to (829, 1091)
+2025-04-23 09:32:17,168 - PristonBot - DEBUG - Captured preview image: 17x101
+2025-04-23 09:32:17,169 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:32:18,158 - PristonBot - INFO - Stamina Bar selection confirmed: (812, 990) to (829, 1091)
+2025-04-23 09:32:18,174 - PristonBot - INFO - Stamina Bar selected: (812,990) to (829,1091)
+2025-04-23 09:32:18,310 - PristonBot - INFO - All bars configured! You can now start the bot.
+2025-04-23 09:32:18,311 - PristonBot - INFO - All bars configured, start button enabled

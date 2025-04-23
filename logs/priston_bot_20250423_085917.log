@@ -1,0 +1,37 @@
+2025-04-23 08:59:17,335 - PristonBot - INFO - Logging initialized
+2025-04-23 08:59:17,335 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 08:59:17,385 - PristonBot - INFO - Icon file not found
+2025-04-23 08:59:17,385 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 08:59:17,389 - PristonBot - INFO - Initialized Health bar selector
+2025-04-23 08:59:17,389 - PristonBot - INFO - Initialized Mana bar selector
+2025-04-23 08:59:17,389 - PristonBot - INFO - Initialized Stamina bar selector
+2025-04-23 08:59:17,402 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 08:59:17,404 - PristonBot - INFO - Please select the Health, Mana, and Stamina bars to continue
+2025-04-23 08:59:17,404 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 08:59:17,405 - PristonBot - INFO - Application started successfully
+2025-04-23 08:59:17,407 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 08:59:17,408 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 08:59:17,409 - PristonBot - INFO - Step 3: Click Start Bot to begin monitoring
+2025-04-23 08:59:22,423 - PristonBot - INFO - Starting Health bar selection
+2025-04-23 08:59:28,437 - PristonBot - INFO - Health bar selection confirmed: (482, 765) to (499, 863)
+2025-04-23 08:59:30,186 - PristonBot - INFO - Starting Mana bar selection
+2025-04-23 08:59:31,348 - PristonBot - INFO - Health bar at screen coords: (482,765) to (499,863)
+2025-04-23 08:59:41,589 - PristonBot - INFO - Mana bar selection confirmed: (625, 764) to (648, 862)
+2025-04-23 08:59:43,592 - PristonBot - INFO - Starting Stamina bar selection
+2025-04-23 08:59:44,756 - PristonBot - INFO - Health bar at screen coords: (482,765) to (499,863)
+2025-04-23 08:59:44,762 - PristonBot - INFO - Mana bar at screen coords: (625,764) to (648,862)
+2025-04-23 08:59:52,473 - PristonBot - INFO - Stamina bar selection confirmed: (463, 778) to (481, 862)
+2025-04-23 08:59:52,598 - PristonBot - INFO - All bars configured! You can now start the bot.
+2025-04-23 08:59:52,598 - PristonBot - INFO - All bars configured, start button enabled
+2025-04-23 08:59:52,602 - PristonBot - INFO - Health bar at screen coords: (482,765) to (499,863)
+2025-04-23 08:59:52,605 - PristonBot - INFO - Mana bar at screen coords: (625,764) to (648,862)
+2025-04-23 08:59:52,607 - PristonBot - INFO - Stamina bar at screen coords: (463,778) to (481,862)
+2025-04-23 09:06:31,759 - PristonBot - ERROR - Unhandled exception
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\system.py", line 143, in <module>
+    main()
+  File "C:\repositories\microsoft\system.py", line 129, in main
+    root.mainloop()
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1505, in mainloop
+    self.tk.mainloop(n)
+KeyboardInterrupt

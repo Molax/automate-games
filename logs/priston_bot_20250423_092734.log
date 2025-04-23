@@ -1,0 +1,72 @@
+2025-04-23 09:27:34,500 - PristonBot - INFO - Logging initialized
+2025-04-23 09:27:34,500 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 09:27:34,548 - PristonBot - INFO - Icon file not found
+2025-04-23 09:27:34,548 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 09:27:34,566 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 09:27:34,567 - PristonBot - INFO - Step 1: Select the game window by clicking 'Select Game Window'
+2025-04-23 09:27:34,567 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 09:27:34,568 - PristonBot - INFO - Application started successfully
+2025-04-23 09:27:34,572 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 09:27:34,573 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 09:27:34,574 - PristonBot - INFO - Step 3: Click Start Bot to begin monitoring
+2025-04-23 09:27:41,646 - PristonBot - INFO - Starting game window selection
+2025-04-23 09:27:51,011 - PristonBot - WARNING - User made a small selection for game window: 0x0 pixels
+2025-04-23 09:27:51,101 - PristonBot - ERROR - Error creating preview image: tile cannot extend outside image
+Traceback (most recent call last):
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 554, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\app\bar_selector.py", line 161, in on_release
+    preview.save(f"{debug_dir}/game_window_preview.png")
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\PngImagePlugin.py", line 1488, in _save
+    ImageFile._save(
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 558, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 576, in _encode_tile
+    encoder.setimage(im.im, extents)
+SystemError: tile cannot extend outside image
+2025-04-23 09:27:51,978 - PristonBot - INFO - Game window selection canceled, retrying
+2025-04-23 09:27:53,598 - PristonBot - INFO - Game window selection canceled by user (ESC key)
+2025-04-23 09:27:54,377 - PristonBot - WARNING - User made a small selection for game window: 0x1 pixels
+2025-04-23 09:27:54,459 - PristonBot - ERROR - Error creating preview image: tile cannot extend outside image
+Traceback (most recent call last):
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 554, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\app\bar_selector.py", line 161, in on_release
+    preview.save(f"{debug_dir}/game_window_preview.png")
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\PngImagePlugin.py", line 1488, in _save
+    ImageFile._save(
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 558, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 576, in _encode_tile
+    encoder.setimage(im.im, extents)
+SystemError: tile cannot extend outside image
+2025-04-23 09:27:55,959 - PristonBot - INFO - Game window selection confirmed: (1459, 468) to (1459, 468)
+2025-04-23 09:27:56,891 - PristonBot - INFO - Game window selected successfully!
+2025-04-23 09:27:56,896 - PristonBot - INFO - Initialized Health bar selector
+2025-04-23 09:27:56,897 - PristonBot - INFO - Initialized Mana bar selector
+2025-04-23 09:27:56,897 - PristonBot - INFO - Initialized Stamina bar selector
+2025-04-23 09:29:26,443 - PristonBot - ERROR - Unhandled exception
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\system.py", line 143, in <module>
+    main()
+  File "C:\repositories\microsoft\system.py", line 129, in main
+    root.mainloop()
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1505, in mainloop
+    self.tk.mainloop(n)
+KeyboardInterrupt

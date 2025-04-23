@@ -1,0 +1,586 @@
+2025-04-23 08:49:00,947 - PristonBot - INFO - Logging initialized
+2025-04-23 08:49:00,948 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 08:49:01,002 - PristonBot - INFO - Icon file not found
+2025-04-23 08:49:01,002 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 08:49:01,008 - PristonBot - INFO - Initialized Health bar selector
+2025-04-23 08:49:01,008 - PristonBot - INFO - Initialized Mana bar selector
+2025-04-23 08:49:01,009 - PristonBot - INFO - Initialized Stamina bar selector
+2025-04-23 08:49:01,020 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 08:49:01,024 - PristonBot - INFO - Please select the Health, Mana, and Stamina bars to continue
+2025-04-23 08:49:01,025 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 08:49:01,026 - PristonBot - INFO - Application started successfully
+2025-04-23 08:49:01,028 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 08:49:01,029 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 08:49:01,031 - PristonBot - INFO - Step 3: Click Start Bot to begin monitoring
+2025-04-23 08:49:07,963 - PristonBot - INFO - Starting Health bar selection
+2025-04-23 08:49:07,964 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 08:49:09,653 - PristonBot - DEBUG - Started Health bar selection at (482, 768)
+2025-04-23 08:49:15,053 - PristonBot - DEBUG - Completed Health bar selection to (498, 860)
+2025-04-23 08:49:16,654 - PristonBot - INFO - Health bar selection confirmed: (482, 768) to (498, 860)
+2025-04-23 08:49:18,108 - PristonBot - INFO - Starting Mana bar selection
+2025-04-23 08:49:18,109 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 08:49:21,312 - PristonBot - DEBUG - Started Mana bar selection at (465, 783)
+2025-04-23 08:49:23,266 - PristonBot - DEBUG - Completed Mana bar selection to (477, 863)
+2025-04-23 08:49:24,452 - PristonBot - INFO - Mana bar selection confirmed: (465, 783) to (477, 863)
+2025-04-23 08:49:25,370 - PristonBot - INFO - Starting Stamina bar selection
+2025-04-23 08:49:25,371 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 08:49:28,086 - PristonBot - DEBUG - Started Stamina bar selection at (626, 762)
+2025-04-23 08:49:31,775 - PristonBot - DEBUG - Completed Stamina bar selection to (646, 863)
+2025-04-23 08:49:32,856 - PristonBot - INFO - Stamina bar selection confirmed: (626, 762) to (646, 863)
+2025-04-23 08:49:33,346 - PristonBot - INFO - All bars configured! You can now start the bot.
+2025-04-23 08:49:33,347 - PristonBot - INFO - All bars configured, start button enabled
+2025-04-23 08:49:38,312 - PristonBot - INFO - Starting bot...
+2025-04-23 08:49:38,312 - PristonBot - INFO - Bot thread started
+2025-04-23 08:49:38,314 - PristonBot - INFO - Bot started
+2025-04-23 08:49:38,314 - PristonBot - INFO - Bot loop started
+2025-04-23 08:49:38,315 - PristonBot - DEBUG - Bot loop iteration 1
+2025-04-23 08:49:38,316 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:49:38,316 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:49:38,317 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:49:38,317 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:49:38,318 - PristonBot - DEBUG - Current foreground: Priston Tale Potion Bot, need to focus Priston Tale
+2025-04-23 08:49:38,318 - PristonBot - DEBUG - Attempting to focus game window using SetForegroundWindow
+2025-04-23 08:49:38,519 - PristonBot - INFO - Window focus successful
+2025-04-23 08:49:38,521 - PristonBot - INFO - Game window: 1040x807 at (155, 69)
+2025-04-23 08:49:38,521 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:49:38,659 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:49:38,664 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_084938.png
+2025-04-23 08:49:38,664 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:49:38,665 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_084938.png
+2025-04-23 08:49:38,665 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:49:38,669 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:49:38,672 - PristonBot - INFO - Health low (0.0%), using health potion (key 1)
+2025-04-23 08:49:38,672 - PristonBot - INFO - Using health potion - HP: 0.0% < 50.0%
+2025-04-23 08:49:38,672 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:49:38,724 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:49:38,724 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_084938.png
+2025-04-23 08:49:38,724 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:49:38,725 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_084938.png
+2025-04-23 08:49:38,725 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:49:38,726 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:49:38,730 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:49:38,731 - PristonBot - INFO - Using mana potion - MP: 0.0% < 30.0%
+2025-04-23 08:49:38,731 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:49:38,782 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:49:38,784 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_084938.png
+2025-04-23 08:49:38,784 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:49:38,785 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_084938.png
+2025-04-23 08:49:38,785 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:49:38,789 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:49:38,792 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:49:38,794 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 08:49:38,794 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:49:39,345 - PristonBot - DEBUG - Bot loop iteration 2
+2025-04-23 08:49:39,345 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:49:39,346 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:49:39,346 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:49:39,347 - PristonBot - DEBUG - Window already in foreground
+2025-04-23 08:49:39,347 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:49:39,428 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:49:39,429 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_084939.png
+2025-04-23 08:49:39,429 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:49:39,429 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_084939.png
+2025-04-23 08:49:39,429 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:49:39,431 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:49:39,431 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:49:39,432 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_084939.png
+2025-04-23 08:49:39,432 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:49:39,433 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_084939.png
+2025-04-23 08:49:39,433 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:49:39,435 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:49:39,435 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:49:39,436 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_084939.png
+2025-04-23 08:49:39,436 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:49:39,437 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_084939.png
+2025-04-23 08:49:39,437 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:49:39,438 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:49:39,939 - PristonBot - DEBUG - Bot loop iteration 3
+2025-04-23 08:49:39,939 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:49:39,939 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:49:39,940 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:49:39,941 - PristonBot - DEBUG - Window already in foreground
+2025-04-23 08:49:39,941 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:49:40,020 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:49:40,021 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_084940.png
+2025-04-23 08:49:40,021 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:49:40,021 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_084940.png
+2025-04-23 08:49:40,021 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:49:40,023 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:49:40,023 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:49:40,023 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_084940.png
+2025-04-23 08:49:40,024 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:49:40,024 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_084940.png
+2025-04-23 08:49:40,024 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:49:40,025 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:49:40,026 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:49:40,026 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_084940.png
+2025-04-23 08:49:40,027 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:49:40,027 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_084940.png
+2025-04-23 08:49:40,027 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:49:40,029 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:49:40,530 - PristonBot - DEBUG - Bot loop iteration 4
+2025-04-23 08:49:40,530 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:49:40,531 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:49:40,531 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:49:40,531 - PristonBot - DEBUG - Window already in foreground
+2025-04-23 08:49:40,531 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:49:40,601 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:49:40,602 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_084940.png
+2025-04-23 08:49:40,602 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:49:40,602 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_084940.png
+2025-04-23 08:49:40,602 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:49:40,605 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:49:40,605 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:49:40,605 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_084940.png
+2025-04-23 08:49:40,606 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:49:40,606 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_084940.png
+2025-04-23 08:49:40,606 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:49:40,607 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:49:40,608 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:49:40,608 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_084940.png
+2025-04-23 08:49:40,608 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:49:40,609 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_084940.png
+2025-04-23 08:49:40,609 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:49:40,610 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:49:41,111 - PristonBot - DEBUG - Bot loop iteration 5
+2025-04-23 08:49:41,111 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:49:41,111 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:49:41,111 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:49:41,112 - PristonBot - DEBUG - Window already in foreground
+2025-04-23 08:49:41,112 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:49:41,184 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:49:41,184 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_084941.png
+2025-04-23 08:49:41,185 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:49:41,185 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_084941.png
+2025-04-23 08:49:41,185 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:49:41,187 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:49:41,187 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:49:41,187 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_084941.png
+2025-04-23 08:49:41,188 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:49:41,188 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_084941.png
+2025-04-23 08:49:41,188 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:49:41,190 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:49:41,190 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:49:41,191 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_084941.png
+2025-04-23 08:49:41,191 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:49:41,191 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_084941.png
+2025-04-23 08:49:41,192 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:49:41,193 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:49:41,694 - PristonBot - DEBUG - Bot loop iteration 6
+2025-04-23 08:49:41,694 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:49:41,695 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:49:41,695 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:49:41,696 - PristonBot - DEBUG - Window already in foreground
+2025-04-23 08:49:41,696 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:49:41,772 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:49:41,772 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_084941.png
+2025-04-23 08:49:41,774 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:49:41,774 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_084941.png
+2025-04-23 08:49:41,774 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:49:41,776 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:49:41,778 - PristonBot - INFO - Health low (0.0%), using health potion (key 1)
+2025-04-23 08:49:41,779 - PristonBot - INFO - Using health potion - HP: 0.0% < 50.0%
+2025-04-23 08:49:41,779 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:49:41,829 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:49:41,830 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_084941.png
+2025-04-23 08:49:41,830 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:49:41,830 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_084941.png
+2025-04-23 08:49:41,830 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:49:41,832 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:49:41,833 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:49:41,833 - PristonBot - INFO - Using mana potion - MP: 0.0% < 30.0%
+2025-04-23 08:49:41,833 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:49:41,884 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:49:41,885 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_084941.png
+2025-04-23 08:49:41,885 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:49:41,885 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_084941.png
+2025-04-23 08:49:41,886 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:49:41,887 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:49:41,890 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:49:41,890 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 08:49:41,891 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:49:42,442 - PristonBot - DEBUG - Bot loop iteration 7
+2025-04-23 08:49:42,442 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:49:42,442 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:49:42,444 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:49:42,445 - PristonBot - DEBUG - Window already in foreground
+2025-04-23 08:49:42,445 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:49:42,522 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:49:42,523 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_084942.png
+2025-04-23 08:49:42,524 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:49:42,524 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_084942.png
+2025-04-23 08:49:42,524 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:49:42,526 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:49:42,526 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:49:42,527 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_084942.png
+2025-04-23 08:49:42,527 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:49:42,528 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_084942.png
+2025-04-23 08:49:42,528 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:49:42,530 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:49:42,530 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:49:42,531 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_084942.png
+2025-04-23 08:49:42,531 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:49:42,532 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_084942.png
+2025-04-23 08:49:42,532 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:49:42,533 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:49:43,034 - PristonBot - DEBUG - Bot loop iteration 8
+2025-04-23 08:49:43,034 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:49:43,035 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:49:43,036 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:49:43,037 - PristonBot - DEBUG - Window already in foreground
+2025-04-23 08:49:43,037 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:49:43,108 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:49:43,109 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_084943.png
+2025-04-23 08:49:43,109 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:49:43,109 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_084943.png
+2025-04-23 08:49:43,109 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:49:43,111 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:49:43,111 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:49:43,114 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_084943.png
+2025-04-23 08:49:43,115 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:49:43,115 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_084943.png
+2025-04-23 08:49:43,115 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:49:43,117 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:49:43,117 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:49:43,118 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_084943.png
+2025-04-23 08:49:43,118 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:49:43,118 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_084943.png
+2025-04-23 08:49:43,118 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:49:43,120 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:49:43,621 - PristonBot - DEBUG - Bot loop iteration 9
+2025-04-23 08:49:43,621 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:49:43,622 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:49:43,623 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:49:43,624 - PristonBot - DEBUG - Window already in foreground
+2025-04-23 08:49:43,625 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:49:43,713 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:49:43,714 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_084943.png
+2025-04-23 08:49:43,714 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:49:43,715 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_084943.png
+2025-04-23 08:49:43,715 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:49:43,716 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:49:43,717 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:49:43,717 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_084943.png
+2025-04-23 08:49:43,717 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:49:43,718 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_084943.png
+2025-04-23 08:49:43,718 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:49:43,719 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:49:43,720 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:49:43,720 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_084943.png
+2025-04-23 08:49:43,720 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:49:43,721 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_084943.png
+2025-04-23 08:49:43,721 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:49:43,722 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:49:44,223 - PristonBot - DEBUG - Bot loop iteration 10
+2025-04-23 08:49:44,223 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:49:44,223 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:49:44,223 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:49:44,223 - PristonBot - DEBUG - Window already in foreground
+2025-04-23 08:49:44,223 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:49:44,300 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:49:44,301 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_084944.png
+2025-04-23 08:49:44,301 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:49:44,302 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_084944.png
+2025-04-23 08:49:44,302 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:49:44,303 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:49:44,303 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:49:44,304 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_084944.png
+2025-04-23 08:49:44,304 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:49:44,304 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_084944.png
+2025-04-23 08:49:44,304 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:49:44,306 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:49:44,306 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:49:44,306 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_084944.png
+2025-04-23 08:49:44,306 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:49:44,307 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_084944.png
+2025-04-23 08:49:44,307 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:49:44,310 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:49:44,811 - PristonBot - DEBUG - Bot loop iteration 11
+2025-04-23 08:49:44,814 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:49:44,814 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:49:44,815 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:49:44,815 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:49:44,816 - PristonBot - DEBUG - Window already in foreground
+2025-04-23 08:49:44,818 - PristonBot - INFO - Game window: 1040x807 at (155, 69)
+2025-04-23 08:49:44,819 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:49:44,898 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:49:44,898 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_084944.png
+2025-04-23 08:49:44,899 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:49:44,899 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_084944.png
+2025-04-23 08:49:44,899 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:49:44,901 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:49:44,902 - PristonBot - INFO - Health low (0.0%), using health potion (key 1)
+2025-04-23 08:49:44,902 - PristonBot - INFO - Using health potion - HP: 0.0% < 50.0%
+2025-04-23 08:49:44,902 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:49:44,953 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:49:44,954 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_084944.png
+2025-04-23 08:49:44,955 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:49:44,956 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_084944.png
+2025-04-23 08:49:44,958 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:49:44,962 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:49:44,966 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:49:44,966 - PristonBot - INFO - Using mana potion - MP: 0.0% < 30.0%
+2025-04-23 08:49:44,967 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:49:45,018 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:49:45,019 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_084945.png
+2025-04-23 08:49:45,019 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:49:45,020 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_084945.png
+2025-04-23 08:49:45,021 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:49:45,025 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:49:45,029 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:49:45,030 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 08:49:45,030 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:49:45,380 - PristonBot - INFO - Stopping bot...
+2025-04-23 08:49:46,382 - PristonBot - INFO - Bot thread joined
+2025-04-23 08:49:46,385 - PristonBot - INFO - Bot stopped
+2025-04-23 08:49:46,387 - PristonBot - INFO - Bot loop stopped
+2025-04-23 08:50:33,155 - PristonBot - INFO - Starting bot...
+2025-04-23 08:50:33,156 - PristonBot - INFO - Bot thread started
+2025-04-23 08:50:33,158 - PristonBot - INFO - Bot started
+2025-04-23 08:50:33,159 - PristonBot - INFO - Bot loop started
+2025-04-23 08:50:33,160 - PristonBot - DEBUG - Bot loop iteration 1
+2025-04-23 08:50:33,162 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:50:33,162 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:50:33,162 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:50:33,162 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:50:33,162 - PristonBot - DEBUG - Current foreground: Priston Tale Potion Bot, need to focus Priston Tale
+2025-04-23 08:50:33,163 - PristonBot - DEBUG - Attempting to focus game window using SetForegroundWindow
+2025-04-23 08:50:33,364 - PristonBot - INFO - Window focus successful
+2025-04-23 08:50:33,369 - PristonBot - INFO - Game window: 1040x807 at (155, 69)
+2025-04-23 08:50:33,370 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:50:33,466 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:50:33,467 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_085033.png
+2025-04-23 08:50:33,467 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:50:33,471 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_085033.png
+2025-04-23 08:50:33,471 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:50:33,473 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:50:33,475 - PristonBot - INFO - Health low (0.0%), using health potion (key 1)
+2025-04-23 08:50:33,476 - PristonBot - INFO - Using health potion - HP: 0.0% < 50.0%
+2025-04-23 08:50:33,476 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:50:33,527 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:50:33,528 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_085033.png
+2025-04-23 08:50:33,528 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:50:33,529 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_085033.png
+2025-04-23 08:50:33,529 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:50:33,530 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:50:33,532 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:50:33,533 - PristonBot - INFO - Using mana potion - MP: 0.0% < 30.0%
+2025-04-23 08:50:33,533 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:50:33,584 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:50:33,584 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_085033.png
+2025-04-23 08:50:33,585 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:50:33,585 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_085033.png
+2025-04-23 08:50:33,585 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:50:33,587 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:50:33,589 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:50:33,589 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 08:50:33,590 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:50:34,142 - PristonBot - DEBUG - Bot loop iteration 2
+2025-04-23 08:50:34,142 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:50:34,142 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:50:34,142 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:50:34,143 - PristonBot - DEBUG - Current foreground: debug_images - File Explorer, need to focus Priston Tale
+2025-04-23 08:50:34,143 - PristonBot - DEBUG - Attempting to focus game window using SetForegroundWindow
+2025-04-23 08:50:34,143 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:50:34,144 - PristonBot - DEBUG - Trying alternative focus method
+2025-04-23 08:50:34,144 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:50:34,145 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:50:34,236 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:50:34,237 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_085034.png
+2025-04-23 08:50:34,238 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:50:34,238 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_085034.png
+2025-04-23 08:50:34,238 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:50:34,240 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:50:34,240 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:50:34,240 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_085034.png
+2025-04-23 08:50:34,240 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:50:34,241 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_085034.png
+2025-04-23 08:50:34,241 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:50:34,242 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:50:34,242 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:50:34,243 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_085034.png
+2025-04-23 08:50:34,243 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:50:34,243 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_085034.png
+2025-04-23 08:50:34,243 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:50:34,245 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:50:34,746 - PristonBot - DEBUG - Bot loop iteration 3
+2025-04-23 08:50:34,746 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:50:34,747 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:50:34,747 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:50:34,748 - PristonBot - DEBUG - Current foreground: debug_images - File Explorer, need to focus Priston Tale
+2025-04-23 08:50:34,748 - PristonBot - DEBUG - Attempting to focus game window using SetForegroundWindow
+2025-04-23 08:50:34,748 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:50:34,749 - PristonBot - DEBUG - Trying alternative focus method
+2025-04-23 08:50:34,749 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:50:34,749 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:50:34,828 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:50:34,829 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_085034.png
+2025-04-23 08:50:34,829 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:50:34,830 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_085034.png
+2025-04-23 08:50:34,830 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:50:34,832 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:50:34,832 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:50:34,832 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_085034.png
+2025-04-23 08:50:34,832 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:50:34,833 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_085034.png
+2025-04-23 08:50:34,833 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:50:34,835 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:50:34,836 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:50:34,836 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_085034.png
+2025-04-23 08:50:34,836 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:50:34,836 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_085034.png
+2025-04-23 08:50:34,836 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:50:34,838 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:50:35,338 - PristonBot - DEBUG - Bot loop iteration 4
+2025-04-23 08:50:35,338 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:50:35,339 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:50:35,340 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:50:35,341 - PristonBot - DEBUG - Current foreground: debug_images - File Explorer, need to focus Priston Tale
+2025-04-23 08:50:35,342 - PristonBot - DEBUG - Attempting to focus game window using SetForegroundWindow
+2025-04-23 08:50:35,342 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:50:35,343 - PristonBot - DEBUG - Trying alternative focus method
+2025-04-23 08:50:35,344 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:50:35,344 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:50:35,436 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:50:35,437 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_085035.png
+2025-04-23 08:50:35,437 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:50:35,438 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_085035.png
+2025-04-23 08:50:35,438 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:50:35,439 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:50:35,440 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:50:35,440 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_085035.png
+2025-04-23 08:50:35,440 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:50:35,444 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_085035.png
+2025-04-23 08:50:35,444 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:50:35,446 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:50:35,446 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:50:35,446 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_085035.png
+2025-04-23 08:50:35,447 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:50:35,447 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_085035.png
+2025-04-23 08:50:35,447 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:50:35,449 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:50:35,951 - PristonBot - DEBUG - Bot loop iteration 5
+2025-04-23 08:50:35,951 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:50:35,951 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:50:35,952 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:50:35,953 - PristonBot - DEBUG - Current foreground: debug_images - File Explorer, need to focus Priston Tale
+2025-04-23 08:50:35,954 - PristonBot - DEBUG - Attempting to focus game window using SetForegroundWindow
+2025-04-23 08:50:35,954 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:50:35,955 - PristonBot - DEBUG - Trying alternative focus method
+2025-04-23 08:50:35,955 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:50:35,956 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:50:36,034 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:50:36,035 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_085036.png
+2025-04-23 08:50:36,035 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:50:36,035 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_085036.png
+2025-04-23 08:50:36,035 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:50:36,037 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:50:36,037 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:50:36,038 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_085036.png
+2025-04-23 08:50:36,038 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:50:36,038 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_085036.png
+2025-04-23 08:50:36,038 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:50:36,040 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:50:36,040 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:50:36,040 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_085036.png
+2025-04-23 08:50:36,040 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:50:36,041 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_085036.png
+2025-04-23 08:50:36,041 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:50:36,042 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:50:36,544 - PristonBot - DEBUG - Bot loop iteration 6
+2025-04-23 08:50:36,545 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:50:36,546 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:50:36,548 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:50:36,549 - PristonBot - DEBUG - Current foreground: debug_images - File Explorer, need to focus Priston Tale
+2025-04-23 08:50:36,549 - PristonBot - DEBUG - Attempting to focus game window using SetForegroundWindow
+2025-04-23 08:50:36,550 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:50:36,551 - PristonBot - DEBUG - Trying alternative focus method
+2025-04-23 08:50:36,552 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:50:36,552 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:50:36,647 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:50:36,648 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_085036.png
+2025-04-23 08:50:36,648 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:50:36,648 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_085036.png
+2025-04-23 08:50:36,649 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:50:36,651 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:50:36,653 - PristonBot - INFO - Health low (0.0%), using health potion (key 1)
+2025-04-23 08:50:36,653 - PristonBot - INFO - Using health potion - HP: 0.0% < 50.0%
+2025-04-23 08:50:36,654 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:50:36,705 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:50:36,705 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_085036.png
+2025-04-23 08:50:36,705 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:50:36,706 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_085036.png
+2025-04-23 08:50:36,706 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:50:36,707 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:50:36,709 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:50:36,709 - PristonBot - INFO - Using mana potion - MP: 0.0% < 30.0%
+2025-04-23 08:50:36,710 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:50:36,761 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:50:36,762 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_085036.png
+2025-04-23 08:50:36,762 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:50:36,763 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_085036.png
+2025-04-23 08:50:36,765 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:50:36,768 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:50:36,771 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:50:36,771 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 08:50:36,772 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:50:37,324 - PristonBot - DEBUG - Bot loop iteration 7
+2025-04-23 08:50:37,324 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:50:37,324 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:50:37,324 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:50:37,325 - PristonBot - DEBUG - Current foreground: debug_images - File Explorer, need to focus Priston Tale
+2025-04-23 08:50:37,325 - PristonBot - DEBUG - Attempting to focus game window using SetForegroundWindow
+2025-04-23 08:50:37,325 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:50:37,325 - PristonBot - DEBUG - Trying alternative focus method
+2025-04-23 08:50:37,325 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:50:37,326 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:50:37,389 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:50:37,389 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_085037.png
+2025-04-23 08:50:37,390 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:50:37,390 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_085037.png
+2025-04-23 08:50:37,390 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:50:37,392 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:50:37,392 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:50:37,392 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_085037.png
+2025-04-23 08:50:37,392 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:50:37,394 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_085037.png
+2025-04-23 08:50:37,394 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:50:37,395 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:50:37,396 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:50:37,396 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_085037.png
+2025-04-23 08:50:37,396 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:50:37,397 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_085037.png
+2025-04-23 08:50:37,397 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:50:37,399 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:50:37,899 - PristonBot - DEBUG - Bot loop iteration 8
+2025-04-23 08:50:37,899 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:50:37,899 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:50:37,899 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:50:37,899 - PristonBot - DEBUG - Current foreground: debug_images - File Explorer, need to focus Priston Tale
+2025-04-23 08:50:37,899 - PristonBot - DEBUG - Attempting to focus game window using SetForegroundWindow
+2025-04-23 08:50:37,901 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:50:37,901 - PristonBot - DEBUG - Trying alternative focus method
+2025-04-23 08:50:37,901 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:50:37,901 - PristonBot - DEBUG - Capturing screenshot of area (1040x807) at (155, 69)
+2025-04-23 08:50:37,973 - PristonBot - DEBUG - Extracted Health bar region: 16x39 pixels
+2025-04-23 08:50:37,975 - PristonBot - DEBUG - Saved debug image to debug_images\health_bar_region_20250423_085037.png
+2025-04-23 08:50:37,976 - PristonBot - DEBUG - Using red color detection for Health bar
+2025-04-23 08:50:37,976 - PristonBot - DEBUG - Saved debug image to debug_images\health_mask_20250423_085037.png
+2025-04-23 08:50:37,976 - PristonBot - DEBUG - Health bar: 0/624 pixels = 0.0%
+2025-04-23 08:50:37,978 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:50:37,978 - PristonBot - DEBUG - Extracted Mana bar region: 12x24 pixels
+2025-04-23 08:50:37,979 - PristonBot - DEBUG - Saved debug image to debug_images\mana_bar_region_20250423_085037.png
+2025-04-23 08:50:37,979 - PristonBot - DEBUG - Using blue color detection for Mana bar
+2025-04-23 08:50:37,979 - PristonBot - DEBUG - Saved debug image to debug_images\mana_mask_20250423_085037.png
+2025-04-23 08:50:37,980 - PristonBot - DEBUG - Mana bar: 0/288 pixels = 0.0%
+2025-04-23 08:50:37,981 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:50:37,982 - PristonBot - DEBUG - Extracted Stamina bar region: 20x45 pixels
+2025-04-23 08:50:37,982 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_bar_region_20250423_085037.png
+2025-04-23 08:50:37,982 - PristonBot - DEBUG - Using green color detection for Stamina bar
+2025-04-23 08:50:37,982 - PristonBot - DEBUG - Saved debug image to debug_images\stamina_mask_20250423_085037.png
+2025-04-23 08:50:37,983 - PristonBot - DEBUG - Stamina bar: 0/900 pixels = 0.0%
+2025-04-23 08:50:37,985 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:50:38,377 - PristonBot - INFO - Stopping bot...
+2025-04-23 08:50:39,379 - PristonBot - INFO - Bot thread joined
+2025-04-23 08:50:39,383 - PristonBot - INFO - Bot stopped
+2025-04-23 08:50:39,389 - PristonBot - INFO - Bot loop stopped

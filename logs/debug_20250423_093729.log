@@ -1,0 +1,1212 @@
+2025-04-23 09:37:29,357 - PristonBot - INFO - Logging initialized
+2025-04-23 09:37:29,357 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 09:37:29,414 - PristonBot - INFO - Icon file not found
+2025-04-23 09:37:29,414 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 09:37:29,441 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 09:37:29,444 - PristonBot - INFO - Please select the Health, Mana, and Stamina bars to continue
+2025-04-23 09:37:29,444 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 09:37:29,446 - PristonBot - INFO - Application started successfully
+2025-04-23 09:37:29,448 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 09:37:29,449 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 09:37:29,450 - PristonBot - INFO - Step 3: Click Start Bot to begin monitoring
+2025-04-23 09:37:36,296 - PristonBot - INFO - Starting selection: Game Window
+2025-04-23 09:37:36,297 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:37:43,971 - PristonBot - DEBUG - Started selection at (202, 128)
+2025-04-23 09:37:51,479 - PristonBot - DEBUG - Completed selection to (1480, 1117)
+2025-04-23 09:37:51,481 - PristonBot - DEBUG - Captured preview image: 1278x989
+2025-04-23 09:37:52,596 - PristonBot - INFO - Game Window selection confirmed: (202, 128) to (1480, 1117)
+2025-04-23 09:37:53,498 - PristonBot - INFO - Game window selected: (202,128) to (1480,1117)
+2025-04-23 09:37:58,834 - PristonBot - INFO - Starting selection: Health Bar
+2025-04-23 09:37:58,834 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:38:01,060 - PristonBot - DEBUG - Started selection at (600, 990)
+2025-04-23 09:38:02,467 - PristonBot - DEBUG - Completed selection to (619, 1111)
+2025-04-23 09:38:02,468 - PristonBot - DEBUG - Captured preview image: 19x121
+2025-04-23 09:38:02,469 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:38:03,530 - PristonBot - INFO - Health Bar selection confirmed: (600, 990) to (619, 1111)
+2025-04-23 09:38:03,983 - PristonBot - INFO - Health Bar selected: (600,990) to (619,1111)
+2025-04-23 09:38:04,249 - PristonBot - INFO - Starting selection: Mana Bar
+2025-04-23 09:38:04,250 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:38:05,978 - PristonBot - DEBUG - Started selection at (784, 993)
+2025-04-23 09:38:08,216 - PristonBot - DEBUG - Completed selection to (802, 1111)
+2025-04-23 09:38:08,216 - PristonBot - DEBUG - Captured preview image: 18x118
+2025-04-23 09:38:08,217 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:38:09,269 - PristonBot - INFO - Mana Bar selection confirmed: (784, 993) to (802, 1111)
+2025-04-23 09:38:09,357 - PristonBot - INFO - Mana Bar selected: (784,993) to (802,1111)
+2025-04-23 09:38:14,552 - PristonBot - INFO - Starting selection: Stamina Bar
+2025-04-23 09:38:14,554 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:38:20,387 - PristonBot - DEBUG - Started selection at (584, 1017)
+2025-04-23 09:38:23,410 - PristonBot - DEBUG - Completed selection to (590, 1117)
+2025-04-23 09:38:23,411 - PristonBot - DEBUG - Captured preview image: 6x100
+2025-04-23 09:38:23,413 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:38:25,337 - PristonBot - INFO - Stamina Bar selection confirmed: (584, 1017) to (590, 1117)
+2025-04-23 09:38:25,687 - PristonBot - INFO - Stamina Bar selected: (584,1017) to (590,1117)
+2025-04-23 09:38:26,065 - PristonBot - INFO - All bars configured! You can now start the bot.
+2025-04-23 09:38:26,067 - PristonBot - INFO - All bars configured, start button enabled
+2025-04-23 09:38:27,300 - PristonBot - INFO - Starting selection: Health Bar
+2025-04-23 09:38:27,300 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:38:30,941 - PristonBot - DEBUG - Started selection at (602, 992)
+2025-04-23 09:38:33,362 - PristonBot - DEBUG - Completed selection to (618, 1109)
+2025-04-23 09:38:33,364 - PristonBot - DEBUG - Captured preview image: 16x117
+2025-04-23 09:38:33,365 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:38:34,642 - PristonBot - INFO - Health Bar selection confirmed: (602, 992) to (618, 1109)
+2025-04-23 09:38:35,453 - PristonBot - INFO - Health Bar selected: (602,992) to (618,1109)
+2025-04-23 09:38:35,712 - PristonBot - INFO - Starting selection: Mana Bar
+2025-04-23 09:38:35,713 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:38:37,162 - PristonBot - DEBUG - Started selection at (785, 996)
+2025-04-23 09:38:39,839 - PristonBot - DEBUG - Completed selection to (799, 1109)
+2025-04-23 09:38:39,840 - PristonBot - DEBUG - Captured preview image: 14x113
+2025-04-23 09:38:39,841 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:38:41,084 - PristonBot - INFO - Mana Bar selection confirmed: (785, 996) to (799, 1109)
+2025-04-23 09:38:41,841 - PristonBot - INFO - Mana Bar selected: (785,996) to (799,1109)
+2025-04-23 09:38:42,386 - PristonBot - INFO - Starting selection: Stamina Bar
+2025-04-23 09:38:42,387 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:38:44,331 - PristonBot - DEBUG - Started selection at (582, 1017)
+2025-04-23 09:38:45,807 - PristonBot - DEBUG - Completed selection to (589, 1110)
+2025-04-23 09:38:45,808 - PristonBot - DEBUG - Captured preview image: 7x93
+2025-04-23 09:38:45,809 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:38:46,924 - PristonBot - INFO - Stamina Bar selection confirmed: (582, 1017) to (589, 1110)
+2025-04-23 09:38:47,518 - PristonBot - INFO - Stamina Bar selected: (582,1017) to (589,1110)
+2025-04-23 09:39:01,783 - PristonBot - INFO - Starting bot...
+2025-04-23 09:39:01,783 - PristonBot - INFO - Bot thread started
+2025-04-23 09:39:01,785 - PristonBot - INFO - Bot started
+2025-04-23 09:39:01,786 - PristonBot - INFO - Bot loop started
+2025-04-23 09:39:01,786 - PristonBot - DEBUG - Bot loop iteration 1
+2025-04-23 09:39:01,870 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:01,870 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:01,933 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:01,934 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:01,999 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 09:39:02,000 - PristonBot - INFO - Stamina: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:02,501 - PristonBot - DEBUG - Bot loop iteration 2
+2025-04-23 09:39:02,580 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:02,581 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:02,650 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:02,652 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:02,721 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 09:39:02,721 - PristonBot - INFO - Stamina: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:03,225 - PristonBot - DEBUG - Bot loop iteration 3
+2025-04-23 09:39:03,288 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:03,288 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:03,351 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:03,352 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:03,427 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 09:39:03,428 - PristonBot - INFO - Stamina: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:03,929 - PristonBot - DEBUG - Bot loop iteration 4
+2025-04-23 09:39:04,018 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:04,019 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:04,087 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:04,087 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:04,150 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 09:39:04,151 - PristonBot - INFO - Stamina: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:04,652 - PristonBot - DEBUG - Bot loop iteration 5
+2025-04-23 09:39:04,722 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:04,723 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:04,782 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:04,782 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:04,848 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 09:39:04,849 - PristonBot - INFO - Stamina: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:05,350 - PristonBot - DEBUG - Bot loop iteration 6
+2025-04-23 09:39:05,423 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:05,424 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:05,480 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:05,481 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:05,553 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 09:39:05,554 - PristonBot - INFO - Stamina: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:06,055 - PristonBot - DEBUG - Bot loop iteration 7
+2025-04-23 09:39:06,129 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:06,130 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:06,208 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:06,209 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:06,269 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 09:39:06,269 - PristonBot - INFO - Stamina: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:06,771 - PristonBot - DEBUG - Bot loop iteration 8
+2025-04-23 09:39:06,840 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:06,841 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:06,904 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:06,905 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:06,967 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 09:39:06,968 - PristonBot - INFO - Stamina: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:07,470 - PristonBot - DEBUG - Bot loop iteration 9
+2025-04-23 09:39:07,545 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:07,546 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:07,608 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:07,608 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:07,670 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 09:39:07,670 - PristonBot - INFO - Stamina: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:08,172 - PristonBot - DEBUG - Bot loop iteration 10
+2025-04-23 09:39:08,241 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:08,242 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:08,305 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:08,306 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:08,368 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 09:39:08,369 - PristonBot - INFO - Stamina: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:08,870 - PristonBot - DEBUG - Bot loop iteration 11
+2025-04-23 09:39:08,940 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:08,941 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:09,002 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:09,002 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:09,069 - PristonBot - DEBUG - Stamina bar percentage: 100.0%
+2025-04-23 09:39:09,070 - PristonBot - INFO - Stamina: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:09,571 - PristonBot - DEBUG - Bot loop iteration 12
+2025-04-23 09:39:09,646 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:09,647 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:09,701 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:09,702 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:09,772 - PristonBot - DEBUG - Stamina bar percentage: 97.8%
+2025-04-23 09:39:09,773 - PristonBot - INFO - Stamina: 97.8% (Threshold: 50.0%)
+2025-04-23 09:39:10,274 - PristonBot - DEBUG - Bot loop iteration 13
+2025-04-23 09:39:10,345 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:10,346 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:10,406 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:10,407 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:10,470 - PristonBot - DEBUG - Stamina bar percentage: 97.8%
+2025-04-23 09:39:10,471 - PristonBot - INFO - Stamina: 97.8% (Threshold: 50.0%)
+2025-04-23 09:39:10,972 - PristonBot - DEBUG - Bot loop iteration 14
+2025-04-23 09:39:11,044 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:11,045 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:11,107 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:11,108 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:11,168 - PristonBot - DEBUG - Stamina bar percentage: 96.8%
+2025-04-23 09:39:11,170 - PristonBot - INFO - Stamina: 96.8% (Threshold: 50.0%)
+2025-04-23 09:39:11,672 - PristonBot - DEBUG - Bot loop iteration 15
+2025-04-23 09:39:11,755 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:11,756 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:11,820 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:11,820 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:11,891 - PristonBot - DEBUG - Stamina bar percentage: 96.8%
+2025-04-23 09:39:11,891 - PristonBot - INFO - Stamina: 96.8% (Threshold: 50.0%)
+2025-04-23 09:39:12,392 - PristonBot - DEBUG - Bot loop iteration 16
+2025-04-23 09:39:12,467 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:12,468 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:12,542 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:12,543 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:12,611 - PristonBot - DEBUG - Stamina bar percentage: 95.7%
+2025-04-23 09:39:12,611 - PristonBot - INFO - Stamina: 95.7% (Threshold: 50.0%)
+2025-04-23 09:39:13,113 - PristonBot - DEBUG - Bot loop iteration 17
+2025-04-23 09:39:13,180 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:13,181 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:13,248 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:13,248 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:13,308 - PristonBot - DEBUG - Stamina bar percentage: 95.7%
+2025-04-23 09:39:13,310 - PristonBot - INFO - Stamina: 95.7% (Threshold: 50.0%)
+2025-04-23 09:39:13,811 - PristonBot - DEBUG - Bot loop iteration 18
+2025-04-23 09:39:13,878 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:13,879 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:13,946 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:13,948 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:14,008 - PristonBot - DEBUG - Stamina bar percentage: 94.6%
+2025-04-23 09:39:14,009 - PristonBot - INFO - Stamina: 94.6% (Threshold: 50.0%)
+2025-04-23 09:39:14,510 - PristonBot - DEBUG - Bot loop iteration 19
+2025-04-23 09:39:14,580 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:14,581 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:14,645 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:14,646 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:14,715 - PristonBot - DEBUG - Stamina bar percentage: 94.6%
+2025-04-23 09:39:14,716 - PristonBot - INFO - Stamina: 94.6% (Threshold: 50.0%)
+2025-04-23 09:39:15,217 - PristonBot - DEBUG - Bot loop iteration 20
+2025-04-23 09:39:15,273 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:15,274 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:15,342 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:15,342 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:15,405 - PristonBot - DEBUG - Stamina bar percentage: 92.5%
+2025-04-23 09:39:15,406 - PristonBot - INFO - Stamina: 92.5% (Threshold: 50.0%)
+2025-04-23 09:39:15,907 - PristonBot - DEBUG - Bot loop iteration 21
+2025-04-23 09:39:15,983 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:15,984 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:16,041 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:16,041 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:16,112 - PristonBot - DEBUG - Stamina bar percentage: 92.5%
+2025-04-23 09:39:16,112 - PristonBot - INFO - Stamina: 92.5% (Threshold: 50.0%)
+2025-04-23 09:39:16,614 - PristonBot - DEBUG - Bot loop iteration 22
+2025-04-23 09:39:16,688 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:16,690 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:16,763 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:16,764 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:16,827 - PristonBot - DEBUG - Stamina bar percentage: 91.4%
+2025-04-23 09:39:16,828 - PristonBot - INFO - Stamina: 91.4% (Threshold: 50.0%)
+2025-04-23 09:39:17,329 - PristonBot - DEBUG - Bot loop iteration 23
+2025-04-23 09:39:17,390 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:17,391 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:17,460 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:17,461 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:17,524 - PristonBot - DEBUG - Stamina bar percentage: 91.4%
+2025-04-23 09:39:17,524 - PristonBot - INFO - Stamina: 91.4% (Threshold: 50.0%)
+2025-04-23 09:39:18,026 - PristonBot - DEBUG - Bot loop iteration 24
+2025-04-23 09:39:18,100 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:18,101 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:18,166 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:18,167 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:18,227 - PristonBot - DEBUG - Stamina bar percentage: 90.3%
+2025-04-23 09:39:18,227 - PristonBot - INFO - Stamina: 90.3% (Threshold: 50.0%)
+2025-04-23 09:39:18,728 - PristonBot - DEBUG - Bot loop iteration 25
+2025-04-23 09:39:18,799 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:18,800 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:18,862 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:18,862 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:18,927 - PristonBot - DEBUG - Stamina bar percentage: 90.3%
+2025-04-23 09:39:18,928 - PristonBot - INFO - Stamina: 90.3% (Threshold: 50.0%)
+2025-04-23 09:39:19,429 - PristonBot - DEBUG - Bot loop iteration 26
+2025-04-23 09:39:19,493 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:19,493 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:19,559 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:19,560 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:19,632 - PristonBot - DEBUG - Stamina bar percentage: 89.2%
+2025-04-23 09:39:19,633 - PristonBot - INFO - Stamina: 89.2% (Threshold: 50.0%)
+2025-04-23 09:39:20,134 - PristonBot - DEBUG - Bot loop iteration 27
+2025-04-23 09:39:20,193 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:20,195 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:20,257 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:20,258 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:20,327 - PristonBot - DEBUG - Stamina bar percentage: 87.1%
+2025-04-23 09:39:20,328 - PristonBot - INFO - Stamina: 87.1% (Threshold: 50.0%)
+2025-04-23 09:39:20,830 - PristonBot - DEBUG - Bot loop iteration 28
+2025-04-23 09:39:20,898 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:20,899 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:20,963 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:20,964 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:21,027 - PristonBot - DEBUG - Stamina bar percentage: 87.1%
+2025-04-23 09:39:21,028 - PristonBot - INFO - Stamina: 87.1% (Threshold: 50.0%)
+2025-04-23 09:39:21,528 - PristonBot - DEBUG - Bot loop iteration 29
+2025-04-23 09:39:21,610 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:21,611 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:21,681 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:21,681 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:21,745 - PristonBot - DEBUG - Stamina bar percentage: 87.1%
+2025-04-23 09:39:21,745 - PristonBot - INFO - Stamina: 87.1% (Threshold: 50.0%)
+2025-04-23 09:39:22,246 - PristonBot - DEBUG - Bot loop iteration 30
+2025-04-23 09:39:22,317 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:22,319 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:22,377 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:22,378 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:22,443 - PristonBot - DEBUG - Stamina bar percentage: 86.0%
+2025-04-23 09:39:22,444 - PristonBot - INFO - Stamina: 86.0% (Threshold: 50.0%)
+2025-04-23 09:39:22,945 - PristonBot - DEBUG - Bot loop iteration 31
+2025-04-23 09:39:23,019 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:23,020 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:23,085 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:23,086 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:23,143 - PristonBot - DEBUG - Stamina bar percentage: 86.0%
+2025-04-23 09:39:23,143 - PristonBot - INFO - Stamina: 86.0% (Threshold: 50.0%)
+2025-04-23 09:39:23,644 - PristonBot - DEBUG - Bot loop iteration 32
+2025-04-23 09:39:23,714 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:23,715 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:23,779 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:23,781 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:23,843 - PristonBot - DEBUG - Stamina bar percentage: 84.9%
+2025-04-23 09:39:23,843 - PristonBot - INFO - Stamina: 84.9% (Threshold: 50.0%)
+2025-04-23 09:39:24,345 - PristonBot - DEBUG - Bot loop iteration 33
+2025-04-23 09:39:24,414 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:24,415 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:24,482 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:24,482 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:24,550 - PristonBot - DEBUG - Stamina bar percentage: 84.9%
+2025-04-23 09:39:24,551 - PristonBot - INFO - Stamina: 84.9% (Threshold: 50.0%)
+2025-04-23 09:39:25,052 - PristonBot - DEBUG - Bot loop iteration 34
+2025-04-23 09:39:25,128 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:25,128 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:25,205 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:25,206 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:25,283 - PristonBot - DEBUG - Stamina bar percentage: 83.9%
+2025-04-23 09:39:25,284 - PristonBot - INFO - Stamina: 83.9% (Threshold: 50.0%)
+2025-04-23 09:39:25,784 - PristonBot - DEBUG - Bot loop iteration 35
+2025-04-23 09:39:25,853 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:25,854 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:25,913 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:25,914 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:25,983 - PristonBot - DEBUG - Stamina bar percentage: 83.9%
+2025-04-23 09:39:25,984 - PristonBot - INFO - Stamina: 83.9% (Threshold: 50.0%)
+2025-04-23 09:39:26,486 - PristonBot - DEBUG - Bot loop iteration 36
+2025-04-23 09:39:26,548 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:26,549 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:26,615 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:26,616 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:26,682 - PristonBot - DEBUG - Stamina bar percentage: 81.7%
+2025-04-23 09:39:26,682 - PristonBot - INFO - Stamina: 81.7% (Threshold: 50.0%)
+2025-04-23 09:39:27,184 - PristonBot - DEBUG - Bot loop iteration 37
+2025-04-23 09:39:27,257 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:27,258 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:27,335 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:27,336 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:27,396 - PristonBot - DEBUG - Stamina bar percentage: 80.6%
+2025-04-23 09:39:27,396 - PristonBot - INFO - Stamina: 80.6% (Threshold: 50.0%)
+2025-04-23 09:39:27,897 - PristonBot - DEBUG - Bot loop iteration 38
+2025-04-23 09:39:27,973 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:27,974 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:28,048 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:28,048 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:28,126 - PristonBot - DEBUG - Stamina bar percentage: 80.6%
+2025-04-23 09:39:28,127 - PristonBot - INFO - Stamina: 80.6% (Threshold: 50.0%)
+2025-04-23 09:39:28,628 - PristonBot - DEBUG - Bot loop iteration 39
+2025-04-23 09:39:28,720 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:28,721 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:28,792 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:28,793 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:28,865 - PristonBot - DEBUG - Stamina bar percentage: 79.6%
+2025-04-23 09:39:28,866 - PristonBot - INFO - Stamina: 79.6% (Threshold: 50.0%)
+2025-04-23 09:39:29,367 - PristonBot - DEBUG - Bot loop iteration 40
+2025-04-23 09:39:29,434 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:29,435 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:29,501 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:29,502 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:29,566 - PristonBot - DEBUG - Stamina bar percentage: 79.6%
+2025-04-23 09:39:29,567 - PristonBot - INFO - Stamina: 79.6% (Threshold: 50.0%)
+2025-04-23 09:39:30,068 - PristonBot - DEBUG - Bot loop iteration 41
+2025-04-23 09:39:30,148 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:30,149 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:30,217 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:30,218 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:30,286 - PristonBot - DEBUG - Stamina bar percentage: 77.4%
+2025-04-23 09:39:30,287 - PristonBot - INFO - Stamina: 77.4% (Threshold: 50.0%)
+2025-04-23 09:39:30,789 - PristonBot - DEBUG - Bot loop iteration 42
+2025-04-23 09:39:30,858 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:30,859 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:30,931 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:30,931 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:30,997 - PristonBot - DEBUG - Stamina bar percentage: 77.4%
+2025-04-23 09:39:30,997 - PristonBot - INFO - Stamina: 77.4% (Threshold: 50.0%)
+2025-04-23 09:39:31,498 - PristonBot - DEBUG - Bot loop iteration 43
+2025-04-23 09:39:31,568 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:31,568 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:31,630 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:31,630 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:31,700 - PristonBot - DEBUG - Stamina bar percentage: 76.3%
+2025-04-23 09:39:31,701 - PristonBot - INFO - Stamina: 76.3% (Threshold: 50.0%)
+2025-04-23 09:39:32,202 - PristonBot - DEBUG - Bot loop iteration 44
+2025-04-23 09:39:32,291 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:32,293 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:32,366 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:32,367 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:32,434 - PristonBot - DEBUG - Stamina bar percentage: 76.3%
+2025-04-23 09:39:32,435 - PristonBot - INFO - Stamina: 76.3% (Threshold: 50.0%)
+2025-04-23 09:39:32,936 - PristonBot - DEBUG - Bot loop iteration 45
+2025-04-23 09:39:33,004 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:33,004 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:33,063 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:33,064 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:33,147 - PristonBot - DEBUG - Stamina bar percentage: 75.3%
+2025-04-23 09:39:33,148 - PristonBot - INFO - Stamina: 75.3% (Threshold: 50.0%)
+2025-04-23 09:39:33,649 - PristonBot - DEBUG - Bot loop iteration 46
+2025-04-23 09:39:33,735 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:33,736 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:33,820 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:33,821 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:33,887 - PristonBot - DEBUG - Stamina bar percentage: 75.3%
+2025-04-23 09:39:33,888 - PristonBot - INFO - Stamina: 75.3% (Threshold: 50.0%)
+2025-04-23 09:39:34,390 - PristonBot - DEBUG - Bot loop iteration 47
+2025-04-23 09:39:34,457 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:34,457 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:34,510 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:34,511 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:34,578 - PristonBot - DEBUG - Stamina bar percentage: 75.3%
+2025-04-23 09:39:34,580 - PristonBot - INFO - Stamina: 75.3% (Threshold: 50.0%)
+2025-04-23 09:39:35,081 - PristonBot - DEBUG - Bot loop iteration 48
+2025-04-23 09:39:35,164 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:35,165 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:35,242 - PristonBot - DEBUG - Mana bar percentage: 100.0%
+2025-04-23 09:39:35,243 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:39:35,320 - PristonBot - DEBUG - Stamina bar percentage: 78.5%
+2025-04-23 09:39:35,321 - PristonBot - INFO - Stamina: 78.5% (Threshold: 50.0%)
+2025-04-23 09:39:35,823 - PristonBot - DEBUG - Bot loop iteration 49
+2025-04-23 09:39:35,887 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:35,888 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:35,951 - PristonBot - DEBUG - Mana bar percentage: 94.7%
+2025-04-23 09:39:35,951 - PristonBot - INFO - Mana: 94.7% (Threshold: 50.0%)
+2025-04-23 09:39:36,016 - PristonBot - DEBUG - Stamina bar percentage: 72.0%
+2025-04-23 09:39:36,017 - PristonBot - INFO - Stamina: 72.0% (Threshold: 50.0%)
+2025-04-23 09:39:36,518 - PristonBot - DEBUG - Bot loop iteration 50
+2025-04-23 09:39:36,588 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:36,589 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:36,647 - PristonBot - DEBUG - Mana bar percentage: 95.6%
+2025-04-23 09:39:36,647 - PristonBot - INFO - Mana: 95.6% (Threshold: 50.0%)
+2025-04-23 09:39:36,720 - PristonBot - DEBUG - Stamina bar percentage: 72.0%
+2025-04-23 09:39:36,721 - PristonBot - INFO - Stamina: 72.0% (Threshold: 50.0%)
+2025-04-23 09:39:37,222 - PristonBot - DEBUG - Bot loop iteration 51
+2025-04-23 09:39:37,289 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:37,289 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:37,343 - PristonBot - DEBUG - Mana bar percentage: 96.5%
+2025-04-23 09:39:37,344 - PristonBot - INFO - Mana: 96.5% (Threshold: 50.0%)
+2025-04-23 09:39:37,395 - PristonBot - DEBUG - Stamina bar percentage: 72.0%
+2025-04-23 09:39:37,396 - PristonBot - INFO - Stamina: 72.0% (Threshold: 50.0%)
+2025-04-23 09:39:37,897 - PristonBot - DEBUG - Bot loop iteration 52
+2025-04-23 09:39:37,973 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:37,975 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:38,031 - PristonBot - DEBUG - Mana bar percentage: 96.5%
+2025-04-23 09:39:38,032 - PristonBot - INFO - Mana: 96.5% (Threshold: 50.0%)
+2025-04-23 09:39:38,105 - PristonBot - DEBUG - Stamina bar percentage: 72.0%
+2025-04-23 09:39:38,107 - PristonBot - INFO - Stamina: 72.0% (Threshold: 50.0%)
+2025-04-23 09:39:38,609 - PristonBot - DEBUG - Bot loop iteration 53
+2025-04-23 09:39:38,673 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:38,673 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:38,730 - PristonBot - DEBUG - Mana bar percentage: 96.5%
+2025-04-23 09:39:38,730 - PristonBot - INFO - Mana: 96.5% (Threshold: 50.0%)
+2025-04-23 09:39:38,805 - PristonBot - DEBUG - Stamina bar percentage: 67.7%
+2025-04-23 09:39:38,806 - PristonBot - INFO - Stamina: 67.7% (Threshold: 50.0%)
+2025-04-23 09:39:39,307 - PristonBot - DEBUG - Bot loop iteration 54
+2025-04-23 09:39:39,369 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:39,369 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:39,435 - PristonBot - DEBUG - Mana bar percentage: 91.2%
+2025-04-23 09:39:39,437 - PristonBot - INFO - Mana: 91.2% (Threshold: 50.0%)
+2025-04-23 09:39:39,501 - PristonBot - DEBUG - Stamina bar percentage: 67.7%
+2025-04-23 09:39:39,501 - PristonBot - INFO - Stamina: 67.7% (Threshold: 50.0%)
+2025-04-23 09:39:40,003 - PristonBot - DEBUG - Bot loop iteration 55
+2025-04-23 09:39:40,074 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:40,076 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:40,133 - PristonBot - DEBUG - Mana bar percentage: 91.2%
+2025-04-23 09:39:40,133 - PristonBot - INFO - Mana: 91.2% (Threshold: 50.0%)
+2025-04-23 09:39:40,199 - PristonBot - DEBUG - Stamina bar percentage: 67.7%
+2025-04-23 09:39:40,200 - PristonBot - INFO - Stamina: 67.7% (Threshold: 50.0%)
+2025-04-23 09:39:40,701 - PristonBot - DEBUG - Bot loop iteration 56
+2025-04-23 09:39:40,767 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:40,768 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:40,836 - PristonBot - DEBUG - Mana bar percentage: 84.1%
+2025-04-23 09:39:40,837 - PristonBot - INFO - Mana: 84.1% (Threshold: 50.0%)
+2025-04-23 09:39:40,908 - PristonBot - DEBUG - Stamina bar percentage: 60.2%
+2025-04-23 09:39:40,909 - PristonBot - INFO - Stamina: 60.2% (Threshold: 50.0%)
+2025-04-23 09:39:41,410 - PristonBot - DEBUG - Bot loop iteration 57
+2025-04-23 09:39:41,470 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:41,470 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:41,541 - PristonBot - DEBUG - Mana bar percentage: 85.8%
+2025-04-23 09:39:41,542 - PristonBot - INFO - Mana: 85.8% (Threshold: 50.0%)
+2025-04-23 09:39:41,595 - PristonBot - DEBUG - Stamina bar percentage: 60.2%
+2025-04-23 09:39:41,596 - PristonBot - INFO - Stamina: 60.2% (Threshold: 50.0%)
+2025-04-23 09:39:42,097 - PristonBot - DEBUG - Bot loop iteration 58
+2025-04-23 09:39:42,170 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:42,172 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:42,234 - PristonBot - DEBUG - Mana bar percentage: 85.8%
+2025-04-23 09:39:42,235 - PristonBot - INFO - Mana: 85.8% (Threshold: 50.0%)
+2025-04-23 09:39:42,298 - PristonBot - DEBUG - Stamina bar percentage: 60.2%
+2025-04-23 09:39:42,300 - PristonBot - INFO - Stamina: 60.2% (Threshold: 50.0%)
+2025-04-23 09:39:42,803 - PristonBot - DEBUG - Bot loop iteration 59
+2025-04-23 09:39:42,881 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:42,882 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:42,959 - PristonBot - DEBUG - Mana bar percentage: 78.8%
+2025-04-23 09:39:42,960 - PristonBot - INFO - Mana: 78.8% (Threshold: 50.0%)
+2025-04-23 09:39:43,020 - PristonBot - DEBUG - Stamina bar percentage: 53.8%
+2025-04-23 09:39:43,020 - PristonBot - INFO - Stamina: 53.8% (Threshold: 50.0%)
+2025-04-23 09:39:43,522 - PristonBot - DEBUG - Bot loop iteration 60
+2025-04-23 09:39:43,588 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:43,589 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:43,658 - PristonBot - DEBUG - Mana bar percentage: 79.6%
+2025-04-23 09:39:43,660 - PristonBot - INFO - Mana: 79.6% (Threshold: 50.0%)
+2025-04-23 09:39:43,725 - PristonBot - DEBUG - Stamina bar percentage: 53.8%
+2025-04-23 09:39:43,726 - PristonBot - INFO - Stamina: 53.8% (Threshold: 50.0%)
+2025-04-23 09:39:44,227 - PristonBot - DEBUG - Bot loop iteration 61
+2025-04-23 09:39:44,286 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:44,287 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:44,371 - PristonBot - DEBUG - Mana bar percentage: 79.6%
+2025-04-23 09:39:44,373 - PristonBot - INFO - Mana: 79.6% (Threshold: 50.0%)
+2025-04-23 09:39:44,439 - PristonBot - DEBUG - Stamina bar percentage: 53.8%
+2025-04-23 09:39:44,441 - PristonBot - INFO - Stamina: 53.8% (Threshold: 50.0%)
+2025-04-23 09:39:44,943 - PristonBot - DEBUG - Bot loop iteration 62
+2025-04-23 09:39:45,015 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:45,016 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:45,094 - PristonBot - DEBUG - Mana bar percentage: 74.3%
+2025-04-23 09:39:45,095 - PristonBot - INFO - Mana: 74.3% (Threshold: 50.0%)
+2025-04-23 09:39:45,162 - PristonBot - DEBUG - Stamina bar percentage: 48.4%
+2025-04-23 09:39:45,163 - PristonBot - INFO - Stamina: 48.4% (Threshold: 50.0%)
+2025-04-23 09:39:45,164 - PristonBot - INFO - Stamina low (48.4%), using stamina potion (key 2)
+2025-04-23 09:39:45,164 - PristonBot - INFO - Using stamina potion - SP: 48.4% < 50.0%
+2025-04-23 09:39:45,164 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:39:45,717 - PristonBot - DEBUG - Bot loop iteration 63
+2025-04-23 09:39:45,805 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:45,806 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:45,876 - PristonBot - DEBUG - Mana bar percentage: 74.3%
+2025-04-23 09:39:45,877 - PristonBot - INFO - Mana: 74.3% (Threshold: 50.0%)
+2025-04-23 09:39:45,938 - PristonBot - DEBUG - Stamina bar percentage: 48.4%
+2025-04-23 09:39:45,939 - PristonBot - INFO - Stamina: 48.4% (Threshold: 50.0%)
+2025-04-23 09:39:46,441 - PristonBot - DEBUG - Bot loop iteration 64
+2025-04-23 09:39:46,505 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:46,506 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:46,579 - PristonBot - DEBUG - Mana bar percentage: 74.3%
+2025-04-23 09:39:46,580 - PristonBot - INFO - Mana: 74.3% (Threshold: 50.0%)
+2025-04-23 09:39:46,638 - PristonBot - DEBUG - Stamina bar percentage: 48.4%
+2025-04-23 09:39:46,640 - PristonBot - INFO - Stamina: 48.4% (Threshold: 50.0%)
+2025-04-23 09:39:47,141 - PristonBot - DEBUG - Bot loop iteration 65
+2025-04-23 09:39:47,214 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:47,216 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:47,287 - PristonBot - DEBUG - Mana bar percentage: 75.2%
+2025-04-23 09:39:47,288 - PristonBot - INFO - Mana: 75.2% (Threshold: 50.0%)
+2025-04-23 09:39:47,363 - PristonBot - DEBUG - Stamina bar percentage: 48.4%
+2025-04-23 09:39:47,364 - PristonBot - INFO - Stamina: 48.4% (Threshold: 50.0%)
+2025-04-23 09:39:47,865 - PristonBot - DEBUG - Bot loop iteration 66
+2025-04-23 09:39:47,921 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:47,922 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:47,988 - PristonBot - DEBUG - Mana bar percentage: 75.2%
+2025-04-23 09:39:47,991 - PristonBot - INFO - Mana: 75.2% (Threshold: 50.0%)
+2025-04-23 09:39:48,061 - PristonBot - DEBUG - Stamina bar percentage: 49.5%
+2025-04-23 09:39:48,061 - PristonBot - INFO - Stamina: 49.5% (Threshold: 50.0%)
+2025-04-23 09:39:48,562 - PristonBot - DEBUG - Bot loop iteration 67
+2025-04-23 09:39:48,627 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:48,628 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:48,688 - PristonBot - DEBUG - Mana bar percentage: 75.2%
+2025-04-23 09:39:48,689 - PristonBot - INFO - Mana: 75.2% (Threshold: 50.0%)
+2025-04-23 09:39:48,764 - PristonBot - DEBUG - Stamina bar percentage: 52.7%
+2025-04-23 09:39:48,766 - PristonBot - INFO - Stamina: 52.7% (Threshold: 50.0%)
+2025-04-23 09:39:49,268 - PristonBot - DEBUG - Bot loop iteration 68
+2025-04-23 09:39:49,345 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:49,346 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:49,408 - PristonBot - DEBUG - Mana bar percentage: 77.0%
+2025-04-23 09:39:49,409 - PristonBot - INFO - Mana: 77.0% (Threshold: 50.0%)
+2025-04-23 09:39:49,471 - PristonBot - DEBUG - Stamina bar percentage: 53.8%
+2025-04-23 09:39:49,472 - PristonBot - INFO - Stamina: 53.8% (Threshold: 50.0%)
+2025-04-23 09:39:49,974 - PristonBot - DEBUG - Bot loop iteration 69
+2025-04-23 09:39:50,039 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:50,040 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:50,117 - PristonBot - DEBUG - Mana bar percentage: 69.9%
+2025-04-23 09:39:50,120 - PristonBot - INFO - Mana: 69.9% (Threshold: 50.0%)
+2025-04-23 09:39:50,186 - PristonBot - DEBUG - Stamina bar percentage: 48.4%
+2025-04-23 09:39:50,187 - PristonBot - INFO - Stamina: 48.4% (Threshold: 50.0%)
+2025-04-23 09:39:50,189 - PristonBot - INFO - Stamina low (48.4%), using stamina potion (key 2)
+2025-04-23 09:39:50,190 - PristonBot - INFO - Using stamina potion - SP: 48.4% < 50.0%
+2025-04-23 09:39:50,190 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:39:50,742 - PristonBot - DEBUG - Bot loop iteration 70
+2025-04-23 09:39:50,810 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:50,811 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:50,870 - PristonBot - DEBUG - Mana bar percentage: 69.9%
+2025-04-23 09:39:50,871 - PristonBot - INFO - Mana: 69.9% (Threshold: 50.0%)
+2025-04-23 09:39:50,939 - PristonBot - DEBUG - Stamina bar percentage: 48.4%
+2025-04-23 09:39:50,940 - PristonBot - INFO - Stamina: 48.4% (Threshold: 50.0%)
+2025-04-23 09:39:51,441 - PristonBot - DEBUG - Bot loop iteration 71
+2025-04-23 09:39:51,516 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:51,517 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:51,585 - PristonBot - DEBUG - Mana bar percentage: 70.8%
+2025-04-23 09:39:51,586 - PristonBot - INFO - Mana: 70.8% (Threshold: 50.0%)
+2025-04-23 09:39:51,666 - PristonBot - DEBUG - Stamina bar percentage: 49.5%
+2025-04-23 09:39:51,667 - PristonBot - INFO - Stamina: 49.5% (Threshold: 50.0%)
+2025-04-23 09:39:52,168 - PristonBot - DEBUG - Bot loop iteration 72
+2025-04-23 09:39:52,253 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:52,254 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:52,328 - PristonBot - DEBUG - Mana bar percentage: 72.6%
+2025-04-23 09:39:52,331 - PristonBot - INFO - Mana: 72.6% (Threshold: 50.0%)
+2025-04-23 09:39:52,435 - PristonBot - DEBUG - Stamina bar percentage: 51.6%
+2025-04-23 09:39:52,436 - PristonBot - INFO - Stamina: 51.6% (Threshold: 50.0%)
+2025-04-23 09:39:52,938 - PristonBot - DEBUG - Bot loop iteration 73
+2025-04-23 09:39:53,012 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:53,013 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:53,074 - PristonBot - DEBUG - Mana bar percentage: 72.6%
+2025-04-23 09:39:53,075 - PristonBot - INFO - Mana: 72.6% (Threshold: 50.0%)
+2025-04-23 09:39:53,146 - PristonBot - DEBUG - Stamina bar percentage: 52.7%
+2025-04-23 09:39:53,147 - PristonBot - INFO - Stamina: 52.7% (Threshold: 50.0%)
+2025-04-23 09:39:53,649 - PristonBot - DEBUG - Bot loop iteration 74
+2025-04-23 09:39:53,711 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:53,713 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:53,775 - PristonBot - DEBUG - Mana bar percentage: 72.6%
+2025-04-23 09:39:53,775 - PristonBot - INFO - Mana: 72.6% (Threshold: 50.0%)
+2025-04-23 09:39:53,839 - PristonBot - DEBUG - Stamina bar percentage: 54.8%
+2025-04-23 09:39:53,839 - PristonBot - INFO - Stamina: 54.8% (Threshold: 50.0%)
+2025-04-23 09:39:54,341 - PristonBot - DEBUG - Bot loop iteration 75
+2025-04-23 09:39:54,418 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:54,419 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:54,493 - PristonBot - DEBUG - Mana bar percentage: 73.5%
+2025-04-23 09:39:54,494 - PristonBot - INFO - Mana: 73.5% (Threshold: 50.0%)
+2025-04-23 09:39:54,560 - PristonBot - DEBUG - Stamina bar percentage: 55.9%
+2025-04-23 09:39:54,561 - PristonBot - INFO - Stamina: 55.9% (Threshold: 50.0%)
+2025-04-23 09:39:55,062 - PristonBot - DEBUG - Bot loop iteration 76
+2025-04-23 09:39:55,155 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:55,156 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:55,229 - PristonBot - DEBUG - Mana bar percentage: 73.5%
+2025-04-23 09:39:55,229 - PristonBot - INFO - Mana: 73.5% (Threshold: 50.0%)
+2025-04-23 09:39:55,292 - PristonBot - DEBUG - Stamina bar percentage: 58.1%
+2025-04-23 09:39:55,293 - PristonBot - INFO - Stamina: 58.1% (Threshold: 50.0%)
+2025-04-23 09:39:55,794 - PristonBot - DEBUG - Bot loop iteration 77
+2025-04-23 09:39:55,878 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:55,879 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:55,943 - PristonBot - DEBUG - Mana bar percentage: 74.3%
+2025-04-23 09:39:55,943 - PristonBot - INFO - Mana: 74.3% (Threshold: 50.0%)
+2025-04-23 09:39:56,011 - PristonBot - DEBUG - Stamina bar percentage: 59.1%
+2025-04-23 09:39:56,012 - PristonBot - INFO - Stamina: 59.1% (Threshold: 50.0%)
+2025-04-23 09:39:56,514 - PristonBot - DEBUG - Bot loop iteration 78
+2025-04-23 09:39:56,585 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:56,585 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:56,647 - PristonBot - DEBUG - Mana bar percentage: 74.3%
+2025-04-23 09:39:56,648 - PristonBot - INFO - Mana: 74.3% (Threshold: 50.0%)
+2025-04-23 09:39:56,711 - PristonBot - DEBUG - Stamina bar percentage: 62.4%
+2025-04-23 09:39:56,712 - PristonBot - INFO - Stamina: 62.4% (Threshold: 50.0%)
+2025-04-23 09:39:57,213 - PristonBot - DEBUG - Bot loop iteration 79
+2025-04-23 09:39:57,289 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:57,290 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:57,361 - PristonBot - DEBUG - Mana bar percentage: 68.1%
+2025-04-23 09:39:57,361 - PristonBot - INFO - Mana: 68.1% (Threshold: 50.0%)
+2025-04-23 09:39:57,428 - PristonBot - DEBUG - Stamina bar percentage: 54.8%
+2025-04-23 09:39:57,429 - PristonBot - INFO - Stamina: 54.8% (Threshold: 50.0%)
+2025-04-23 09:39:57,930 - PristonBot - DEBUG - Bot loop iteration 80
+2025-04-23 09:39:58,005 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:58,006 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:58,076 - PristonBot - DEBUG - Mana bar percentage: 69.0%
+2025-04-23 09:39:58,077 - PristonBot - INFO - Mana: 69.0% (Threshold: 50.0%)
+2025-04-23 09:39:58,149 - PristonBot - DEBUG - Stamina bar percentage: 54.8%
+2025-04-23 09:39:58,150 - PristonBot - INFO - Stamina: 54.8% (Threshold: 50.0%)
+2025-04-23 09:39:58,651 - PristonBot - DEBUG - Bot loop iteration 81
+2025-04-23 09:39:58,716 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:58,716 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:58,774 - PristonBot - DEBUG - Mana bar percentage: 61.9%
+2025-04-23 09:39:58,774 - PristonBot - INFO - Mana: 61.9% (Threshold: 50.0%)
+2025-04-23 09:39:58,850 - PristonBot - DEBUG - Stamina bar percentage: 48.4%
+2025-04-23 09:39:58,852 - PristonBot - INFO - Stamina: 48.4% (Threshold: 50.0%)
+2025-04-23 09:39:58,854 - PristonBot - INFO - Stamina low (48.4%), using stamina potion (key 2)
+2025-04-23 09:39:58,854 - PristonBot - INFO - Using stamina potion - SP: 48.4% < 50.0%
+2025-04-23 09:39:58,855 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:39:59,407 - PristonBot - DEBUG - Bot loop iteration 82
+2025-04-23 09:39:59,478 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:39:59,479 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:39:59,542 - PristonBot - DEBUG - Mana bar percentage: 61.9%
+2025-04-23 09:39:59,542 - PristonBot - INFO - Mana: 61.9% (Threshold: 50.0%)
+2025-04-23 09:39:59,609 - PristonBot - DEBUG - Stamina bar percentage: 48.4%
+2025-04-23 09:39:59,610 - PristonBot - INFO - Stamina: 48.4% (Threshold: 50.0%)
+2025-04-23 09:40:00,110 - PristonBot - DEBUG - Bot loop iteration 83
+2025-04-23 09:40:00,185 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:00,187 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:00,249 - PristonBot - DEBUG - Mana bar percentage: 56.6%
+2025-04-23 09:40:00,249 - PristonBot - INFO - Mana: 56.6% (Threshold: 50.0%)
+2025-04-23 09:40:00,321 - PristonBot - DEBUG - Stamina bar percentage: 41.9%
+2025-04-23 09:40:00,322 - PristonBot - INFO - Stamina: 41.9% (Threshold: 50.0%)
+2025-04-23 09:40:00,823 - PristonBot - DEBUG - Bot loop iteration 84
+2025-04-23 09:40:00,916 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:00,916 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:00,978 - PristonBot - DEBUG - Mana bar percentage: 56.6%
+2025-04-23 09:40:00,979 - PristonBot - INFO - Mana: 56.6% (Threshold: 50.0%)
+2025-04-23 09:40:01,056 - PristonBot - DEBUG - Stamina bar percentage: 43.0%
+2025-04-23 09:40:01,057 - PristonBot - INFO - Stamina: 43.0% (Threshold: 50.0%)
+2025-04-23 09:40:01,559 - PristonBot - DEBUG - Bot loop iteration 85
+2025-04-23 09:40:01,637 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:01,638 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:01,697 - PristonBot - DEBUG - Mana bar percentage: 56.6%
+2025-04-23 09:40:01,698 - PristonBot - INFO - Mana: 56.6% (Threshold: 50.0%)
+2025-04-23 09:40:01,766 - PristonBot - DEBUG - Stamina bar percentage: 43.0%
+2025-04-23 09:40:01,767 - PristonBot - INFO - Stamina: 43.0% (Threshold: 50.0%)
+2025-04-23 09:40:02,268 - PristonBot - DEBUG - Bot loop iteration 86
+2025-04-23 09:40:02,328 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:02,329 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:02,392 - PristonBot - DEBUG - Mana bar percentage: 51.3%
+2025-04-23 09:40:02,394 - PristonBot - INFO - Mana: 51.3% (Threshold: 50.0%)
+2025-04-23 09:40:02,459 - PristonBot - DEBUG - Stamina bar percentage: 36.6%
+2025-04-23 09:40:02,460 - PristonBot - INFO - Stamina: 36.6% (Threshold: 50.0%)
+2025-04-23 09:40:02,461 - PristonBot - INFO - Stamina low (36.6%), using stamina potion (key 2)
+2025-04-23 09:40:02,462 - PristonBot - INFO - Using stamina potion - SP: 36.6% < 50.0%
+2025-04-23 09:40:02,462 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:40:03,014 - PristonBot - DEBUG - Bot loop iteration 87
+2025-04-23 09:40:03,086 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:03,087 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:03,145 - PristonBot - DEBUG - Mana bar percentage: 51.3%
+2025-04-23 09:40:03,146 - PristonBot - INFO - Mana: 51.3% (Threshold: 50.0%)
+2025-04-23 09:40:03,212 - PristonBot - DEBUG - Stamina bar percentage: 36.6%
+2025-04-23 09:40:03,214 - PristonBot - INFO - Stamina: 36.6% (Threshold: 50.0%)
+2025-04-23 09:40:03,716 - PristonBot - DEBUG - Bot loop iteration 88
+2025-04-23 09:40:03,788 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:03,790 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:03,860 - PristonBot - DEBUG - Mana bar percentage: 46.0%
+2025-04-23 09:40:03,863 - PristonBot - INFO - Mana: 46.0% (Threshold: 50.0%)
+2025-04-23 09:40:03,864 - PristonBot - INFO - Mana low (46.0%), using mana potion (key 3)
+2025-04-23 09:40:03,864 - PristonBot - INFO - Using mana potion - MP: 46.0% < 50.0%
+2025-04-23 09:40:03,865 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:40:03,977 - PristonBot - DEBUG - Stamina bar percentage: 28.0%
+2025-04-23 09:40:03,978 - PristonBot - INFO - Stamina: 28.0% (Threshold: 50.0%)
+2025-04-23 09:40:04,480 - PristonBot - DEBUG - Bot loop iteration 89
+2025-04-23 09:40:04,554 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:04,556 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:04,611 - PristonBot - DEBUG - Mana bar percentage: 46.0%
+2025-04-23 09:40:04,612 - PristonBot - INFO - Mana: 46.0% (Threshold: 50.0%)
+2025-04-23 09:40:04,687 - PristonBot - DEBUG - Stamina bar percentage: 28.0%
+2025-04-23 09:40:04,689 - PristonBot - INFO - Stamina: 28.0% (Threshold: 50.0%)
+2025-04-23 09:40:05,190 - PristonBot - DEBUG - Bot loop iteration 90
+2025-04-23 09:40:05,269 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:05,270 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:05,329 - PristonBot - DEBUG - Mana bar percentage: 46.0%
+2025-04-23 09:40:05,331 - PristonBot - INFO - Mana: 46.0% (Threshold: 50.0%)
+2025-04-23 09:40:05,392 - PristonBot - DEBUG - Stamina bar percentage: 28.0%
+2025-04-23 09:40:05,393 - PristonBot - INFO - Stamina: 28.0% (Threshold: 50.0%)
+2025-04-23 09:40:05,895 - PristonBot - DEBUG - Bot loop iteration 91
+2025-04-23 09:40:05,966 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:05,968 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:06,025 - PristonBot - DEBUG - Mana bar percentage: 39.8%
+2025-04-23 09:40:06,027 - PristonBot - INFO - Mana: 39.8% (Threshold: 50.0%)
+2025-04-23 09:40:06,115 - PristonBot - DEBUG - Stamina bar percentage: 21.5%
+2025-04-23 09:40:06,117 - PristonBot - INFO - Stamina: 21.5% (Threshold: 50.0%)
+2025-04-23 09:40:06,120 - PristonBot - INFO - Stamina low (21.5%), using stamina potion (key 2)
+2025-04-23 09:40:06,121 - PristonBot - INFO - Using stamina potion - SP: 21.5% < 50.0%
+2025-04-23 09:40:06,123 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:40:06,675 - PristonBot - DEBUG - Bot loop iteration 92
+2025-04-23 09:40:06,759 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:06,762 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:06,829 - PristonBot - DEBUG - Mana bar percentage: 41.6%
+2025-04-23 09:40:06,830 - PristonBot - INFO - Mana: 41.6% (Threshold: 50.0%)
+2025-04-23 09:40:06,894 - PristonBot - DEBUG - Stamina bar percentage: 21.5%
+2025-04-23 09:40:06,896 - PristonBot - INFO - Stamina: 21.5% (Threshold: 50.0%)
+2025-04-23 09:40:07,397 - PristonBot - DEBUG - Bot loop iteration 93
+2025-04-23 09:40:07,470 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:07,471 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:07,531 - PristonBot - DEBUG - Mana bar percentage: 41.6%
+2025-04-23 09:40:07,531 - PristonBot - INFO - Mana: 41.6% (Threshold: 50.0%)
+2025-04-23 09:40:07,533 - PristonBot - INFO - Mana low (41.6%), using mana potion (key 3)
+2025-04-23 09:40:07,533 - PristonBot - INFO - Using mana potion - MP: 41.6% < 50.0%
+2025-04-23 09:40:07,534 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:40:07,644 - PristonBot - DEBUG - Stamina bar percentage: 22.6%
+2025-04-23 09:40:07,646 - PristonBot - INFO - Stamina: 22.6% (Threshold: 50.0%)
+2025-04-23 09:40:08,147 - PristonBot - DEBUG - Bot loop iteration 94
+2025-04-23 09:40:08,229 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:08,232 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:08,302 - PristonBot - DEBUG - Mana bar percentage: 41.6%
+2025-04-23 09:40:08,302 - PristonBot - INFO - Mana: 41.6% (Threshold: 50.0%)
+2025-04-23 09:40:08,362 - PristonBot - DEBUG - Stamina bar percentage: 23.7%
+2025-04-23 09:40:08,362 - PristonBot - INFO - Stamina: 23.7% (Threshold: 50.0%)
+2025-04-23 09:40:08,863 - PristonBot - DEBUG - Bot loop iteration 95
+2025-04-23 09:40:08,931 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:08,932 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:09,006 - PristonBot - DEBUG - Mana bar percentage: 42.5%
+2025-04-23 09:40:09,007 - PristonBot - INFO - Mana: 42.5% (Threshold: 50.0%)
+2025-04-23 09:40:09,067 - PristonBot - DEBUG - Stamina bar percentage: 24.7%
+2025-04-23 09:40:09,068 - PristonBot - INFO - Stamina: 24.7% (Threshold: 50.0%)
+2025-04-23 09:40:09,569 - PristonBot - DEBUG - Bot loop iteration 96
+2025-04-23 09:40:09,649 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:09,649 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:09,716 - PristonBot - DEBUG - Mana bar percentage: 42.5%
+2025-04-23 09:40:09,717 - PristonBot - INFO - Mana: 42.5% (Threshold: 50.0%)
+2025-04-23 09:40:09,775 - PristonBot - DEBUG - Stamina bar percentage: 20.4%
+2025-04-23 09:40:09,777 - PristonBot - INFO - Stamina: 20.4% (Threshold: 50.0%)
+2025-04-23 09:40:09,780 - PristonBot - INFO - Stamina low (20.4%), using stamina potion (key 2)
+2025-04-23 09:40:09,780 - PristonBot - INFO - Using stamina potion - SP: 20.4% < 50.0%
+2025-04-23 09:40:09,781 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:40:10,333 - PristonBot - DEBUG - Bot loop iteration 97
+2025-04-23 09:40:10,407 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:10,408 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:10,468 - PristonBot - DEBUG - Mana bar percentage: 35.4%
+2025-04-23 09:40:10,469 - PristonBot - INFO - Mana: 35.4% (Threshold: 50.0%)
+2025-04-23 09:40:10,534 - PristonBot - DEBUG - Stamina bar percentage: 20.4%
+2025-04-23 09:40:10,535 - PristonBot - INFO - Stamina: 20.4% (Threshold: 50.0%)
+2025-04-23 09:40:11,037 - PristonBot - DEBUG - Bot loop iteration 98
+2025-04-23 09:40:11,111 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:11,115 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:11,214 - PristonBot - DEBUG - Mana bar percentage: 37.2%
+2025-04-23 09:40:11,216 - PristonBot - INFO - Mana: 37.2% (Threshold: 50.0%)
+2025-04-23 09:40:11,217 - PristonBot - INFO - Mana low (37.2%), using mana potion (key 3)
+2025-04-23 09:40:11,217 - PristonBot - INFO - Using mana potion - MP: 37.2% < 50.0%
+2025-04-23 09:40:11,217 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:40:11,342 - PristonBot - DEBUG - Stamina bar percentage: 20.4%
+2025-04-23 09:40:11,343 - PristonBot - INFO - Stamina: 20.4% (Threshold: 50.0%)
+2025-04-23 09:40:11,845 - PristonBot - DEBUG - Bot loop iteration 99
+2025-04-23 09:40:11,919 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:11,920 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:11,982 - PristonBot - DEBUG - Mana bar percentage: 37.2%
+2025-04-23 09:40:11,984 - PristonBot - INFO - Mana: 37.2% (Threshold: 50.0%)
+2025-04-23 09:40:12,044 - PristonBot - DEBUG - Stamina bar percentage: 20.4%
+2025-04-23 09:40:12,044 - PristonBot - INFO - Stamina: 20.4% (Threshold: 50.0%)
+2025-04-23 09:40:12,546 - PristonBot - DEBUG - Bot loop iteration 100
+2025-04-23 09:40:12,614 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:12,615 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:12,692 - PristonBot - DEBUG - Mana bar percentage: 31.0%
+2025-04-23 09:40:12,694 - PristonBot - INFO - Mana: 31.0% (Threshold: 50.0%)
+2025-04-23 09:40:12,765 - PristonBot - DEBUG - Stamina bar percentage: 15.1%
+2025-04-23 09:40:12,766 - PristonBot - INFO - Stamina: 15.1% (Threshold: 50.0%)
+2025-04-23 09:40:13,268 - PristonBot - DEBUG - Bot loop iteration 101
+2025-04-23 09:40:13,332 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:13,333 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:13,400 - PristonBot - DEBUG - Mana bar percentage: 31.0%
+2025-04-23 09:40:13,401 - PristonBot - INFO - Mana: 31.0% (Threshold: 50.0%)
+2025-04-23 09:40:13,465 - PristonBot - DEBUG - Stamina bar percentage: 16.1%
+2025-04-23 09:40:13,468 - PristonBot - INFO - Stamina: 16.1% (Threshold: 50.0%)
+2025-04-23 09:40:13,470 - PristonBot - INFO - Stamina low (16.1%), using stamina potion (key 2)
+2025-04-23 09:40:13,471 - PristonBot - INFO - Using stamina potion - SP: 16.1% < 50.0%
+2025-04-23 09:40:13,471 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:40:14,023 - PristonBot - DEBUG - Bot loop iteration 102
+2025-04-23 09:40:14,085 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:14,085 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:14,151 - PristonBot - DEBUG - Mana bar percentage: 24.8%
+2025-04-23 09:40:14,151 - PristonBot - INFO - Mana: 24.8% (Threshold: 50.0%)
+2025-04-23 09:40:14,222 - PristonBot - DEBUG - Stamina bar percentage: 9.7%
+2025-04-23 09:40:14,225 - PristonBot - INFO - Stamina: 9.7% (Threshold: 50.0%)
+2025-04-23 09:40:14,726 - PristonBot - DEBUG - Bot loop iteration 103
+2025-04-23 09:40:14,786 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:14,787 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:14,851 - PristonBot - DEBUG - Mana bar percentage: 25.7%
+2025-04-23 09:40:14,851 - PristonBot - INFO - Mana: 25.7% (Threshold: 50.0%)
+2025-04-23 09:40:14,851 - PristonBot - INFO - Mana low (25.7%), using mana potion (key 3)
+2025-04-23 09:40:14,852 - PristonBot - INFO - Using mana potion - MP: 25.7% < 50.0%
+2025-04-23 09:40:14,852 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:40:14,971 - PristonBot - DEBUG - Stamina bar percentage: 10.8%
+2025-04-23 09:40:14,972 - PristonBot - INFO - Stamina: 10.8% (Threshold: 50.0%)
+2025-04-23 09:40:15,474 - PristonBot - DEBUG - Bot loop iteration 104
+2025-04-23 09:40:15,542 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:15,544 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:15,614 - PristonBot - DEBUG - Mana bar percentage: 25.7%
+2025-04-23 09:40:15,616 - PristonBot - INFO - Mana: 25.7% (Threshold: 50.0%)
+2025-04-23 09:40:15,695 - PristonBot - DEBUG - Stamina bar percentage: 10.8%
+2025-04-23 09:40:15,697 - PristonBot - INFO - Stamina: 10.8% (Threshold: 50.0%)
+2025-04-23 09:40:16,198 - PristonBot - DEBUG - Bot loop iteration 105
+2025-04-23 09:40:16,278 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:16,279 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:16,354 - PristonBot - DEBUG - Mana bar percentage: 25.7%
+2025-04-23 09:40:16,355 - PristonBot - INFO - Mana: 25.7% (Threshold: 50.0%)
+2025-04-23 09:40:16,419 - PristonBot - DEBUG - Stamina bar percentage: 11.8%
+2025-04-23 09:40:16,420 - PristonBot - INFO - Stamina: 11.8% (Threshold: 50.0%)
+2025-04-23 09:40:16,922 - PristonBot - DEBUG - Bot loop iteration 106
+2025-04-23 09:40:16,997 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:16,998 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:17,073 - PristonBot - DEBUG - Mana bar percentage: 26.5%
+2025-04-23 09:40:17,074 - PristonBot - INFO - Mana: 26.5% (Threshold: 50.0%)
+2025-04-23 09:40:17,138 - PristonBot - DEBUG - Stamina bar percentage: 12.9%
+2025-04-23 09:40:17,139 - PristonBot - INFO - Stamina: 12.9% (Threshold: 50.0%)
+2025-04-23 09:40:17,140 - PristonBot - INFO - Stamina low (12.9%), using stamina potion (key 2)
+2025-04-23 09:40:17,140 - PristonBot - INFO - Using stamina potion - SP: 12.9% < 50.0%
+2025-04-23 09:40:17,140 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:40:17,691 - PristonBot - DEBUG - Bot loop iteration 107
+2025-04-23 09:40:17,758 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:17,758 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:17,814 - PristonBot - DEBUG - Mana bar percentage: 26.5%
+2025-04-23 09:40:17,816 - PristonBot - INFO - Mana: 26.5% (Threshold: 50.0%)
+2025-04-23 09:40:17,886 - PristonBot - DEBUG - Stamina bar percentage: 15.1%
+2025-04-23 09:40:17,888 - PristonBot - INFO - Stamina: 15.1% (Threshold: 50.0%)
+2025-04-23 09:40:18,389 - PristonBot - DEBUG - Bot loop iteration 108
+2025-04-23 09:40:18,453 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:18,454 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:18,517 - PristonBot - DEBUG - Mana bar percentage: 28.3%
+2025-04-23 09:40:18,518 - PristonBot - INFO - Mana: 28.3% (Threshold: 50.0%)
+2025-04-23 09:40:18,519 - PristonBot - INFO - Mana low (28.3%), using mana potion (key 3)
+2025-04-23 09:40:18,520 - PristonBot - INFO - Using mana potion - MP: 28.3% < 50.0%
+2025-04-23 09:40:18,520 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:40:18,635 - PristonBot - DEBUG - Stamina bar percentage: 17.2%
+2025-04-23 09:40:18,636 - PristonBot - INFO - Stamina: 17.2% (Threshold: 50.0%)
+2025-04-23 09:40:19,137 - PristonBot - DEBUG - Bot loop iteration 109
+2025-04-23 09:40:19,207 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:19,208 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:19,274 - PristonBot - DEBUG - Mana bar percentage: 28.3%
+2025-04-23 09:40:19,275 - PristonBot - INFO - Mana: 28.3% (Threshold: 50.0%)
+2025-04-23 09:40:19,332 - PristonBot - DEBUG - Stamina bar percentage: 18.3%
+2025-04-23 09:40:19,333 - PristonBot - INFO - Stamina: 18.3% (Threshold: 50.0%)
+2025-04-23 09:40:19,835 - PristonBot - DEBUG - Bot loop iteration 110
+2025-04-23 09:40:19,911 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:19,912 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:19,997 - PristonBot - DEBUG - Mana bar percentage: 29.2%
+2025-04-23 09:40:19,999 - PristonBot - INFO - Mana: 29.2% (Threshold: 50.0%)
+2025-04-23 09:40:20,072 - PristonBot - DEBUG - Stamina bar percentage: 20.4%
+2025-04-23 09:40:20,073 - PristonBot - INFO - Stamina: 20.4% (Threshold: 50.0%)
+2025-04-23 09:40:20,575 - PristonBot - DEBUG - Bot loop iteration 111
+2025-04-23 09:40:20,637 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:20,637 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:20,708 - PristonBot - DEBUG - Mana bar percentage: 29.2%
+2025-04-23 09:40:20,709 - PristonBot - INFO - Mana: 29.2% (Threshold: 50.0%)
+2025-04-23 09:40:20,790 - PristonBot - DEBUG - Stamina bar percentage: 22.6%
+2025-04-23 09:40:20,791 - PristonBot - INFO - Stamina: 22.6% (Threshold: 50.0%)
+2025-04-23 09:40:20,791 - PristonBot - INFO - Stamina low (22.6%), using stamina potion (key 2)
+2025-04-23 09:40:20,792 - PristonBot - INFO - Using stamina potion - SP: 22.6% < 50.0%
+2025-04-23 09:40:20,792 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:40:21,344 - PristonBot - DEBUG - Bot loop iteration 112
+2025-04-23 09:40:21,404 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:21,405 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:21,478 - PristonBot - DEBUG - Mana bar percentage: 30.1%
+2025-04-23 09:40:21,481 - PristonBot - INFO - Mana: 30.1% (Threshold: 50.0%)
+2025-04-23 09:40:21,559 - PristonBot - DEBUG - Stamina bar percentage: 23.7%
+2025-04-23 09:40:21,559 - PristonBot - INFO - Stamina: 23.7% (Threshold: 50.0%)
+2025-04-23 09:40:22,061 - PristonBot - DEBUG - Bot loop iteration 113
+2025-04-23 09:40:22,136 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:22,137 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:22,212 - PristonBot - DEBUG - Mana bar percentage: 30.1%
+2025-04-23 09:40:22,213 - PristonBot - INFO - Mana: 30.1% (Threshold: 50.0%)
+2025-04-23 09:40:22,215 - PristonBot - INFO - Mana low (30.1%), using mana potion (key 3)
+2025-04-23 09:40:22,216 - PristonBot - INFO - Using mana potion - MP: 30.1% < 50.0%
+2025-04-23 09:40:22,217 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:40:22,336 - PristonBot - DEBUG - Stamina bar percentage: 24.7%
+2025-04-23 09:40:22,338 - PristonBot - INFO - Stamina: 24.7% (Threshold: 50.0%)
+2025-04-23 09:40:22,839 - PristonBot - DEBUG - Bot loop iteration 114
+2025-04-23 09:40:22,908 - PristonBot - DEBUG - Health bar percentage: 98.3%
+2025-04-23 09:40:22,909 - PristonBot - INFO - Health: 98.3% (Threshold: 50.0%)
+2025-04-23 09:40:22,974 - PristonBot - DEBUG - Mana bar percentage: 30.1%
+2025-04-23 09:40:22,975 - PristonBot - INFO - Mana: 30.1% (Threshold: 50.0%)
+2025-04-23 09:40:23,040 - PristonBot - DEBUG - Stamina bar percentage: 26.9%
+2025-04-23 09:40:23,041 - PristonBot - INFO - Stamina: 26.9% (Threshold: 50.0%)
+2025-04-23 09:40:23,481 - PristonBot - INFO - Stopping bot...
+2025-04-23 09:40:24,494 - PristonBot - INFO - Bot thread joined
+2025-04-23 09:40:24,495 - PristonBot - INFO - Bot stopped
+2025-04-23 09:40:24,500 - PristonBot - INFO - Bot loop stopped
+2025-04-23 09:40:27,328 - PristonBot - INFO - Starting selection: Health Bar
+2025-04-23 09:40:27,329 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:40:32,773 - PristonBot - DEBUG - Started selection at (483, 792)
+2025-04-23 09:40:34,681 - PristonBot - DEBUG - Completed selection to (491, 888)
+2025-04-23 09:40:34,681 - PristonBot - DEBUG - Captured preview image: 8x96
+2025-04-23 09:40:34,682 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:40:35,748 - PristonBot - INFO - Health Bar selection confirmed: (483, 792) to (491, 888)
+2025-04-23 09:40:36,468 - PristonBot - INFO - Health Bar selected: (483,792) to (491,888)
+2025-04-23 09:40:36,925 - PristonBot - INFO - Starting selection: Stamina Bar
+2025-04-23 09:40:36,926 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:40:40,649 - PristonBot - DEBUG - Started selection at (782, 992)
+2025-04-23 09:40:42,731 - PristonBot - DEBUG - Completed selection to (801, 1110)
+2025-04-23 09:40:42,733 - PristonBot - DEBUG - Captured preview image: 19x118
+2025-04-23 09:40:42,735 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:40:43,731 - PristonBot - INFO - Stamina Bar selection confirmed: (782, 992) to (801, 1110)
+2025-04-23 09:40:44,073 - PristonBot - INFO - Stamina Bar selected: (782,992) to (801,1110)
+2025-04-23 09:40:45,021 - PristonBot - INFO - Starting selection: Stamina Bar
+2025-04-23 09:40:45,023 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:40:47,413 - PristonBot - DEBUG - Started selection at (580, 1012)
+2025-04-23 09:40:49,519 - PristonBot - DEBUG - Completed selection to (590, 1114)
+2025-04-23 09:40:49,520 - PristonBot - DEBUG - Captured preview image: 10x102
+2025-04-23 09:40:49,521 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:40:50,772 - PristonBot - INFO - Stamina Bar selection confirmed: (580, 1012) to (590, 1114)
+2025-04-23 09:40:51,148 - PristonBot - INFO - Stamina Bar selected: (580,1012) to (590,1114)
+2025-04-23 09:40:53,489 - PristonBot - INFO - Starting selection: Mana Bar
+2025-04-23 09:40:53,490 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:40:57,458 - PristonBot - DEBUG - Started selection at (627, 795)
+2025-04-23 09:40:59,028 - PristonBot - DEBUG - Completed selection to (639, 888)
+2025-04-23 09:40:59,028 - PristonBot - DEBUG - Captured preview image: 12x93
+2025-04-23 09:40:59,029 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:40:59,975 - PristonBot - INFO - Mana Bar selection confirmed: (627, 795) to (639, 888)
+2025-04-23 09:41:00,627 - PristonBot - INFO - Mana Bar selected: (627,795) to (639,888)
+2025-04-23 09:41:01,992 - PristonBot - INFO - Starting selection: Health Bar
+2025-04-23 09:41:01,994 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:41:04,172 - PristonBot - DEBUG - Started selection at (605, 993)
+2025-04-23 09:41:06,521 - PristonBot - DEBUG - Completed selection to (614, 1111)
+2025-04-23 09:41:06,523 - PristonBot - DEBUG - Captured preview image: 9x118
+2025-04-23 09:41:06,524 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:41:07,858 - PristonBot - INFO - Health Bar selection confirmed: (605, 993) to (614, 1111)
+2025-04-23 09:41:08,116 - PristonBot - INFO - Health Bar selected: (605,993) to (614,1111)
+2025-04-23 09:41:09,363 - PristonBot - INFO - Starting selection: Mana Bar
+2025-04-23 09:41:09,363 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:41:12,199 - PristonBot - DEBUG - Started selection at (787, 994)
+2025-04-23 09:41:14,772 - PristonBot - DEBUG - Completed selection to (800, 1108)
+2025-04-23 09:41:14,773 - PristonBot - DEBUG - Captured preview image: 13x114
+2025-04-23 09:41:14,773 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:41:16,016 - PristonBot - INFO - Mana Bar selection confirmed: (787, 994) to (800, 1108)
+2025-04-23 09:41:16,508 - PristonBot - INFO - Mana Bar selected: (787,994) to (800,1108)
+2025-04-23 09:41:19,005 - PristonBot - INFO - Starting bot...
+2025-04-23 09:41:19,006 - PristonBot - INFO - Bot thread started
+2025-04-23 09:41:19,007 - PristonBot - INFO - Bot started
+2025-04-23 09:41:19,007 - PristonBot - INFO - Bot loop started
+2025-04-23 09:41:19,008 - PristonBot - DEBUG - Bot loop iteration 1
+2025-04-23 09:41:19,080 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:19,081 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:19,137 - PristonBot - DEBUG - Mana bar percentage: 64.0%
+2025-04-23 09:41:19,137 - PristonBot - INFO - Mana: 64.0% (Threshold: 50.0%)
+2025-04-23 09:41:19,188 - PristonBot - DEBUG - Stamina bar percentage: 96.1%
+2025-04-23 09:41:19,189 - PristonBot - INFO - Stamina: 96.1% (Threshold: 50.0%)
+2025-04-23 09:41:19,690 - PristonBot - DEBUG - Bot loop iteration 2
+2025-04-23 09:41:19,768 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:19,768 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:19,822 - PristonBot - DEBUG - Mana bar percentage: 64.0%
+2025-04-23 09:41:19,824 - PristonBot - INFO - Mana: 64.0% (Threshold: 50.0%)
+2025-04-23 09:41:19,891 - PristonBot - DEBUG - Stamina bar percentage: 96.1%
+2025-04-23 09:41:19,891 - PristonBot - INFO - Stamina: 96.1% (Threshold: 50.0%)
+2025-04-23 09:41:20,393 - PristonBot - DEBUG - Bot loop iteration 3
+2025-04-23 09:41:20,530 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:20,531 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:20,598 - PristonBot - DEBUG - Mana bar percentage: 64.9%
+2025-04-23 09:41:20,599 - PristonBot - INFO - Mana: 64.9% (Threshold: 50.0%)
+2025-04-23 09:41:20,666 - PristonBot - DEBUG - Stamina bar percentage: 96.1%
+2025-04-23 09:41:20,667 - PristonBot - INFO - Stamina: 96.1% (Threshold: 50.0%)
+2025-04-23 09:41:21,168 - PristonBot - DEBUG - Bot loop iteration 4
+2025-04-23 09:41:21,238 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:21,238 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:21,296 - PristonBot - DEBUG - Mana bar percentage: 64.9%
+2025-04-23 09:41:21,296 - PristonBot - INFO - Mana: 64.9% (Threshold: 50.0%)
+2025-04-23 09:41:21,376 - PristonBot - DEBUG - Stamina bar percentage: 96.1%
+2025-04-23 09:41:21,377 - PristonBot - INFO - Stamina: 96.1% (Threshold: 50.0%)
+2025-04-23 09:41:21,878 - PristonBot - DEBUG - Bot loop iteration 5
+2025-04-23 09:41:21,960 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:21,961 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:22,028 - PristonBot - DEBUG - Mana bar percentage: 64.9%
+2025-04-23 09:41:22,028 - PristonBot - INFO - Mana: 64.9% (Threshold: 50.0%)
+2025-04-23 09:41:22,098 - PristonBot - DEBUG - Stamina bar percentage: 96.1%
+2025-04-23 09:41:22,099 - PristonBot - INFO - Stamina: 96.1% (Threshold: 50.0%)
+2025-04-23 09:41:22,601 - PristonBot - DEBUG - Bot loop iteration 6
+2025-04-23 09:41:22,675 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:22,676 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:22,747 - PristonBot - DEBUG - Mana bar percentage: 59.6%
+2025-04-23 09:41:22,748 - PristonBot - INFO - Mana: 59.6% (Threshold: 50.0%)
+2025-04-23 09:41:22,816 - PristonBot - DEBUG - Stamina bar percentage: 88.2%
+2025-04-23 09:41:22,817 - PristonBot - INFO - Stamina: 88.2% (Threshold: 50.0%)
+2025-04-23 09:41:23,319 - PristonBot - DEBUG - Bot loop iteration 7
+2025-04-23 09:41:23,389 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:23,390 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:23,443 - PristonBot - DEBUG - Mana bar percentage: 59.6%
+2025-04-23 09:41:23,444 - PristonBot - INFO - Mana: 59.6% (Threshold: 50.0%)
+2025-04-23 09:41:23,514 - PristonBot - DEBUG - Stamina bar percentage: 90.2%
+2025-04-23 09:41:23,515 - PristonBot - INFO - Stamina: 90.2% (Threshold: 50.0%)
+2025-04-23 09:41:24,017 - PristonBot - DEBUG - Bot loop iteration 8
+2025-04-23 09:41:24,096 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:24,097 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:24,163 - PristonBot - DEBUG - Mana bar percentage: 59.6%
+2025-04-23 09:41:24,164 - PristonBot - INFO - Mana: 59.6% (Threshold: 50.0%)
+2025-04-23 09:41:24,228 - PristonBot - DEBUG - Stamina bar percentage: 90.2%
+2025-04-23 09:41:24,229 - PristonBot - INFO - Stamina: 90.2% (Threshold: 50.0%)
+2025-04-23 09:41:24,730 - PristonBot - DEBUG - Bot loop iteration 9
+2025-04-23 09:41:24,799 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:24,800 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:24,927 - PristonBot - DEBUG - Mana bar percentage: 54.4%
+2025-04-23 09:41:24,929 - PristonBot - INFO - Mana: 54.4% (Threshold: 50.0%)
+2025-04-23 09:41:25,008 - PristonBot - DEBUG - Stamina bar percentage: 82.4%
+2025-04-23 09:41:25,010 - PristonBot - INFO - Stamina: 82.4% (Threshold: 50.0%)
+2025-04-23 09:41:25,510 - PristonBot - DEBUG - Bot loop iteration 10
+2025-04-23 09:41:25,595 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:25,596 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:25,667 - PristonBot - DEBUG - Mana bar percentage: 54.4%
+2025-04-23 09:41:25,668 - PristonBot - INFO - Mana: 54.4% (Threshold: 50.0%)
+2025-04-23 09:41:25,728 - PristonBot - DEBUG - Stamina bar percentage: 82.4%
+2025-04-23 09:41:25,729 - PristonBot - INFO - Stamina: 82.4% (Threshold: 50.0%)
+2025-04-23 09:41:26,231 - PristonBot - DEBUG - Bot loop iteration 11
+2025-04-23 09:41:26,308 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:26,308 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:26,361 - PristonBot - DEBUG - Mana bar percentage: 47.4%
+2025-04-23 09:41:26,362 - PristonBot - INFO - Mana: 47.4% (Threshold: 50.0%)
+2025-04-23 09:41:26,365 - PristonBot - INFO - Mana low (47.4%), using mana potion (key 3)
+2025-04-23 09:41:26,365 - PristonBot - INFO - Using mana potion - MP: 47.4% < 50.0%
+2025-04-23 09:41:26,365 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:41:26,493 - PristonBot - DEBUG - Stamina bar percentage: 76.5%
+2025-04-23 09:41:26,494 - PristonBot - INFO - Stamina: 76.5% (Threshold: 50.0%)
+2025-04-23 09:41:26,996 - PristonBot - DEBUG - Bot loop iteration 12
+2025-04-23 09:41:27,072 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:27,073 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:27,148 - PristonBot - DEBUG - Mana bar percentage: 49.1%
+2025-04-23 09:41:27,149 - PristonBot - INFO - Mana: 49.1% (Threshold: 50.0%)
+2025-04-23 09:41:27,218 - PristonBot - DEBUG - Stamina bar percentage: 76.5%
+2025-04-23 09:41:27,220 - PristonBot - INFO - Stamina: 76.5% (Threshold: 50.0%)
+2025-04-23 09:41:27,721 - PristonBot - DEBUG - Bot loop iteration 13
+2025-04-23 09:41:27,791 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:27,791 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:27,847 - PristonBot - DEBUG - Mana bar percentage: 42.1%
+2025-04-23 09:41:27,847 - PristonBot - INFO - Mana: 42.1% (Threshold: 50.0%)
+2025-04-23 09:41:27,930 - PristonBot - DEBUG - Stamina bar percentage: 69.6%
+2025-04-23 09:41:27,931 - PristonBot - INFO - Stamina: 69.6% (Threshold: 50.0%)
+2025-04-23 09:41:28,433 - PristonBot - DEBUG - Bot loop iteration 14
+2025-04-23 09:41:28,503 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:28,504 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:28,568 - PristonBot - DEBUG - Mana bar percentage: 43.0%
+2025-04-23 09:41:28,569 - PristonBot - INFO - Mana: 43.0% (Threshold: 50.0%)
+2025-04-23 09:41:28,633 - PristonBot - DEBUG - Stamina bar percentage: 69.6%
+2025-04-23 09:41:28,633 - PristonBot - INFO - Stamina: 69.6% (Threshold: 50.0%)
+2025-04-23 09:41:29,135 - PristonBot - DEBUG - Bot loop iteration 15
+2025-04-23 09:41:29,209 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:29,210 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:29,284 - PristonBot - DEBUG - Mana bar percentage: 43.0%
+2025-04-23 09:41:29,285 - PristonBot - INFO - Mana: 43.0% (Threshold: 50.0%)
+2025-04-23 09:41:29,353 - PristonBot - DEBUG - Stamina bar percentage: 69.6%
+2025-04-23 09:41:29,355 - PristonBot - INFO - Stamina: 69.6% (Threshold: 50.0%)
+2025-04-23 09:41:29,855 - PristonBot - DEBUG - Bot loop iteration 16
+2025-04-23 09:41:29,936 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:29,937 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:30,001 - PristonBot - DEBUG - Mana bar percentage: 36.8%
+2025-04-23 09:41:30,001 - PristonBot - INFO - Mana: 36.8% (Threshold: 50.0%)
+2025-04-23 09:41:30,002 - PristonBot - INFO - Mana low (36.8%), using mana potion (key 3)
+2025-04-23 09:41:30,002 - PristonBot - INFO - Using mana potion - MP: 36.8% < 50.0%
+2025-04-23 09:41:30,002 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:41:30,121 - PristonBot - DEBUG - Stamina bar percentage: 62.7%
+2025-04-23 09:41:30,122 - PristonBot - INFO - Stamina: 62.7% (Threshold: 50.0%)
+2025-04-23 09:41:30,624 - PristonBot - DEBUG - Bot loop iteration 17
+2025-04-23 09:41:30,691 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:30,692 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:30,752 - PristonBot - DEBUG - Mana bar percentage: 37.7%
+2025-04-23 09:41:30,753 - PristonBot - INFO - Mana: 37.7% (Threshold: 50.0%)
+2025-04-23 09:41:30,817 - PristonBot - DEBUG - Stamina bar percentage: 62.7%
+2025-04-23 09:41:30,817 - PristonBot - INFO - Stamina: 62.7% (Threshold: 50.0%)
+2025-04-23 09:41:31,318 - PristonBot - DEBUG - Bot loop iteration 18
+2025-04-23 09:41:31,393 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:31,394 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:31,449 - PristonBot - DEBUG - Mana bar percentage: 37.7%
+2025-04-23 09:41:31,449 - PristonBot - INFO - Mana: 37.7% (Threshold: 50.0%)
+2025-04-23 09:41:31,548 - PristonBot - DEBUG - Stamina bar percentage: 63.7%
+2025-04-23 09:41:31,549 - PristonBot - INFO - Stamina: 63.7% (Threshold: 50.0%)
+2025-04-23 09:41:32,051 - PristonBot - DEBUG - Bot loop iteration 19
+2025-04-23 09:41:32,142 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:32,144 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:32,208 - PristonBot - DEBUG - Mana bar percentage: 37.7%
+2025-04-23 09:41:32,209 - PristonBot - INFO - Mana: 37.7% (Threshold: 50.0%)
+2025-04-23 09:41:32,270 - PristonBot - DEBUG - Stamina bar percentage: 57.8%
+2025-04-23 09:41:32,270 - PristonBot - INFO - Stamina: 57.8% (Threshold: 50.0%)
+2025-04-23 09:41:32,771 - PristonBot - DEBUG - Bot loop iteration 20
+2025-04-23 09:41:32,843 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:32,844 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:32,899 - PristonBot - DEBUG - Mana bar percentage: 32.5%
+2025-04-23 09:41:32,899 - PristonBot - INFO - Mana: 32.5% (Threshold: 50.0%)
+2025-04-23 09:41:32,975 - PristonBot - DEBUG - Stamina bar percentage: 57.8%
+2025-04-23 09:41:32,976 - PristonBot - INFO - Stamina: 57.8% (Threshold: 50.0%)
+2025-04-23 09:41:33,477 - PristonBot - DEBUG - Bot loop iteration 21
+2025-04-23 09:41:33,549 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:33,550 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:33,623 - PristonBot - DEBUG - Mana bar percentage: 32.5%
+2025-04-23 09:41:33,624 - PristonBot - INFO - Mana: 32.5% (Threshold: 50.0%)
+2025-04-23 09:41:33,625 - PristonBot - INFO - Mana low (32.5%), using mana potion (key 3)
+2025-04-23 09:41:33,625 - PristonBot - INFO - Using mana potion - MP: 32.5% < 50.0%
+2025-04-23 09:41:33,625 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:41:33,754 - PristonBot - DEBUG - Stamina bar percentage: 57.8%
+2025-04-23 09:41:33,755 - PristonBot - INFO - Stamina: 57.8% (Threshold: 50.0%)
+2025-04-23 09:41:34,257 - PristonBot - DEBUG - Bot loop iteration 22
+2025-04-23 09:41:34,331 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:34,332 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:34,407 - PristonBot - DEBUG - Mana bar percentage: 25.4%
+2025-04-23 09:41:34,408 - PristonBot - INFO - Mana: 25.4% (Threshold: 50.0%)
+2025-04-23 09:41:34,471 - PristonBot - DEBUG - Stamina bar percentage: 51.0%
+2025-04-23 09:41:34,472 - PristonBot - INFO - Stamina: 51.0% (Threshold: 50.0%)
+2025-04-23 09:41:34,973 - PristonBot - DEBUG - Bot loop iteration 23
+2025-04-23 09:41:35,048 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:35,050 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:35,119 - PristonBot - DEBUG - Mana bar percentage: 27.2%
+2025-04-23 09:41:35,120 - PristonBot - INFO - Mana: 27.2% (Threshold: 50.0%)
+2025-04-23 09:41:35,196 - PristonBot - DEBUG - Stamina bar percentage: 51.0%
+2025-04-23 09:41:35,198 - PristonBot - INFO - Stamina: 51.0% (Threshold: 50.0%)
+2025-04-23 09:41:35,699 - PristonBot - DEBUG - Bot loop iteration 24
+2025-04-23 09:41:35,780 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:35,781 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:35,861 - PristonBot - DEBUG - Mana bar percentage: 20.2%
+2025-04-23 09:41:35,861 - PristonBot - INFO - Mana: 20.2% (Threshold: 50.0%)
+2025-04-23 09:41:35,921 - PristonBot - DEBUG - Stamina bar percentage: 44.1%
+2025-04-23 09:41:35,921 - PristonBot - INFO - Stamina: 44.1% (Threshold: 50.0%)
+2025-04-23 09:41:35,922 - PristonBot - INFO - Stamina low (44.1%), using stamina potion (key 2)
+2025-04-23 09:41:35,923 - PristonBot - INFO - Using stamina potion - SP: 44.1% < 50.0%
+2025-04-23 09:41:35,923 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:41:36,475 - PristonBot - DEBUG - Bot loop iteration 25
+2025-04-23 09:41:36,562 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:36,564 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:36,647 - PristonBot - DEBUG - Mana bar percentage: 21.1%
+2025-04-23 09:41:36,648 - PristonBot - INFO - Mana: 21.1% (Threshold: 50.0%)
+2025-04-23 09:41:36,720 - PristonBot - DEBUG - Stamina bar percentage: 44.1%
+2025-04-23 09:41:36,720 - PristonBot - INFO - Stamina: 44.1% (Threshold: 50.0%)
+2025-04-23 09:41:37,221 - PristonBot - DEBUG - Bot loop iteration 26
+2025-04-23 09:41:37,293 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:37,293 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:37,358 - PristonBot - DEBUG - Mana bar percentage: 15.8%
+2025-04-23 09:41:37,359 - PristonBot - INFO - Mana: 15.8% (Threshold: 50.0%)
+2025-04-23 09:41:37,360 - PristonBot - INFO - Mana low (15.8%), using mana potion (key 3)
+2025-04-23 09:41:37,360 - PristonBot - INFO - Using mana potion - MP: 15.8% < 50.0%
+2025-04-23 09:41:37,361 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:41:37,470 - PristonBot - DEBUG - Stamina bar percentage: 38.2%
+2025-04-23 09:41:37,471 - PristonBot - INFO - Stamina: 38.2% (Threshold: 50.0%)
+2025-04-23 09:41:37,972 - PristonBot - DEBUG - Bot loop iteration 27
+2025-04-23 09:41:38,046 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:38,047 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:38,118 - PristonBot - DEBUG - Mana bar percentage: 15.8%
+2025-04-23 09:41:38,118 - PristonBot - INFO - Mana: 15.8% (Threshold: 50.0%)
+2025-04-23 09:41:38,188 - PristonBot - DEBUG - Stamina bar percentage: 38.2%
+2025-04-23 09:41:38,189 - PristonBot - INFO - Stamina: 38.2% (Threshold: 50.0%)
+2025-04-23 09:41:38,691 - PristonBot - DEBUG - Bot loop iteration 28
+2025-04-23 09:41:38,761 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:38,761 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:38,819 - PristonBot - DEBUG - Mana bar percentage: 15.8%
+2025-04-23 09:41:38,820 - PristonBot - INFO - Mana: 15.8% (Threshold: 50.0%)
+2025-04-23 09:41:38,891 - PristonBot - DEBUG - Stamina bar percentage: 38.2%
+2025-04-23 09:41:38,891 - PristonBot - INFO - Stamina: 38.2% (Threshold: 50.0%)
+2025-04-23 09:41:39,393 - PristonBot - DEBUG - Bot loop iteration 29
+2025-04-23 09:41:39,461 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:39,462 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:39,523 - PristonBot - DEBUG - Mana bar percentage: 10.5%
+2025-04-23 09:41:39,524 - PristonBot - INFO - Mana: 10.5% (Threshold: 50.0%)
+2025-04-23 09:41:39,590 - PristonBot - DEBUG - Stamina bar percentage: 32.4%
+2025-04-23 09:41:39,591 - PristonBot - INFO - Stamina: 32.4% (Threshold: 50.0%)
+2025-04-23 09:41:39,592 - PristonBot - INFO - Stamina low (32.4%), using stamina potion (key 2)
+2025-04-23 09:41:39,592 - PristonBot - INFO - Using stamina potion - SP: 32.4% < 50.0%
+2025-04-23 09:41:39,592 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:41:40,144 - PristonBot - DEBUG - Bot loop iteration 30
+2025-04-23 09:41:40,212 - PristonBot - INFO - Stopping bot...
+2025-04-23 09:41:40,220 - PristonBot - DEBUG - Health bar percentage: 100.0%
+2025-04-23 09:41:41,218 - PristonBot - INFO - Bot thread joined
+2025-04-23 09:41:41,221 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:41:41,303 - PristonBot - DEBUG - Mana bar percentage: 10.5%
+2025-04-23 09:41:41,304 - PristonBot - INFO - Mana: 10.5% (Threshold: 50.0%)
+2025-04-23 09:41:41,369 - PristonBot - DEBUG - Stamina bar percentage: 33.3%
+2025-04-23 09:41:41,370 - PristonBot - INFO - Stamina: 33.3% (Threshold: 50.0%)
+2025-04-23 09:41:41,872 - PristonBot - INFO - Bot stopped
+2025-04-23 09:41:41,872 - PristonBot - INFO - Bot loop stopped
+2025-04-23 09:45:06,276 - PristonBot - ERROR - Unhandled exception
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\system.py", line 143, in <module>
+    main()
+  File "C:\repositories\microsoft\system.py", line 129, in main
+    root.mainloop()
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1505, in mainloop
+    self.tk.mainloop(n)
+KeyboardInterrupt

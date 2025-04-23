@@ -1,0 +1,330 @@
+2025-04-23 09:07:57,247 - PristonBot - INFO - Logging initialized
+2025-04-23 09:07:57,247 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 09:07:57,298 - PristonBot - INFO - Icon file not found
+2025-04-23 09:07:57,299 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 09:07:57,303 - PristonBot - INFO - Initialized Health bar selector
+2025-04-23 09:07:57,303 - PristonBot - INFO - Initialized Mana bar selector
+2025-04-23 09:07:57,304 - PristonBot - INFO - Initialized Stamina bar selector
+2025-04-23 09:07:57,314 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 09:07:57,318 - PristonBot - INFO - Please select the Health, Mana, and Stamina bars to continue
+2025-04-23 09:07:57,318 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 09:07:57,319 - PristonBot - INFO - Application started successfully
+2025-04-23 09:07:57,320 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 09:07:57,321 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 09:07:57,323 - PristonBot - INFO - Step 3: Click Start Bot to begin monitoring
+2025-04-23 09:08:03,349 - PristonBot - INFO - Starting Health bar selection
+2025-04-23 09:08:03,350 - PristonBot - DEBUG - Taking screenshot for selection
+2025-04-23 09:08:07,210 - PristonBot - DEBUG - Started Health bar selection at (243, 534)
+2025-04-23 09:08:07,257 - PristonBot - DEBUG - Completed Health bar selection to (243, 532)
+2025-04-23 09:08:08,941 - PristonBot - WARNING - User made a small selection for Health bar: 0x2 pixels
+2025-04-23 09:08:09,019 - PristonBot - DEBUG - Captured preview image for Health bar: 0x2
+2025-04-23 09:08:09,030 - PristonBot - ERROR - Error creating preview image: tile cannot extend outside image
+Traceback (most recent call last):
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 554, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\app\bar_selector.py", line 194, in on_release
+    preview.save(f"{debug_dir}/{self.title.lower()}_preview.png")
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\PngImagePlugin.py", line 1488, in _save
+    ImageFile._save(
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 558, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 576, in _encode_tile
+    encoder.setimage(im.im, extents)
+SystemError: tile cannot extend outside image
+2025-04-23 09:08:10,634 - PristonBot - INFO - Health bar selection canceled, retrying
+2025-04-23 09:08:11,905 - PristonBot - DEBUG - Started Health bar selection at (1698, 93)
+2025-04-23 09:08:11,963 - PristonBot - DEBUG - Completed Health bar selection to (1698, 93)
+2025-04-23 09:08:13,251 - PristonBot - WARNING - User made a small selection for Health bar: 0x0 pixels
+2025-04-23 09:08:13,320 - PristonBot - DEBUG - Captured preview image for Health bar: 0x0
+2025-04-23 09:08:13,321 - PristonBot - ERROR - Error creating preview image: tile cannot extend outside image
+Traceback (most recent call last):
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 554, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\app\bar_selector.py", line 194, in on_release
+    preview.save(f"{debug_dir}/{self.title.lower()}_preview.png")
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\PngImagePlugin.py", line 1488, in _save
+    ImageFile._save(
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 558, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 576, in _encode_tile
+    encoder.setimage(im.im, extents)
+SystemError: tile cannot extend outside image
+2025-04-23 09:08:14,594 - PristonBot - INFO - Health bar selection canceled, retrying
+2025-04-23 09:08:17,107 - PristonBot - DEBUG - Started Health bar selection at (1243, 453)
+2025-04-23 09:08:17,152 - PristonBot - DEBUG - Completed Health bar selection to (1244, 453)
+2025-04-23 09:08:18,228 - PristonBot - WARNING - User made a small selection for Health bar: 1x0 pixels
+2025-04-23 09:08:18,297 - PristonBot - DEBUG - Captured preview image for Health bar: 1x0
+2025-04-23 09:08:18,298 - PristonBot - ERROR - Error creating preview image: tile cannot extend outside image
+Traceback (most recent call last):
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 554, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\app\bar_selector.py", line 194, in on_release
+    preview.save(f"{debug_dir}/{self.title.lower()}_preview.png")
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\PngImagePlugin.py", line 1488, in _save
+    ImageFile._save(
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 558, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 576, in _encode_tile
+    encoder.setimage(im.im, extents)
+SystemError: tile cannot extend outside image
+2025-04-23 09:08:19,232 - PristonBot - INFO - Health bar selection canceled, retrying
+2025-04-23 09:08:19,622 - PristonBot - DEBUG - Started Health bar selection at (1693, 1080)
+2025-04-23 09:08:19,696 - PristonBot - DEBUG - Completed Health bar selection to (1696, 1083)
+2025-04-23 09:08:19,847 - PristonBot - WARNING - User made a small selection for Health bar: 3x3 pixels
+2025-04-23 09:08:19,918 - PristonBot - DEBUG - Captured preview image for Health bar: 3x3
+2025-04-23 09:08:20,767 - PristonBot - DEBUG - Started Health bar selection at (2254, 848)
+2025-04-23 09:08:20,836 - PristonBot - DEBUG - Completed Health bar selection to (2254, 849)
+2025-04-23 09:08:20,893 - PristonBot - DEBUG - Started Health bar selection at (2255, 854)
+2025-04-23 09:08:20,973 - PristonBot - DEBUG - Completed Health bar selection to (2260, 858)
+2025-04-23 09:08:21,021 - PristonBot - DEBUG - Started Health bar selection at (2265, 855)
+2025-04-23 09:08:21,108 - PristonBot - DEBUG - Completed Health bar selection to (2266, 855)
+2025-04-23 09:08:21,163 - PristonBot - DEBUG - Started Health bar selection at (2272, 862)
+2025-04-23 09:08:21,241 - PristonBot - DEBUG - Completed Health bar selection to (2274, 861)
+2025-04-23 09:08:21,296 - PristonBot - DEBUG - Started Health bar selection at (2272, 862)
+2025-04-23 09:08:21,362 - PristonBot - DEBUG - Completed Health bar selection to (2274, 861)
+2025-04-23 09:08:21,441 - PristonBot - DEBUG - Started Health bar selection at (2329, 844)
+2025-04-23 09:08:21,515 - PristonBot - DEBUG - Completed Health bar selection to (2329, 843)
+2025-04-23 09:08:21,567 - PristonBot - DEBUG - Started Health bar selection at (2334, 841)
+2025-04-23 09:08:21,662 - PristonBot - DEBUG - Completed Health bar selection to (2342, 840)
+2025-04-23 09:08:21,690 - PristonBot - DEBUG - Started Health bar selection at (2343, 839)
+2025-04-23 09:08:21,781 - PristonBot - DEBUG - Completed Health bar selection to (2343, 839)
+2025-04-23 09:08:23,014 - PristonBot - WARNING - User made a small selection for Health bar: 0x0 pixels
+2025-04-23 09:08:23,099 - PristonBot - DEBUG - Captured preview image for Health bar: 0x0
+2025-04-23 09:08:23,099 - PristonBot - ERROR - Error creating preview image: tile cannot extend outside image
+Traceback (most recent call last):
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 554, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\app\bar_selector.py", line 194, in on_release
+    preview.save(f"{debug_dir}/{self.title.lower()}_preview.png")
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\PngImagePlugin.py", line 1488, in _save
+    ImageFile._save(
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 558, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 576, in _encode_tile
+    encoder.setimage(im.im, extents)
+SystemError: tile cannot extend outside image
+2025-04-23 09:08:23,529 - PristonBot - INFO - Health bar selection confirmed: (2343, 839) to (2343, 839)
+2025-04-23 09:08:24,451 - PristonBot - INFO - Health bar at screen coords: (2343,839) to (2343,839)
+2025-04-23 09:08:24,945 - PristonBot - WARNING - User made a small selection for Health bar: 8x1 pixels
+2025-04-23 09:08:25,032 - PristonBot - DEBUG - Captured preview image for Health bar: 0x0
+2025-04-23 09:08:25,032 - PristonBot - ERROR - Error creating preview image: tile cannot extend outside image
+Traceback (most recent call last):
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 554, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\app\bar_selector.py", line 194, in on_release
+    preview.save(f"{debug_dir}/{self.title.lower()}_preview.png")
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\PngImagePlugin.py", line 1488, in _save
+    ImageFile._save(
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 558, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 576, in _encode_tile
+    encoder.setimage(im.im, extents)
+SystemError: tile cannot extend outside image
+2025-04-23 09:08:25,458 - PristonBot - INFO - Health bar at screen coords: (2343,839) to (2343,839)
+2025-04-23 09:08:26,473 - PristonBot - INFO - Health bar at screen coords: (2343,839) to (2343,839)
+2025-04-23 09:08:27,069 - PristonBot - INFO - Health bar selection canceled, retrying
+2025-04-23 09:08:27,487 - PristonBot - INFO - Health bar at screen coords: (2343,839) to (2343,839)
+2025-04-23 09:08:28,337 - PristonBot - WARNING - User made a small selection for Health bar: 0x1 pixels
+2025-04-23 09:08:28,426 - PristonBot - DEBUG - Captured preview image for Health bar: 0x0
+2025-04-23 09:08:28,428 - PristonBot - ERROR - Error creating preview image: tile cannot extend outside image
+Traceback (most recent call last):
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 554, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\app\bar_selector.py", line 194, in on_release
+    preview.save(f"{debug_dir}/{self.title.lower()}_preview.png")
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\PngImagePlugin.py", line 1488, in _save
+    ImageFile._save(
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 558, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 576, in _encode_tile
+    encoder.setimage(im.im, extents)
+SystemError: tile cannot extend outside image
+2025-04-23 09:08:28,493 - PristonBot - INFO - Health bar at screen coords: (2343,839) to (2343,839)
+2025-04-23 09:08:29,503 - PristonBot - INFO - Health bar at screen coords: (2343,839) to (2343,839)
+2025-04-23 09:08:30,509 - PristonBot - INFO - Health bar at screen coords: (2343,839) to (2343,839)
+2025-04-23 09:08:31,520 - PristonBot - INFO - Health bar at screen coords: (2343,839) to (2343,839)
+2025-04-23 09:08:31,611 - PristonBot - INFO - Health bar selection canceled, retrying
+2025-04-23 09:08:31,613 - PristonBot - WARNING - User made a small selection for Health bar: 2x1 pixels
+2025-04-23 09:08:31,695 - PristonBot - DEBUG - Captured preview image for Health bar: 0x0
+2025-04-23 09:08:31,695 - PristonBot - ERROR - Error creating preview image: tile cannot extend outside image
+Traceback (most recent call last):
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 554, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\app\bar_selector.py", line 194, in on_release
+    preview.save(f"{debug_dir}/{self.title.lower()}_preview.png")
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\PngImagePlugin.py", line 1488, in _save
+    ImageFile._save(
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 558, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 576, in _encode_tile
+    encoder.setimage(im.im, extents)
+SystemError: tile cannot extend outside image
+2025-04-23 09:08:32,278 - PristonBot - INFO - Health bar selection canceled, retrying
+2025-04-23 09:08:32,530 - PristonBot - INFO - Health bar at screen coords: (2343,839) to (2343,839)
+2025-04-23 09:08:32,740 - PristonBot - WARNING - User made a small selection for Health bar: 2x1 pixels
+2025-04-23 09:08:32,834 - PristonBot - DEBUG - Captured preview image for Health bar: 0x0
+2025-04-23 09:08:32,835 - PristonBot - ERROR - Error creating preview image: tile cannot extend outside image
+Traceback (most recent call last):
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 554, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\app\bar_selector.py", line 194, in on_release
+    preview.save(f"{debug_dir}/{self.title.lower()}_preview.png")
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\PngImagePlugin.py", line 1488, in _save
+    ImageFile._save(
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 558, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 576, in _encode_tile
+    encoder.setimage(im.im, extents)
+SystemError: tile cannot extend outside image
+2025-04-23 09:08:33,515 - PristonBot - INFO - Health bar selection canceled, retrying
+2025-04-23 09:08:33,553 - PristonBot - INFO - Health bar at screen coords: (2343,839) to (2343,839)
+2025-04-23 09:08:33,938 - PristonBot - WARNING - User made a small selection for Health bar: 1x0 pixels
+2025-04-23 09:08:34,013 - PristonBot - DEBUG - Captured preview image for Health bar: 0x0
+2025-04-23 09:08:34,013 - PristonBot - ERROR - Error creating preview image: tile cannot extend outside image
+Traceback (most recent call last):
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 554, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\app\bar_selector.py", line 194, in on_release
+    preview.save(f"{debug_dir}/{self.title.lower()}_preview.png")
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\PngImagePlugin.py", line 1488, in _save
+    ImageFile._save(
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 558, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 576, in _encode_tile
+    encoder.setimage(im.im, extents)
+SystemError: tile cannot extend outside image
+2025-04-23 09:08:34,574 - PristonBot - INFO - Health bar at screen coords: (2343,839) to (2343,839)
+2025-04-23 09:08:35,581 - PristonBot - INFO - Health bar at screen coords: (2343,839) to (2343,839)
+2025-04-23 09:08:43,174 - PristonBot - WARNING - User made a small selection for Health bar: 5x4 pixels
+2025-04-23 09:08:43,266 - PristonBot - DEBUG - Captured preview image for Health bar: 0x0
+2025-04-23 09:08:43,267 - PristonBot - ERROR - Error creating preview image: tile cannot extend outside image
+Traceback (most recent call last):
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 554, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\app\bar_selector.py", line 194, in on_release
+    preview.save(f"{debug_dir}/{self.title.lower()}_preview.png")
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\PngImagePlugin.py", line 1488, in _save
+    ImageFile._save(
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 558, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 576, in _encode_tile
+    encoder.setimage(im.im, extents)
+SystemError: tile cannot extend outside image
+2025-04-23 09:08:44,177 - PristonBot - INFO - Health bar selection canceled, retrying
+2025-04-23 09:08:44,539 - PristonBot - WARNING - User made a small selection for Health bar: 0x1 pixels
+2025-04-23 09:08:44,632 - PristonBot - DEBUG - Captured preview image for Health bar: 0x0
+2025-04-23 09:08:44,632 - PristonBot - ERROR - Error creating preview image: tile cannot extend outside image
+Traceback (most recent call last):
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 554, in _save
+    fh = fp.fileno()
+         ^^^^^^^^^
+AttributeError: '_idat' object has no attribute 'fileno'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\app\bar_selector.py", line 194, in on_release
+    preview.save(f"{debug_dir}/{self.title.lower()}_preview.png")
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\PngImagePlugin.py", line 1488, in _save
+    ImageFile._save(
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 558, in _save
+    _encode_tile(im, fp, tile, bufsize, None, exc)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFile.py", line 576, in _encode_tile
+    encoder.setimage(im.im, extents)
+SystemError: tile cannot extend outside image
+2025-04-23 09:08:45,482 - PristonBot - INFO - Health bar selection canceled, retrying
+2025-04-23 09:08:45,485 - PristonBot - INFO - Health bar selection canceled, retrying
+2025-04-23 09:08:45,486 - PristonBot - ERROR - Unhandled exception
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\system.py", line 143, in <module>
+    main()
+  File "C:\repositories\microsoft\system.py", line 129, in main
+    root.mainloop()
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1505, in mainloop
+    self.tk.mainloop(n)
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1963, in __call__
+    def __call__(self, *args):
+    
+KeyboardInterrupt

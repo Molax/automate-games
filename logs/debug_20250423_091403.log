@@ -1,0 +1,125 @@
+2025-04-23 09:14:03,091 - PristonBot - INFO - Logging initialized
+2025-04-23 09:14:03,091 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 09:14:03,147 - PristonBot - INFO - Icon file not found
+2025-04-23 09:14:03,147 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 09:14:03,151 - PristonBot - INFO - Initialized Health bar selector
+2025-04-23 09:14:03,151 - PristonBot - INFO - Initialized Mana bar selector
+2025-04-23 09:14:03,151 - PristonBot - INFO - Initialized Stamina bar selector
+2025-04-23 09:14:03,163 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 09:14:03,165 - PristonBot - INFO - Please select the Health, Mana, and Stamina bars to continue
+2025-04-23 09:14:03,166 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 09:14:03,167 - PristonBot - INFO - Application started successfully
+2025-04-23 09:14:03,168 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 09:14:03,170 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 09:14:03,172 - PristonBot - INFO - Step 3: Click Start Bot to begin monitoring
+2025-04-23 09:14:06,617 - PristonBot - INFO - Starting Health bar selection
+2025-04-23 09:14:06,621 - PristonBot - INFO - Found game window: Priston Tale Potion Bot
+2025-04-23 09:14:06,623 - PristonBot - INFO - Found game window: Priston Tale
+2025-04-23 09:14:06,624 - PristonBot - DEBUG - Taking screenshot of game window for selection
+2025-04-23 09:14:08,941 - PristonBot - DEBUG - Started Health bar selection at (316, 662)
+2025-04-23 09:14:12,952 - PristonBot - DEBUG - Completed Health bar selection to (336, 762)
+2025-04-23 09:14:12,954 - PristonBot - INFO - Canvas coords (316,662)-(336,762) translated to screen coords (471,731)-(491,831)
+2025-04-23 09:14:13,017 - PristonBot - DEBUG - Captured preview image for Health bar: 20x100
+2025-04-23 09:14:14,320 - PristonBot - INFO - Health bar selection confirmed: screen coordinates (471, 731) to (491, 831)
+2025-04-23 09:14:15,213 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:16,234 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:17,245 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:18,249 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:18,380 - PristonBot - INFO - Starting Mana bar selection
+2025-04-23 09:14:18,381 - PristonBot - INFO - Found game window: Priston Tale Potion Bot
+2025-04-23 09:14:18,382 - PristonBot - INFO - Found game window: Priston Tale
+2025-04-23 09:14:18,383 - PristonBot - DEBUG - Taking screenshot of game window for selection
+2025-04-23 09:14:19,252 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:19,459 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:20,270 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:21,281 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:22,286 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:23,290 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:23,703 - PristonBot - DEBUG - Started Mana bar selection at (333, 671)
+2025-04-23 09:14:24,295 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:24,611 - PristonBot - DEBUG - Completed Mana bar selection to (360, 770)
+2025-04-23 09:14:24,612 - PristonBot - INFO - Canvas coords (333,671)-(360,770) translated to screen coords (488,740)-(515,839)
+2025-04-23 09:14:24,695 - PristonBot - DEBUG - Captured preview image for Mana bar: 27x99
+2025-04-23 09:14:25,311 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:25,761 - PristonBot - INFO - Mana bar selection confirmed: screen coordinates (488, 740) to (515, 839)
+2025-04-23 09:14:26,332 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:26,336 - PristonBot - INFO - Mana bar at screen coords: (488,740) to (515,839)
+2025-04-23 09:14:27,352 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:27,356 - PristonBot - INFO - Mana bar at screen coords: (488,740) to (515,839)
+2025-04-23 09:14:28,023 - PristonBot - INFO - Starting Stamina bar selection
+2025-04-23 09:14:28,024 - PristonBot - INFO - Found game window: Priston Tale Potion Bot
+2025-04-23 09:14:28,024 - PristonBot - INFO - Found game window: Priston Tale
+2025-04-23 09:14:28,025 - PristonBot - DEBUG - Taking screenshot of game window for selection
+2025-04-23 09:14:28,359 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:28,361 - PristonBot - INFO - Mana bar at screen coords: (488,740) to (515,839)
+2025-04-23 09:14:29,097 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:29,100 - PristonBot - INFO - Mana bar at screen coords: (488,740) to (515,839)
+2025-04-23 09:14:29,363 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:29,366 - PristonBot - INFO - Mana bar at screen coords: (488,740) to (515,839)
+2025-04-23 09:14:30,033 - PristonBot - DEBUG - Started Stamina bar selection at (463, 662)
+2025-04-23 09:14:30,369 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:30,371 - PristonBot - INFO - Mana bar at screen coords: (488,740) to (515,839)
+2025-04-23 09:14:30,835 - PristonBot - DEBUG - Completed Stamina bar selection to (486, 757)
+2025-04-23 09:14:30,836 - PristonBot - INFO - Canvas coords (463,662)-(486,757) translated to screen coords (618,731)-(641,826)
+2025-04-23 09:14:30,907 - PristonBot - DEBUG - Captured preview image for Stamina bar: 23x95
+2025-04-23 09:14:31,388 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:31,391 - PristonBot - INFO - Mana bar at screen coords: (488,740) to (515,839)
+2025-04-23 09:14:32,411 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:32,414 - PristonBot - INFO - Mana bar at screen coords: (488,740) to (515,839)
+2025-04-23 09:14:33,421 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:33,425 - PristonBot - INFO - Mana bar at screen coords: (488,740) to (515,839)
+2025-04-23 09:14:33,519 - PristonBot - INFO - Stamina bar selection confirmed: screen coordinates (618, 731) to (641, 826)
+2025-04-23 09:14:34,441 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:34,443 - PristonBot - INFO - Mana bar at screen coords: (488,740) to (515,839)
+2025-04-23 09:14:34,445 - PristonBot - INFO - Stamina bar at screen coords: (618,731) to (641,826)
+2025-04-23 09:14:34,447 - PristonBot - INFO - All bars configured! You can now start the bot.
+2025-04-23 09:14:34,447 - PristonBot - INFO - All bars configured, start button enabled
+2025-04-23 09:14:55,936 - PristonBot - INFO - Starting Health bar selection
+2025-04-23 09:14:55,937 - PristonBot - INFO - Found game window: Priston Tale Potion Bot
+2025-04-23 09:14:55,938 - PristonBot - INFO - Found game window: Priston Tale
+2025-04-23 09:14:55,939 - PristonBot - DEBUG - Taking screenshot of game window for selection
+2025-04-23 09:14:57,033 - PristonBot - INFO - Health bar at screen coords: (471,731) to (491,831)
+2025-04-23 09:14:57,034 - PristonBot - INFO - Mana bar at screen coords: (488,740) to (515,839)
+2025-04-23 09:14:57,037 - PristonBot - INFO - Stamina bar at screen coords: (618,731) to (641,826)
+2025-04-23 09:14:58,424 - PristonBot - DEBUG - Started Health bar selection at (319, 623)
+2025-04-23 09:14:59,510 - PristonBot - DEBUG - Completed Health bar selection to (336, 727)
+2025-04-23 09:14:59,512 - PristonBot - INFO - Canvas coords (319,623)-(336,727) translated to screen coords (3063,1094)-(3080,1198)
+2025-04-23 09:14:59,580 - PristonBot - DEBUG - Captured preview image for Health bar: 17x104
+2025-04-23 09:15:00,783 - PristonBot - INFO - Health bar selection confirmed: screen coordinates (3063, 1094) to (3080, 1198)
+2025-04-23 09:15:13,056 - PristonBot - INFO - Starting Health bar selection
+2025-04-23 09:15:13,057 - PristonBot - INFO - Found game window: Priston Tale Potion Bot
+2025-04-23 09:15:13,057 - PristonBot - INFO - Found game window: Priston Tale
+2025-04-23 09:15:13,058 - PristonBot - DEBUG - Taking screenshot of game window for selection
+2025-04-23 09:15:14,131 - PristonBot - INFO - Health bar at screen coords: (3063,1094) to (3080,1198)
+2025-04-23 09:15:14,134 - PristonBot - INFO - Mana bar at screen coords: (488,740) to (515,839)
+2025-04-23 09:15:14,136 - PristonBot - INFO - Stamina bar at screen coords: (618,731) to (641,826)
+2025-04-23 09:15:14,678 - PristonBot - DEBUG - Started Health bar selection at (300, 501)
+2025-04-23 09:15:15,383 - PristonBot - DEBUG - Completed Health bar selection to (471, 684)
+2025-04-23 09:15:15,384 - PristonBot - INFO - Canvas coords (300,501)-(471,684) translated to screen coords (3044,972)-(3215,1155)
+2025-04-23 09:15:15,469 - PristonBot - DEBUG - Captured preview image for Health bar: 171x183
+2025-04-23 09:15:16,849 - PristonBot - INFO - Health bar selection confirmed: screen coordinates (3044, 972) to (3215, 1155)
+2025-04-23 09:15:34,481 - PristonBot - INFO - Starting Health bar selection
+2025-04-23 09:15:34,481 - PristonBot - INFO - Found game window: Priston Tale Potion Bot
+2025-04-23 09:15:34,482 - PristonBot - INFO - Found game window: Priston Tale
+2025-04-23 09:15:34,482 - PristonBot - DEBUG - Taking screenshot of game window for selection
+2025-04-23 09:15:35,566 - PristonBot - INFO - Health bar at screen coords: (3044,972) to (3215,1155)
+2025-04-23 09:15:35,571 - PristonBot - INFO - Mana bar at screen coords: (488,740) to (515,839)
+2025-04-23 09:15:35,574 - PristonBot - INFO - Stamina bar at screen coords: (618,731) to (641,826)
+2025-04-23 09:15:37,212 - PristonBot - INFO - Starting Health bar selection
+2025-04-23 09:15:37,212 - PristonBot - INFO - Found game window: Priston Tale Potion Bot
+2025-04-23 09:15:37,213 - PristonBot - INFO - Found game window: Priston Tale
+2025-04-23 09:15:37,213 - PristonBot - DEBUG - Taking screenshot of game window for selection
+2025-04-23 09:15:38,302 - PristonBot - INFO - Health bar at screen coords: (3044,972) to (3215,1155)
+2025-04-23 09:15:38,306 - PristonBot - INFO - Mana bar at screen coords: (488,740) to (515,839)
+2025-04-23 09:15:38,310 - PristonBot - INFO - Stamina bar at screen coords: (618,731) to (641,826)
+2025-04-23 09:16:55,514 - PristonBot - INFO - Health bar selection canceled by user (ESC key)
+2025-04-23 09:16:55,669 - PristonBot - INFO - Health bar selection canceled by user (ESC key)
+2025-04-23 09:18:04,794 - PristonBot - ERROR - Unhandled exception
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\system.py", line 143, in <module>
+    main()
+  File "C:\repositories\microsoft\system.py", line 129, in main
+    root.mainloop()
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1505, in mainloop
+    self.tk.mainloop(n)
+KeyboardInterrupt

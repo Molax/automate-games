@@ -1,0 +1,30 @@
+2025-04-23 14:00:53,957 - PristonBot - INFO - Logging initialized
+2025-04-23 14:00:53,957 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 14:00:54,004 - PristonBot - INFO - Icon file not found
+2025-04-23 14:00:54,005 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 14:00:54,022 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 14:00:54,023 - PristonBot - INFO - Configuration loaded from file
+2025-04-23 14:00:54,024 - PristonBot - INFO - Selection configured from saved coordinates: (262,72) to (1539,1073)
+2025-04-23 14:00:54,028 - PristonBot - INFO - Selection configured from saved coordinates: (665,945) to (675,1060)
+2025-04-23 14:00:54,028 - PristonBot - INFO - Selection configured from saved coordinates: (846,944) to (858,1063)
+2025-04-23 14:00:54,028 - PristonBot - INFO - Selection configured from saved coordinates: (643,968) to (648,1057)
+2025-04-23 14:00:54,029 - PristonBot - INFO - Loaded 3/3 bars from saved configuration
+2025-04-23 14:00:54,031 - PristonBot - INFO - Loaded 3/3 bars from saved configuration
+2025-04-23 14:00:54,032 - PristonBot - INFO - Loaded saved configuration
+2025-04-23 14:00:54,033 - PristonBot - INFO - All bars configured! You can now start the bot.
+2025-04-23 14:00:54,033 - PristonBot - INFO - All bars configured, start button enabled
+2025-04-23 14:00:54,033 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 14:00:54,034 - PristonBot - INFO - Application started successfully
+2025-04-23 14:00:54,035 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 14:00:54,035 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 14:00:54,037 - PristonBot - INFO - Step 3: Configure spell casting (optional)
+2025-04-23 14:00:54,038 - PristonBot - INFO - Step 4: Click Start Bot to begin monitoring
+2025-04-23 14:05:56,276 - PristonBot - ERROR - Unhandled exception
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\system.py", line 144, in <module>
+    main()
+  File "C:\repositories\microsoft\system.py", line 130, in main
+    root.mainloop()
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1505, in mainloop
+    self.tk.mainloop(n)
+KeyboardInterrupt

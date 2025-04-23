@@ -1,0 +1,13 @@
+2025-04-23 14:06:17,483 - PristonBot - INFO - Logging initialized
+2025-04-23 14:06:17,483 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 14:06:17,533 - PristonBot - INFO - Icon file not found
+2025-04-23 14:06:17,533 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 14:06:17,539 - PristonBot - CRITICAL - Fatal error: 'PristonTaleBot' object has no attribute 'log'
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\system.py", line 120, in main
+    app = PristonTaleBot(root)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\repositories\microsoft\app\ui\main_gui.py", line 49, in __init__
+    self.window_selector_ui = WindowSelectorUI(root, main_frame, self.log)
+                                                                 ^^^^^^^^
+AttributeError: 'PristonTaleBot' object has no attribute 'log'

@@ -1,0 +1,1141 @@
+2025-04-23 09:49:22,813 - PristonBot - INFO - Logging initialized
+2025-04-23 09:49:22,813 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 09:49:22,870 - PristonBot - INFO - Icon file not found
+2025-04-23 09:49:22,871 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 09:49:22,889 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 09:49:22,891 - PristonBot - INFO - Please select the Health, Mana, and Stamina bars to continue
+2025-04-23 09:49:22,892 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 09:49:22,893 - PristonBot - INFO - Application started successfully
+2025-04-23 09:49:22,897 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 09:49:22,898 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 09:49:22,900 - PristonBot - INFO - Step 3: Configure spell casting (optional)
+2025-04-23 09:49:22,901 - PristonBot - INFO - Step 4: Click Start Bot to begin monitoring
+2025-04-23 09:49:36,563 - PristonBot - INFO - Starting selection: Game Window
+2025-04-23 09:49:43,325 - PristonBot - INFO - Game Window selection confirmed: (201, 128) to (1482, 1120)
+2025-04-23 09:49:43,758 - PristonBot - INFO - Game window selected: (201,128) to (1482,1120)
+2025-04-23 09:49:44,605 - PristonBot - INFO - Starting selection: Health Bar
+2025-04-23 09:49:49,361 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:49:50,609 - PristonBot - INFO - Health Bar selection confirmed: (485, 795) to (491, 888)
+2025-04-23 09:49:50,768 - PristonBot - INFO - Health Bar selected: (485,795) to (491,888)
+2025-04-23 09:49:52,448 - PristonBot - INFO - Starting selection: Health Bar
+2025-04-23 09:49:57,556 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:49:58,765 - PristonBot - INFO - Health Bar selection confirmed: (605, 996) to (614, 1110)
+2025-04-23 09:49:59,568 - PristonBot - INFO - Health Bar selected: (605,996) to (614,1110)
+2025-04-23 09:49:59,761 - PristonBot - INFO - Starting selection: Mana Bar
+2025-04-23 09:50:06,340 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:50:08,936 - PristonBot - INFO - Mana Bar selection confirmed: (787, 993) to (799, 1109)
+2025-04-23 09:50:08,943 - PristonBot - INFO - Mana Bar selected: (787,993) to (799,1109)
+2025-04-23 09:50:10,240 - PristonBot - INFO - Starting selection: Stamina Bar
+2025-04-23 09:50:13,396 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:50:14,496 - PristonBot - INFO - Stamina Bar selection confirmed: (465, 814) to (472, 889)
+2025-04-23 09:50:15,106 - PristonBot - INFO - All bars configured! You can now start the bot.
+2025-04-23 09:50:15,106 - PristonBot - INFO - All bars configured, start button enabled
+2025-04-23 09:50:15,386 - PristonBot - INFO - Stamina Bar selected: (465,814) to (472,889)
+2025-04-23 09:50:26,258 - PristonBot - INFO - Starting bot...
+2025-04-23 09:50:26,259 - PristonBot - INFO - Bot thread started
+2025-04-23 09:50:26,260 - PristonBot - INFO - Bot started
+2025-04-23 09:50:26,260 - PristonBot - INFO - Bot loop started
+2025-04-23 09:50:26,265 - PristonBot - INFO - Auto spellcasting enabled with key F5 at 2.0s interval
+2025-04-23 09:50:26,266 - PristonBot - INFO - Spellcasting enabled: Key=F5, Interval=2.0s
+2025-04-23 09:50:26,343 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:26,397 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:26,464 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:26,465 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:50:26,466 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:50:26,466 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:50:26,518 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:26,519 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:26,519 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:50:26,671 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:50:27,308 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:27,375 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:27,438 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:28,018 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:28,085 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:28,152 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:28,725 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:28,786 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:28,852 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:28,853 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:28,854 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:28,854 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:50:29,006 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:50:29,646 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:29,707 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:29,770 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:29,770 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:50:29,770 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:50:29,772 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:50:30,401 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:30,472 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:30,548 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:31,108 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:31,171 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:31,239 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:31,240 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:31,241 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:31,241 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:50:31,392 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:50:32,015 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:32,078 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:32,142 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:32,718 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:32,790 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:32,854 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:32,855 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:50:32,855 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:50:32,855 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:50:33,492 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:33,568 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:33,646 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:33,647 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:33,647 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:33,647 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:50:33,799 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:50:34,409 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:34,473 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:34,545 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:35,123 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:35,198 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:35,259 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:35,842 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:35,914 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:35,980 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:35,982 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:50:35,982 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:50:35,982 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:50:36,037 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:36,037 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:36,038 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:50:36,189 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:50:36,834 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:36,894 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:36,964 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:37,553 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:37,633 - PristonBot - INFO - Mana: 92.2% (Threshold: 50.0%)
+2025-04-23 09:50:37,692 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:38,274 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:38,348 - PristonBot - INFO - Mana: 93.1% (Threshold: 50.0%)
+2025-04-23 09:50:38,412 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:38,414 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:38,414 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:38,414 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:50:38,565 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:50:39,194 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:39,263 - PristonBot - INFO - Mana: 94.0% (Threshold: 50.0%)
+2025-04-23 09:50:39,325 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:39,327 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:50:39,327 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:50:39,328 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:50:39,948 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:40,015 - PristonBot - INFO - Mana: 94.0% (Threshold: 50.0%)
+2025-04-23 09:50:40,075 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:40,650 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:40,722 - PristonBot - INFO - Mana: 94.8% (Threshold: 50.0%)
+2025-04-23 09:50:40,797 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:40,799 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:40,800 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:40,800 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:50:40,953 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:50:41,588 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:41,667 - PristonBot - INFO - Mana: 94.8% (Threshold: 50.0%)
+2025-04-23 09:50:41,726 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:42,300 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:42,367 - PristonBot - INFO - Mana: 94.8% (Threshold: 50.0%)
+2025-04-23 09:50:42,426 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:42,427 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:50:42,427 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:50:42,427 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:50:43,048 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:43,119 - PristonBot - INFO - Mana: 96.6% (Threshold: 50.0%)
+2025-04-23 09:50:43,183 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:43,184 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:43,185 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:43,185 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:50:43,337 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:50:43,969 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:44,044 - PristonBot - INFO - Mana: 96.6% (Threshold: 50.0%)
+2025-04-23 09:50:44,116 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:44,689 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:44,771 - PristonBot - INFO - Mana: 97.4% (Threshold: 50.0%)
+2025-04-23 09:50:44,827 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:45,399 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:45,464 - PristonBot - INFO - Mana: 97.4% (Threshold: 50.0%)
+2025-04-23 09:50:45,532 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:45,532 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:50:45,534 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:50:45,534 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:50:45,585 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:45,585 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:45,586 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:50:45,737 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:50:46,363 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:46,435 - PristonBot - INFO - Mana: 97.4% (Threshold: 50.0%)
+2025-04-23 09:50:46,499 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:47,088 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:47,161 - PristonBot - INFO - Mana: 98.3% (Threshold: 50.0%)
+2025-04-23 09:50:47,235 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:47,803 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:47,869 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:47,936 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:47,937 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:47,937 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:47,938 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:50:48,089 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:50:48,712 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:48,783 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:48,847 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:48,847 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:50:48,848 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:50:48,848 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:50:49,467 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:49,528 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:49,605 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:50,172 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:50,230 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:50,300 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:50,301 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:50,301 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:50,301 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:50:50,453 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:50:51,095 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:51,166 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:51,231 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:51,804 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:51,868 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:51,932 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:51,933 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:50:51,933 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:50:51,934 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:50:52,565 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:52,635 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:52,709 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:52,711 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:52,711 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:52,712 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:50:52,863 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:50:53,508 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:53,576 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:53,659 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:54,247 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:54,319 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:54,390 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:54,966 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:55,038 - PristonBot - INFO - Mana: 92.2% (Threshold: 50.0%)
+2025-04-23 09:50:55,104 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:55,104 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:50:55,105 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:50:55,106 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:50:55,157 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:55,157 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:55,157 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:50:55,309 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:50:55,982 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:56,060 - PristonBot - INFO - Mana: 93.1% (Threshold: 50.0%)
+2025-04-23 09:50:56,117 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:56,698 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:56,772 - PristonBot - INFO - Mana: 94.0% (Threshold: 50.0%)
+2025-04-23 09:50:56,835 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:57,412 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:57,493 - PristonBot - INFO - Mana: 94.0% (Threshold: 50.0%)
+2025-04-23 09:50:57,552 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:57,554 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:57,554 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:57,555 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:50:57,706 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:50:58,353 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:58,418 - PristonBot - INFO - Mana: 94.0% (Threshold: 50.0%)
+2025-04-23 09:50:58,485 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:58,485 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:50:58,486 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:50:58,486 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:50:59,115 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:59,189 - PristonBot - INFO - Mana: 94.8% (Threshold: 50.0%)
+2025-04-23 09:50:59,253 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:59,826 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:50:59,887 - PristonBot - INFO - Mana: 94.8% (Threshold: 50.0%)
+2025-04-23 09:50:59,958 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:50:59,959 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:50:59,959 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:50:59,960 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:51:00,111 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:00,728 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:00,788 - PristonBot - INFO - Mana: 96.6% (Threshold: 50.0%)
+2025-04-23 09:51:00,854 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:01,427 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:01,495 - PristonBot - INFO - Mana: 89.7% (Threshold: 50.0%)
+2025-04-23 09:51:01,577 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:01,578 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:51:01,578 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:51:01,578 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:51:02,220 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:02,291 - PristonBot - INFO - Mana: 89.7% (Threshold: 50.0%)
+2025-04-23 09:51:02,354 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:02,355 - PristonBot - INFO - Casting spell (F5)
+2025-04-23 09:51:02,356 - PristonBot - INFO - Casting spell with key F5
+2025-04-23 09:51:02,356 - PristonBot - INFO - Sending key 'F5' (VK: 116) using SendInput
+2025-04-23 09:51:02,508 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:03,132 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:03,209 - PristonBot - INFO - Mana: 90.5% (Threshold: 50.0%)
+2025-04-23 09:51:03,290 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:03,867 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:03,946 - PristonBot - INFO - Mana: 90.5% (Threshold: 50.0%)
+2025-04-23 09:51:04,016 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:04,063 - PristonBot - INFO - Stopping bot...
+2025-04-23 09:51:05,076 - PristonBot - INFO - Bot thread joined
+2025-04-23 09:51:05,077 - PristonBot - INFO - Bot stopped
+2025-04-23 09:51:05,078 - PristonBot - INFO - Bot loop stopped
+2025-04-23 09:51:09,021 - PristonBot - INFO - Starting bot...
+2025-04-23 09:51:09,021 - PristonBot - INFO - Bot thread started
+2025-04-23 09:51:09,022 - PristonBot - INFO - Bot started
+2025-04-23 09:51:09,024 - PristonBot - INFO - Bot loop started
+2025-04-23 09:51:09,026 - PristonBot - INFO - Auto spellcasting enabled with key F1 at 2.0s interval
+2025-04-23 09:51:09,027 - PristonBot - INFO - Spellcasting enabled: Key=F1, Interval=2.0s
+2025-04-23 09:51:09,092 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:09,152 - PristonBot - INFO - Mana: 94.0% (Threshold: 50.0%)
+2025-04-23 09:51:09,221 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:09,221 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:51:09,221 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:51:09,222 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:51:09,274 - PristonBot - INFO - Casting spell (2)
+2025-04-23 09:51:09,275 - PristonBot - INFO - Casting spell with key 2
+2025-04-23 09:51:09,275 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:51:09,427 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:10,065 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:10,122 - PristonBot - INFO - Mana: 94.8% (Threshold: 50.0%)
+2025-04-23 09:51:10,196 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:10,766 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:10,819 - PristonBot - INFO - Mana: 94.8% (Threshold: 50.0%)
+2025-04-23 09:51:10,886 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:11,462 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:11,522 - PristonBot - INFO - Mana: 96.6% (Threshold: 50.0%)
+2025-04-23 09:51:11,593 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:11,595 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:11,595 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:11,595 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:11,595 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:11,747 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:12,385 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:12,461 - PristonBot - INFO - Mana: 96.6% (Threshold: 50.0%)
+2025-04-23 09:51:12,524 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:12,525 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:51:12,526 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:51:12,526 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:51:13,144 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:13,205 - PristonBot - INFO - Mana: 97.4% (Threshold: 50.0%)
+2025-04-23 09:51:13,273 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:13,849 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:13,908 - PristonBot - INFO - Mana: 97.4% (Threshold: 50.0%)
+2025-04-23 09:51:13,977 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:13,977 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:13,977 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:13,977 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:13,978 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:14,129 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:14,769 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:14,850 - PristonBot - INFO - Mana: 97.4% (Threshold: 50.0%)
+2025-04-23 09:51:14,908 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:15,486 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:15,559 - PristonBot - INFO - Mana: 98.3% (Threshold: 50.0%)
+2025-04-23 09:51:15,634 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:15,635 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:51:15,635 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:51:15,635 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:51:16,258 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:16,325 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:16,390 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:16,391 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:16,392 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:16,392 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:16,392 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:16,543 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:17,192 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:17,261 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:17,327 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:17,908 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:17,988 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:18,059 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:18,654 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:18,731 - PristonBot - INFO - Mana: 92.2% (Threshold: 50.0%)
+2025-04-23 09:51:18,810 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:18,811 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:51:18,811 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:51:18,811 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:51:18,865 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:18,866 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:18,867 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:18,867 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:19,019 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:19,653 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:19,728 - PristonBot - INFO - Mana: 93.1% (Threshold: 50.0%)
+2025-04-23 09:51:19,795 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:20,366 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:20,425 - PristonBot - INFO - Mana: 94.0% (Threshold: 50.0%)
+2025-04-23 09:51:20,494 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:21,063 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:21,136 - PristonBot - INFO - Mana: 94.0% (Threshold: 50.0%)
+2025-04-23 09:51:21,196 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:21,197 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:21,197 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:21,198 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:21,198 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:21,350 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:21,992 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:22,062 - PristonBot - INFO - Mana: 87.9% (Threshold: 50.0%)
+2025-04-23 09:51:22,136 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:22,137 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:51:22,138 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:51:22,138 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:51:22,793 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:22,860 - PristonBot - INFO - Mana: 88.8% (Threshold: 50.0%)
+2025-04-23 09:51:22,929 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:23,508 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:23,589 - PristonBot - INFO - Mana: 81.9% (Threshold: 50.0%)
+2025-04-23 09:51:23,687 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:23,689 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:23,689 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:23,689 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:23,690 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:23,841 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:24,486 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:24,555 - PristonBot - INFO - Mana: 83.6% (Threshold: 50.0%)
+2025-04-23 09:51:24,624 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:25,202 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:25,279 - PristonBot - INFO - Mana: 76.7% (Threshold: 50.0%)
+2025-04-23 09:51:25,346 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:25,348 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:51:25,349 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:51:25,350 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:51:25,992 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:26,070 - PristonBot - INFO - Mana: 77.6% (Threshold: 50.0%)
+2025-04-23 09:51:26,133 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:26,134 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:26,134 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:26,134 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:26,135 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:26,286 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:26,926 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:27,005 - PristonBot - INFO - Mana: 71.6% (Threshold: 50.0%)
+2025-04-23 09:51:27,066 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:27,637 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:27,697 - PristonBot - INFO - Mana: 71.6% (Threshold: 50.0%)
+2025-04-23 09:51:27,765 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:28,343 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:28,417 - PristonBot - INFO - Mana: 66.4% (Threshold: 50.0%)
+2025-04-23 09:51:28,484 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:28,486 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:51:28,486 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:51:28,486 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:51:28,539 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:28,540 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:28,540 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:28,540 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:28,692 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:29,324 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:29,385 - PristonBot - INFO - Mana: 66.4% (Threshold: 50.0%)
+2025-04-23 09:51:29,450 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:30,034 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:30,106 - PristonBot - INFO - Mana: 60.3% (Threshold: 50.0%)
+2025-04-23 09:51:30,171 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:30,747 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:30,822 - PristonBot - INFO - Mana: 60.3% (Threshold: 50.0%)
+2025-04-23 09:51:30,891 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:30,892 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:30,892 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:30,892 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:30,892 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:31,043 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:31,681 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:31,750 - PristonBot - INFO - Mana: 54.3% (Threshold: 50.0%)
+2025-04-23 09:51:31,823 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:31,824 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:51:31,824 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:51:31,825 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:51:32,456 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:32,515 - PristonBot - INFO - Mana: 55.2% (Threshold: 50.0%)
+2025-04-23 09:51:32,584 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:33,162 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:33,240 - PristonBot - INFO - Mana: 55.2% (Threshold: 50.0%)
+2025-04-23 09:51:33,308 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:33,309 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:33,309 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:33,309 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:33,310 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:33,461 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:34,086 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:34,160 - PristonBot - INFO - Mana: 50.0% (Threshold: 50.0%)
+2025-04-23 09:51:34,215 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:34,797 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:34,869 - PristonBot - INFO - Mana: 50.0% (Threshold: 50.0%)
+2025-04-23 09:51:34,935 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:34,936 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:51:34,936 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:51:34,937 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:51:35,564 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:35,640 - PristonBot - INFO - Mana: 43.1% (Threshold: 50.0%)
+2025-04-23 09:51:35,642 - PristonBot - INFO - Mana low (43.1%), using mana potion (key 3)
+2025-04-23 09:51:35,643 - PristonBot - INFO - Using mana potion - MP: 43.1% < 50.0%
+2025-04-23 09:51:35,643 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:51:35,782 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:35,785 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:35,785 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:35,786 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:35,786 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:35,938 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:36,577 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:36,644 - PristonBot - INFO - Mana: 44.8% (Threshold: 50.0%)
+2025-04-23 09:51:36,706 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:37,276 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:37,336 - PristonBot - INFO - Mana: 44.8% (Threshold: 50.0%)
+2025-04-23 09:51:37,419 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:38,002 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:38,073 - PristonBot - INFO - Mana: 45.7% (Threshold: 50.0%)
+2025-04-23 09:51:38,135 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:38,136 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:51:38,137 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:51:38,137 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:51:38,188 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:38,189 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:38,189 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:38,190 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:38,342 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:38,972 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:39,040 - PristonBot - INFO - Mana: 46.6% (Threshold: 50.0%)
+2025-04-23 09:51:39,041 - PristonBot - INFO - Mana low (46.6%), using mana potion (key 3)
+2025-04-23 09:51:39,042 - PristonBot - INFO - Using mana potion - MP: 46.6% < 50.0%
+2025-04-23 09:51:39,042 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:51:39,152 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:39,723 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:39,799 - PristonBot - INFO - Mana: 46.6% (Threshold: 50.0%)
+2025-04-23 09:51:39,870 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:40,439 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:40,504 - PristonBot - INFO - Mana: 46.6% (Threshold: 50.0%)
+2025-04-23 09:51:40,601 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:40,603 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:40,603 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:40,603 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:40,604 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:40,756 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:41,390 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:41,457 - PristonBot - INFO - Mana: 41.4% (Threshold: 50.0%)
+2025-04-23 09:51:41,528 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:41,529 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:51:41,530 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:51:41,530 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:51:42,162 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:42,235 - PristonBot - INFO - Mana: 41.4% (Threshold: 50.0%)
+2025-04-23 09:51:42,238 - PristonBot - INFO - Mana low (41.4%), using mana potion (key 3)
+2025-04-23 09:51:42,238 - PristonBot - INFO - Using mana potion - MP: 41.4% < 50.0%
+2025-04-23 09:51:42,240 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:51:42,357 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:42,927 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:42,996 - PristonBot - INFO - Mana: 42.2% (Threshold: 50.0%)
+2025-04-23 09:51:43,062 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:43,063 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:43,063 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:43,063 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:43,063 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:43,215 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:43,840 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:43,913 - PristonBot - INFO - Mana: 42.2% (Threshold: 50.0%)
+2025-04-23 09:51:43,971 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:44,548 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:44,603 - PristonBot - INFO - Mana: 42.2% (Threshold: 50.0%)
+2025-04-23 09:51:44,673 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:51:44,674 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:51:44,674 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:51:44,674 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:51:45,292 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:45,364 - PristonBot - INFO - Mana: 43.1% (Threshold: 50.0%)
+2025-04-23 09:51:45,366 - PristonBot - INFO - Mana low (43.1%), using mana potion (key 3)
+2025-04-23 09:51:45,366 - PristonBot - INFO - Using mana potion - MP: 43.1% < 50.0%
+2025-04-23 09:51:45,367 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:51:45,411 - PristonBot - INFO - Starting selection: Stamina Bar
+2025-04-23 09:51:45,527 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:45,527 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:45,528 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:45,528 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:45,680 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:46,324 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:46,398 - PristonBot - INFO - Mana: 43.1% (Threshold: 50.0%)
+2025-04-23 09:51:46,976 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:47,047 - PristonBot - INFO - Mana: 44.0% (Threshold: 50.0%)
+2025-04-23 09:51:47,614 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:47,675 - PristonBot - INFO - Mana: 44.0% (Threshold: 50.0%)
+2025-04-23 09:51:47,676 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:47,676 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:47,676 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:47,676 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:47,828 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:48,463 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:48,530 - PristonBot - INFO - Mana: 44.0% (Threshold: 50.0%)
+2025-04-23 09:51:48,531 - PristonBot - INFO - Mana low (44.0%), using mana potion (key 3)
+2025-04-23 09:51:48,531 - PristonBot - INFO - Using mana potion - MP: 44.0% < 50.0%
+2025-04-23 09:51:48,531 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:51:48,954 - PristonBot - INFO - Detected vertical bar
+2025-04-23 09:51:49,157 - PristonBot - INFO - Health: 98.2% (Threshold: 50.0%)
+2025-04-23 09:51:49,240 - PristonBot - INFO - Mana: 45.7% (Threshold: 50.0%)
+2025-04-23 09:51:49,814 - PristonBot - INFO - Health: 98.2% (Threshold: 50.0%)
+2025-04-23 09:51:49,875 - PristonBot - INFO - Mana: 46.6% (Threshold: 50.0%)
+2025-04-23 09:51:49,876 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:49,877 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:49,877 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:49,877 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:50,029 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:50,097 - PristonBot - INFO - Stamina Bar selection confirmed: (582, 1017) to (590, 1109)
+2025-04-23 09:51:50,531 - PristonBot - INFO - Stamina Bar selected: (582,1017) to (590,1109)
+2025-04-23 09:51:50,663 - PristonBot - INFO - Health: 98.2% (Threshold: 50.0%)
+2025-04-23 09:51:50,721 - PristonBot - INFO - Mana: 46.6% (Threshold: 50.0%)
+2025-04-23 09:51:50,791 - PristonBot - INFO - Stamina: 54.3% (Threshold: 40.0%)
+2025-04-23 09:51:51,365 - PristonBot - INFO - Health: 96.5% (Threshold: 50.0%)
+2025-04-23 09:51:51,422 - PristonBot - INFO - Mana: 46.6% (Threshold: 50.0%)
+2025-04-23 09:51:51,495 - PristonBot - INFO - Stamina: 55.4% (Threshold: 40.0%)
+2025-04-23 09:51:51,929 - PristonBot - INFO - Stopping bot...
+2025-04-23 09:51:52,943 - PristonBot - INFO - Bot thread joined
+2025-04-23 09:51:52,943 - PristonBot - INFO - Bot stopped
+2025-04-23 09:51:52,944 - PristonBot - INFO - Bot loop stopped
+2025-04-23 09:51:52,945 - PristonBot - INFO - Starting bot...
+2025-04-23 09:51:52,946 - PristonBot - INFO - Bot thread started
+2025-04-23 09:51:52,946 - PristonBot - INFO - Bot started
+2025-04-23 09:51:52,948 - PristonBot - INFO - Bot loop started
+2025-04-23 09:51:52,949 - PristonBot - INFO - Auto spellcasting enabled with key 22 at 2.0s interval
+2025-04-23 09:51:52,949 - PristonBot - INFO - Spellcasting enabled: Key=22, Interval=2.0s
+2025-04-23 09:51:53,011 - PristonBot - INFO - Health: 96.5% (Threshold: 50.0%)
+2025-04-23 09:51:53,079 - PristonBot - INFO - Mana: 47.4% (Threshold: 50.0%)
+2025-04-23 09:51:53,080 - PristonBot - INFO - Mana low (47.4%), using mana potion (key 3)
+2025-04-23 09:51:53,080 - PristonBot - INFO - Using mana potion - MP: 47.4% < 50.0%
+2025-04-23 09:51:53,081 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:51:53,194 - PristonBot - INFO - Stamina: 59.8% (Threshold: 40.0%)
+2025-04-23 09:51:53,194 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:53,195 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:53,195 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:53,195 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:53,347 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:53,979 - PristonBot - INFO - Health: 96.5% (Threshold: 50.0%)
+2025-04-23 09:51:54,040 - PristonBot - INFO - Mana: 49.1% (Threshold: 50.0%)
+2025-04-23 09:51:54,108 - PristonBot - INFO - Stamina: 62.0% (Threshold: 40.0%)
+2025-04-23 09:51:54,695 - PristonBot - INFO - Health: 96.5% (Threshold: 50.0%)
+2025-04-23 09:51:54,796 - PristonBot - INFO - Mana: 49.1% (Threshold: 50.0%)
+2025-04-23 09:51:54,911 - PristonBot - INFO - Stamina: 64.1% (Threshold: 40.0%)
+2025-04-23 09:51:55,509 - PristonBot - INFO - Health: 95.6% (Threshold: 50.0%)
+2025-04-23 09:51:55,583 - PristonBot - INFO - Mana: 49.1% (Threshold: 50.0%)
+2025-04-23 09:51:55,657 - PristonBot - INFO - Stamina: 65.2% (Threshold: 40.0%)
+2025-04-23 09:51:55,659 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:55,659 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:55,659 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:55,660 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:55,811 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:56,447 - PristonBot - INFO - Health: 94.7% (Threshold: 50.0%)
+2025-04-23 09:51:56,515 - PristonBot - INFO - Mana: 50.0% (Threshold: 50.0%)
+2025-04-23 09:51:56,577 - PristonBot - INFO - Stamina: 67.4% (Threshold: 40.0%)
+2025-04-23 09:51:57,144 - PristonBot - INFO - Health: 95.6% (Threshold: 50.0%)
+2025-04-23 09:51:57,211 - PristonBot - INFO - Mana: 50.0% (Threshold: 50.0%)
+2025-04-23 09:51:57,276 - PristonBot - INFO - Stamina: 67.4% (Threshold: 40.0%)
+2025-04-23 09:51:57,843 - PristonBot - INFO - Health: 95.6% (Threshold: 50.0%)
+2025-04-23 09:51:57,908 - PristonBot - INFO - Mana: 50.9% (Threshold: 50.0%)
+2025-04-23 09:51:57,980 - PristonBot - INFO - Stamina: 68.5% (Threshold: 40.0%)
+2025-04-23 09:51:57,981 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:51:57,981 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:51:57,981 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:51:57,982 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:51:58,133 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:51:58,766 - PristonBot - INFO - Health: 95.6% (Threshold: 50.0%)
+2025-04-23 09:51:58,826 - PristonBot - INFO - Mana: 51.7% (Threshold: 50.0%)
+2025-04-23 09:51:58,896 - PristonBot - INFO - Stamina: 70.7% (Threshold: 40.0%)
+2025-04-23 09:51:59,472 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:51:59,551 - PristonBot - INFO - Mana: 45.7% (Threshold: 50.0%)
+2025-04-23 09:51:59,552 - PristonBot - INFO - Mana low (45.7%), using mana potion (key 3)
+2025-04-23 09:51:59,552 - PristonBot - INFO - Using mana potion - MP: 45.7% < 50.0%
+2025-04-23 09:51:59,553 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:51:59,662 - PristonBot - INFO - Stamina: 63.0% (Threshold: 40.0%)
+2025-04-23 09:52:00,229 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:00,292 - PristonBot - INFO - Mana: 45.7% (Threshold: 50.0%)
+2025-04-23 09:52:00,360 - PristonBot - INFO - Stamina: 63.0% (Threshold: 40.0%)
+2025-04-23 09:52:00,362 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:00,362 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:00,362 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:00,363 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:00,514 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:01,137 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:01,195 - PristonBot - INFO - Mana: 40.5% (Threshold: 50.0%)
+2025-04-23 09:52:01,260 - PristonBot - INFO - Stamina: 55.4% (Threshold: 40.0%)
+2025-04-23 09:52:01,850 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:01,924 - PristonBot - INFO - Mana: 40.5% (Threshold: 50.0%)
+2025-04-23 09:52:01,997 - PristonBot - INFO - Stamina: 55.4% (Threshold: 40.0%)
+2025-04-23 09:52:02,595 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:02,669 - PristonBot - INFO - Mana: 34.5% (Threshold: 50.0%)
+2025-04-23 09:52:02,670 - PristonBot - INFO - Mana low (34.5%), using mana potion (key 3)
+2025-04-23 09:52:02,670 - PristonBot - INFO - Using mana potion - MP: 34.5% < 50.0%
+2025-04-23 09:52:02,671 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:02,785 - PristonBot - INFO - Stamina: 48.9% (Threshold: 40.0%)
+2025-04-23 09:52:02,786 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:02,786 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:02,787 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:02,787 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:02,938 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:03,573 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:03,655 - PristonBot - INFO - Mana: 34.5% (Threshold: 50.0%)
+2025-04-23 09:52:03,713 - PristonBot - INFO - Stamina: 48.9% (Threshold: 40.0%)
+2025-04-23 09:52:04,290 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:04,351 - PristonBot - INFO - Mana: 34.5% (Threshold: 50.0%)
+2025-04-23 09:52:04,414 - PristonBot - INFO - Stamina: 42.4% (Threshold: 40.0%)
+2025-04-23 09:52:04,991 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:05,066 - PristonBot - INFO - Mana: 29.3% (Threshold: 50.0%)
+2025-04-23 09:52:05,137 - PristonBot - INFO - Stamina: 43.5% (Threshold: 40.0%)
+2025-04-23 09:52:05,139 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:05,139 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:05,139 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:05,139 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:05,290 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:05,930 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:05,996 - PristonBot - INFO - Mana: 29.3% (Threshold: 50.0%)
+2025-04-23 09:52:05,996 - PristonBot - INFO - Mana low (29.3%), using mana potion (key 3)
+2025-04-23 09:52:05,996 - PristonBot - INFO - Using mana potion - MP: 29.3% < 50.0%
+2025-04-23 09:52:05,997 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:06,117 - PristonBot - INFO - Stamina: 43.5% (Threshold: 40.0%)
+2025-04-23 09:52:06,684 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:06,754 - PristonBot - INFO - Mana: 30.2% (Threshold: 50.0%)
+2025-04-23 09:52:06,825 - PristonBot - INFO - Stamina: 45.7% (Threshold: 40.0%)
+2025-04-23 09:52:07,404 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:07,475 - PristonBot - INFO - Mana: 30.2% (Threshold: 50.0%)
+2025-04-23 09:52:07,553 - PristonBot - INFO - Stamina: 47.8% (Threshold: 40.0%)
+2025-04-23 09:52:07,555 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:07,556 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:07,556 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:07,556 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:07,709 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:08,363 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:08,443 - PristonBot - INFO - Mana: 30.2% (Threshold: 50.0%)
+2025-04-23 09:52:08,518 - PristonBot - INFO - Stamina: 48.9% (Threshold: 40.0%)
+2025-04-23 09:52:09,088 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:09,148 - PristonBot - INFO - Mana: 31.9% (Threshold: 50.0%)
+2025-04-23 09:52:09,149 - PristonBot - INFO - Mana low (31.9%), using mana potion (key 3)
+2025-04-23 09:52:09,150 - PristonBot - INFO - Using mana potion - MP: 31.9% < 50.0%
+2025-04-23 09:52:09,150 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:09,275 - PristonBot - INFO - Stamina: 51.1% (Threshold: 40.0%)
+2025-04-23 09:52:09,854 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:09,917 - PristonBot - INFO - Mana: 31.9% (Threshold: 50.0%)
+2025-04-23 09:52:09,982 - PristonBot - INFO - Stamina: 53.3% (Threshold: 40.0%)
+2025-04-23 09:52:09,983 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:09,983 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:09,983 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:09,984 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:10,135 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:10,775 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:10,840 - PristonBot - INFO - Mana: 25.9% (Threshold: 50.0%)
+2025-04-23 09:52:10,913 - PristonBot - INFO - Stamina: 45.7% (Threshold: 40.0%)
+2025-04-23 09:52:11,500 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:11,568 - PristonBot - INFO - Mana: 25.9% (Threshold: 50.0%)
+2025-04-23 09:52:11,656 - PristonBot - INFO - Stamina: 45.7% (Threshold: 40.0%)
+2025-04-23 09:52:12,224 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:12,285 - PristonBot - INFO - Mana: 25.9% (Threshold: 50.0%)
+2025-04-23 09:52:12,286 - PristonBot - INFO - Mana low (25.9%), using mana potion (key 3)
+2025-04-23 09:52:12,287 - PristonBot - INFO - Using mana potion - MP: 25.9% < 50.0%
+2025-04-23 09:52:12,287 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:12,404 - PristonBot - INFO - Stamina: 46.7% (Threshold: 40.0%)
+2025-04-23 09:52:12,405 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:12,405 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:12,405 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:12,406 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:12,557 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:13,197 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:13,278 - PristonBot - INFO - Mana: 27.6% (Threshold: 50.0%)
+2025-04-23 09:52:13,357 - PristonBot - INFO - Stamina: 47.8% (Threshold: 40.0%)
+2025-04-23 09:52:13,939 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:13,999 - PristonBot - INFO - Mana: 28.4% (Threshold: 50.0%)
+2025-04-23 09:52:14,068 - PristonBot - INFO - Stamina: 48.9% (Threshold: 40.0%)
+2025-04-23 09:52:14,648 - PristonBot - INFO - Health: 62.3% (Threshold: 50.0%)
+2025-04-23 09:52:14,719 - PristonBot - INFO - Mana: 28.4% (Threshold: 50.0%)
+2025-04-23 09:52:14,788 - PristonBot - INFO - Stamina: 52.2% (Threshold: 40.0%)
+2025-04-23 09:52:14,789 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:14,790 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:14,790 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:14,790 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:14,942 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:15,572 - PristonBot - INFO - Health: 62.3% (Threshold: 50.0%)
+2025-04-23 09:52:15,638 - PristonBot - INFO - Mana: 29.3% (Threshold: 50.0%)
+2025-04-23 09:52:15,638 - PristonBot - INFO - Mana low (29.3%), using mana potion (key 3)
+2025-04-23 09:52:15,639 - PristonBot - INFO - Using mana potion - MP: 29.3% < 50.0%
+2025-04-23 09:52:15,639 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:15,766 - PristonBot - INFO - Stamina: 53.3% (Threshold: 40.0%)
+2025-04-23 09:52:16,350 - PristonBot - INFO - Health: 62.3% (Threshold: 50.0%)
+2025-04-23 09:52:16,424 - PristonBot - INFO - Mana: 29.3% (Threshold: 50.0%)
+2025-04-23 09:52:16,492 - PristonBot - INFO - Stamina: 55.4% (Threshold: 40.0%)
+2025-04-23 09:52:17,064 - PristonBot - INFO - Health: 62.3% (Threshold: 50.0%)
+2025-04-23 09:52:17,142 - PristonBot - INFO - Mana: 29.3% (Threshold: 50.0%)
+2025-04-23 09:52:17,210 - PristonBot - INFO - Stamina: 57.6% (Threshold: 40.0%)
+2025-04-23 09:52:17,212 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:17,212 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:17,212 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:17,212 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:17,364 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:18,011 - PristonBot - INFO - Health: 62.3% (Threshold: 50.0%)
+2025-04-23 09:52:18,074 - PristonBot - INFO - Mana: 30.2% (Threshold: 50.0%)
+2025-04-23 09:52:18,137 - PristonBot - INFO - Stamina: 59.8% (Threshold: 40.0%)
+2025-04-23 09:52:18,717 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:18,788 - PristonBot - INFO - Mana: 30.2% (Threshold: 50.0%)
+2025-04-23 09:52:18,788 - PristonBot - INFO - Mana low (30.2%), using mana potion (key 3)
+2025-04-23 09:52:18,789 - PristonBot - INFO - Using mana potion - MP: 30.2% < 50.0%
+2025-04-23 09:52:18,789 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:18,906 - PristonBot - INFO - Stamina: 62.0% (Threshold: 40.0%)
+2025-04-23 09:52:19,484 - PristonBot - INFO - Health: 62.3% (Threshold: 50.0%)
+2025-04-23 09:52:19,555 - PristonBot - INFO - Mana: 31.9% (Threshold: 50.0%)
+2025-04-23 09:52:19,631 - PristonBot - INFO - Stamina: 63.0% (Threshold: 40.0%)
+2025-04-23 09:52:19,633 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:19,633 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:19,633 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:19,634 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:19,784 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:20,434 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:20,509 - PristonBot - INFO - Mana: 25.0% (Threshold: 50.0%)
+2025-04-23 09:52:20,585 - PristonBot - INFO - Stamina: 58.7% (Threshold: 40.0%)
+2025-04-23 09:52:21,169 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:21,243 - PristonBot - INFO - Mana: 25.9% (Threshold: 50.0%)
+2025-04-23 09:52:21,305 - PristonBot - INFO - Stamina: 58.7% (Threshold: 40.0%)
+2025-04-23 09:52:21,877 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:21,940 - PristonBot - INFO - Mana: 25.9% (Threshold: 50.0%)
+2025-04-23 09:52:21,940 - PristonBot - INFO - Mana low (25.9%), using mana potion (key 3)
+2025-04-23 09:52:21,941 - PristonBot - INFO - Using mana potion - MP: 25.9% < 50.0%
+2025-04-23 09:52:21,941 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:22,064 - PristonBot - INFO - Stamina: 58.7% (Threshold: 40.0%)
+2025-04-23 09:52:22,066 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:22,067 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:22,067 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:22,067 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:22,218 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:22,897 - PristonBot - INFO - Health: 62.3% (Threshold: 50.0%)
+2025-04-23 09:52:22,963 - PristonBot - INFO - Mana: 25.9% (Threshold: 50.0%)
+2025-04-23 09:52:23,024 - PristonBot - INFO - Stamina: 58.7% (Threshold: 40.0%)
+2025-04-23 09:52:23,608 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:23,687 - PristonBot - INFO - Mana: 27.6% (Threshold: 50.0%)
+2025-04-23 09:52:23,767 - PristonBot - INFO - Stamina: 59.8% (Threshold: 40.0%)
+2025-04-23 09:52:24,352 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:24,439 - PristonBot - INFO - Mana: 28.4% (Threshold: 50.0%)
+2025-04-23 09:52:24,513 - PristonBot - INFO - Stamina: 62.0% (Threshold: 40.0%)
+2025-04-23 09:52:24,514 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:24,514 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:24,515 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:24,515 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:24,667 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:25,326 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:25,409 - PristonBot - INFO - Mana: 28.4% (Threshold: 50.0%)
+2025-04-23 09:52:25,410 - PristonBot - INFO - Mana low (28.4%), using mana potion (key 3)
+2025-04-23 09:52:25,412 - PristonBot - INFO - Using mana potion - MP: 28.4% < 50.0%
+2025-04-23 09:52:25,412 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:25,530 - PristonBot - INFO - Stamina: 64.1% (Threshold: 40.0%)
+2025-04-23 09:52:26,104 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:26,182 - PristonBot - INFO - Mana: 29.3% (Threshold: 50.0%)
+2025-04-23 09:52:26,245 - PristonBot - INFO - Stamina: 65.2% (Threshold: 40.0%)
+2025-04-23 09:52:26,811 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:26,881 - PristonBot - INFO - Mana: 29.3% (Threshold: 50.0%)
+2025-04-23 09:52:26,959 - PristonBot - INFO - Stamina: 68.5% (Threshold: 40.0%)
+2025-04-23 09:52:26,960 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:26,961 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:26,961 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:26,961 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:27,112 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:27,755 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:27,827 - PristonBot - INFO - Mana: 29.3% (Threshold: 50.0%)
+2025-04-23 09:52:27,925 - PristonBot - INFO - Stamina: 69.6% (Threshold: 40.0%)
+2025-04-23 09:52:28,500 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:28,562 - PristonBot - INFO - Mana: 30.2% (Threshold: 50.0%)
+2025-04-23 09:52:28,564 - PristonBot - INFO - Mana low (30.2%), using mana potion (key 3)
+2025-04-23 09:52:28,564 - PristonBot - INFO - Using mana potion - MP: 30.2% < 50.0%
+2025-04-23 09:52:28,564 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:28,689 - PristonBot - INFO - Stamina: 71.7% (Threshold: 40.0%)
+2025-04-23 09:52:29,280 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:29,344 - PristonBot - INFO - Mana: 30.2% (Threshold: 50.0%)
+2025-04-23 09:52:29,427 - PristonBot - INFO - Stamina: 73.9% (Threshold: 40.0%)
+2025-04-23 09:52:29,428 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:29,428 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:29,429 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:29,429 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:29,581 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:30,214 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:30,280 - PristonBot - INFO - Mana: 31.9% (Threshold: 50.0%)
+2025-04-23 09:52:30,346 - PristonBot - INFO - Stamina: 75.0% (Threshold: 40.0%)
+2025-04-23 09:52:30,921 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:30,994 - PristonBot - INFO - Mana: 31.9% (Threshold: 50.0%)
+2025-04-23 09:52:31,064 - PristonBot - INFO - Stamina: 77.2% (Threshold: 40.0%)
+2025-04-23 09:52:31,634 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:31,695 - PristonBot - INFO - Mana: 31.9% (Threshold: 50.0%)
+2025-04-23 09:52:31,696 - PristonBot - INFO - Mana low (31.9%), using mana potion (key 3)
+2025-04-23 09:52:31,696 - PristonBot - INFO - Using mana potion - MP: 31.9% < 50.0%
+2025-04-23 09:52:31,697 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:31,816 - PristonBot - INFO - Stamina: 79.3% (Threshold: 40.0%)
+2025-04-23 09:52:31,817 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:31,817 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:31,817 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:31,818 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:31,970 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:32,619 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:32,679 - PristonBot - INFO - Mana: 32.8% (Threshold: 50.0%)
+2025-04-23 09:52:32,745 - PristonBot - INFO - Stamina: 81.5% (Threshold: 40.0%)
+2025-04-23 09:52:33,313 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:33,380 - PristonBot - INFO - Mana: 32.8% (Threshold: 50.0%)
+2025-04-23 09:52:33,446 - PristonBot - INFO - Stamina: 83.7% (Threshold: 40.0%)
+2025-04-23 09:52:34,022 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:34,099 - PristonBot - INFO - Mana: 33.6% (Threshold: 50.0%)
+2025-04-23 09:52:34,176 - PristonBot - INFO - Stamina: 84.8% (Threshold: 40.0%)
+2025-04-23 09:52:34,178 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:34,178 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:34,178 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:34,178 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:34,330 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:34,967 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:35,026 - PristonBot - INFO - Mana: 33.6% (Threshold: 50.0%)
+2025-04-23 09:52:35,027 - PristonBot - INFO - Mana low (33.6%), using mana potion (key 3)
+2025-04-23 09:52:35,027 - PristonBot - INFO - Using mana potion - MP: 33.6% < 50.0%
+2025-04-23 09:52:35,027 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:35,148 - PristonBot - INFO - Stamina: 83.7% (Threshold: 40.0%)
+2025-04-23 09:52:35,726 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:35,796 - PristonBot - INFO - Mana: 25.9% (Threshold: 50.0%)
+2025-04-23 09:52:35,864 - PristonBot - INFO - Stamina: 80.4% (Threshold: 40.0%)
+2025-04-23 09:52:36,434 - PristonBot - INFO - Health: 98.2% (Threshold: 50.0%)
+2025-04-23 09:52:36,496 - PristonBot - INFO - Mana: 25.9% (Threshold: 50.0%)
+2025-04-23 09:52:36,564 - PristonBot - INFO - Stamina: 80.4% (Threshold: 40.0%)
+2025-04-23 09:52:36,565 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:36,565 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:36,565 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:36,566 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:36,718 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:37,352 - PristonBot - INFO - Health: 98.2% (Threshold: 50.0%)
+2025-04-23 09:52:37,413 - PristonBot - INFO - Mana: 27.6% (Threshold: 50.0%)
+2025-04-23 09:52:37,484 - PristonBot - INFO - Stamina: 81.5% (Threshold: 40.0%)
+2025-04-23 09:52:38,075 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:38,150 - PristonBot - INFO - Mana: 28.4% (Threshold: 50.0%)
+2025-04-23 09:52:38,150 - PristonBot - INFO - Mana low (28.4%), using mana potion (key 3)
+2025-04-23 09:52:38,150 - PristonBot - INFO - Using mana potion - MP: 28.4% < 50.0%
+2025-04-23 09:52:38,150 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:38,270 - PristonBot - INFO - Stamina: 83.7% (Threshold: 40.0%)
+2025-04-23 09:52:38,843 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:38,918 - PristonBot - INFO - Mana: 28.4% (Threshold: 50.0%)
+2025-04-23 09:52:38,979 - PristonBot - INFO - Stamina: 84.8% (Threshold: 40.0%)
+2025-04-23 09:52:38,980 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:38,980 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:38,980 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:38,982 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:39,133 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:39,753 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:39,814 - PristonBot - INFO - Mana: 28.4% (Threshold: 50.0%)
+2025-04-23 09:52:39,879 - PristonBot - INFO - Stamina: 87.0% (Threshold: 40.0%)
+2025-04-23 09:52:40,454 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:40,523 - PristonBot - INFO - Mana: 29.3% (Threshold: 50.0%)
+2025-04-23 09:52:40,599 - PristonBot - INFO - Stamina: 89.1% (Threshold: 40.0%)
+2025-04-23 09:52:41,170 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:41,237 - PristonBot - INFO - Mana: 29.3% (Threshold: 50.0%)
+2025-04-23 09:52:41,237 - PristonBot - INFO - Mana low (29.3%), using mana potion (key 3)
+2025-04-23 09:52:41,237 - PristonBot - INFO - Using mana potion - MP: 29.3% < 50.0%
+2025-04-23 09:52:41,238 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:41,350 - PristonBot - INFO - Stamina: 91.3% (Threshold: 40.0%)
+2025-04-23 09:52:41,352 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:41,353 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:41,353 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:41,353 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:41,504 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:42,154 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:42,215 - PristonBot - INFO - Mana: 30.2% (Threshold: 50.0%)
+2025-04-23 09:52:42,282 - PristonBot - INFO - Stamina: 92.4% (Threshold: 40.0%)
+2025-04-23 09:52:42,862 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:42,938 - PristonBot - INFO - Mana: 30.2% (Threshold: 50.0%)
+2025-04-23 09:52:43,002 - PristonBot - INFO - Stamina: 95.7% (Threshold: 40.0%)
+2025-04-23 09:52:43,573 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:43,638 - PristonBot - INFO - Mana: 30.2% (Threshold: 50.0%)
+2025-04-23 09:52:43,699 - PristonBot - INFO - Stamina: 96.7% (Threshold: 40.0%)
+2025-04-23 09:52:43,700 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:43,700 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:43,701 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:43,701 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:43,852 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:44,491 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:44,550 - PristonBot - INFO - Mana: 31.9% (Threshold: 50.0%)
+2025-04-23 09:52:44,551 - PristonBot - INFO - Mana low (31.9%), using mana potion (key 3)
+2025-04-23 09:52:44,551 - PristonBot - INFO - Using mana potion - MP: 31.9% < 50.0%
+2025-04-23 09:52:44,552 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:44,665 - PristonBot - INFO - Stamina: 97.8% (Threshold: 40.0%)
+2025-04-23 09:52:45,240 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:45,305 - PristonBot - INFO - Mana: 31.9% (Threshold: 50.0%)
+2025-04-23 09:52:45,366 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:52:45,936 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:46,001 - PristonBot - INFO - Mana: 32.8% (Threshold: 50.0%)
+2025-04-23 09:52:46,068 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:52:46,069 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:46,070 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:46,070 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:46,070 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:46,221 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:46,849 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:46,916 - PristonBot - INFO - Mana: 32.8% (Threshold: 50.0%)
+2025-04-23 09:52:46,984 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:52:47,559 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:47,621 - PristonBot - INFO - Mana: 32.8% (Threshold: 50.0%)
+2025-04-23 09:52:47,621 - PristonBot - INFO - Mana low (32.8%), using mana potion (key 3)
+2025-04-23 09:52:47,621 - PristonBot - INFO - Using mana potion - MP: 32.8% < 50.0%
+2025-04-23 09:52:47,621 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:52:47,741 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:52:48,312 - PristonBot - INFO - Health: 100.0% (Threshold: 50.0%)
+2025-04-23 09:52:48,385 - PristonBot - INFO - Mana: 33.6% (Threshold: 50.0%)
+2025-04-23 09:52:48,454 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:52:48,455 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:52:48,455 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:52:48,455 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:52:48,456 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:52:48,607 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:52:49,026 - PristonBot - INFO - Stopping bot...
+2025-04-23 09:52:50,028 - PristonBot - INFO - Bot thread joined
+2025-04-23 09:52:50,029 - PristonBot - INFO - Bot stopped
+2025-04-23 09:52:50,031 - PristonBot - INFO - Bot loop stopped
+2025-04-23 09:54:31,923 - PristonBot - INFO - Starting bot...
+2025-04-23 09:54:31,924 - PristonBot - INFO - Bot thread started
+2025-04-23 09:54:31,925 - PristonBot - INFO - Bot started
+2025-04-23 09:54:31,929 - PristonBot - INFO - Bot loop started
+2025-04-23 09:54:31,931 - PristonBot - INFO - Auto spellcasting enabled with key 22 at 2.0s interval
+2025-04-23 09:54:31,931 - PristonBot - INFO - Spellcasting enabled: Key=22, Interval=2.0s
+2025-04-23 09:54:32,030 - PristonBot - INFO - Health: 52.6% (Threshold: 50.0%)
+2025-04-23 09:54:32,096 - PristonBot - INFO - Mana: 96.6% (Threshold: 50.0%)
+2025-04-23 09:54:32,160 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:32,161 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:54:32,161 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:54:32,161 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:54:32,161 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:54:32,313 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:54:32,949 - PristonBot - INFO - Health: 51.8% (Threshold: 50.0%)
+2025-04-23 09:54:33,014 - PristonBot - INFO - Mana: 96.6% (Threshold: 50.0%)
+2025-04-23 09:54:33,083 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:33,655 - PristonBot - INFO - Health: 51.8% (Threshold: 50.0%)
+2025-04-23 09:54:33,715 - PristonBot - INFO - Mana: 97.4% (Threshold: 50.0%)
+2025-04-23 09:54:33,776 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:34,349 - PristonBot - INFO - Health: 50.9% (Threshold: 50.0%)
+2025-04-23 09:54:34,411 - PristonBot - INFO - Mana: 97.4% (Threshold: 50.0%)
+2025-04-23 09:54:34,481 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:34,482 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:54:34,482 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:54:34,482 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:54:34,483 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:54:34,635 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:54:35,272 - PristonBot - INFO - Health: 51.8% (Threshold: 50.0%)
+2025-04-23 09:54:35,328 - PristonBot - INFO - Mana: 97.4% (Threshold: 50.0%)
+2025-04-23 09:54:35,395 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:35,974 - PristonBot - INFO - Health: 50.9% (Threshold: 50.0%)
+2025-04-23 09:54:36,026 - PristonBot - INFO - Mana: 98.3% (Threshold: 50.0%)
+2025-04-23 09:54:36,097 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:36,703 - PristonBot - INFO - Health: 50.9% (Threshold: 50.0%)
+2025-04-23 09:54:36,764 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:36,837 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:36,838 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:54:36,838 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:54:36,839 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:54:36,839 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:54:36,991 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:54:37,627 - PristonBot - INFO - Health: 49.1% (Threshold: 50.0%)
+2025-04-23 09:54:37,628 - PristonBot - INFO - Health low (49.1%), using health potion (key 1)
+2025-04-23 09:54:37,629 - PristonBot - INFO - Using health potion - HP: 49.1% < 50.0%
+2025-04-23 09:54:37,629 - PristonBot - INFO - Sending key '1' (VK: 49) using SendInput
+2025-04-23 09:54:37,745 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:37,819 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:38,388 - PristonBot - INFO - Health: 48.2% (Threshold: 50.0%)
+2025-04-23 09:54:38,450 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:38,515 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:39,082 - PristonBot - INFO - Health: 48.2% (Threshold: 50.0%)
+2025-04-23 09:54:39,147 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:39,215 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:39,216 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:54:39,216 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:54:39,216 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:54:39,216 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:54:39,368 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:54:40,010 - PristonBot - INFO - Health: 49.1% (Threshold: 50.0%)
+2025-04-23 09:54:40,083 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:40,154 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:40,723 - PristonBot - INFO - Health: 48.2% (Threshold: 50.0%)
+2025-04-23 09:54:40,724 - PristonBot - INFO - Health low (48.2%), using health potion (key 1)
+2025-04-23 09:54:40,724 - PristonBot - INFO - Using health potion - HP: 48.2% < 50.0%
+2025-04-23 09:54:40,725 - PristonBot - INFO - Sending key '1' (VK: 49) using SendInput
+2025-04-23 09:54:40,834 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:40,896 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:41,469 - PristonBot - INFO - Health: 48.2% (Threshold: 50.0%)
+2025-04-23 09:54:41,535 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:41,603 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:41,605 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:54:41,606 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:54:41,606 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:54:41,606 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:54:41,759 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:54:42,388 - PristonBot - INFO - Health: 47.4% (Threshold: 50.0%)
+2025-04-23 09:54:42,451 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:42,518 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:43,089 - PristonBot - INFO - Health: 47.4% (Threshold: 50.0%)
+2025-04-23 09:54:43,147 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:43,217 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:43,788 - PristonBot - INFO - Health: 46.5% (Threshold: 50.0%)
+2025-04-23 09:54:43,789 - PristonBot - INFO - Health low (46.5%), using health potion (key 1)
+2025-04-23 09:54:43,789 - PristonBot - INFO - Using health potion - HP: 46.5% < 50.0%
+2025-04-23 09:54:43,790 - PristonBot - INFO - Sending key '1' (VK: 49) using SendInput
+2025-04-23 09:54:43,897 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:43,963 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:43,964 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:54:43,964 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:54:43,964 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:54:43,964 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:54:44,116 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:54:44,753 - PristonBot - INFO - Health: 46.5% (Threshold: 50.0%)
+2025-04-23 09:54:44,814 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:44,890 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:45,451 - PristonBot - INFO - Health: 46.5% (Threshold: 50.0%)
+2025-04-23 09:54:45,516 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:45,581 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:46,158 - PristonBot - INFO - Health: 46.5% (Threshold: 50.0%)
+2025-04-23 09:54:46,221 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:46,290 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:46,290 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:54:46,290 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:54:46,290 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:54:46,292 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:54:46,444 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:54:47,073 - PristonBot - INFO - Health: 44.7% (Threshold: 50.0%)
+2025-04-23 09:54:47,074 - PristonBot - INFO - Health low (44.7%), using health potion (key 1)
+2025-04-23 09:54:47,075 - PristonBot - INFO - Using health potion - HP: 44.7% < 50.0%
+2025-04-23 09:54:47,075 - PristonBot - INFO - Sending key '1' (VK: 49) using SendInput
+2025-04-23 09:54:47,186 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:47,251 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:47,822 - PristonBot - INFO - Health: 43.9% (Threshold: 50.0%)
+2025-04-23 09:54:47,883 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:47,948 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:48,519 - PristonBot - INFO - Health: 43.0% (Threshold: 50.0%)
+2025-04-23 09:54:48,590 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:48,656 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:48,657 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:54:48,657 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:54:48,658 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:54:48,658 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:54:48,810 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:54:49,439 - PristonBot - INFO - Health: 42.1% (Threshold: 50.0%)
+2025-04-23 09:54:49,502 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:49,570 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:50,134 - PristonBot - INFO - Health: 42.1% (Threshold: 50.0%)
+2025-04-23 09:54:50,135 - PristonBot - INFO - Health low (42.1%), using health potion (key 1)
+2025-04-23 09:54:50,135 - PristonBot - INFO - Using health potion - HP: 42.1% < 50.0%
+2025-04-23 09:54:50,135 - PristonBot - INFO - Sending key '1' (VK: 49) using SendInput
+2025-04-23 09:54:50,253 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:50,321 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:50,882 - PristonBot - INFO - Health: 42.1% (Threshold: 50.0%)
+2025-04-23 09:54:50,951 - PristonBot - INFO - Mana: 100.0% (Threshold: 50.0%)
+2025-04-23 09:54:51,022 - PristonBot - INFO - Stamina: 100.0% (Threshold: 40.0%)
+2025-04-23 09:54:51,023 - PristonBot - INFO - Casting spell (22)
+2025-04-23 09:54:51,023 - PristonBot - INFO - Casting spell with key 22
+2025-04-23 09:54:51,023 - PristonBot - WARNING - Key '22' not found in key map, using ASCII value
+2025-04-23 09:54:51,024 - PristonBot - INFO - Sending key '22' (VK: 50) using SendInput
+2025-04-23 09:54:51,176 - PristonBot - INFO - Sending right-click using SendInput
+2025-04-23 09:54:51,792 - PristonBot - INFO - Stopping bot...
+2025-04-23 09:54:52,793 - PristonBot - INFO - Bot thread joined
+2025-04-23 09:54:52,794 - PristonBot - INFO - Health: 40.4% (Threshold: 50.0%)
+2025-04-23 09:54:52,861 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 09:54:52,862 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 09:54:52,862 - PristonBot - INFO - Using mana potion - MP: 0.0% < 50.0%
+2025-04-23 09:54:52,862 - PristonBot - INFO - Sending key '3' (VK: 51) using SendInput
+2025-04-23 09:54:52,974 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 09:54:52,975 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 09:54:52,976 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 09:54:52,976 - PristonBot - INFO - Sending key '2' (VK: 50) using SendInput
+2025-04-23 09:54:53,529 - PristonBot - INFO - Bot stopped
+2025-04-23 09:54:53,529 - PristonBot - INFO - Bot loop stopped

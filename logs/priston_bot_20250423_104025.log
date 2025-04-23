@@ -1,0 +1,66 @@
+2025-04-23 10:40:25,889 - PristonBot - INFO - Logging initialized
+2025-04-23 10:40:25,889 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 10:40:25,936 - PristonBot - INFO - Icon file not found
+2025-04-23 10:40:25,937 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 10:40:25,952 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 10:40:25,954 - PristonBot - INFO - Please select the Health, Mana, and Stamina bars to continue
+2025-04-23 10:40:25,954 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 10:40:25,955 - PristonBot - INFO - Application started successfully
+2025-04-23 10:40:25,961 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 10:40:25,962 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 10:40:25,963 - PristonBot - INFO - Step 3: Configure spell casting (optional)
+2025-04-23 10:40:25,964 - PristonBot - INFO - Step 4: Click Start Bot to begin monitoring
+2025-04-23 10:40:31,248 - PristonBot - INFO - Starting selection: Game Window
+2025-04-23 10:40:37,774 - PristonBot - INFO - Game Window selection confirmed: (250, 57) to (1530, 1075)
+2025-04-23 10:40:38,344 - PristonBot - INFO - Starting selection: Health Bar
+2025-04-23 10:40:38,457 - PristonBot - INFO - Game window selected: (250,57) to (1530,1075)
+2025-04-23 10:40:41,328 - PristonBot - INFO - Detected vertical bar
+2025-04-23 10:40:42,412 - PristonBot - INFO - Health Bar selection confirmed: (522, 762) to (530, 855)
+2025-04-23 10:40:42,475 - PristonBot - INFO - Health Bar selected: (522,762) to (530,855)
+2025-04-23 10:40:44,340 - PristonBot - INFO - Starting selection: Health Bar
+2025-04-23 10:40:47,381 - PristonBot - INFO - Detected vertical bar
+2025-04-23 10:40:48,393 - PristonBot - INFO - Health Bar selection confirmed: (655, 950) to (660, 1071)
+2025-04-23 10:40:48,527 - PristonBot - INFO - Health Bar selected: (655,950) to (660,1071)
+2025-04-23 10:40:49,340 - PristonBot - INFO - Starting selection: Mana Bar
+2025-04-23 10:40:55,265 - PristonBot - INFO - Detected vertical bar
+2025-04-23 10:40:56,387 - PristonBot - INFO - Mana Bar selection confirmed: (838, 951) to (846, 1063)
+2025-04-23 10:40:56,506 - PristonBot - INFO - Mana Bar selected: (838,951) to (846,1063)
+2025-04-23 10:40:57,614 - PristonBot - INFO - Starting selection: Stamina Bar
+2025-04-23 10:41:01,694 - PristonBot - WARNING - User made a small selection: 4x95 pixels
+2025-04-23 10:41:01,696 - PristonBot - INFO - Detected vertical bar
+2025-04-23 10:41:03,191 - PristonBot - INFO - Stamina Bar selection confirmed: (633, 975) to (637, 1070)
+2025-04-23 10:41:03,749 - PristonBot - INFO - Stamina Bar selected: (633,975) to (637,1070)
+2025-04-23 10:41:04,139 - PristonBot - INFO - All bars configured! You can now start the bot.
+2025-04-23 10:41:04,140 - PristonBot - INFO - All bars configured, start button enabled
+2025-04-23 10:41:16,023 - PristonBot - INFO - Starting bot...
+2025-04-23 10:41:16,024 - PristonBot - INFO - Bot thread started
+2025-04-23 10:41:16,025 - PristonBot - INFO - Bot started
+2025-04-23 10:41:16,027 - PristonBot - INFO - Bot loop started
+2025-04-23 10:41:16,028 - PristonBot - INFO - Auto spellcasting enabled with key F3 at 2.0s interval
+2025-04-23 10:41:16,028 - PristonBot - INFO - Spellcasting enabled: Key=F3, Interval=2.0s
+2025-04-23 10:41:16,250 - PristonBot - INFO - Health: 47.1% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:41:16,250 - PristonBot - INFO - Health low (47.1%), using health potion (key 1)
+2025-04-23 10:41:16,251 - PristonBot - INFO - Using health potion - HP: 47.1% < 50.0%
+2025-04-23 10:41:16,251 - PristonBot - INFO - Sending key '1' (VK: 49) using SendInput
+2025-04-23 10:41:16,305 - PristonBot - INFO - Casting spell (F3)
+2025-04-23 10:41:16,306 - PristonBot - INFO - Casting spell with key F3
+2025-04-23 10:41:16,307 - PristonBot - INFO - Sending key 'F3' (VK: 114) using SendInput
+2025-04-23 10:41:16,461 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:41:16,515 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:41:17,234 - PristonBot - INFO - Health: 45.5% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:41:17,961 - PristonBot - INFO - Health: 45.5% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:41:18,684 - PristonBot - INFO - Health: 44.6% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:41:18,684 - PristonBot - INFO - Casting spell (F3)
+2025-04-23 10:41:18,685 - PristonBot - INFO - Casting spell with key F3
+2025-04-23 10:41:18,685 - PristonBot - INFO - Sending key 'F3' (VK: 114) using SendInput
+2025-04-23 10:41:18,838 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 10:41:18,890 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 10:41:19,602 - PristonBot - INFO - Health: 44.6% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:41:19,604 - PristonBot - INFO - Health low (44.6%), using health potion (key 1)
+2025-04-23 10:41:19,605 - PristonBot - INFO - Using health potion - HP: 44.6% < 50.0%
+2025-04-23 10:41:19,605 - PristonBot - INFO - Sending key '1' (VK: 49) using SendInput
+2025-04-23 10:41:20,363 - PristonBot - INFO - Health: 44.6% (Thrs: 50.0%) | Mana: 100.0% (Thrs: 30.0%) | Stamina: 100.0% (Thrs: 40.0%)
+2025-04-23 10:41:20,568 - PristonBot - INFO - Stopping bot...
+2025-04-23 10:41:21,578 - PristonBot - INFO - Bot thread joined
+2025-04-23 10:41:21,580 - PristonBot - INFO - Bot stopped
+2025-04-23 10:41:21,582 - PristonBot - INFO - Bot loop stopped

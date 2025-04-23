@@ -1,0 +1,118 @@
+2025-04-23 14:12:10,007 - PristonBot - INFO - Logging initialized
+2025-04-23 14:12:10,008 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 14:12:10,053 - PristonBot - INFO - Icon file not found
+2025-04-23 14:12:10,054 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 14:12:10,076 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 14:12:10,077 - PristonBot - INFO - Configuration loaded from file
+2025-04-23 14:12:10,077 - PristonBot - INFO - Selection configured from saved coordinates: (261,74) to (1541,1071)
+2025-04-23 14:12:10,078 - PristonBot - INFO - Loaded game window configuration: (261,74) to (1541,1071)
+2025-04-23 14:12:10,153 - PristonBot - INFO - Created preview image for game window
+2025-04-23 14:12:10,174 - PristonBot - INFO - Game window selected: (261,74) to (1541,1071)
+2025-04-23 14:12:10,174 - PristonBot - INFO - Health Bar configured from saved coordinates: (665,945) to (675,1060)
+2025-04-23 14:12:10,175 - PristonBot - INFO - Loaded health bar configuration: (665,945) to (675,1060)
+2025-04-23 14:12:10,242 - PristonBot - INFO - Created preview image for health bar
+2025-04-23 14:12:10,242 - PristonBot - INFO - Mana Bar configured from saved coordinates: (846,944) to (858,1063)
+2025-04-23 14:12:10,243 - PristonBot - INFO - Loaded mana bar configuration: (846,944) to (858,1063)
+2025-04-23 14:12:10,306 - PristonBot - INFO - Created preview image for mana bar
+2025-04-23 14:12:10,306 - PristonBot - INFO - Stamina Bar configured from saved coordinates: (643,968) to (648,1057)
+2025-04-23 14:12:10,306 - PristonBot - INFO - Loaded stamina bar configuration: (643,968) to (648,1057)
+2025-04-23 14:12:10,371 - PristonBot - INFO - Created preview image for stamina bar
+2025-04-23 14:12:10,373 - PristonBot - INFO - Loaded 3/3 bars from saved configuration
+2025-04-23 14:12:10,374 - PristonBot - INFO - Loaded 3/3 bars from saved configuration
+2025-04-23 14:12:10,375 - PristonBot - INFO - Loaded saved configuration
+2025-04-23 14:12:10,377 - PristonBot - INFO - Health Bar selected: (665,945) to (675,1060)
+2025-04-23 14:12:10,380 - PristonBot - INFO - Mana Bar selected: (846,944) to (858,1063)
+2025-04-23 14:12:10,383 - PristonBot - INFO - Stamina Bar selected: (643,968) to (648,1057)
+2025-04-23 14:12:10,395 - PristonBot - INFO - Game window selected: (261,74) to (1541,1071)
+2025-04-23 14:12:10,397 - PristonBot - INFO - All bars configured! You can now start the bot.
+2025-04-23 14:12:10,397 - PristonBot - INFO - All bars configured, start button enabled
+2025-04-23 14:12:10,398 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 14:12:10,399 - PristonBot - INFO - Application started successfully
+2025-04-23 14:12:10,401 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 14:12:10,403 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 14:12:10,405 - PristonBot - INFO - Step 3: Configure spell casting (optional)
+2025-04-23 14:12:10,408 - PristonBot - INFO - Step 4: Click Start Bot to begin monitoring
+2025-04-23 14:12:10,889 - PristonBot - INFO - Game window selected: (261,74) to (1541,1071)
+2025-04-23 14:12:10,890 - PristonBot - INFO - Health Bar selected: (665,945) to (675,1060)
+2025-04-23 14:12:10,891 - PristonBot - INFO - Mana Bar selected: (846,944) to (858,1063)
+2025-04-23 14:12:10,892 - PristonBot - INFO - Stamina Bar selected: (643,968) to (648,1057)
+2025-04-23 14:12:11,066 - PristonBot - INFO - Health Bar selected: (665,945) to (675,1060)
+2025-04-23 14:12:11,067 - PristonBot - INFO - Mana Bar selected: (846,944) to (858,1063)
+2025-04-23 14:12:11,069 - PristonBot - INFO - Stamina Bar selected: (643,968) to (648,1057)
+2025-04-23 14:12:15,626 - PristonBot - INFO - Configuration loaded from file
+2025-04-23 14:12:15,627 - PristonBot - INFO - Saved game window configuration
+2025-04-23 14:12:15,627 - PristonBot - INFO - Saved health bar configuration
+2025-04-23 14:12:15,627 - PristonBot - INFO - Saved mana bar configuration
+2025-04-23 14:12:15,628 - PristonBot - INFO - Saved stamina bar configuration
+2025-04-23 14:12:15,628 - PristonBot - INFO - Configuration saved to file
+2025-04-23 14:12:15,628 - PristonBot - INFO - Configuration saved successfully
+2025-04-23 14:12:15,630 - PristonBot - INFO - Configuration saved successfully
+2025-04-23 14:12:15,630 - PristonBot - INFO - Starting bot...
+2025-04-23 14:12:15,630 - PristonBot - INFO - Bot thread started
+2025-04-23 14:12:15,631 - PristonBot - INFO - Bot started
+2025-04-23 14:12:15,631 - PristonBot - INFO - Bot loop started
+2025-04-23 14:12:15,634 - PristonBot - INFO - Auto spellcasting enabled with key F2 at 2.5s interval
+2025-04-23 14:12:15,635 - PristonBot - INFO - Spellcasting enabled: Key=F2, Interval=2.5s
+2025-04-23 14:12:15,832 - PristonBot - INFO - Health: 100.0% | Mana: 100.0% | Stamina: 100.0%
+2025-04-23 14:12:15,833 - PristonBot - INFO - Casting spell (F2)
+2025-04-23 14:12:15,834 - PristonBot - INFO - Casting spell with key F2
+2025-04-23 14:12:15,834 - PristonBot - INFO - Sending key 'F2' (VK: 113) using SendInput
+2025-04-23 14:12:15,986 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 14:12:16,045 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 14:12:16,766 - PristonBot - INFO - Health: 100.0% | Mana: 100.0% | Stamina: 100.0%
+2025-04-23 14:12:17,483 - PristonBot - INFO - Health: 100.0% | Mana: 100.0% | Stamina: 100.0%
+2025-04-23 14:12:18,197 - PristonBot - INFO - Health: 100.0% | Mana: 93.3% | Stamina: 93.3%
+2025-04-23 14:12:18,902 - PristonBot - INFO - Health: 100.0% | Mana: 94.1% | Stamina: 95.5%
+2025-04-23 14:12:18,903 - PristonBot - INFO - Casting spell (F2)
+2025-04-23 14:12:18,904 - PristonBot - INFO - Casting spell with key F2
+2025-04-23 14:12:18,904 - PristonBot - INFO - Sending key 'F2' (VK: 113) using SendInput
+2025-04-23 14:12:19,055 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 14:12:19,113 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 14:12:19,818 - PristonBot - INFO - Health: 100.0% | Mana: 95.0% | Stamina: 87.6%
+2025-04-23 14:12:20,519 - PristonBot - INFO - Health: 100.0% | Mana: 89.1% | Stamina: 87.6%
+2025-04-23 14:12:21,217 - PristonBot - INFO - Health: 100.0% | Mana: 89.9% | Stamina: 87.6%
+2025-04-23 14:12:21,938 - PristonBot - INFO - Health: 100.0% | Mana: 83.2% | Stamina: 79.8%
+2025-04-23 14:12:21,939 - PristonBot - INFO - Casting spell (F2)
+2025-04-23 14:12:21,939 - PristonBot - INFO - Casting spell with key F2
+2025-04-23 14:12:21,940 - PristonBot - INFO - Sending key 'F2' (VK: 113) using SendInput
+2025-04-23 14:12:22,092 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 14:12:22,144 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 14:12:22,853 - PristonBot - INFO - Health: 100.0% | Mana: 83.2% | Stamina: 79.8%
+2025-04-23 14:12:23,552 - PristonBot - INFO - Health: 100.0% | Mana: 78.2% | Stamina: 71.9%
+2025-04-23 14:12:24,250 - PristonBot - INFO - Health: 100.0% | Mana: 78.2% | Stamina: 71.9%
+2025-04-23 14:12:24,954 - PristonBot - INFO - Health: 100.0% | Mana: 78.2% | Stamina: 71.9%
+2025-04-23 14:12:24,954 - PristonBot - INFO - Casting spell (F2)
+2025-04-23 14:12:24,955 - PristonBot - INFO - Casting spell with key F2
+2025-04-23 14:12:24,955 - PristonBot - INFO - Sending key 'F2' (VK: 113) using SendInput
+2025-04-23 14:12:25,107 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 14:12:25,167 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 14:12:25,869 - PristonBot - INFO - Health: 100.0% | Mana: 73.1% | Stamina: 67.4%
+2025-04-23 14:12:26,605 - PristonBot - INFO - Health: 100.0% | Mana: 73.1% | Stamina: 67.4%
+2025-04-23 14:12:27,308 - PristonBot - INFO - Health: 100.0% | Mana: 73.9% | Stamina: 68.5%
+2025-04-23 14:12:28,003 - PristonBot - INFO - Health: 100.0% | Mana: 73.9% | Stamina: 71.9%
+2025-04-23 14:12:28,004 - PristonBot - INFO - Casting spell (F2)
+2025-04-23 14:12:28,004 - PristonBot - INFO - Casting spell with key F2
+2025-04-23 14:12:28,004 - PristonBot - INFO - Sending key 'F2' (VK: 113) using SendInput
+2025-04-23 14:12:28,155 - PristonBot - INFO - Attempting SendInput right-click
+2025-04-23 14:12:28,216 - PristonBot - INFO - SendInput right-click succeeded
+2025-04-23 14:12:28,311 - PristonBot - INFO - Stopping bot...
+2025-04-23 14:12:29,324 - PristonBot - INFO - Bot thread joined
+2025-04-23 14:12:29,328 - PristonBot - INFO - Configuration loaded from file
+2025-04-23 14:12:29,329 - PristonBot - INFO - Saved game window configuration
+2025-04-23 14:12:29,330 - PristonBot - INFO - Saved health bar configuration
+2025-04-23 14:12:29,331 - PristonBot - INFO - Saved mana bar configuration
+2025-04-23 14:12:29,332 - PristonBot - INFO - Saved stamina bar configuration
+2025-04-23 14:12:29,333 - PristonBot - INFO - Configuration saved to file
+2025-04-23 14:12:29,335 - PristonBot - INFO - Configuration saved successfully
+2025-04-23 14:12:29,336 - PristonBot - INFO - Configuration saved successfully
+2025-04-23 14:12:29,337 - PristonBot - INFO - Bot stopped
+2025-04-23 14:12:29,338 - PristonBot - INFO - Bot loop stopped
+2025-04-23 14:14:24,877 - PristonBot - ERROR - Unhandled exception
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\system.py", line 144, in <module>
+    main()
+  File "C:\repositories\microsoft\system.py", line 130, in main
+    root.mainloop()
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1505, in mainloop
+    self.tk.mainloop(n)
+KeyboardInterrupt

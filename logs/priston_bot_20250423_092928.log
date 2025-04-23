@@ -1,0 +1,26 @@
+2025-04-23 09:29:28,601 - PristonBot - INFO - Logging initialized
+2025-04-23 09:29:28,601 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 09:29:28,650 - PristonBot - INFO - Icon file not found
+2025-04-23 09:29:28,651 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 09:29:28,667 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 09:29:28,669 - PristonBot - INFO - Step 1: Select the game window by clicking 'Select Game Window'
+2025-04-23 09:29:28,669 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 09:29:28,670 - PristonBot - INFO - Application started successfully
+2025-04-23 09:29:28,672 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 09:29:28,673 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 09:29:28,675 - PristonBot - INFO - Step 3: Click Start Bot to begin monitoring
+2025-04-23 09:29:36,184 - PristonBot - INFO - Starting game window selection
+2025-04-23 09:29:44,292 - PristonBot - INFO - Game window selection confirmed: (1, 0) to (2751, 1105)
+2025-04-23 09:29:44,409 - PristonBot - INFO - Game window selected successfully!
+2025-04-23 09:29:44,431 - PristonBot - INFO - Initialized Health bar selector
+2025-04-23 09:29:44,431 - PristonBot - INFO - Initialized Mana bar selector
+2025-04-23 09:29:44,431 - PristonBot - INFO - Initialized Stamina bar selector
+2025-04-23 09:31:23,402 - PristonBot - ERROR - Unhandled exception
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\system.py", line 143, in <module>
+    main()
+  File "C:\repositories\microsoft\system.py", line 129, in main
+    root.mainloop()
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1505, in mainloop
+    self.tk.mainloop(n)
+KeyboardInterrupt

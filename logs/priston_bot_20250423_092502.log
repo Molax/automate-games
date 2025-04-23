@@ -1,0 +1,29 @@
+2025-04-23 09:25:02,017 - PristonBot - INFO - Logging initialized
+2025-04-23 09:25:02,017 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 09:25:02,066 - PristonBot - INFO - Icon file not found
+2025-04-23 09:25:02,066 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 09:25:02,083 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 09:25:02,084 - PristonBot - INFO - Step 1: Select the game window by clicking 'Select Game Window'
+2025-04-23 09:25:02,085 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 09:25:02,086 - PristonBot - INFO - Application started successfully
+2025-04-23 09:25:02,091 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 09:25:02,091 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 09:25:02,094 - PristonBot - INFO - Step 3: Click Start Bot to begin monitoring
+2025-04-23 09:25:05,397 - PristonBot - INFO - Starting game window selection
+2025-04-23 09:25:16,024 - PristonBot - INFO - Game window selection confirmed: (353, 86) to (1375, 850)
+2025-04-23 09:25:16,568 - PristonBot - INFO - Game window selected successfully!
+2025-04-23 09:25:16,575 - PristonBot - INFO - Initialized Health bar selector
+2025-04-23 09:25:16,575 - PristonBot - INFO - Initialized Mana bar selector
+2025-04-23 09:25:16,575 - PristonBot - INFO - Initialized Stamina bar selector
+2025-04-23 09:25:21,828 - PristonBot - INFO - Starting game window selection
+2025-04-23 09:25:22,948 - PristonBot - INFO - Game window selected successfully!
+2025-04-23 09:25:22,953 - PristonBot - INFO - Initialized Health bar selector
+2025-04-23 09:25:22,953 - PristonBot - INFO - Initialized Mana bar selector
+2025-04-23 09:25:22,953 - PristonBot - INFO - Initialized Stamina bar selector
+2025-04-23 09:25:27,079 - PristonBot - INFO - Game window selection confirmed: (440, 109) to (1543, 1105)
+2025-04-23 09:25:40,648 - PristonBot - INFO - Starting game window selection
+2025-04-23 09:25:41,787 - PristonBot - INFO - Game window selected successfully!
+2025-04-23 09:25:41,799 - PristonBot - INFO - Initialized Health bar selector
+2025-04-23 09:25:41,800 - PristonBot - INFO - Initialized Mana bar selector
+2025-04-23 09:25:41,800 - PristonBot - INFO - Initialized Stamina bar selector
+2025-04-23 09:25:45,867 - PristonBot - INFO - Game window selection confirmed: (351, 86) to (1375, 880)

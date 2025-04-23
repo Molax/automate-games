@@ -1,0 +1,481 @@
+2025-04-23 08:46:55,041 - PristonBot - INFO - Logging initialized
+2025-04-23 08:46:55,041 - PristonBot - INFO - Starting Priston Tale Potion Bot application
+2025-04-23 08:46:55,042 - PristonBot - INFO - Created directory: debug_images
+2025-04-23 08:46:55,094 - PristonBot - INFO - Icon file not found
+2025-04-23 08:46:55,094 - PristonBot - INFO - Initializing Priston Tale Potion Bot
+2025-04-23 08:46:55,098 - PristonBot - INFO - Initialized Health bar selector
+2025-04-23 08:46:55,099 - PristonBot - INFO - Initialized Mana bar selector
+2025-04-23 08:46:55,099 - PristonBot - INFO - Initialized Stamina bar selector
+2025-04-23 08:46:55,111 - PristonBot - INFO - Bot GUI initialized successfully
+2025-04-23 08:46:55,112 - PristonBot - INFO - Please select the Health, Mana, and Stamina bars to continue
+2025-04-23 08:46:55,112 - PristonBot - INFO - Bot GUI initialized
+2025-04-23 08:46:55,113 - PristonBot - INFO - Application started successfully
+2025-04-23 08:46:55,114 - PristonBot - INFO - Step 1: Select your Health, Mana, and Stamina bars
+2025-04-23 08:46:55,116 - PristonBot - INFO - Step 2: Configure thresholds and keys
+2025-04-23 08:46:55,117 - PristonBot - INFO - Step 3: Click Start Bot to begin monitoring
+2025-04-23 08:47:08,727 - PristonBot - INFO - Starting Health bar selection
+2025-04-23 08:47:17,762 - PristonBot - INFO - Health bar selection confirmed: (482, 764) to (497, 861)
+2025-04-23 08:47:18,699 - PristonBot - INFO - Starting Mana bar selection
+2025-04-23 08:47:24,655 - PristonBot - INFO - Mana bar selection confirmed: (626, 764) to (646, 865)
+2025-04-23 08:47:26,277 - PristonBot - INFO - Starting Stamina bar selection
+2025-04-23 08:47:32,033 - PristonBot - INFO - Stamina bar selection confirmed: (464, 781) to (476, 864)
+2025-04-23 08:47:32,275 - PristonBot - INFO - All bars configured! You can now start the bot.
+2025-04-23 08:47:32,276 - PristonBot - INFO - All bars configured, start button enabled
+2025-04-23 08:47:43,654 - PristonBot - INFO - Starting bot...
+2025-04-23 08:47:43,655 - PristonBot - INFO - Bot thread started
+2025-04-23 08:47:43,657 - PristonBot - INFO - Bot started
+2025-04-23 08:47:43,658 - PristonBot - INFO - Bot loop started
+2025-04-23 08:47:43,661 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:43,661 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:43,661 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:43,664 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:43,866 - PristonBot - INFO - Window focus successful
+2025-04-23 08:47:43,868 - PristonBot - INFO - Game window: 1040x807 at (155, 69)
+2025-04-23 08:47:43,962 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:43,963 - PristonBot - INFO - Health low (0.0%), using health potion (key 1)
+2025-04-23 08:47:43,963 - PristonBot - INFO - Using health potion - HP: 0.0% < 50.0%
+2025-04-23 08:47:43,964 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:47:44,020 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:44,021 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:47:44,022 - PristonBot - INFO - Using mana potion - MP: 0.0% < 30.0%
+2025-04-23 08:47:44,022 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:47:44,076 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:44,081 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:47:44,081 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 08:47:44,081 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:47:44,633 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:44,633 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:44,633 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:44,698 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:44,700 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:44,702 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:45,204 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:45,204 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:45,205 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:45,296 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:45,299 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:45,302 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:45,803 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:45,804 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:45,804 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:45,888 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:45,891 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:45,895 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:46,395 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:46,395 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:46,396 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:46,472 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:46,477 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:46,480 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:46,981 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:46,982 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:46,982 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:47,061 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:47,063 - PristonBot - INFO - Health low (0.0%), using health potion (key 1)
+2025-04-23 08:47:47,063 - PristonBot - INFO - Using health potion - HP: 0.0% < 50.0%
+2025-04-23 08:47:47,064 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:47:47,120 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:47,124 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:47:47,124 - PristonBot - INFO - Using mana potion - MP: 0.0% < 30.0%
+2025-04-23 08:47:47,124 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:47:47,182 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:47,183 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:47:47,183 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 08:47:47,183 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:47:47,735 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:47,736 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:47,737 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:47,812 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:47,816 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:47,819 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:48,319 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:48,319 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:48,319 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:48,384 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:48,388 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:48,391 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:48,893 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:48,893 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:48,893 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:48,970 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:48,972 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:48,975 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:49,476 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:49,476 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:49,476 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:49,566 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:49,573 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:49,577 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:50,080 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:50,080 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:50,080 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:50,080 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:50,082 - PristonBot - INFO - Game window: 1040x807 at (155, 69)
+2025-04-23 08:47:50,172 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:50,177 - PristonBot - INFO - Health low (0.0%), using health potion (key 1)
+2025-04-23 08:47:50,177 - PristonBot - INFO - Using health potion - HP: 0.0% < 50.0%
+2025-04-23 08:47:50,178 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:47:50,232 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:50,234 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:47:50,234 - PristonBot - INFO - Using mana potion - MP: 0.0% < 30.0%
+2025-04-23 08:47:50,234 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:47:50,288 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:50,290 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:47:50,290 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 08:47:50,290 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:47:50,843 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:50,843 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:50,844 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:50,933 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:50,936 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:50,939 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:51,440 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:51,440 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:51,440 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:51,523 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:51,526 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:51,533 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:52,035 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:52,035 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:52,036 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:52,119 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:52,122 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:52,124 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:52,625 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:52,626 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:52,627 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:52,708 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:52,711 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:52,714 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:53,215 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:53,215 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:53,216 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:53,295 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:53,297 - PristonBot - INFO - Health low (0.0%), using health potion (key 1)
+2025-04-23 08:47:53,297 - PristonBot - INFO - Using health potion - HP: 0.0% < 50.0%
+2025-04-23 08:47:53,297 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:47:53,354 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:53,357 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:47:53,357 - PristonBot - INFO - Using mana potion - MP: 0.0% < 30.0%
+2025-04-23 08:47:53,358 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:47:53,416 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:53,421 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:47:53,421 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 40.0%
+2025-04-23 08:47:53,422 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:47:53,974 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:53,976 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:53,978 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:54,059 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:54,064 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:54,067 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:54,569 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:47:54,569 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:47:54,570 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:47:54,660 - PristonBot - INFO - Stopping bot...
+2025-04-23 08:47:55,666 - PristonBot - INFO - Bot thread joined
+2025-04-23 08:47:55,666 - PristonBot - WARNING - Focus verification failed. Current foreground: Priston Tale Potion Bot
+2025-04-23 08:47:55,761 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:47:55,765 - PristonBot - INFO - Mana: 0.0% (Threshold: 30.0%)
+2025-04-23 08:47:55,771 - PristonBot - INFO - Stamina: 0.0% (Threshold: 40.0%)
+2025-04-23 08:47:56,273 - PristonBot - INFO - Bot stopped
+2025-04-23 08:47:56,273 - PristonBot - INFO - Bot loop stopped
+2025-04-23 08:48:15,177 - PristonBot - INFO - Starting bot...
+2025-04-23 08:48:15,178 - PristonBot - INFO - Bot thread started
+2025-04-23 08:48:15,180 - PristonBot - INFO - Bot started
+2025-04-23 08:48:15,181 - PristonBot - INFO - Bot loop started
+2025-04-23 08:48:15,183 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:15,184 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:15,184 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:15,184 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:15,386 - PristonBot - INFO - Window focus successful
+2025-04-23 08:48:15,391 - PristonBot - INFO - Game window: 1040x807 at (155, 69)
+2025-04-23 08:48:15,468 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:15,470 - PristonBot - INFO - Health low (0.0%), using health potion (key 1)
+2025-04-23 08:48:15,470 - PristonBot - INFO - Using health potion - HP: 0.0% < 50.0%
+2025-04-23 08:48:15,470 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:48:15,523 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:15,525 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:48:15,525 - PristonBot - INFO - Using mana potion - MP: 0.0% < 50.0%
+2025-04-23 08:48:15,526 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:48:15,581 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:15,582 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:48:15,582 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 50.0%
+2025-04-23 08:48:15,582 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:48:16,134 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:16,135 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:16,135 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:16,215 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:16,222 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:16,225 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:16,727 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:16,727 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:16,728 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:16,802 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:16,806 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:16,809 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:17,310 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:17,310 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:17,310 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:17,402 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:17,408 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:17,413 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:17,914 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:17,914 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:17,915 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:17,980 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:17,982 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:17,986 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:18,487 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:18,488 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:18,489 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:18,576 - PristonBot - INFO - Health: 5.3% (Threshold: 50.0%)
+2025-04-23 08:48:18,579 - PristonBot - INFO - Health low (5.3%), using health potion (key 1)
+2025-04-23 08:48:18,579 - PristonBot - INFO - Using health potion - HP: 5.3% < 50.0%
+2025-04-23 08:48:18,580 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:48:18,632 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:18,634 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:48:18,634 - PristonBot - INFO - Using mana potion - MP: 0.0% < 50.0%
+2025-04-23 08:48:18,634 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:48:18,689 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:18,692 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:48:18,692 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 50.0%
+2025-04-23 08:48:18,692 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:48:19,245 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:19,245 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:19,245 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:19,315 - PristonBot - INFO - Health: 0.9% (Threshold: 50.0%)
+2025-04-23 08:48:19,319 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:19,322 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:19,824 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:19,825 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:19,826 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:19,907 - PristonBot - INFO - Health: 0.9% (Threshold: 50.0%)
+2025-04-23 08:48:19,910 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:19,912 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:20,414 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:20,414 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:20,414 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:20,415 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:48:20,415 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:48:20,487 - PristonBot - INFO - Health: 0.9% (Threshold: 50.0%)
+2025-04-23 08:48:20,490 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:20,493 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:20,995 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:20,995 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:20,995 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:20,996 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:48:20,997 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:48:21,068 - PristonBot - INFO - Health: 0.9% (Threshold: 50.0%)
+2025-04-23 08:48:21,071 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:21,075 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:21,580 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:21,581 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:21,581 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:21,582 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:21,582 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:48:21,583 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:48:21,585 - PristonBot - INFO - Warning: Could not focus game window
+2025-04-23 08:48:21,590 - PristonBot - INFO - Game window: 1040x807 at (155, 69)
+2025-04-23 08:48:21,663 - PristonBot - INFO - Health: 0.9% (Threshold: 50.0%)
+2025-04-23 08:48:21,665 - PristonBot - INFO - Health low (0.9%), using health potion (key 1)
+2025-04-23 08:48:21,665 - PristonBot - INFO - Using health potion - HP: 0.9% < 50.0%
+2025-04-23 08:48:21,666 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:48:21,721 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:21,722 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:48:21,722 - PristonBot - INFO - Using mana potion - MP: 0.0% < 50.0%
+2025-04-23 08:48:21,723 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:48:21,777 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:21,778 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:48:21,779 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 50.0%
+2025-04-23 08:48:21,779 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:48:22,331 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:22,331 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:22,331 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:22,332 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:48:22,332 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:48:22,396 - PristonBot - INFO - Health: 0.9% (Threshold: 50.0%)
+2025-04-23 08:48:22,399 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:22,402 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:22,904 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:22,905 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:22,906 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:22,908 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:48:22,909 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:48:22,992 - PristonBot - INFO - Health: 0.9% (Threshold: 50.0%)
+2025-04-23 08:48:22,994 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:22,997 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:23,499 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:23,500 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:23,501 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:23,503 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:48:23,504 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:48:23,590 - PristonBot - INFO - Health: 0.9% (Threshold: 50.0%)
+2025-04-23 08:48:23,593 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:23,597 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:24,098 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:24,099 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:24,099 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:24,099 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:48:24,100 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:48:24,167 - PristonBot - INFO - Health: 0.9% (Threshold: 50.0%)
+2025-04-23 08:48:24,169 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:24,172 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:24,673 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:24,673 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:24,673 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:24,674 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:48:24,674 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:48:24,756 - PristonBot - INFO - Health: 0.9% (Threshold: 50.0%)
+2025-04-23 08:48:24,757 - PristonBot - INFO - Health low (0.9%), using health potion (key 1)
+2025-04-23 08:48:24,758 - PristonBot - INFO - Using health potion - HP: 0.9% < 50.0%
+2025-04-23 08:48:24,758 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:48:24,813 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:24,815 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:48:24,815 - PristonBot - INFO - Using mana potion - MP: 0.0% < 50.0%
+2025-04-23 08:48:24,815 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:48:24,869 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:24,872 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:48:24,872 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 50.0%
+2025-04-23 08:48:24,874 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:48:25,426 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:25,426 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:25,426 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:25,427 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:48:25,428 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:48:25,502 - PristonBot - INFO - Health: 0.9% (Threshold: 50.0%)
+2025-04-23 08:48:25,510 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:25,513 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:26,016 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:26,017 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:26,018 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:26,019 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:48:26,020 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:48:26,111 - PristonBot - INFO - Health: 0.9% (Threshold: 50.0%)
+2025-04-23 08:48:26,114 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:26,118 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:26,620 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:26,620 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:26,620 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:26,621 - PristonBot - WARNING - Normal focus failed: (0, 'SetForegroundWindow', 'No error message is available')
+2025-04-23 08:48:26,622 - PristonBot - ERROR - Alternative focus method failed: (5, 'AttachThreadInput', 'Access is denied.')
+2025-04-23 08:48:26,716 - PristonBot - INFO - Health: 0.9% (Threshold: 50.0%)
+2025-04-23 08:48:26,719 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:26,721 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:27,222 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:27,222 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:27,222 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:27,464 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:27,467 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:27,470 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:28,093 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:28,094 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:28,095 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:28,096 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:28,100 - PristonBot - INFO - Game window: 1040x807 at (155, 69)
+2025-04-23 08:48:28,207 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:28,209 - PristonBot - INFO - Health low (0.0%), using health potion (key 1)
+2025-04-23 08:48:28,209 - PristonBot - INFO - Using health potion - HP: 0.0% < 50.0%
+2025-04-23 08:48:28,209 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:48:28,263 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:28,267 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:48:28,267 - PristonBot - INFO - Using mana potion - MP: 0.0% < 50.0%
+2025-04-23 08:48:28,268 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:48:28,322 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:28,323 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:48:28,323 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 50.0%
+2025-04-23 08:48:28,324 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:48:28,875 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:28,875 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:28,876 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:28,953 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:28,956 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:28,958 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:29,461 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:29,462 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:29,462 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:29,541 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:29,545 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:29,548 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:30,049 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:30,050 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:30,051 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:30,123 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:30,135 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:30,142 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:30,646 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:30,646 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:30,647 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:30,726 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:30,729 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:30,731 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:31,232 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:31,232 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:31,232 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:31,306 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:31,308 - PristonBot - INFO - Health low (0.0%), using health potion (key 1)
+2025-04-23 08:48:31,309 - PristonBot - INFO - Using health potion - HP: 0.0% < 50.0%
+2025-04-23 08:48:31,309 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:48:31,363 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:31,365 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:48:31,365 - PristonBot - INFO - Using mana potion - MP: 0.0% < 50.0%
+2025-04-23 08:48:31,365 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:48:31,424 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:31,429 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:48:31,430 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 50.0%
+2025-04-23 08:48:31,431 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:48:31,982 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:31,983 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:31,983 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:32,061 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:32,065 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:32,068 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:32,569 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:32,570 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:32,572 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:32,646 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:32,649 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:32,652 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:33,153 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:33,153 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:33,156 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:33,242 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:33,245 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:33,248 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:33,749 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:33,749 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:33,750 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:33,835 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:33,838 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:33,842 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:34,348 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:34,349 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:34,349 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:34,350 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:34,353 - PristonBot - INFO - Game window: 1040x807 at (155, 69)
+2025-04-23 08:48:34,421 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:34,424 - PristonBot - INFO - Health low (0.0%), using health potion (key 1)
+2025-04-23 08:48:34,424 - PristonBot - INFO - Using health potion - HP: 0.0% < 50.0%
+2025-04-23 08:48:34,425 - PristonBot - INFO - Sending key '1' (VK: 49) to window 'Priston Tale'
+2025-04-23 08:48:34,479 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:34,481 - PristonBot - INFO - Mana low (0.0%), using mana potion (key 3)
+2025-04-23 08:48:34,481 - PristonBot - INFO - Using mana potion - MP: 0.0% < 50.0%
+2025-04-23 08:48:34,482 - PristonBot - INFO - Sending key '3' (VK: 51) to window 'Priston Tale'
+2025-04-23 08:48:34,537 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:34,540 - PristonBot - INFO - Stamina low (0.0%), using stamina potion (key 2)
+2025-04-23 08:48:34,541 - PristonBot - INFO - Using stamina potion - SP: 0.0% < 50.0%
+2025-04-23 08:48:34,541 - PristonBot - INFO - Sending key '2' (VK: 50) to window 'Priston Tale'
+2025-04-23 08:48:35,093 - PristonBot - INFO - Searching for game window: Priston Tale
+2025-04-23 08:48:35,093 - PristonBot - INFO - Found exact window match with handle 34736226
+2025-04-23 08:48:35,094 - PristonBot - INFO - Focusing window: Priston Tale
+2025-04-23 08:48:35,188 - PristonBot - INFO - Health: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:35,192 - PristonBot - INFO - Mana: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:35,197 - PristonBot - INFO - Stamina: 0.0% (Threshold: 50.0%)
+2025-04-23 08:48:35,542 - PristonBot - ERROR - Unhandled exception
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\system.py", line 143, in <module>
+    main()
+  File "C:\repositories\microsoft\system.py", line 129, in main
+    root.mainloop()
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1505, in mainloop
+    self.tk.mainloop(n)
+KeyboardInterrupt
