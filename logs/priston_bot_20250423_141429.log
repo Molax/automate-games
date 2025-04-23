@@ -130,3 +130,12 @@
 2025-04-23 14:15:00,030 - PristonBot - INFO - Configuration saved successfully
 2025-04-23 14:15:00,032 - PristonBot - INFO - Bot stopped
 2025-04-23 14:15:00,032 - PristonBot - INFO - Bot loop stopped
+2025-04-23 14:20:53,063 - PristonBot - ERROR - Unhandled exception
+Traceback (most recent call last):
+  File "C:\repositories\microsoft\system.py", line 144, in <module>
+    main()
+  File "C:\repositories\microsoft\system.py", line 130, in main
+    root.mainloop()
+  File "C:\Users\Joaop\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1505, in mainloop
+    self.tk.mainloop(n)
+KeyboardInterrupt
