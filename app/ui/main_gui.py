@@ -16,6 +16,7 @@ from app.ui.bar_selector_ui import BarSelectorUI
 from app.ui.settings_ui import SettingsUI
 from app.bot.potion_bot import PotionBot
 from app.bot.config_manager import ConfigManager
+from app.window_utils import test_click_methods, find_game_window
 
 logger = logging.getLogger('PristonBot')
 
@@ -37,6 +38,21 @@ class PristonTaleBot:
         # Create scrollable main frame
         scroll_container = ScrollableFrame(root)
         scroll_container.pack(fill=tk.BOTH, expand=True)
+        # Add this code in your __init__ method, after the control buttons (start/stop bot)
+        # Add a separator between control buttons and test buttons
+        ttk.Separator(main_frame, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=10)
+
+        # Test tools frame
+        test_frame = ttk.LabelFrame(main_frame, text="Testing Tools", padding=10)
+        test_frame.pack(fill=tk.X, padx=5, pady=5)
+
+        # Test click methods button
+        test_click_button = ttk.Button(
+            test_frame,
+            text="Test Click Methods",
+            command=self.test_click_methods
+        )
+        test_click_button.pack(fill=tk.X, padx=5, pady=5)
         
         # Use the scrollable frame as our main container
         main_frame = scroll_container.scrollable_frame
@@ -152,6 +168,31 @@ class PristonTaleBot:
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
         
         logger.info("Bot GUI initialized")
+    
+    # Add this method to your PristonTaleBot class
+    def test_click_methods(self):
+        """Test click methods and log results"""
+        self.log("Testing click methods...")
+        
+        # Try to get game window handle
+        window_handle = None
+        if self.window_selector_ui.is_setup():
+            # Try to find the game window
+            window_handle = find_game_window()
+            if window_handle:
+                self.log(f"Found game window with handle: {window_handle}")
+            else:
+                self.log("Game window not found, testing global methods only")
+        
+        # Run the tests
+        results = test_click_methods(window_handle)
+        
+        # Log the results
+        self.log("Click method test results:")
+        for method, result in results.items():
+            self.log(f"  {method}: {result}")
+        
+        self.log("Testing completed. Check the logs for detailed information.")
         
     def on_closing(self):
         """Handle window closing event"""
