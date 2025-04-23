@@ -5,9 +5,9 @@
         "stamina": "2"
     },
     "thresholds": {
-        "health": 50.0,
-        "mana": 50.0,
-        "stamina": 50.0
+        "health": 60.0,
+        "mana": 15.0,
+        "stamina": 15.0
     },
     "scan_interval": 0.5,
     "potion_cooldown": 3.0,
@@ -16,35 +16,35 @@
     "spellcasting": {
         "enabled": true,
         "spell_key": "F1",
-        "spell_interval": 3.0
+        "spell_interval": 1.5
     },
     "bars": {
         "game_window": {
-            "x1": 363,
-            "y1": 97,
-            "x2": 1641,
-            "y2": 1094,
+            "x1": 1384,
+            "y1": 346,
+            "x2": 1529,
+            "y2": 449,
             "configured": true
         },
         "health_bar": {
-            "x1": 665,
-            "y1": 945,
-            "x2": 675,
-            "y2": 1060,
+            "x1": 860,
+            "y1": 966,
+            "x2": 865,
+            "y2": 1080,
             "configured": true
         },
         "mana_bar": {
-            "x1": 846,
-            "y1": 944,
-            "x2": 858,
-            "y2": 1063,
+            "x1": 1043,
+            "y1": 965,
+            "x2": 1054,
+            "y2": 1082,
             "configured": true
         },
         "stamina_bar": {
-            "x1": 643,
-            "y1": 968,
-            "x2": 648,
-            "y2": 1057,
+            "x1": 838,
+            "y1": 988,
+            "x2": 844,
+            "y2": 1082,
             "configured": true
         }
     }
