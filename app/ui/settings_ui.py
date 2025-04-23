@@ -1,7 +1,8 @@
 """
 Improved Settings UI for the Priston Tale Potion Bot
 ------------------------------------------------
-This module contains the settings UI components with better use of space.
+This module contains the settings UI components with better use of space
+and slider-based threshold controls similar to Windows volume controls.
 """
 
 import tkinter as tk
@@ -11,7 +12,7 @@ import logging
 logger = logging.getLogger('PristonBot')
 
 class SettingsUI:
-    """Class that handles the settings UI with horizontal layout"""
+    """Class that handles the settings UI with horizontal layout and slider controls"""
     
     def __init__(self, parent, save_callback):
         """
@@ -70,7 +71,7 @@ class SettingsUI:
         self.save_button.pack(fill=tk.X, pady=5)
     
     def _create_potion_settings(self, parent):
-        """Create the potion settings UI"""
+        """Create the potion settings UI with slider controls"""
         # Thresholds frame
         thresholds_frame = ttk.LabelFrame(parent, text="Potion Thresholds", padding=5)
         thresholds_frame.pack(fill=tk.X, pady=5, padx=5)
@@ -80,36 +81,89 @@ class SettingsUI:
                  text="Set when potions should be used (percentage of bar remaining)").pack(
                      anchor=tk.W, pady=(0, 5))
         
-        # Two columns for thresholds
-        threshold_frame = ttk.Frame(thresholds_frame)
-        threshold_frame.pack(fill=tk.X, pady=5)
-        
-        # Health threshold
-        hp_frame = ttk.Frame(threshold_frame)
+        # Health threshold with slider
+        hp_frame = ttk.Frame(thresholds_frame)
         hp_frame.pack(fill=tk.X, pady=2)
         
         ttk.Label(hp_frame, text="Health %:", width=12).pack(side=tk.LEFT)
-        self.hp_threshold = ttk.Spinbox(hp_frame, from_=1, to=99, width=5)
-        self.hp_threshold.set(50)
-        self.hp_threshold.pack(side=tk.LEFT)
         
-        # Mana threshold
-        mp_frame = ttk.Frame(threshold_frame)
+        # Create a frame for the slider and value display
+        hp_slider_frame = ttk.Frame(hp_frame)
+        hp_slider_frame.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        
+        # Create a variable to hold the slider value
+        self.hp_threshold_var = tk.IntVar(value=50)
+        
+        # Create the slider
+        self.hp_threshold = ttk.Scale(
+            hp_slider_frame, 
+            from_=1, 
+            to=99, 
+            orient=tk.HORIZONTAL, 
+            variable=self.hp_threshold_var,
+            command=self._update_hp_label
+        )
+        self.hp_threshold.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
+        
+        # Create a label to display the current value
+        self.hp_value_label = ttk.Label(hp_slider_frame, text="50%", width=4)
+        self.hp_value_label.pack(side=tk.LEFT)
+        
+        # Mana threshold with slider
+        mp_frame = ttk.Frame(thresholds_frame)
         mp_frame.pack(fill=tk.X, pady=2)
         
         ttk.Label(mp_frame, text="Mana %:", width=12).pack(side=tk.LEFT)
-        self.mp_threshold = ttk.Spinbox(mp_frame, from_=1, to=99, width=5)
-        self.mp_threshold.set(30)
-        self.mp_threshold.pack(side=tk.LEFT)
         
-        # Stamina threshold
-        sp_frame = ttk.Frame(threshold_frame)
+        # Create a frame for the slider and value display
+        mp_slider_frame = ttk.Frame(mp_frame)
+        mp_slider_frame.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        
+        # Create a variable to hold the slider value
+        self.mp_threshold_var = tk.IntVar(value=30)
+        
+        # Create the slider
+        self.mp_threshold = ttk.Scale(
+            mp_slider_frame, 
+            from_=1, 
+            to=99, 
+            orient=tk.HORIZONTAL, 
+            variable=self.mp_threshold_var,
+            command=self._update_mp_label
+        )
+        self.mp_threshold.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
+        
+        # Create a label to display the current value
+        self.mp_value_label = ttk.Label(mp_slider_frame, text="30%", width=4)
+        self.mp_value_label.pack(side=tk.LEFT)
+        
+        # Stamina threshold with slider
+        sp_frame = ttk.Frame(thresholds_frame)
         sp_frame.pack(fill=tk.X, pady=2)
         
         ttk.Label(sp_frame, text="Stamina %:", width=12).pack(side=tk.LEFT)
-        self.sp_threshold = ttk.Spinbox(sp_frame, from_=1, to=99, width=5)
-        self.sp_threshold.set(40)
-        self.sp_threshold.pack(side=tk.LEFT)
+        
+        # Create a frame for the slider and value display
+        sp_slider_frame = ttk.Frame(sp_frame)
+        sp_slider_frame.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        
+        # Create a variable to hold the slider value
+        self.sp_threshold_var = tk.IntVar(value=40)
+        
+        # Create the slider
+        self.sp_threshold = ttk.Scale(
+            sp_slider_frame, 
+            from_=1, 
+            to=99, 
+            orient=tk.HORIZONTAL, 
+            variable=self.sp_threshold_var,
+            command=self._update_sp_label
+        )
+        self.sp_threshold.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
+        
+        # Create a label to display the current value
+        self.sp_value_label = ttk.Label(sp_slider_frame, text="40%", width=4)
+        self.sp_value_label.pack(side=tk.LEFT)
         
         # Potion keys frame
         keys_frame = ttk.LabelFrame(parent, text="Potion Keys", padding=5)
@@ -151,6 +205,24 @@ class SettingsUI:
         self.sp_key.set("2")
         self.sp_key.pack(side=tk.LEFT)
     
+    def _update_hp_label(self, value):
+        """Update the health threshold label when the slider is moved"""
+        # Round to integer
+        value = int(float(value))
+        self.hp_value_label.config(text=f"{value}%")
+    
+    def _update_mp_label(self, value):
+        """Update the mana threshold label when the slider is moved"""
+        # Round to integer
+        value = int(float(value))
+        self.mp_value_label.config(text=f"{value}%")
+    
+    def _update_sp_label(self, value):
+        """Update the stamina threshold label when the slider is moved"""
+        # Round to integer
+        value = int(float(value))
+        self.sp_value_label.config(text=f"{value}%")
+    
     def _create_spell_settings(self, parent):
         """Create the spell settings UI"""
         # Spellcasting frame
@@ -187,15 +259,33 @@ class SettingsUI:
         self.spell_key.set("F5")
         self.spell_key.pack(side=tk.LEFT)
         
-        # Spell interval
+        # Spell interval with slider
         interval_frame = ttk.Frame(spell_frame)
         interval_frame.pack(fill=tk.X, pady=2)
         
         ttk.Label(interval_frame, text="Cast Interval:", width=12).pack(side=tk.LEFT)
-        self.spell_interval = ttk.Spinbox(interval_frame, from_=0.5, to=10.0, increment=0.5, width=5)
-        self.spell_interval.set(3.0)
-        self.spell_interval.pack(side=tk.LEFT, padx=(0, 5))
-        ttk.Label(interval_frame, text="seconds").pack(side=tk.LEFT)
+        
+        # Create a frame for the slider and value display
+        interval_slider_frame = ttk.Frame(interval_frame)
+        interval_slider_frame.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        
+        # Create a variable to hold the slider value
+        self.spell_interval_var = tk.DoubleVar(value=3.0)
+        
+        # Create the slider
+        self.spell_interval = ttk.Scale(
+            interval_slider_frame, 
+            from_=0.5, 
+            to=10.0, 
+            orient=tk.HORIZONTAL, 
+            variable=self.spell_interval_var,
+            command=self._update_interval_label
+        )
+        self.spell_interval.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
+        
+        # Create a label to display the current value
+        self.interval_value_label = ttk.Label(interval_slider_frame, text="3.0s", width=5)
+        self.interval_value_label.pack(side=tk.LEFT)
         
         # Spell targets
         target_frame = ttk.LabelFrame(parent, text="Spell Target (optional)", padding=5)
@@ -212,8 +302,14 @@ class SettingsUI:
         ttk.Label(coord_frame, text="Uses right mouse click at current cursor position").pack(
             anchor=tk.W, pady=5)
     
+    def _update_interval_label(self, value):
+        """Update the spell interval label when the slider is moved"""
+        # Round to 1 decimal place
+        value = round(float(value), 1)
+        self.interval_value_label.config(text=f"{value}s")
+    
     def _create_advanced_settings(self, parent):
-        """Create the advanced settings UI"""
+        """Create the advanced settings UI with sliders"""
         # Scanning parameters
         scan_frame = ttk.LabelFrame(parent, text="Scanning Parameters", padding=5)
         scan_frame.pack(fill=tk.X, pady=5, padx=5)
@@ -223,25 +319,61 @@ class SettingsUI:
                  text="Configure how frequently the bot checks bar values").pack(
                      anchor=tk.W, pady=(0, 5))
         
-        # Scan interval
+        # Scan interval with slider
         interval_frame = ttk.Frame(scan_frame)
         interval_frame.pack(fill=tk.X, pady=2)
         
         ttk.Label(interval_frame, text="Scan Interval:", width=12).pack(side=tk.LEFT)
-        self.scan_interval = ttk.Spinbox(interval_frame, from_=0.1, to=2.0, increment=0.1, width=5)
-        self.scan_interval.set(0.5)
-        self.scan_interval.pack(side=tk.LEFT, padx=(0, 5))
-        ttk.Label(interval_frame, text="seconds").pack(side=tk.LEFT)
         
-        # Potion cooldown
+        # Create a frame for the slider and value display
+        scan_slider_frame = ttk.Frame(interval_frame)
+        scan_slider_frame.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        
+        # Create a variable to hold the slider value
+        self.scan_interval_var = tk.DoubleVar(value=0.5)
+        
+        # Create the slider
+        self.scan_interval = ttk.Scale(
+            scan_slider_frame, 
+            from_=0.1, 
+            to=2.0, 
+            orient=tk.HORIZONTAL, 
+            variable=self.scan_interval_var,
+            command=self._update_scan_label
+        )
+        self.scan_interval.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
+        
+        # Create a label to display the current value
+        self.scan_value_label = ttk.Label(scan_slider_frame, text="0.5s", width=5)
+        self.scan_value_label.pack(side=tk.LEFT)
+        
+        # Potion cooldown with slider
         cooldown_frame = ttk.Frame(scan_frame)
         cooldown_frame.pack(fill=tk.X, pady=2)
         
         ttk.Label(cooldown_frame, text="Potion Cooldown:", width=12).pack(side=tk.LEFT)
-        self.potion_cooldown = ttk.Spinbox(cooldown_frame, from_=1.0, to=10.0, increment=0.5, width=5)
-        self.potion_cooldown.set(3.0)
-        self.potion_cooldown.pack(side=tk.LEFT, padx=(0, 5))
-        ttk.Label(cooldown_frame, text="seconds").pack(side=tk.LEFT)
+        
+        # Create a frame for the slider and value display
+        cooldown_slider_frame = ttk.Frame(cooldown_frame)
+        cooldown_slider_frame.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        
+        # Create a variable to hold the slider value
+        self.potion_cooldown_var = tk.DoubleVar(value=3.0)
+        
+        # Create the slider
+        self.potion_cooldown = ttk.Scale(
+            cooldown_slider_frame, 
+            from_=1.0, 
+            to=10.0, 
+            orient=tk.HORIZONTAL, 
+            variable=self.potion_cooldown_var,
+            command=self._update_cooldown_label
+        )
+        self.potion_cooldown.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
+        
+        # Create a label to display the current value
+        self.cooldown_value_label = ttk.Label(cooldown_slider_frame, text="3.0s", width=5)
+        self.cooldown_value_label.pack(side=tk.LEFT)
         
         # Debug options
         debug_frame = ttk.LabelFrame(parent, text="Debug Options", padding=5)
@@ -256,13 +388,25 @@ class SettingsUI:
         )
         debug_check.pack(anchor=tk.W, pady=5)
     
+    def _update_scan_label(self, value):
+        """Update the scan interval label when the slider is moved"""
+        # Round to 1 decimal place
+        value = round(float(value), 1)
+        self.scan_value_label.config(text=f"{value}s")
+    
+    def _update_cooldown_label(self, value):
+        """Update the potion cooldown label when the slider is moved"""
+        # Round to 1 decimal place
+        value = round(float(value), 1)
+        self.cooldown_value_label.config(text=f"{value}s")
+    
     def get_settings(self):
         """Get current settings as a dictionary"""
         return {
             "thresholds": {
-                "health": float(self.hp_threshold.get()),
-                "mana": float(self.mp_threshold.get()),
-                "stamina": float(self.sp_threshold.get())
+                "health": float(self.hp_threshold_var.get()),
+                "mana": float(self.mp_threshold_var.get()),
+                "stamina": float(self.sp_threshold_var.get())
             },
             "potion_keys": {
                 "health": self.hp_key.get(),
@@ -272,9 +416,9 @@ class SettingsUI:
             "spellcasting": {
                 "enabled": self.spellcast_enabled.get(),
                 "spell_key": self.spell_key.get(),
-                "spell_interval": float(self.spell_interval.get())
+                "spell_interval": float(self.spell_interval_var.get())
             },
-            "scan_interval": float(self.scan_interval.get()),
+            "scan_interval": float(self.scan_interval_var.get()),
             "debug_enabled": self.debug_var.get()
         }
     
@@ -282,9 +426,14 @@ class SettingsUI:
         """Set settings from a dictionary"""
         # Thresholds
         thresholds = settings.get("thresholds", {})
-        self.hp_threshold.set(thresholds.get("health", 50))
-        self.mp_threshold.set(thresholds.get("mana", 30))
-        self.sp_threshold.set(thresholds.get("stamina", 40))
+        self.hp_threshold_var.set(thresholds.get("health", 50))
+        self.mp_threshold_var.set(thresholds.get("mana", 30))
+        self.sp_threshold_var.set(thresholds.get("stamina", 40))
+        
+        # Update labels
+        self._update_hp_label(self.hp_threshold_var.get())
+        self._update_mp_label(self.mp_threshold_var.get())
+        self._update_sp_label(self.sp_threshold_var.get())
         
         # Potion keys
         potion_keys = settings.get("potion_keys", {})
@@ -296,8 +445,14 @@ class SettingsUI:
         spellcasting = settings.get("spellcasting", {})
         self.spellcast_enabled.set(spellcasting.get("enabled", False))
         self.spell_key.set(spellcasting.get("spell_key", "F5"))
-        self.spell_interval.set(spellcasting.get("spell_interval", 3.0))
+        self.spell_interval_var.set(spellcasting.get("spell_interval", 3.0))
+        self._update_interval_label(self.spell_interval_var.get())
         
         # Other settings
-        self.scan_interval.set(settings.get("scan_interval", 0.5))
+        self.scan_interval_var.set(settings.get("scan_interval", 0.5))
+        self._update_scan_label(self.scan_interval_var.get())
+        
+        self.potion_cooldown_var.set(settings.get("potion_cooldown", 3.0))
+        self._update_cooldown_label(self.potion_cooldown_var.get())
+        
         self.debug_var.set(settings.get("debug_enabled", True))
