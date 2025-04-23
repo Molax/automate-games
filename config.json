@@ -6,8 +6,8 @@
     },
     "thresholds": {
         "health": 50.0,
-        "mana": 51.0,
-        "stamina": 52.0
+        "mana": 50.0,
+        "stamina": 50.0
     },
     "scan_interval": 0.5,
     "potion_cooldown": 3.0,
@@ -20,10 +20,10 @@
     },
     "bars": {
         "game_window": {
-            "x1": 362,
-            "y1": 98,
-            "x2": 1640,
-            "y2": 1091,
+            "x1": 363,
+            "y1": 97,
+            "x2": 1641,
+            "y2": 1094,
             "configured": true
         },
         "health_bar": {
