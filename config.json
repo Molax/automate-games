@@ -18,15 +18,15 @@
         "spell_key": "F1",
         "spell_interval": 0.960820895522388,
         "random_targeting": true,
-        "target_radius": 186,
+        "target_radius": 300,
         "target_change_interval": 1
     },
     "bars": {
         "game_window": {
-            "x1": 271,
-            "y1": 81,
-            "x2": 1263,
-            "y2": 1077,
+            "x1": 311,
+            "y1": 48,
+            "x2": 2307,
+            "y2": 1099,
             "configured": true
         },
         "health_bar": {

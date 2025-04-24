@@ -415,7 +415,99 @@ def test_click_methods(hwnd=None):
     
     return results
 
-def press_right_mouse(hwnd=None, method=None):
+def press_right_mouse(hwnd=None, target_x=None, target_y=None, method=None):
+    """
+    Try specific or all mouse click methods to simulate a right-click
+    
+    Args:
+        hwnd: Window handle or None
+        method: Specific method to use, or None to try all methods
+    
+    Returns:
+        True if at least one method worked, False otherwise
+    """
+    # Make sure to import the logger at the beginning of the function
+    logger = logging.getLogger('PristonBot')
+    logger.debug(f"Entered press_right_mouse function with target: ({target_x}, {target_y})")
+    success = False
+
+    # Store original cursor position if we're moving it
+    original_pos = None
+    if target_x is not None and target_y is not None:
+        try:
+            cursor_info = win32gui.GetCursorInfo()
+            original_pos = cursor_info[2]  # (x, y) tuple
+            logger.debug(f"Saved original cursor position: {original_pos}")
+        except Exception as e:
+            logger.warning(f"Could not get original cursor position: {e}")
+    
+    try:
+        # Move cursor to target position if specified
+        if target_x is not None and target_y is not None:
+            logger.debug(f"Moving cursor to position ({target_x}, {target_y})")
+            ctypes.windll.user32.SetCursorPos(int(target_x), int(target_y))
+            # Ensure the cursor has moved before continuing
+            time.sleep(0.1)
+        
+        # Try direct approach with SendInput for the right click
+        try:
+            logger.info(f"Clicking at position ({target_x}, {target_y}) with SendInput")
+            
+            # Define constants
+            INPUT_MOUSE = 0
+            MOUSEEVENTF_RIGHTDOWN = 0x0008
+            MOUSEEVENTF_RIGHTUP = 0x0010
+            
+            # Mouse down
+            extra = ctypes.c_ulong(0)
+            ii_ = InputI()
+            ii_.mi = MouseInput(0, 0, 0, MOUSEEVENTF_RIGHTDOWN, 0, ctypes.pointer(extra))
+            x = Input(INPUT_MOUSE, ii_)
+            ctypes.windll.user32.SendInput(1, ctypes.pointer(x), ctypes.sizeof(x))
+            
+            # Small delay between down and up
+            time.sleep(0.1)
+            
+            # Mouse up
+            extra = ctypes.c_ulong(0)
+            ii_ = InputI()
+            ii_.mi = MouseInput(0, 0, 0, MOUSEEVENTF_RIGHTUP, 0, ctypes.pointer(extra))
+            x = Input(INPUT_MOUSE, ii_)
+            ctypes.windll.user32.SendInput(1, ctypes.pointer(x), ctypes.sizeof(x))
+            
+            success = True
+            
+        except Exception as e:
+            logger.error(f"Error with SendInput click: {e}", exc_info=True)
+            
+            # Try alternative method with mouse_event
+            try:
+                logger.info("Attempting mouse_event as fallback")
+                MOUSEEVENTF_RIGHTDOWN = 0x0008
+                MOUSEEVENTF_RIGHTUP = 0x0010
+                
+                ctypes.windll.user32.mouse_event(MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0)
+                time.sleep(0.1)
+                ctypes.windll.user32.mouse_event(MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0)
+                
+                success = True
+            except Exception as e2:
+                logger.error(f"Error with mouse_event click: {e2}", exc_info=True)
+                success = False
+        
+        if not success:
+            logger.error("All click methods failed!")
+        
+        return success
+        
+    finally:
+        # Restore original cursor position if we moved it and the setting requires it
+        # You can add a setting to control whether to restore the cursor position
+        if original_pos is not None:
+            # Wait slightly longer before restoring position to ensure click is registered
+            time.sleep(0.2)
+            logger.debug(f"Restoring cursor to original position: {original_pos}")
+            ctypes.windll.user32.SetCursorPos(original_pos[0], original_pos[1])
     """
     Try specific or all mouse click methods to simulate a right-click
     

@@ -13,6 +13,45 @@ import time
 import random
 import math
 from app.window_utils import press_key, press_right_mouse, get_window_rect
+
+# Import the DirectInput module
+try:
+    from app import game_mouse_move, game_right_click, focus_game_window
+except ImportError:
+    # If module doesn't exist yet, create these functions as placeholders
+    def game_mouse_move(x, y):
+        """Placeholder function if module isn't created yet"""
+        logger = logging.getLogger('PristonBot')
+        logger.warning(f"DirectInput module not found, using fallback for mouse move to ({x}, {y})")
+        import ctypes
+        return ctypes.windll.user32.SetCursorPos(int(x), int(y))
+        
+    def game_right_click(x=None, y=None):
+        """Placeholder function if module isn't created yet"""
+        logger = logging.getLogger('PristonBot')
+        logger.warning(f"DirectInput module not found, using fallback for right click at ({x}, {y})")
+        
+        # Move mouse if coordinates are provided
+        if x is not None and y is not None:
+            game_mouse_move(x, y)
+            time.sleep(0.05)
+        
+        # Perform right click
+        import ctypes
+        MOUSEEVENTF_RIGHTDOWN = 0x0008
+        MOUSEEVENTF_RIGHTUP = 0x0010
+        ctypes.windll.user32.mouse_event(MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0)
+        time.sleep(0.1)
+        ctypes.windll.user32.mouse_event(MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0)
+        return True
+        
+    def focus_game_window(hwnd):
+        """Placeholder function if module isn't created yet"""
+        logger = logging.getLogger('PristonBot')
+        logger.warning(f"DirectInput module not found, using fallback for window focus")
+        import win32gui
+        return win32gui.SetForegroundWindow(hwnd) if hwnd else False
+
 from app.bar_selector import BarDetector, HEALTH_COLOR_RANGE, MANA_COLOR_RANGE, STAMINA_COLOR_RANGE
 
 logger = logging.getLogger('PristonBot')
@@ -332,13 +371,27 @@ class BotControllerUI:
         self.log_callback("Bot started")
         logger.info("Bot loop started")
         
+        # Verify game window is configured properly
+        game_window = None
+        
+        # Check if hp_bar has game_window attribute
+        if hasattr(self.hp_bar, 'game_window'):
+            game_window = self.hp_bar.game_window
+        
+        if game_window and game_window.is_setup():
+            self.log_callback(f"Game window found at ({game_window.x1},{game_window.y1})-({game_window.x2},{game_window.y2})")
+            logger.info(f"Game window dimensions: ({game_window.x1},{game_window.y1})-({game_window.x2},{game_window.y2})")
+        else:
+            self.log_callback("WARNING: Game window not properly configured. Random targeting may not work correctly.")
+            logger.warning("Game window not properly configured")
+        
         # Get the settings
         settings = self.settings_ui.get_settings()
         
         # Check if spellcasting is enabled and log it
         if settings["spellcasting"]["enabled"]:
             self.log_callback(f"Auto spellcasting enabled with key {settings['spellcasting']['spell_key']} " + 
-                             f"at {settings['spellcasting']['spell_interval']}s interval")
+                            f"at {settings['spellcasting']['spell_interval']}s interval")
             logger.info(f"Spellcasting enabled: Key={settings['spellcasting']['spell_key']}, " + 
                         f"Interval={settings['spellcasting']['spell_interval']}s")
             
@@ -360,8 +413,8 @@ class BotControllerUI:
         
         # Log initial values
         status_message = (f"Health: {self.prev_hp_percent:.1f}% | " +
-                         f"Mana: {self.prev_mp_percent:.1f}% | " +
-                         f"Stamina: {self.prev_sp_percent:.1f}%")
+                        f"Mana: {self.prev_mp_percent:.1f}% | " +
+                        f"Stamina: {self.prev_sp_percent:.1f}%")
         self.log_callback(status_message)
         
         while self.running:
@@ -409,8 +462,8 @@ class BotControllerUI:
                 # Log all percentages in a single line if any have changed
                 if hp_changed or mp_changed or sp_changed:
                     status_message = (f"Health: {hp_percent:.1f}% | " +
-                                     f"Mana: {mp_percent:.1f}% | " +
-                                     f"Stamina: {sp_percent:.1f}%")
+                                    f"Mana: {mp_percent:.1f}% | " +
+                                    f"Stamina: {sp_percent:.1f}%")
                     self.log_callback(status_message)
                     logger.debug(status_message)
                     
@@ -499,6 +552,9 @@ class BotControllerUI:
                         if settings["spellcasting"].get("random_targeting", False):
                             # Get window coordinates if game window is configured
                             game_window_rect = None
+                            game_hwnd = None
+                            
+                            # Try to get the game window
                             if hasattr(self.hp_bar, 'game_window') and self.hp_bar.game_window.is_setup():
                                 game_window_rect = (
                                     self.hp_bar.game_window.x1,
@@ -506,9 +562,18 @@ class BotControllerUI:
                                     self.hp_bar.game_window.x2,
                                     self.hp_bar.game_window.y2
                                 )
+                                
+                                # Try to get the window handle if we have a find_game_window function
+                                try:
+                                    from app.window_utils import find_game_window
+                                    game_hwnd = find_game_window("Priston Tale")
+                                    logger.debug(f"Found game window handle: {game_hwnd}")
+                                except (ImportError, AttributeError):
+                                    logger.debug("find_game_window function not available")
                             
                             # Calculate center of game window
                             if game_window_rect:
+                                # IMPORTANT: Use the actual window center
                                 center_x = (game_window_rect[0] + game_window_rect[2]) // 2
                                 center_y = (game_window_rect[1] + game_window_rect[3]) // 2
                                 
@@ -520,16 +585,57 @@ class BotControllerUI:
                                 target_x = max(game_window_rect[0], min(target_x, game_window_rect[2]))
                                 target_y = max(game_window_rect[1], min(target_y, game_window_rect[3]))
                                 
-                                # Press right mouse button at targeted position
-                                logger.debug(f"Calling press_right_mouse with target position ({target_x}, {target_y})")
-                                press_right_mouse(None, target_x, target_y)
+                                # Log the actual coordinates we're using
+                                logger.debug(f"Game window center: ({center_x}, {center_y})")
+                                logger.info(f"Target coordinates: ({target_x}, {target_y})")
+                                
+                                try:
+                                    # Focus the game window if we have a handle
+                                    if game_hwnd:
+                                        focus_game_window(game_hwnd)
+                                        time.sleep(0.1)  # Short delay to ensure window is focused
+                                    
+                                    # USE OUR DIRECT GAME INPUT FUNCTIONS
+                                    # First move the mouse
+                                    game_mouse_move(target_x, target_y)
+                                    # Small delay to make sure the game registers the mouse position
+                                    time.sleep(0.1)
+                                    # Then do the right click
+                                    game_right_click()
+                                    
+                                    # Log the action
+                                    logger.info(f"Successfully performed game mouse targeting at ({target_x}, {target_y})")
+                                    
+                                except Exception as e:
+                                    logger.error(f"Error with game input methods: {e}", exc_info=True)
+                                    
+                                    # Fallback to standard Windows methods
+                                    try:
+                                        logger.warning("Falling back to standard Windows input methods")
+                                        # Import standard functions
+                                        import ctypes
+                                        
+                                        # Move cursor
+                                        ctypes.windll.user32.SetCursorPos(int(target_x), int(target_y))
+                                        time.sleep(0.1)
+                                        
+                                        # Right click
+                                        MOUSEEVENTF_RIGHTDOWN = 0x0008
+                                        MOUSEEVENTF_RIGHTUP = 0x0010
+                                        ctypes.windll.user32.mouse_event(MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0)
+                                        time.sleep(0.1)
+                                        ctypes.windll.user32.mouse_event(MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0)
+                                        
+                                        logger.info(f"Fallback method used for targeting at ({target_x}, {target_y})")
+                                    except Exception as e2:
+                                        logger.error(f"Fallback method also failed: {e2}", exc_info=True)
                             else:
-                                # Fall back to regular right-click if game window isn't available
-                                logger.debug("Calling press_right_mouse(None) - game window not available")
+                                # No game window rect available, use standard right-click
+                                logger.warning("No game window coordinates available, using standard right-click")
                                 press_right_mouse(None)
                         else:
-                            # Regular right-click at current position
-                            logger.debug("Calling press_right_mouse(None) for spellcasting")
+                            # No random targeting, use standard right-click
+                            logger.debug("Using standard right-click (no random targeting)")
                             press_right_mouse(None)
                         
                         # Update state
