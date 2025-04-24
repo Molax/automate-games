@@ -162,6 +162,9 @@ class BotControllerUI:
         # Game window reference
         self.game_window = None
         
+        # Initialize target zone selector
+        self.target_zone_selector = None
+        
         # Create the UI
         self._create_ui()
         
@@ -649,6 +652,7 @@ class BotControllerUI:
                     last_mp_potion = current_time
                     
                     # Update statistics
+                    # Update statistics
                     self.mp_potions_used += 1
                     self.mp_potions_var.set(str(self.mp_potions_used))
                 
@@ -670,27 +674,87 @@ class BotControllerUI:
                     if current_time - last_spell_cast > spell_interval:
                         spell_key = settings["spellcasting"]["spell_key"]
                         
-                        # FIX: Check if random targeting is enabled and handle target changes properly
-                        if settings["spellcasting"].get("random_targeting", False):
-                            radius = settings["spellcasting"].get("target_radius", 100)
-                            change_interval = settings["spellcasting"].get("target_change_interval", 5)
+                        # Get targeting method preference
+                        target_method = settings["spellcasting"].get("target_method", "Ring Around Character")
+                        
+                        # Initialize target coordinates
+                        target_x, target_y = None, None
+                        
+                        # Check if we have a configured target zone
+                        target_zone = settings["spellcasting"].get("target_zone", {})
+                        
+                        if target_zone and all(k in target_zone for k in ["x1", "y1", "x2", "y2"]):
+                            # Load target zone selector if not already loaded
+                            if self.target_zone_selector is None:
+                                try:
+                                    from app import TargetZoneSelector
+                                    self.target_zone_selector = TargetZoneSelector(self.root)
+                                    self.target_zone_selector.configure_from_saved(
+                                        target_zone["x1"], 
+                                        target_zone["y1"], 
+                                        target_zone["x2"], 
+                                        target_zone["y2"],
+                                        target_zone.get("points", [])
+                                    )
+                                    self.log_callback(f"Loaded target zone with {len(self.target_zone_selector.target_points)} targeting points")
+                                except Exception as e:
+                                    logger.error(f"Error loading target zone selector: {e}", exc_info=True)
+                                    self.log_callback(f"Error loading target zone: {e}")
                             
-                            # FIXED: Generate a new random target for EVERY cast when change_interval is 1
-                            if change_interval == 1 or self.spells_cast_since_target_change >= change_interval:
-                                # Generate new random target
-                                self.target_x_offset, self.target_y_offset = self.generate_random_target_offsets(radius)
-                                self.log_callback(f"New target offset: ({self.target_x_offset}, {self.target_y_offset})")
-                                logger.info(f"New target offset: ({self.target_x_offset}, {self.target_y_offset})")
-                                self.spells_cast_since_target_change = 0
+                            # Use the target zone to get target coordinates
+                            if self.target_zone_selector and self.target_zone_selector.is_setup():
+                                # Get a random target from the zone
+                                target_point = self.target_zone_selector.get_random_target()
+                                if target_point:
+                                    target_x, target_y = target_point
+                                    self.log_callback(f"Targeting at zone point: ({target_x}, {target_y})")
+                                    
+                                    # Update target display
+                                    if game_window_rect:
+                                        self.target_var.set(f"({target_x-game_window_rect[0]}, {target_y-game_window_rect[1]})")
+                                    else:
+                                        self.target_var.set(f"({target_x}, {target_y})")
+                        
+                        # If no target zone or it failed, fall back to the ring method
+                        if target_x is None or target_y is None:
+                            if target_method == "Ring Around Character" or settings["spellcasting"].get("random_targeting", False):
+                                # Get the radius and change interval
+                                radius = settings["spellcasting"].get("target_radius", 100)
+                                change_interval = settings["spellcasting"].get("target_change_interval", 5)
                                 
-                                # Update target display
-                                self.target_var.set(f"({self.target_x_offset}, {self.target_y_offset})")
-                            
-                            self.log_callback(f"Casting spell ({spell_key}) with offset ({self.target_x_offset}, {self.target_y_offset})")
-                            logger.info(f"Casting spell with key {spell_key} and offset ({self.target_x_offset}, {self.target_y_offset})")
-                        else:
-                            self.log_callback(f"Casting spell ({spell_key})")
-                            logger.info(f"Casting spell with key {spell_key}")
+                                # Generate new random target if needed
+                                if change_interval == 1 or self.spells_cast_since_target_change >= change_interval:
+                                    # Generate new random target offset
+                                    self.target_x_offset, self.target_y_offset = self.generate_random_target_offsets(radius)
+                                    self.log_callback(f"New target offset: ({self.target_x_offset}, {self.target_y_offset})")
+                                    logger.info(f"New target offset: ({self.target_x_offset}, {self.target_y_offset})")
+                                    self.spells_cast_since_target_change = 0
+                                    
+                                    # Update target display
+                                    self.target_var.set(f"({self.target_x_offset}, {self.target_y_offset})")
+                                
+                                # Log what we're doing
+                                self.log_callback(f"Casting spell ({spell_key}) with offset ({self.target_x_offset}, {self.target_y_offset})")
+                                logger.info(f"Casting spell with key {spell_key} and offset ({self.target_x_offset}, {self.target_y_offset})")
+                                
+                                # Calculate target coordinates using offsets if we have a game window
+                                if game_window_rect:
+                                    # Calculate center of game window
+                                    center_x = (game_window_rect[0] + game_window_rect[2]) // 2
+                                    center_y = (game_window_rect[1] + game_window_rect[3]) // 2
+                                    
+                                    # Apply target offsets
+                                    target_x = center_x + self.target_x_offset
+                                    target_y = center_y + self.target_y_offset
+                                    
+                                    # Make sure target is within game window
+                                    target_x = max(game_window_rect[0], min(target_x, game_window_rect[2]))
+                                    target_y = max(game_window_rect[1], min(target_y, game_window_rect[3]))
+                            else:
+                                # Just cast in the middle of the screen if no targeting method is available
+                                if game_window_rect:
+                                    target_x = (game_window_rect[0] + game_window_rect[2]) // 2
+                                    target_y = (game_window_rect[1] + game_window_rect[3]) // 2
                         
                         # Press the spell key
                         press_key(None, spell_key)
@@ -698,23 +762,9 @@ class BotControllerUI:
                         # Small delay before right-clicking
                         time.sleep(0.1)
                         
-                        # Press right mouse button with target offsets if random targeting is enabled
-                        if settings["spellcasting"].get("random_targeting", False) and game_window_rect:
-                            # Calculate center of game window
-                            # IMPORTANT: Fixing the targeting calculation
-                            center_x = (game_window_rect[0] + game_window_rect[2]) // 2
-                            center_y = (game_window_rect[1] + game_window_rect[3]) // 2
-                            
-                            # Apply target offsets
-                            target_x = center_x + self.target_x_offset
-                            target_y = center_y + self.target_y_offset
-                            
-                            # Make sure target is within game window
-                            target_x = max(game_window_rect[0], min(target_x, game_window_rect[2]))
-                            target_y = max(game_window_rect[1], min(target_y, game_window_rect[3]))
-                            
+                        # Right-click at target position if we have valid coordinates
+                        if target_x is not None and target_y is not None:
                             # Log the actual coordinates we're using
-                            logger.info(f"Game window center: ({center_x}, {center_y})")
                             logger.info(f"Target coordinates: ({target_x}, {target_y})")
                             
                             # Focus the game window if we have a handle
@@ -726,7 +776,7 @@ class BotControllerUI:
                                 except Exception as e:
                                     logger.warning(f"Could not focus game window: {e}")
                             
-                            # Move mouse to target position
+                            # Move mouse to target position and right-click
                             try:
                                 # First try windows_utils implementation
                                 move_mouse_direct(target_x, target_y)
@@ -762,7 +812,7 @@ class BotControllerUI:
                                     logger.error(f"Fallback mouse methods also failed: {e2}")
                                     self.log_callback(f"Error with mouse movement: {e2}")
                         else:
-                            # If random targeting is disabled or no game window available - just do a regular right-click
+                            # If we don't have coordinates, just right-click at current position
                             press_right_mouse(None)
                         
                         # Update state

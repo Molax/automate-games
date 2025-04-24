@@ -26,14 +26,23 @@ DEFAULT_CONFIG = {
     "potion_cooldown": 3.0,
     "window_name": "Priston Tale",
     "debug_enabled": True,
-    # Spellcasting configuration with random targeting
+    # Spellcasting configuration with target zone
     "spellcasting": {
         "enabled": False,
         "spell_key": "F5",
         "spell_interval": 3.0,
         "random_targeting": False,
-        "target_radius": 700,
-        "target_change_interval": 5
+        "target_radius": 100,
+        "target_change_interval": 5,
+        "target_method": "Ring Around Character",
+        "target_points_count": 8,
+        "target_zone": {
+            "x1": None,
+            "y1": None,
+            "x2": None,
+            "y2": None,
+            "points": []
+        }
     },
     # Bar selection coordinates
     "bars": {
@@ -133,6 +142,14 @@ def load_config():
                     config["spellcasting"]["target_radius"] = DEFAULT_CONFIG["spellcasting"]["target_radius"]
                     config["spellcasting"]["target_change_interval"] = DEFAULT_CONFIG["spellcasting"]["target_change_interval"]
                     logging.getLogger('PristonBot').info("Added missing random targeting configuration")
+                    save_config(config)
+                
+                # Check if target zone settings exist, add them if not
+                if "target_zone" not in config["spellcasting"]:
+                    config["spellcasting"]["target_zone"] = DEFAULT_CONFIG["spellcasting"]["target_zone"]
+                    config["spellcasting"]["target_method"] = DEFAULT_CONFIG["spellcasting"]["target_method"]
+                    config["spellcasting"]["target_points_count"] = DEFAULT_CONFIG["spellcasting"]["target_points_count"]
+                    logging.getLogger('PristonBot').info("Added missing target zone configuration")
                     save_config(config)
                 
                 # Check if bars config exists, add it if not (for backward compatibility)

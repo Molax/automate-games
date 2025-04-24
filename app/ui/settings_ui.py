@@ -367,6 +367,71 @@ class SettingsUI:
         ttk.Label(target_frame, 
                  text="Character is assumed to be in the center of game window").pack(
                      anchor=tk.W, pady=(5, 0))
+        
+        # Add target zone section to the spell settings UI
+        target_zone_frame = ttk.LabelFrame(parent, text="Monster Target Zone", padding=5)
+        target_zone_frame.pack(fill=tk.X, pady=5, padx=5)
+
+        # Brief help text
+        ttk.Label(target_zone_frame, 
+                text="Define an area where monsters typically appear for better targeting").pack(
+                    anchor=tk.W, pady=(0, 5))
+
+        # Target zone status
+        self.target_zone_var = tk.StringVar(value="Not Configured")
+        status_frame = ttk.Frame(target_zone_frame)
+        status_frame.pack(fill=tk.X, pady=2)
+
+        ttk.Label(status_frame, text="Status:", width=12).pack(side=tk.LEFT)
+        ttk.Label(status_frame, textvariable=self.target_zone_var).pack(side=tk.LEFT)
+
+        # Select button
+        select_button = ttk.Button(
+            target_zone_frame, 
+            text="Select Monster Target Zone", 
+            command=self._select_target_zone
+        )
+        select_button.pack(fill=tk.X, pady=5)
+        # Priority method for targeting
+        priority_frame = ttk.Frame(target_zone_frame)
+        priority_frame.pack(fill=tk.X, pady=2)
+
+        ttk.Label(priority_frame, text="Target Method:", width=12).pack(side=tk.LEFT)
+        self.target_method = ttk.Combobox(
+            priority_frame, 
+            values=["Ring Around Character", "Random Within Zone"], 
+            width=20
+        )
+        self.target_method.set("Ring Around Character")
+        self.target_method.pack(side=tk.LEFT)
+
+        # Target points count slider
+        points_frame = ttk.Frame(target_zone_frame)
+        points_frame.pack(fill=tk.X, pady=2)
+
+        ttk.Label(points_frame, text="Target Points:", width=12).pack(side=tk.LEFT)
+
+        # Create a frame for the slider and value display
+        points_slider_frame = ttk.Frame(points_frame)
+        points_slider_frame.pack(side=tk.LEFT, fill=tk.X, expand=True)
+
+        # Create a variable to hold the slider value
+        self.target_points_var = tk.IntVar(value=8)
+
+        # Create the slider
+        self.target_points = ttk.Scale(
+            points_slider_frame, 
+            from_=4, 
+            to=16, 
+            orient=tk.HORIZONTAL, 
+            variable=self.target_points_var,
+            command=self._update_points_label
+        )
+        self.target_points.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
+
+        # Create a label to display the current value
+        self.points_value_label = ttk.Label(points_slider_frame, text="8 points", width=8)
+        self.points_value_label.pack(side=tk.LEFT)
     
     def _update_interval_label(self, value):
         """Update the spell interval label when the slider is moved"""
@@ -385,6 +450,38 @@ class SettingsUI:
         # Round to integer
         value = int(float(value))
         self.change_interval_value_label.config(text=f"{value} casts")
+
+    def _update_points_label(self, value):
+        """Update the target points label when the slider is moved"""
+        # Round to integer
+        value = int(float(value))
+        self.points_value_label.config(text=f"{value} points")
+
+    def _select_target_zone(self):
+        """Launch the target zone selector"""
+        from app.target_zone_selector import TargetZoneSelector
+        target_selector = TargetZoneSelector(self.parent.winfo_toplevel())
+        target_selector.num_target_points = self.target_points_var.get()
+        target_selector.start_selection()
+        
+        # Check if selection was completed
+        if target_selector.is_configured:
+            self.target_zone_var.set(f"Configured ({len(target_selector.target_points)} points)")
+            
+            # Store the target zone data in settings
+            settings = self.get_settings()
+            if "target_zone" not in settings["spellcasting"]:
+                settings["spellcasting"]["target_zone"] = {}
+                
+            settings["spellcasting"]["target_zone"]["x1"] = target_selector.x1
+            settings["spellcasting"]["target_zone"]["y1"] = target_selector.y1
+            settings["spellcasting"]["target_zone"]["x2"] = target_selector.x2
+            settings["spellcasting"]["target_zone"]["y2"] = target_selector.y2
+            settings["spellcasting"]["target_zone"]["points"] = target_selector.target_points
+            
+            # Save configuration
+            if callable(self.save_callback):
+                self.save_callback()
     
     def _create_advanced_settings(self, parent):
         """Create the advanced settings UI with sliders"""
@@ -480,7 +577,7 @@ class SettingsUI:
     
     def get_settings(self):
         """Get current settings as a dictionary"""
-        return {
+        settings = {
             "thresholds": {
                 "health": float(self.hp_threshold_var.get()),
                 "mana": float(self.mp_threshold_var.get()),
@@ -497,11 +594,15 @@ class SettingsUI:
                 "spell_interval": float(self.spell_interval_var.get()),
                 "random_targeting": self.random_targeting_var.get(),
                 "target_radius": int(self.target_radius_var.get()),
-                "target_change_interval": int(self.target_change_interval_var.get())
+                "target_change_interval": int(self.target_change_interval_var.get()),
+                "target_method": self.target_method.get(),
+                "target_points_count": int(self.target_points_var.get())
             },
             "scan_interval": float(self.scan_interval_var.get()),
             "debug_enabled": self.debug_var.get()
         }
+        
+        return settings
     
     def set_settings(self, settings):
         """Set settings from a dictionary"""
@@ -535,6 +636,19 @@ class SettingsUI:
         self.target_change_interval_var.set(spellcasting.get("target_change_interval", 5))
         self._update_radius_label(self.target_radius_var.get())
         self._update_change_interval_label(self.target_change_interval_var.get())
+        
+        # Target zone settings
+        if "target_zone" in spellcasting:
+            target_zone = spellcasting.get("target_zone", {})
+            if target_zone:
+                zone_points = len(target_zone.get("points", []))
+                self.target_zone_var.set(f"Configured ({zone_points} points)")
+            else:
+                self.target_zone_var.set("Not Configured")
+                
+        self.target_method.set(spellcasting.get("target_method", "Ring Around Character"))
+        self.target_points_var.set(spellcasting.get("target_points_count", 8))
+        self._update_points_label(self.target_points_var.get())
         
         # Other settings
         self.scan_interval_var.set(settings.get("scan_interval", 0.5))
