@@ -63,3 +63,35 @@
 2025-04-24 06:03:30,912 - PristonBot - DEBUG - Right-click successful
 2025-04-24 06:03:31,113 - PristonBot - DEBUG - Restoring cursor to original position: (1569, 583)
 2025-04-24 06:03:31,113 - MouseTest - INFO - Right click result: Success
+2025-04-24 12:26:14,901 - MouseTest - INFO - Mouse Movement Test Tool initialized
+2025-04-24 12:26:16,422 - MouseTest - INFO - Right clicking at (500, 500)
+2025-04-24 12:26:16,423 - PristonBot - DEBUG - Entered press_right_mouse function with target: (500, 500)
+2025-04-24 12:26:16,427 - PristonBot - DEBUG - Saved original cursor position: (193, 302)
+2025-04-24 12:26:16,427 - PristonBot - DEBUG - Moving cursor to position (500, 500)
+2025-04-24 12:26:16,427 - PristonBot - DEBUG - Moving cursor to (500, 500) with SetCursorPos
+2025-04-24 12:26:16,427 - PristonBot - DEBUG - Final cursor position: (500, 500)
+2025-04-24 12:26:16,528 - PristonBot - DEBUG - Right-clicking with mouse_event
+2025-04-24 12:26:16,638 - PristonBot - DEBUG - Right-click successful
+2025-04-24 12:26:16,839 - PristonBot - DEBUG - Restoring cursor to original position: (193, 302)
+2025-04-24 12:26:16,839 - MouseTest - INFO - Right click result: Success
+2025-04-24 12:26:24,132 - MouseTest - INFO - Starting test sequence. Original position: (341, 299)
+2025-04-24 12:26:24,132 - MouseTest - INFO - Test 1/5: Moving to (1376, 576)
+2025-04-24 12:26:24,634 - MouseTest - INFO - Test 2/5: Moving to (100, 100)
+2025-04-24 12:26:25,134 - MouseTest - INFO - Test 3/5: Moving to (2652, 100)
+2025-04-24 12:26:25,635 - MouseTest - INFO - Test 4/5: Moving to (2652, 1052)
+2025-04-24 12:26:26,137 - MouseTest - INFO - Test 5/5: Moving to (100, 1052)
+2025-04-24 12:26:26,637 - MouseTest - INFO - Test sequence complete. Restoring to (341, 299)
+2025-04-24 12:26:30,065 - MouseTest - INFO - Saved original position: (87, 302)
+2025-04-24 12:26:30,065 - MouseTest - INFO - Moving cursor to (500, 500)
+2025-04-24 12:26:31,067 - MouseTest - INFO - Restoring cursor to (87, 302)
+2025-04-24 12:26:33,332 - MouseTest - INFO - Right clicking at (500, 500)
+2025-04-24 12:26:33,332 - PristonBot - DEBUG - Entered press_right_mouse function with target: (500, 500)
+2025-04-24 12:26:33,333 - PristonBot - DEBUG - Saved original cursor position: (176, 297)
+2025-04-24 12:26:33,333 - PristonBot - DEBUG - Moving cursor to position (500, 500)
+2025-04-24 12:26:33,333 - PristonBot - DEBUG - Moving cursor to (500, 500) with SetCursorPos
+2025-04-24 12:26:33,333 - PristonBot - DEBUG - Final cursor position: (500, 500)
+2025-04-24 12:26:33,434 - PristonBot - DEBUG - Right-clicking with mouse_event
+2025-04-24 12:26:33,547 - PristonBot - DEBUG - Right-click successful
+2025-04-24 12:26:33,748 - PristonBot - DEBUG - Restoring cursor to original position: (176, 297)
+2025-04-24 12:26:33,748 - MouseTest - INFO - Right click result: Success
+2025-04-24 12:34:16,576 - MouseTest - INFO - Mouse Movement Test Tool initialized

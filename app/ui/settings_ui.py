@@ -324,7 +324,7 @@ class SettingsUI:
         self.target_radius = ttk.Scale(
             radius_slider_frame, 
             from_=20, 
-            to=300, 
+            to=700, 
             orient=tk.HORIZONTAL, 
             variable=self.target_radius_var,
             command=self._update_radius_label

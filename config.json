@@ -5,49 +5,49 @@
         "stamina": "2"
     },
     "thresholds": {
-        "health": 70.0,
-        "mana": 15.0,
-        "stamina": 15.0
+        "health": 73.0,
+        "mana": 16.0,
+        "stamina": 16.0
     },
     "scan_interval": 0.9578358208955223,
     "potion_cooldown": 3.0,
     "window_name": "Priston Tale",
-    "debug_enabled": true,
+    "debug_enabled": false,
     "spellcasting": {
         "enabled": true,
         "spell_key": "F1",
-        "spell_interval": 0.960820895522388,
+        "spell_interval": 1.208955223880597,
         "random_targeting": true,
         "target_radius": 300,
         "target_change_interval": 1
     },
     "bars": {
         "game_window": {
-            "x1": 332,
-            "y1": 115,
-            "x2": 1610,
-            "y2": 1109,
+            "x1": 272,
+            "y1": 75,
+            "x2": 1550,
+            "y2": 1069,
             "configured": true
         },
         "health_bar": {
-            "x1": 738,
-            "y1": 986,
-            "x2": 743,
-            "y2": 1098,
+            "x1": 674,
+            "y1": 944,
+            "x2": 686,
+            "y2": 1059,
             "configured": true
         },
         "mana_bar": {
-            "x1": 922,
-            "y1": 986,
-            "x2": 929,
-            "y2": 1096,
+            "x1": 857,
+            "y1": 947,
+            "x2": 870,
+            "y2": 1054,
             "configured": true
         },
         "stamina_bar": {
-            "x1": 714,
-            "y1": 1008,
-            "x2": 719,
-            "y2": 1101,
+            "x1": 653,
+            "y1": 968,
+            "x2": 660,
+            "y2": 1062,
             "configured": true
         }
     }

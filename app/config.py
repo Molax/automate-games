@@ -32,7 +32,7 @@ DEFAULT_CONFIG = {
         "spell_key": "F5",
         "spell_interval": 3.0,
         "random_targeting": False,
-        "target_radius": 100,
+        "target_radius": 700,
         "target_change_interval": 5
     },
     # Bar selection coordinates

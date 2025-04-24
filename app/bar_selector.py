@@ -69,7 +69,7 @@ class ScreenSelector:
         self.selection_window = tk.Toplevel(self.root)
         self.selection_window.title(title)
         self.selection_window.attributes('-fullscreen', True)
-        self.selection_window.attributes('-alpha', 0.3)  # Semi-transparent
+        self.selection_window.attributes('-alpha', 0.10)  # Semi-transparent
         self.selection_window.configure(bg='black')
         
         # Take a screenshot of the entire screen

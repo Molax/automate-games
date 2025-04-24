@@ -63,6 +63,7 @@ except ImportError:
             ("ii", InputI)
         ]
 
+# Enhanced move_mouse_direct function for app/windows_utils/mouse.py
 def move_mouse_direct(x, y):
     """
     Move the mouse cursor directly to specified coordinates using multiple methods
@@ -76,46 +77,48 @@ def move_mouse_direct(x, y):
     """
     logger = logging.getLogger('PristonBot')
     try:
-        # First method - SetCursorPos
-        logger.debug(f"Moving cursor to ({x}, {y}) with SetCursorPos")
-        ctypes.windll.user32.SetCursorPos(int(x), int(y))
+        # Force integer coordinates
+        x, y = int(x), int(y)
         
-        # Force synchronization by calling GetCursorPos
+        # Save original position for debugging
         point = wintypes.POINT()
         ctypes.windll.user32.GetCursorPos(ctypes.byref(point))
+        original_x, original_y = point.x, point.y
+        logger.debug(f"Moving cursor from ({original_x}, {original_y}) to ({x}, {y})")
         
-        # Check if we're at the target position
-        if point.x != int(x) or point.y != int(y):
-            logger.debug(f"SetCursorPos failed, actual position: ({point.x}, {point.y})")
-            
-            # Try second method - mouse_event with MOUSEEVENTF_MOVE
-            logger.debug(f"Trying mouse_event MOUSEEVENTF_MOVE")
-            MOUSEEVENTF_MOVE = 0x0001
-            dx = int(x) - point.x
-            dy = int(y) - point.y
-            ctypes.windll.user32.mouse_event(MOUSEEVENTF_MOVE, dx, dy, 0, 0)
-            
-            # Check position again
-            ctypes.windll.user32.GetCursorPos(ctypes.byref(point))
-            logger.debug(f"After mouse_event, position: ({point.x}, {point.y})")
-            
-            # Try third method - mouse_event with MOUSEEVENTF_ABSOLUTE
-            if point.x != int(x) or point.y != int(y):
-                logger.debug(f"Trying mouse_event MOUSEEVENTF_ABSOLUTE")
-                MOUSEEVENTF_ABSOLUTE = 0x8000
-                
-                # Convert to normalized coordinates (0..65535)
-                screen_width = ctypes.windll.user32.GetSystemMetrics(0)
-                screen_height = ctypes.windll.user32.GetSystemMetrics(1)
-                norm_x = int(65535 * int(x) / screen_width)
-                norm_y = int(65535 * int(y) / screen_height)
-                
-                ctypes.windll.user32.mouse_event(MOUSEEVENTF_MOVE | MOUSEEVENTF_ABSOLUTE, 
-                                               norm_x, norm_y, 0, 0)
+        # First method - SetCursorPos
+        ctypes.windll.user32.SetCursorPos(x, y)
+        time.sleep(0.05)  # Small delay
         
-        # Final position check
+        # Check if the cursor is at the expected position
         ctypes.windll.user32.GetCursorPos(ctypes.byref(point))
-        logger.debug(f"Final cursor position: ({point.x}, {point.y})")
+        if abs(point.x - x) > 5 or abs(point.y - y) > 5:
+            logger.debug(f"SetCursorPos didn't move precisely, actual: ({point.x}, {point.y})")
+            
+            # Try using absolute positioning with mouse_event
+            screen_width = ctypes.windll.user32.GetSystemMetrics(0)
+            screen_height = ctypes.windll.user32.GetSystemMetrics(1)
+            
+            # Apply special scaling for absolute mouse coordinates
+            norm_x = int(65535 * x / screen_width)
+            norm_y = int(65535 * y / screen_height)
+            
+            # Use the absolute positioning method
+            MOUSEEVENTF_ABSOLUTE = 0x8000
+            MOUSEEVENTF_MOVE = 0x0001
+            ctypes.windll.user32.mouse_event(
+                MOUSEEVENTF_MOVE | MOUSEEVENTF_ABSOLUTE, 
+                norm_x, 
+                norm_y, 
+                0, 
+                0
+            )
+            time.sleep(0.1)  # Longer delay for absolute movement
+        
+        # Verify final position
+        ctypes.windll.user32.GetCursorPos(ctypes.byref(point))
+        distance = ((point.x - x)**2 + (point.y - y)**2)**0.5
+        logger.debug(f"Final position: ({point.x}, {point.y}), distance from target: {distance:.1f}px")
         
         return True
     except Exception as e:

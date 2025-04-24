@@ -13,44 +13,18 @@ import time
 import random
 import math
 from app.window_utils import press_key, press_right_mouse, get_window_rect
+from app.windows_utils.mouse import move_mouse_direct as game_mouse_move
+from app.windows_utils.mouse import press_right_mouse as game_right_click
 
-# Import the DirectInput module
-try:
-    from app import game_mouse_move, game_right_click, focus_game_window
-except ImportError:
-    # If module doesn't exist yet, create these functions as placeholders
-    def game_mouse_move(x, y):
-        """Placeholder function if module isn't created yet"""
-        logger = logging.getLogger('PristonBot')
-        logger.warning(f"DirectInput module not found, using fallback for mouse move to ({x}, {y})")
-        import ctypes
-        return ctypes.windll.user32.SetCursorPos(int(x), int(y))
         
-    def game_right_click(x=None, y=None):
-        """Placeholder function if module isn't created yet"""
-        logger = logging.getLogger('PristonBot')
-        logger.warning(f"DirectInput module not found, using fallback for right click at ({x}, {y})")
+
         
-        # Move mouse if coordinates are provided
-        if x is not None and y is not None:
-            game_mouse_move(x, y)
-            time.sleep(0.05)
-        
-        # Perform right click
-        import ctypes
-        MOUSEEVENTF_RIGHTDOWN = 0x0008
-        MOUSEEVENTF_RIGHTUP = 0x0010
-        ctypes.windll.user32.mouse_event(MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0)
-        time.sleep(0.1)
-        ctypes.windll.user32.mouse_event(MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0)
-        return True
-        
-    def focus_game_window(hwnd):
-        """Placeholder function if module isn't created yet"""
-        logger = logging.getLogger('PristonBot')
-        logger.warning(f"DirectInput module not found, using fallback for window focus")
-        import win32gui
-        return win32gui.SetForegroundWindow(hwnd) if hwnd else False
+def focus_game_window(hwnd):
+    """Placeholder function if module isn't created yet"""
+    logger = logging.getLogger('PristonBot')
+    logger.warning(f"DirectInput module not found, using fallback for window focus")
+    import win32gui
+    return win32gui.SetForegroundWindow(hwnd) if hwnd else False
 
 from app.bar_selector import BarDetector, HEALTH_COLOR_RANGE, MANA_COLOR_RANGE, STAMINA_COLOR_RANGE
 
@@ -593,13 +567,13 @@ class BotControllerUI:
                                     # Focus the game window if we have a handle
                                     if game_hwnd:
                                         focus_game_window(game_hwnd)
-                                        time.sleep(0.1)  # Short delay to ensure window is focused
+                                        time.sleep(0.2)  # Short delay to ensure window is focused
                                     
                                     # USE OUR DIRECT GAME INPUT FUNCTIONS
                                     # First move the mouse
                                     game_mouse_move(target_x, target_y)
                                     # Small delay to make sure the game registers the mouse position
-                                    time.sleep(0.1)
+                                    time.sleep(0.5)
                                     # Then do the right click
                                     game_right_click()
                                     
