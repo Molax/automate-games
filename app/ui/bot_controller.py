@@ -10,7 +10,9 @@ from tkinter import ttk
 import logging
 import threading
 import time
-from app.window_utils import press_key, press_right_mouse
+import random
+import math
+from app.window_utils import press_key, press_right_mouse, get_window_rect
 from app.bar_selector import BarDetector, HEALTH_COLOR_RANGE, MANA_COLOR_RANGE, STAMINA_COLOR_RANGE
 
 logger = logging.getLogger('PristonBot')
@@ -59,6 +61,11 @@ class BotControllerUI:
         self.sp_potions_used = 0
         self.spells_cast = 0
         self.start_time = None
+        
+        # Random targeting variables
+        self.target_x_offset = 0
+        self.target_y_offset = 0
+        self.spells_cast_since_target_change = 0
         
         # Create the UI
         self._create_ui()
@@ -148,6 +155,15 @@ class BotControllerUI:
         ttk.Label(spell_frame, text="Spells Cast:", width=12).pack(side=tk.LEFT)
         self.spells_var = tk.StringVar(value="0")
         ttk.Label(spell_frame, textvariable=self.spells_var).pack(side=tk.LEFT)
+
+        # Target position display (for random targeting)
+        if hasattr(self.settings_ui, 'random_targeting_var') and self.settings_ui.random_targeting_var.get():
+            target_frame = ttk.Frame(values_right)
+            target_frame.pack(fill=tk.X, pady=2)
+            
+            ttk.Label(target_frame, text="Target Offset:", width=12).pack(side=tk.LEFT)
+            self.target_var = tk.StringVar(value="(0, 0)")
+            ttk.Label(target_frame, textvariable=self.target_var).pack(side=tk.LEFT)
         
         # Control buttons
         button_frame = ttk.Frame(self.parent)
@@ -197,6 +213,11 @@ class BotControllerUI:
         self.mp_potions_var.set("0")
         self.sp_potions_var.set("0")
         self.spells_var.set("0")
+        
+        # Reset targeting variables
+        self.target_x_offset = 0
+        self.target_y_offset = 0
+        self.spells_cast_since_target_change = 0
         
         # Store start time
         self.start_time = time.time()
@@ -279,6 +300,26 @@ class BotControllerUI:
         """
         return abs(prev_val - current_val) >= threshold
     
+    def generate_random_target_offsets(self, radius):
+        """
+        Generate random offsets for spell targeting within specified radius
+        
+        Args:
+            radius: Maximum radius from center in pixels
+            
+        Returns:
+            (x_offset, y_offset) tuple of pixel offsets from center
+        """
+        # Generate random angle and distance (using square root for more even distribution)
+        angle = random.uniform(0, 2 * math.pi)
+        distance = radius * math.sqrt(random.random())  # Square root for more even distribution
+        
+        # Calculate x and y offsets (convert polar to cartesian coordinates)
+        x_offset = int(distance * math.cos(angle))
+        y_offset = int(distance * math.sin(angle))
+        
+        return x_offset, y_offset
+    
     def bot_loop(self):
         """Main bot loop that checks bars and uses potions"""
         last_hp_potion = 0
@@ -300,6 +341,22 @@ class BotControllerUI:
                              f"at {settings['spellcasting']['spell_interval']}s interval")
             logger.info(f"Spellcasting enabled: Key={settings['spellcasting']['spell_key']}, " + 
                         f"Interval={settings['spellcasting']['spell_interval']}s")
+            
+            # Check if random targeting is enabled
+            if settings["spellcasting"].get("random_targeting", False):
+                radius = settings["spellcasting"].get("target_radius", 100)
+                change_interval = settings["spellcasting"].get("target_change_interval", 5)
+                self.log_callback(f"Random spell targeting enabled with {radius}px radius, changing every {change_interval} casts")
+                logger.info(f"Random targeting: Radius={radius}px, Change interval={change_interval} casts")
+                
+                # Generate initial random target
+                self.target_x_offset, self.target_y_offset = self.generate_random_target_offsets(radius)
+                self.log_callback(f"Initial target offset: ({self.target_x_offset}, {self.target_y_offset})")
+                logger.info(f"Initial target offset: ({self.target_x_offset}, {self.target_y_offset})")
+                
+                # Update target display if available
+                if hasattr(self, 'target_var'):
+                    self.target_var.set(f"({self.target_x_offset}, {self.target_y_offset})")
         
         # Log initial values
         status_message = (f"Health: {self.prev_hp_percent:.1f}% | " +
@@ -408,8 +465,29 @@ class BotControllerUI:
                     spell_interval = settings["spellcasting"]["spell_interval"]
                     if current_time - last_spell_cast > spell_interval:
                         spell_key = settings["spellcasting"]["spell_key"]
-                        self.log_callback(f"Casting spell ({spell_key})")
-                        logger.info(f"Casting spell with key {spell_key}")
+                        
+                        # Check if we need to update random targeting 
+                        if settings["spellcasting"].get("random_targeting", False):
+                            radius = settings["spellcasting"].get("target_radius", 100)
+                            change_interval = settings["spellcasting"].get("target_change_interval", 5)
+                            
+                            # Check if we need to change target position
+                            if self.spells_cast_since_target_change >= change_interval:
+                                # Generate new random target
+                                self.target_x_offset, self.target_y_offset = self.generate_random_target_offsets(radius)
+                                self.log_callback(f"New target offset: ({self.target_x_offset}, {self.target_y_offset})")
+                                logger.info(f"New target offset: ({self.target_x_offset}, {self.target_y_offset})")
+                                self.spells_cast_since_target_change = 0
+                                
+                                # Update target display if available
+                                if hasattr(self, 'target_var'):
+                                    self.target_var.set(f"({self.target_x_offset}, {self.target_y_offset})")
+                            
+                            self.log_callback(f"Casting spell ({spell_key}) with offset ({self.target_x_offset}, {self.target_y_offset})")
+                            logger.info(f"Casting spell with key {spell_key} and offset ({self.target_x_offset}, {self.target_y_offset})")
+                        else:
+                            self.log_callback(f"Casting spell ({spell_key})")
+                            logger.info(f"Casting spell with key {spell_key}")
                         
                         # Press the spell key
                         press_key(None, spell_key)
@@ -417,15 +495,48 @@ class BotControllerUI:
                         # Small delay before right-clicking
                         time.sleep(0.1)
                         
-                        # Press right mouse button
-                        logger.debug("Calling press_right_mouse(None) for spellcasting")
-                        press_right_mouse(None)
+                        # Press right mouse button with target offsets if random targeting is enabled
+                        if settings["spellcasting"].get("random_targeting", False):
+                            # Get window coordinates if game window is configured
+                            game_window_rect = None
+                            if hasattr(self.hp_bar, 'game_window') and self.hp_bar.game_window.is_setup():
+                                game_window_rect = (
+                                    self.hp_bar.game_window.x1,
+                                    self.hp_bar.game_window.y1,
+                                    self.hp_bar.game_window.x2,
+                                    self.hp_bar.game_window.y2
+                                )
+                            
+                            # Calculate center of game window
+                            if game_window_rect:
+                                center_x = (game_window_rect[0] + game_window_rect[2]) // 2
+                                center_y = (game_window_rect[1] + game_window_rect[3]) // 2
+                                
+                                # Apply target offsets
+                                target_x = center_x + self.target_x_offset
+                                target_y = center_y + self.target_y_offset
+                                
+                                # Make sure target is within game window
+                                target_x = max(game_window_rect[0], min(target_x, game_window_rect[2]))
+                                target_y = max(game_window_rect[1], min(target_y, game_window_rect[3]))
+                                
+                                # Press right mouse button at targeted position
+                                logger.debug(f"Calling press_right_mouse with target position ({target_x}, {target_y})")
+                                press_right_mouse(None, target_x, target_y)
+                            else:
+                                # Fall back to regular right-click if game window isn't available
+                                logger.debug("Calling press_right_mouse(None) - game window not available")
+                                press_right_mouse(None)
+                        else:
+                            # Regular right-click at current position
+                            logger.debug("Calling press_right_mouse(None) for spellcasting")
+                            press_right_mouse(None)
                         
+                        # Update state
                         last_spell_cast = current_time
-                        
-                        # Update statistics
                         self.spells_cast += 1
                         self.spells_var.set(str(self.spells_cast))
+                        self.spells_cast_since_target_change += 1
                 
                 # Wait for next scan
                 scan_interval = settings["scan_interval"]

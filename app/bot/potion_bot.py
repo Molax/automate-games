@@ -7,15 +7,17 @@ This module contains the main bot loop that monitors bars and uses potions.
 import time
 import logging
 import threading
+import random
+import math
 from PIL import Image
-from app.window_utils import press_key, press_right_mouse
+from app.window_utils import press_key, press_right_mouse, get_window_rect
 from app.bar_selector import BarDetector, HEALTH_COLOR_RANGE, MANA_COLOR_RANGE, STAMINA_COLOR_RANGE
-from app.bot.interfaces import BarManager, SettingsProvider
+from app.bot.interfaces import BarManager, SettingsProvider, WindowManager
 
 logger = logging.getLogger('PristonBot')
 
 class PotionBot:
-    """Main bot class for the Priston Tale"""
+    """Main bot class for the Priston Tale Potion Bot"""
     
     def __init__(self, hp_bar: BarManager, mp_bar: BarManager, sp_bar: BarManager, 
                  settings_provider: SettingsProvider, log_callback):
@@ -48,6 +50,11 @@ class PotionBot:
         self.prev_hp_percent = 100.0
         self.prev_mp_percent = 100.0
         self.prev_sp_percent = 100.0
+        
+        # Random targeting variables
+        self.target_x_offset = 0
+        self.target_y_offset = 0
+        self.spells_cast_since_target_change = 0
     
     def start_bot(self):
         """Start the bot thread"""
@@ -66,6 +73,11 @@ class PotionBot:
         self.prev_hp_percent = 100.0
         self.prev_mp_percent = 100.0
         self.prev_sp_percent = 100.0
+        
+        # Reset targeting variables
+        self.target_x_offset = 0
+        self.target_y_offset = 0
+        self.spells_cast_since_target_change = 0
         
         return True
     
@@ -97,141 +109,22 @@ class PotionBot:
         """
         return abs(prev_val - current_val) >= threshold
     
-    def bot_loop(self):
-        """Main bot loop that checks bars and uses potions"""
-        last_hp_potion = 0
-        last_mp_potion = 0
-        last_sp_potion = 0
-        last_spell_cast = 0
-        potion_cooldown = 3.0  # seconds
-        loop_count = 0
+    def generate_random_target_offsets(self, radius):
+        """
+        Generate random offsets for spell targeting within specified radius
         
-        self.log_callback("Bot started")
-        logger.info("Bot loop started")
+        Args:
+            radius: Maximum radius from center in pixels
+            
+        Returns:
+            (x_offset, y_offset) tuple of pixel offsets from center
+        """
+        # Generate random angle and distance (using square root for more even distribution)
+        angle = random.uniform(0, 2 * math.pi)
+        distance = radius * math.sqrt(random.random())  # Square root for more even distribution
         
-        # Get the settings
-        settings = self.settings_provider.get_settings()
+        # Calculate x and y offsets (convert polar to cartesian coordinates)
+        x_offset = int(distance * math.cos(angle))
+        y_offset = int(distance * math.sin(angle))
         
-        # Check if spellcasting is enabled and log it
-        if settings["spellcasting"]["enabled"]:
-            self.log_callback(f"Auto spellcasting enabled with key {settings['spellcasting']['spell_key']} " + 
-                             f"at {settings['spellcasting']['spell_interval']}s interval")
-            logger.info(f"Spellcasting enabled: Key={settings['spellcasting']['spell_key']}, " + 
-                        f"Interval={settings['spellcasting']['spell_interval']}s")
-        
-        # Log initial values
-        status_message = (f"Health: {self.prev_hp_percent:.1f}% | " +
-                         f"Mana: {self.prev_mp_percent:.1f}% | " +
-                         f"Stamina: {self.prev_sp_percent:.1f}%")
-        self.log_callback(status_message)
-        
-        while self.running:
-            try:
-                loop_count += 1
-                logger.debug(f"Bot loop iteration {loop_count}")
-                
-                # Get current time for potion cooldowns
-                current_time = time.time()
-                
-                # Get the latest settings
-                settings = self.settings_provider.get_settings()
-                
-                # Initialize status values
-                hp_percent = 100.0
-                mp_percent = 100.0
-                sp_percent = 100.0
-                hp_threshold = settings["thresholds"]["health"]
-                mp_threshold = settings["thresholds"]["mana"]
-                sp_threshold = settings["thresholds"]["stamina"]
-                
-                # Check HP bar
-                if self.hp_bar.is_setup():
-                    hp_image = self.hp_bar.get_current_screenshot_region()
-                    if hp_image:
-                        hp_percent = self.hp_detector.detect_percentage(hp_image)
-                
-                # Check MP bar
-                if self.mp_bar.is_setup():
-                    mp_image = self.mp_bar.get_current_screenshot_region()
-                    if mp_image:
-                        mp_percent = self.mp_detector.detect_percentage(mp_image)
-                
-                # Check SP bar
-                if self.sp_bar.is_setup():
-                    sp_image = self.sp_bar.get_current_screenshot_region()
-                    if sp_image:
-                        sp_percent = self.sp_detector.detect_percentage(sp_image)
-                
-                # Check if any values have changed
-                hp_changed = self.has_value_changed(self.prev_hp_percent, hp_percent)
-                mp_changed = self.has_value_changed(self.prev_mp_percent, mp_percent)
-                sp_changed = self.has_value_changed(self.prev_sp_percent, sp_percent)
-                
-                # Log all percentages in a single line if any have changed
-                if hp_changed or mp_changed or sp_changed:
-                    status_message = (f"Health: {hp_percent:.1f}% | " +
-                                     f"Mana: {mp_percent:.1f}% | " +
-                                     f"Stamina: {sp_percent:.1f}%")
-                    self.log_callback(status_message)
-                    logger.debug(status_message)
-                    
-                    # Update previous values
-                    self.prev_hp_percent = hp_percent
-                    self.prev_mp_percent = mp_percent
-                    self.prev_sp_percent = sp_percent
-                
-                # Use Health potion if needed
-                if hp_percent < hp_threshold and current_time - last_hp_potion > potion_cooldown:
-                    hp_key = settings["potion_keys"]["health"]
-                    self.log_callback(f"Health low ({hp_percent:.1f}%), using health potion (key {hp_key})")
-                    logger.info(f"Using health potion - HP: {hp_percent:.1f}% < {hp_threshold}%")
-                    press_key(None, hp_key)
-                    last_hp_potion = current_time
-                
-                # Use Mana potion if needed
-                if mp_percent < mp_threshold and current_time - last_mp_potion > potion_cooldown:
-                    mp_key = settings["potion_keys"]["mana"]
-                    self.log_callback(f"Mana low ({mp_percent:.1f}%), using mana potion (key {mp_key})")
-                    logger.info(f"Using mana potion - MP: {mp_percent:.1f}% < {mp_threshold}%")
-                    press_key(None, mp_key)
-                    last_mp_potion = current_time
-                
-                # Use Stamina potion if needed
-                if sp_percent < sp_threshold and current_time - last_sp_potion > potion_cooldown:
-                    sp_key = settings["potion_keys"]["stamina"]
-                    self.log_callback(f"Stamina low ({sp_percent:.1f}%), using stamina potion (key {sp_key})")
-                    logger.info(f"Using stamina potion - SP: {sp_percent:.1f}% < {sp_threshold}%")
-                    press_key(None, sp_key)
-                    last_sp_potion = current_time
-                
-                # Check if spellcasting is enabled and it's time to cast
-                if settings["spellcasting"]["enabled"]:
-                    spell_interval = settings["spellcasting"]["spell_interval"]
-                    if current_time - last_spell_cast > spell_interval:
-                        spell_key = settings["spellcasting"]["spell_key"]
-                        self.log_callback(f"Casting spell ({spell_key})")
-                        logger.info(f"Casting spell with key {spell_key}")
-                        
-                        # Press the spell key
-                        press_key(None, spell_key)
-                        
-                        # Small delay before right-clicking
-                        time.sleep(0.1)
-                        
-                        # Press right mouse button
-                        logger.debug("Calling press_right_mouse(None) for spellcasting")
-                        press_right_mouse(None)
-                        
-                        last_spell_cast = current_time
-                
-                # Wait for next scan
-                scan_interval = settings["scan_interval"]
-                time.sleep(scan_interval)
-                
-            except Exception as e:
-                self.log_callback(f"Error in bot loop: {e}")
-                logger.error(f"Error in bot loop: {e}", exc_info=True)
-                time.sleep(1)
-        
-        self.log_callback("Bot stopped")
-        logger.info("Bot loop stopped")
+        return x_offset, y_offset

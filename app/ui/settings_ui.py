@@ -287,26 +287,104 @@ class SettingsUI:
         self.interval_value_label = ttk.Label(interval_slider_frame, text="3.0s", width=5)
         self.interval_value_label.pack(side=tk.LEFT)
         
-        # Spell targets
-        target_frame = ttk.LabelFrame(parent, text="Spell Target (optional)", padding=5)
+        # Random Targeting frame
+        target_frame = ttk.LabelFrame(parent, text="Spell Targeting", padding=5)
         target_frame.pack(fill=tk.X, pady=5, padx=5)
         
         ttk.Label(target_frame, 
-                 text="Configure where to click after pressing the spell key").pack(
+                 text="Configure targeting behavior for spells").pack(
                      anchor=tk.W, pady=(0, 5))
+                     
+        # Random targeting checkbox
+        random_target_frame = ttk.Frame(target_frame)
+        random_target_frame.pack(fill=tk.X, pady=2)
         
-        # Target coordinates (placeholder for future enhancement)
-        coord_frame = ttk.Frame(target_frame)
-        coord_frame.pack(fill=tk.X, pady=2)
+        self.random_targeting_var = tk.BooleanVar(value=False)
+        random_targeting_check = ttk.Checkbutton(
+            random_target_frame,
+            text="Use random targeting positions",
+            variable=self.random_targeting_var
+        )
+        random_targeting_check.pack(anchor=tk.W)
         
-        ttk.Label(coord_frame, text="Uses right mouse click at current cursor position").pack(
-            anchor=tk.W, pady=5)
+        # Random position radius slider
+        radius_frame = ttk.Frame(target_frame)
+        radius_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(radius_frame, text="Target Radius:", width=12).pack(side=tk.LEFT)
+        
+        # Create a frame for the slider and value display
+        radius_slider_frame = ttk.Frame(radius_frame)
+        radius_slider_frame.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        
+        # Create a variable to hold the slider value
+        self.target_radius_var = tk.IntVar(value=100)
+        
+        # Create the slider
+        self.target_radius = ttk.Scale(
+            radius_slider_frame, 
+            from_=20, 
+            to=300, 
+            orient=tk.HORIZONTAL, 
+            variable=self.target_radius_var,
+            command=self._update_radius_label
+        )
+        self.target_radius.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
+        
+        # Create a label to display the current value
+        self.radius_value_label = ttk.Label(radius_slider_frame, text="100px", width=6)
+        self.radius_value_label.pack(side=tk.LEFT)
+        
+        # Random position change interval slider
+        change_interval_frame = ttk.Frame(target_frame)
+        change_interval_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(change_interval_frame, text="Change Interval:", width=12).pack(side=tk.LEFT)
+        
+        # Create a frame for the slider and value display
+        change_slider_frame = ttk.Frame(change_interval_frame)
+        change_slider_frame.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        
+        # Create a variable to hold the slider value
+        self.target_change_interval_var = tk.IntVar(value=5)
+        
+        # Create the slider
+        self.target_change_interval = ttk.Scale(
+            change_slider_frame, 
+            from_=1, 
+            to=20, 
+            orient=tk.HORIZONTAL, 
+            variable=self.target_change_interval_var,
+            command=self._update_change_interval_label
+        )
+        self.target_change_interval.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
+        
+        # Create a label to display the current value
+        self.change_interval_value_label = ttk.Label(change_slider_frame, text="5 casts", width=8)
+        self.change_interval_value_label.pack(side=tk.LEFT)
+        
+        # Additional info
+        ttk.Label(target_frame, 
+                 text="Character is assumed to be in the center of game window").pack(
+                     anchor=tk.W, pady=(5, 0))
     
     def _update_interval_label(self, value):
         """Update the spell interval label when the slider is moved"""
         # Round to 1 decimal place
         value = round(float(value), 1)
         self.interval_value_label.config(text=f"{value}s")
+    
+    def _update_radius_label(self, value):
+        """Update the target radius label when the slider is moved"""
+        # Round to integer
+        value = int(float(value))
+        self.radius_value_label.config(text=f"{value}px")
+    
+    def _update_change_interval_label(self, value):
+        """Update the change interval label when the slider is moved"""
+        # Round to integer
+        value = int(float(value))
+        self.change_interval_value_label.config(text=f"{value} casts")
     
     def _create_advanced_settings(self, parent):
         """Create the advanced settings UI with sliders"""
@@ -416,7 +494,10 @@ class SettingsUI:
             "spellcasting": {
                 "enabled": self.spellcast_enabled.get(),
                 "spell_key": self.spell_key.get(),
-                "spell_interval": float(self.spell_interval_var.get())
+                "spell_interval": float(self.spell_interval_var.get()),
+                "random_targeting": self.random_targeting_var.get(),
+                "target_radius": int(self.target_radius_var.get()),
+                "target_change_interval": int(self.target_change_interval_var.get())
             },
             "scan_interval": float(self.scan_interval_var.get()),
             "debug_enabled": self.debug_var.get()
@@ -447,6 +528,13 @@ class SettingsUI:
         self.spell_key.set(spellcasting.get("spell_key", "F5"))
         self.spell_interval_var.set(spellcasting.get("spell_interval", 3.0))
         self._update_interval_label(self.spell_interval_var.get())
+        
+        # Random targeting
+        self.random_targeting_var.set(spellcasting.get("random_targeting", False))
+        self.target_radius_var.set(spellcasting.get("target_radius", 100))
+        self.target_change_interval_var.set(spellcasting.get("target_change_interval", 5))
+        self._update_radius_label(self.target_radius_var.get())
+        self._update_change_interval_label(self.target_change_interval_var.get())
         
         # Other settings
         self.scan_interval_var.set(settings.get("scan_interval", 0.5))

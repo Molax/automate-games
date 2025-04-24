@@ -26,11 +26,14 @@ DEFAULT_CONFIG = {
     "potion_cooldown": 3.0,
     "window_name": "Priston Tale",
     "debug_enabled": True,
-    # New spellcasting configuration
+    # Spellcasting configuration with random targeting
     "spellcasting": {
         "enabled": False,
         "spell_key": "F5",
-        "spell_interval": 3.0
+        "spell_interval": 3.0,
+        "random_targeting": False,
+        "target_radius": 100,
+        "target_change_interval": 5
     },
     # Bar selection coordinates
     "bars": {
@@ -120,10 +123,16 @@ def load_config():
                 config = json.load(f)
                 logging.getLogger('PristonBot').info("Configuration loaded from file")
                 
-                # Check if spellcasting config exists, add it if not (for backward compatibility)
+                # Check if random targeting config exists, add it if not (for backward compatibility)
                 if "spellcasting" not in config:
                     config["spellcasting"] = DEFAULT_CONFIG["spellcasting"]
                     logging.getLogger('PristonBot').info("Added missing spellcasting configuration")
+                    save_config(config)
+                elif "random_targeting" not in config["spellcasting"]:
+                    config["spellcasting"]["random_targeting"] = DEFAULT_CONFIG["spellcasting"]["random_targeting"]
+                    config["spellcasting"]["target_radius"] = DEFAULT_CONFIG["spellcasting"]["target_radius"]
+                    config["spellcasting"]["target_change_interval"] = DEFAULT_CONFIG["spellcasting"]["target_change_interval"]
+                    logging.getLogger('PristonBot').info("Added missing random targeting configuration")
                     save_config(config)
                 
                 # Check if bars config exists, add it if not (for backward compatibility)

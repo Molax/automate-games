@@ -258,57 +258,48 @@ class BarDetector:
             # Convert to HSV for better color detection
             hsv_image = cv2.cvtColor(np_image, cv2.COLOR_RGB2HSV)
             
-            # Unpack color ranges
-            lower_range, upper_range = self.color_range
+            # Create mask based on bar color
+            if self.title == "Health":  # Red
+                # Red can wrap around in HSV, so use two ranges
+                lower1 = np.array([0, 50, 50])
+                upper1 = np.array([10, 255, 255])
+                mask1 = cv2.inRange(hsv_image, lower1, upper1)
+                
+                lower2 = np.array([160, 50, 50])
+                upper2 = np.array([180, 255, 255])
+                mask2 = cv2.inRange(hsv_image, lower2, upper2)
+                
+                mask = mask1 | mask2  # Combine both masks
+                
+            elif self.title == "Mana":  # Blue
+                lower = np.array([100, 50, 50])
+                upper = np.array([140, 255, 255])
+                mask = cv2.inRange(hsv_image, lower, upper)
+                
+            else:  # Stamina (Green)
+                lower = np.array([40, 50, 50])
+                upper = np.array([80, 255, 255])
+                mask = cv2.inRange(hsv_image, lower, upper)
             
-            # Create mask
-            mask = cv2.inRange(hsv_image, lower_range, upper_range)
-            
-            # Apply morphology to clean up the mask
-            kernel = np.ones((3, 3), np.uint8)
-            mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
-            mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
-            
-            # Save debug image
+            # Save the mask for debugging
             debug_dir = "debug_images"
             if not os.path.exists(debug_dir):
                 os.makedirs(debug_dir)
             mask_filename = f"{debug_dir}/{self.title.lower()}_mask_{time.strftime('%H%M%S')}.png"
             cv2.imwrite(mask_filename, mask)
             
-            # Determine if bar is vertical or horizontal
-            height, width = mask.shape
-            is_vertical = height > width * 1.5
+            # Apply morphological operations to clean up the mask
+            kernel = np.ones((3, 3), np.uint8)
+            mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
+            mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
             
-            # Calculate percentage based on orientation
-            if is_vertical:
-                # Count non-zero pixels in each row
-                row_counts = np.count_nonzero(mask, axis=1)
-                filled_rows = np.where(row_counts > 0)[0]
+            # Count non-zero pixels to determine percentage
+            total_pixels = mask.shape[0] * mask.shape[1]
+            if total_pixels == 0:
+                return 0
                 
-                if len(filled_rows) == 0:
-                    return 0
-                    
-                # For vertical bars, 0% is at the bottom, 100% is at the top
-                highest_point = np.min(filled_rows)
-                lowest_point = np.max(filled_rows)
-                
-                # Calculate percentage
-                percentage = 100 * (height - highest_point) / height
-            else:
-                # Count non-zero pixels in each column
-                col_counts = np.count_nonzero(mask, axis=0)
-                filled_cols = np.where(col_counts > 0)[0]
-                
-                if len(filled_cols) == 0:
-                    return 0
-                    
-                # For horizontal bars, 0% is at the left, 100% is at the right
-                leftmost_point = np.min(filled_cols)
-                rightmost_point = np.max(filled_cols)
-                
-                # Calculate percentage
-                percentage = 100 * rightmost_point / width
+            filled_pixels = cv2.countNonZero(mask)
+            percentage = (filled_pixels / total_pixels) * 100
             
             self.logger.debug(f"{self.title} bar percentage: {percentage:.1f}%")
             return percentage
@@ -323,16 +314,16 @@ class BarDetector:
 # Define color ranges for Priston Tale Potion Botbars
 # HSV color ranges [hue, saturation, value]
 HEALTH_COLOR_RANGE = (
-    np.array([0, 100, 100]),     # Lower bound for red
+    np.array([0, 50, 50]),       # Lower bound for red
     np.array([10, 255, 255])     # Upper bound for red
 )
 
 MANA_COLOR_RANGE = (
-    np.array([100, 100, 100]),   # Lower bound for blue
+    np.array([100, 50, 50]),     # Lower bound for blue
     np.array([140, 255, 255])    # Upper bound for blue
 )
 
 STAMINA_COLOR_RANGE = (
-    np.array([40, 100, 100]),    # Lower bound for green
+    np.array([40, 50, 50]),      # Lower bound for green
     np.array([80, 255, 255])     # Upper bound for green
 )
