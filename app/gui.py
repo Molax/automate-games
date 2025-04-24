@@ -23,7 +23,7 @@ logger = logging.getLogger('PristonBot')
 main_app = None
 
 class PristonTaleBot:
-    """Improved application class for the Priston Tale Potion Bot"""
+    """Improved application class for the Priston Tale"""
     
     def __init__(self, root):
         """
@@ -35,7 +35,7 @@ class PristonTaleBot:
         global main_app
         main_app = self
         
-        logger.info("Initializing Priston Tale Potion Bot")
+        logger.info("Initializing Priston Tale")
         self.root = root
         self.root.geometry("900x700")  # Wider initial size for better horizontal layout
         self.root.minsize(800, 600)    # Minimum size
@@ -48,7 +48,7 @@ class PristonTaleBot:
         title_frame = ttk.Frame(main_frame)
         title_frame.pack(fill=tk.X, pady=(0, 10))
         
-        title_label = ttk.Label(title_frame, text="Priston Tale Potion Bot", font=("Arial", 16, "bold"))
+        title_label = ttk.Label(title_frame, text="Priston Tale", font=("Arial", 16, "bold"))
         title_label.pack(side=tk.LEFT)
         
         version_label = ttk.Label(title_frame, text="v1.0.0", font=("Arial", 10))

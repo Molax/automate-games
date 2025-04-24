@@ -1,4 +1,4 @@
-"""UI components for the Priston Tale Potion Bot"""
+"""UI components for the Priston Tale"""
 
 from app.ui.components import ScrollableFrame
 from app.ui.bar_selector_ui import BarSelectorUI

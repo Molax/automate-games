@@ -94,7 +94,7 @@ def create_splash_screen():
     frame.pack(fill=tk.BOTH, expand=True)
     
     # Title
-    title_label = ttk.Label(frame, text="Priston Tale Potion Bot", font=("Arial", 16, "bold"))
+    title_label = ttk.Label(frame, text="Priston Tale", font=("Arial", 16, "bold"))
     title_label.pack(pady=(10, 5))
     
     # Version
@@ -111,7 +111,7 @@ def create_splash_screen():
     progress.start()
     
     # Copyright
-    copyright_label = ttk.Label(frame, text="© 2023 Priston Tale Potion Bot", font=("Arial", 8))
+    copyright_label = ttk.Label(frame, text="© 2023 Priston Tale", font=("Arial", 8))
     copyright_label.pack(pady=10)
     
     # Add a border
@@ -179,7 +179,7 @@ def main():
         
         # Start the application
         root = tk.Tk()
-        root.title("Priston Tale Potion Bot")
+        root.title("Priston Tale")
         
         # Set application icon
         try:

@@ -16,7 +16,7 @@
     "spellcasting": {
         "enabled": true,
         "spell_key": "F1",
-        "spell_interval": 1.5
+        "spell_interval": 1.669776119402985
     },
     "bars": {
         "game_window": {

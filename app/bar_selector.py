@@ -320,7 +320,7 @@ class BarDetector:
 
 
 
-# Define color ranges for Priston Tale bars
+# Define color ranges for Priston Tale Potion Botbars
 # HSV color ranges [hue, saturation, value]
 HEALTH_COLOR_RANGE = (
     np.array([0, 100, 100]),     # Lower bound for red

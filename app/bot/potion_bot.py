@@ -15,7 +15,7 @@ from app.bot.interfaces import BarManager, SettingsProvider
 logger = logging.getLogger('PristonBot')
 
 class PotionBot:
-    """Main bot class for the Priston Tale Potion Bot"""
+    """Main bot class for the Priston Tale"""
     
     def __init__(self, hp_bar: BarManager, mp_bar: BarManager, sp_bar: BarManager, 
                  settings_provider: SettingsProvider, log_callback):

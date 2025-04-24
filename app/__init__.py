@@ -1,5 +1,5 @@
 """
-Priston Tale 
+Priston Tale Potion Bot
 ----------------------------------
 
 """
