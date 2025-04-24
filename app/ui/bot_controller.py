@@ -1,7 +1,8 @@
 """
-Fix for Bot Controller UI for the Priston Tale Potion Bot
+Fixed Bot Controller UI for the Priston Tale Potion Bot
 -------------------------------------------------------
-This module handles the bot control UI with fixes for mouse movement during spellcasting.
+This module handles the bot control UI with fixes for mouse movement during spellcasting
+and adds keyboard shortcuts for starting/stopping the bot.
 """
 
 import tkinter as tk
@@ -163,6 +164,9 @@ class BotControllerUI:
         
         # Create the UI
         self._create_ui()
+        
+        # Set up keyboard shortcuts
+        self._setup_keyboard_shortcuts()
     
     def _create_ui(self):
         """Create the UI components with improved layout"""
@@ -265,7 +269,7 @@ class BotControllerUI:
         # Create custom button styles with Tkinter for more control and visibility
         self.start_button = tk.Button(
             button_frame, 
-            text="START BOT",
+            text="START BOT (Ctrl+Shift+A)",
             command=self.start_bot, 
             bg="#4CAF50",  # Green background
             fg="black",    # Black text (more visible)
@@ -277,7 +281,7 @@ class BotControllerUI:
         
         self.stop_button = tk.Button(
             button_frame, 
-            text="STOP BOT",
+            text="STOP BOT (Ctrl+Shift+B)",
             command=self.stop_bot, 
             bg="#F44336",  # Red background
             fg="black",    # Black text (more visible)
@@ -286,6 +290,40 @@ class BotControllerUI:
             state=tk.DISABLED
         )
         self.stop_button.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=5)
+        
+        # Add shortcut information
+        shortcut_frame = ttk.Frame(self.parent)
+        shortcut_frame.pack(fill=tk.X, pady=5)
+        
+        shortcut_label = ttk.Label(
+            shortcut_frame, 
+            text="Keyboard Shortcuts: Ctrl+Shift+A to Start, Ctrl+Shift+B to Stop",
+            font=("Arial", 8),
+            foreground="#555555"
+        )
+        shortcut_label.pack(anchor=tk.CENTER)
+    
+    def _setup_keyboard_shortcuts(self):
+        """Set up keyboard shortcuts for starting and stopping the bot"""
+        # Register keyboard shortcuts with Tkinter
+        self.root.bind("<Control-Shift-a>", lambda event: self._handle_start_shortcut())
+        self.root.bind("<Control-Shift-A>", lambda event: self._handle_start_shortcut())
+        self.root.bind("<Control-Shift-b>", lambda event: self._handle_stop_shortcut())
+        self.root.bind("<Control-Shift-B>", lambda event: self._handle_stop_shortcut())
+        
+        logger.info("Keyboard shortcuts registered")
+        
+    def _handle_start_shortcut(self):
+        """Handle Ctrl+Shift+A shortcut to start the bot"""
+        if not self.running and self.start_button.cget('state') != 'disabled':
+            logger.info("Start bot shortcut (Ctrl+Shift+A) triggered")
+            self.start_bot()
+            
+    def _handle_stop_shortcut(self):
+        """Handle Ctrl+Shift+B shortcut to stop the bot"""
+        if self.running:
+            logger.info("Stop bot shortcut (Ctrl+Shift+B) triggered")
+            self.stop_bot()
     
     def start_bot(self):
         """Start the bot"""
@@ -411,6 +449,7 @@ class BotControllerUI:
         x_offset = int(distance * math.cos(angle))
         y_offset = int(distance * math.sin(angle))
         
+        logger.debug(f"Generated new random offset: ({x_offset}, {y_offset})")
         return x_offset, y_offset
     
     def bot_loop(self):
@@ -631,13 +670,13 @@ class BotControllerUI:
                     if current_time - last_spell_cast > spell_interval:
                         spell_key = settings["spellcasting"]["spell_key"]
                         
-                        # Check if we need to update random targeting 
+                        # FIX: Check if random targeting is enabled and handle target changes properly
                         if settings["spellcasting"].get("random_targeting", False):
                             radius = settings["spellcasting"].get("target_radius", 100)
                             change_interval = settings["spellcasting"].get("target_change_interval", 5)
                             
-                            # Check if we need to change target position
-                            if self.spells_cast_since_target_change >= change_interval:
+                            # FIXED: Generate a new random target for EVERY cast when change_interval is 1
+                            if change_interval == 1 or self.spells_cast_since_target_change >= change_interval:
                                 # Generate new random target
                                 self.target_x_offset, self.target_y_offset = self.generate_random_target_offsets(radius)
                                 self.log_callback(f"New target offset: ({self.target_x_offset}, {self.target_y_offset})")
@@ -723,18 +762,14 @@ class BotControllerUI:
                                     logger.error(f"Fallback mouse methods also failed: {e2}")
                                     self.log_callback(f"Error with mouse movement: {e2}")
                         else:
-                            # No game window available - just do a regular right-click
-                            logger.warning("Random targeting enabled but no game window coordinates - using standard click")
+                            # If random targeting is disabled or no game window available - just do a regular right-click
                             press_right_mouse(None)
-                else:
-                    # No random targeting, just do a regular right-click
-                    press_right_mouse(None)
                         
                         # Update state
-                    last_spell_cast = current_time
-                    self.spells_cast += 1
-                    self.spells_var.set(str(self.spells_cast))
-                    self.spells_cast_since_target_change += 1
+                        last_spell_cast = current_time
+                        self.spells_cast += 1
+                        self.spells_var.set(str(self.spells_cast))
+                        self.spells_cast_since_target_change += 1
                 
                 # Wait for next scan
                 scan_interval = settings["scan_interval"]
