@@ -1,12 +1,12 @@
 """
 Fixed Bot Controller UI for the Priston Tale Potion Bot
 -------------------------------------------------------
-This module handles the bot control UI with fixes for mouse movement during spellcasting
-and adds keyboard shortcuts for starting/stopping the bot.
+This module handles the bot control UI with improved game window detection
+and coordinate handling for spell targeting.
 """
 
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, messagebox
 import logging
 import threading
 import time
@@ -105,7 +105,26 @@ except ImportError:
                 logger.error(f"Error in fallback focus: {e}")
                 return False
 
+# Import additional functions for window detection
+try:
+    from app.windows_utils.windows_management import find_game_window
+except ImportError:
+    try:
+        from app.window_utils import find_game_window
+    except ImportError:
+        def find_game_window(window_name="Priston Tale"):
+            """Fallback function to find game window"""
+            logger = logging.getLogger('PristonBot')
+            logger.warning(f"Using fallback to find game window: {window_name}")
+            try:
+                import win32gui
+                return win32gui.FindWindow(None, window_name)
+            except Exception as e:
+                logger.error(f"Error in fallback window finding: {e}")
+                return None
+
 from app.bar_selector import BarDetector, HEALTH_COLOR_RANGE, MANA_COLOR_RANGE, STAMINA_COLOR_RANGE
+from app.config import load_config
 
 logger = logging.getLogger('PristonBot')
 
@@ -161,6 +180,8 @@ class BotControllerUI:
         
         # Game window reference
         self.game_window = None
+        self.game_window_rect = None
+        self.game_hwnd = None
         
         # Initialize target zone selector
         self.target_zone_selector = None
@@ -264,6 +285,14 @@ class BotControllerUI:
         ttk.Label(target_frame, text="Target Offset:", width=12).pack(side=tk.LEFT)
         self.target_var = tk.StringVar(value="(0, 0)")
         ttk.Label(target_frame, textvariable=self.target_var).pack(side=tk.LEFT)
+        
+        # Game window status
+        window_frame = ttk.Frame(values_left)
+        window_frame.pack(fill=tk.X, pady=2)
+        
+        ttk.Label(window_frame, text="Game Window:", width=10).pack(side=tk.LEFT)
+        self.window_var = tk.StringVar(value="Not Detected")
+        ttk.Label(window_frame, textvariable=self.window_var).pack(side=tk.LEFT)
         
         # Control buttons
         button_frame = ttk.Frame(self.parent)
@@ -454,6 +483,106 @@ class BotControllerUI:
         
         logger.debug(f"Generated new random offset: ({x_offset}, {y_offset})")
         return x_offset, y_offset
+        
+    def _find_and_setup_game_window(self):
+        """Find and set up the game window for targeting"""
+        # Try several methods to find the game window
+        
+        # 1. First try to load from config
+        try:
+            config = load_config()
+            window_config = config.get("bars", {}).get("game_window", {})
+            
+            if window_config.get("configured", False):
+                # Check if we have all coordinates
+                if all(window_config.get(key) is not None for key in ["x1", "y1", "x2", "y2"]):
+                    x1 = window_config["x1"]
+                    y1 = window_config["y1"]
+                    x2 = window_config["x2"]
+                    y2 = window_config["y2"]
+                    
+                    self.game_window_rect = (x1, y1, x2, y2)
+                    self.log_callback(f"Game window found in configuration: ({x1},{y1})-({x2},{y2})")
+                    self.window_var.set(f"Config: {x2-x1}x{y2-y1}")
+                    logger.info(f"Game window loaded from config: ({x1},{y1})-({x2},{y2})")
+                    return True
+        except Exception as e:
+            logger.error(f"Error loading game window from config: {e}")
+        
+        # 2. Try to find it via the root object or UI components
+        try:
+            # Check various UI components
+            for attr_name in dir(self.root):
+                attr = getattr(self.root, attr_name)
+                if hasattr(attr, 'game_window') and hasattr(attr.game_window, 'is_setup') and attr.game_window.is_setup():
+                    game_window = attr.game_window
+                    self.game_window = game_window
+                    
+                    x1, y1, x2, y2 = game_window.x1, game_window.y1, game_window.x2, game_window.y2
+                    self.game_window_rect = (x1, y1, x2, y2)
+                    
+                    self.log_callback(f"Game window found via UI: ({x1},{y1})-({x2},{y2})")
+                    self.window_var.set(f"UI: {x2-x1}x{y2-y1}")
+                    logger.info(f"Game window found via UI: ({x1},{y1})-({x2},{y2})")
+                    return True
+                
+                # Try looking for bar_selector_ui
+                if hasattr(attr, 'bar_selector_ui') and hasattr(attr.bar_selector_ui, 'game_window'):
+                    game_window = attr.bar_selector_ui.game_window
+                    if hasattr(game_window, 'is_setup') and game_window.is_setup():
+                        self.game_window = game_window
+                        
+                        x1, y1, x2, y2 = game_window.x1, game_window.y1, game_window.x2, game_window.y2
+                        self.game_window_rect = (x1, y1, x2, y2)
+                        
+                        self.log_callback(f"Game window found via bar selector UI: ({x1},{y1})-({x2},{y2})")
+                        self.window_var.set(f"BarSel: {x2-x1}x{y2-y1}")
+                        logger.info(f"Game window found via bar selector UI: ({x1},{y1})-({x2},{y2})")
+                        return True
+        except Exception as e:
+            logger.error(f"Error finding game window via UI: {e}")
+        
+        # 3. Try to find the window by name using OS functions
+        try:
+            game_hwnd = find_game_window("Priston Tale")
+            if game_hwnd:
+                from app.window_utils import get_window_rect
+                window_rect = get_window_rect(game_hwnd)
+                
+                if window_rect:
+                    self.game_hwnd = game_hwnd
+                    self.game_window_rect = window_rect
+                    
+                    x1, y1, x2, y2 = window_rect
+                    self.log_callback(f"Game window found via OS: ({x1},{y1})-({x2},{y2})")
+                    self.window_var.set(f"OS: {x2-x1}x{y2-y1}")
+                    logger.info(f"Game window found via OS: ({x1},{y1})-({x2},{y2})")
+                    return True
+        except Exception as e:
+            logger.error(f"Error finding game window via OS: {e}")
+        
+        # 4. Estimate from bar position as last resort
+        try:
+            # Use HP bar position to guess game window
+            if hasattr(self.hp_bar, 'x1') and hasattr(self.hp_bar, 'y1'):
+                # Create a reasonable estimate
+                padding = 500
+                x1 = max(0, self.hp_bar.x1 - padding)
+                y1 = max(0, self.hp_bar.y1 - padding)
+                x2 = self.hp_bar.x2 + padding
+                y2 = self.hp_bar.y2 + 100  # Less padding at bottom
+                
+                self.game_window_rect = (x1, y1, x2, y2)
+                self.log_callback(f"Game window estimated from HP bar: ({x1},{y1})-({x2},{y2})")
+                self.window_var.set(f"Est: {x2-x1}x{y2-y1}")
+                logger.info(f"Game window estimated from HP bar position: ({x1},{y1})-({x2},{y2})")
+                return True
+        except Exception as e:
+            logger.error(f"Error estimating game window from bars: {e}")
+        
+        self.log_callback("WARNING: Game window could not be detected")
+        logger.warning("Failed to find game window through any method")
+        return False
     
     def bot_loop(self):
         """Main bot loop that checks bars and uses potions"""
@@ -467,103 +596,51 @@ class BotControllerUI:
         self.log_callback("Bot started")
         logger.info("Bot loop started")
         
-        # Save game window reference
-        self.game_window = None
-        game_window_rect = None
-        game_hwnd = None
+        # Find and set up game window
+        game_window_found = self._find_and_setup_game_window()
         
-        # IMPORTANT FIX: Get the game window from hp_bar's screen selector
-        try:
-            # Check if there's a direct game_window attribute
-            if hasattr(self.hp_bar, 'game_window') and self.hp_bar.is_setup():
-                self.game_window = self.hp_bar.game_window
-                logger.info(f"Found game window via hp_bar attribute")
-            # Or check for one more level of nesting
-            elif hasattr(self.hp_bar, 'screen_selector') and self.hp_bar.screen_selector.is_setup():
-                self.game_window = self.hp_bar.screen_selector
-                logger.info(f"Found game window via screen_selector")
-            # Try the main UI structure
-            elif hasattr(self.root, 'bar_selector_ui') and hasattr(self.root.bar_selector_ui, 'game_window'):
-                self.game_window = self.root.bar_selector_ui.game_window
-                logger.info(f"Found game window via root.bar_selector_ui")
-            # Fallback to looking through all attributes
-            else:
-                for attr_name in dir(self.root):
-                    attr = getattr(self.root, attr_name)
-                    if hasattr(attr, 'game_window') and hasattr(attr.game_window, 'is_setup') and attr.game_window.is_setup():
-                        self.game_window = attr.game_window
-                        logger.info(f"Found game window via root.{attr_name}")
-                        break
-        except Exception as e:
-            logger.error(f"Error finding game window: {e}")
-        
-        # Check if we found a valid game window
-        if self.game_window and hasattr(self.game_window, 'is_setup') and self.game_window.is_setup():
-            game_window_rect = (
-                self.game_window.x1,
-                self.game_window.y1,
-                self.game_window.x2,
-                self.game_window.y2
+        if not game_window_found:
+            self.log_callback("WARNING: Game window not detected. Some functionality may not work properly.")
+            messagebox.showwarning(
+                "Game Window Not Found",
+                "The game window could not be detected. Spell targeting may not work correctly.\n\n"
+                "Please make sure the game window is configured and visible.",
+                parent=self.root
             )
-            
-            # Try to find the game window handle
-            try:
-                from app.window_utils import find_game_window
-                game_hwnd = find_game_window("Priston Tale")
-                if game_hwnd:
-                    logger.info(f"Found game window handle: {game_hwnd}")
-            except (ImportError, AttributeError):
-                try:
-                    from app.windows_utils.windows_management import find_game_window
-                    game_hwnd = find_game_window("Priston Tale")
-                    if game_hwnd:
-                        logger.info(f"Found game window handle: {game_hwnd}")
-                except (ImportError, AttributeError):
-                    logger.warning("find_game_window function not available")
-            
-            self.log_callback(f"Game window found at ({self.game_window.x1},{self.game_window.y1})-({self.game_window.x2},{self.game_window.y2})")
-            logger.info(f"Game window dimensions: ({self.game_window.x1},{self.game_window.y1})-({self.game_window.x2},{self.game_window.y2})")
-        else:
-            self.log_callback("WARNING: Game window not properly configured. Will use manual approach for targeting.")
-            logger.warning("Game window not properly configured")
-            
-            # Try to find alternative sources of the game window
-            if hasattr(self.hp_bar, 'x1') and hasattr(self.hp_bar, 'x2') and hasattr(self.hp_bar, 'y1') and hasattr(self.hp_bar, 'y2'):
-                # Estimate the game window from the health bar position
-                logger.info("Estimating game window from health bar position")
-                # Assuming the game window extends around the health bar
-                game_window_rect = (
-                    max(0, self.hp_bar.x1 - 500),  # Left
-                    max(0, self.hp_bar.y1 - 500),  # Top
-                    self.hp_bar.x2 + 500,  # Right
-                    self.hp_bar.y2 + 100   # Bottom
-                )
-                logger.info(f"Estimated game window: {game_window_rect}")
         
-        # Get the settings
+        # Load target zone selector if needed
         settings = self.settings_ui.get_settings()
-        
-        # Check if spellcasting is enabled and log it
         if settings["spellcasting"]["enabled"]:
-            self.log_callback(f"Auto spellcasting enabled with key {settings['spellcasting']['spell_key']} " + 
-                            f"at {settings['spellcasting']['spell_interval']}s interval")
-            logger.info(f"Spellcasting enabled: Key={settings['spellcasting']['spell_key']}, " + 
-                        f"Interval={settings['spellcasting']['spell_interval']}s")
-            
-            # Check if random targeting is enabled
-            if settings["spellcasting"].get("random_targeting", False):
-                radius = settings["spellcasting"].get("target_radius", 100)
-                change_interval = settings["spellcasting"].get("target_change_interval", 5)
-                self.log_callback(f"Random spell targeting enabled with {radius}px radius, changing every {change_interval} casts")
-                logger.info(f"Random targeting: Radius={radius}px, Change interval={change_interval} casts")
-                
-                # Generate initial random target
-                self.target_x_offset, self.target_y_offset = self.generate_random_target_offsets(radius)
-                self.log_callback(f"Initial target offset: ({self.target_x_offset}, {self.target_y_offset})")
-                logger.info(f"Initial target offset: ({self.target_x_offset}, {self.target_y_offset})")
-                
-                # Update target display if available
-                self.target_var.set(f"({self.target_x_offset}, {self.target_y_offset})")
+            target_zone = settings["spellcasting"].get("target_zone", {})
+            if target_zone and all(k in target_zone for k in ["x1", "y1", "x2", "y2"]):
+                try:
+                    from app.target_zone_selector import TargetZoneSelector
+                    self.target_zone_selector = TargetZoneSelector(self.root)
+                    
+                    # Get the number of target points to generate
+                    num_points = settings["spellcasting"].get("target_points_count", 8)
+                    self.target_zone_selector.num_target_points = num_points
+                    
+                    # Configure the target zone
+                    self.target_zone_selector.configure_from_saved(
+                        target_zone["x1"], 
+                        target_zone["y1"], 
+                        target_zone["x2"], 
+                        target_zone["y2"],
+                        target_zone.get("points", [])  # Use saved points if available
+                    )
+                    
+                    # If we have points but they don't match the expected count, regenerate them
+                    if (len(self.target_zone_selector.target_points) != num_points):
+                        self.log_callback(f"Regenerating target points to match count ({num_points})")
+                        self.target_zone_selector.num_target_points = num_points
+                        self.target_zone_selector.generate_target_points()
+                        
+                    self.log_callback(f"Loaded target zone with {len(self.target_zone_selector.target_points)} targeting points")
+                    
+                except Exception as e:
+                    logger.error(f"Error loading target zone selector: {e}", exc_info=True)
+                    self.log_callback(f"Error loading target zone: {e}")
         
         # Log initial values
         status_message = (f"Health: {self.prev_hp_percent:.1f}% | " +
@@ -652,7 +729,6 @@ class BotControllerUI:
                     last_mp_potion = current_time
                     
                     # Update statistics
-                    # Update statistics
                     self.mp_potions_used += 1
                     self.mp_potions_var.set(str(self.mp_potions_used))
                 
@@ -679,44 +755,29 @@ class BotControllerUI:
                         
                         # Initialize target coordinates
                         target_x, target_y = None, None
+                        using_target_zone = False
                         
-                        # Check if we have a configured target zone
-                        target_zone = settings["spellcasting"].get("target_zone", {})
+                        # IMPROVED TARGETING PRIORITY:
+                        # 1. First try target zone if configured
+                        if self.target_zone_selector and self.target_zone_selector.is_setup():
+                            # Get a random target from the zone
+                            target_point = self.target_zone_selector.get_random_target()
+                            if target_point:
+                                target_x, target_y = target_point
+                                using_target_zone = True
+                                self.log_callback(f"Targeting at zone point: ({target_x}, {target_y})")
+                                logger.info(f"Using target zone point: ({target_x}, {target_y})")
+                                
+                                # Update target display
+                                if self.game_window_rect:
+                                    gx1, gy1, gx2, gy2 = self.game_window_rect
+                                    rel_x, rel_y = target_x - gx1, target_y - gy1
+                                    self.target_var.set(f"Z:({rel_x}, {rel_y})")
+                                else:
+                                    self.target_var.set(f"Z:({target_x}, {target_y})")
                         
-                        if target_zone and all(k in target_zone for k in ["x1", "y1", "x2", "y2"]):
-                            # Load target zone selector if not already loaded
-                            if self.target_zone_selector is None:
-                                try:
-                                    from app import TargetZoneSelector
-                                    self.target_zone_selector = TargetZoneSelector(self.root)
-                                    self.target_zone_selector.configure_from_saved(
-                                        target_zone["x1"], 
-                                        target_zone["y1"], 
-                                        target_zone["x2"], 
-                                        target_zone["y2"],
-                                        target_zone.get("points", [])
-                                    )
-                                    self.log_callback(f"Loaded target zone with {len(self.target_zone_selector.target_points)} targeting points")
-                                except Exception as e:
-                                    logger.error(f"Error loading target zone selector: {e}", exc_info=True)
-                                    self.log_callback(f"Error loading target zone: {e}")
-                            
-                            # Use the target zone to get target coordinates
-                            if self.target_zone_selector and self.target_zone_selector.is_setup():
-                                # Get a random target from the zone
-                                target_point = self.target_zone_selector.get_random_target()
-                                if target_point:
-                                    target_x, target_y = target_point
-                                    self.log_callback(f"Targeting at zone point: ({target_x}, {target_y})")
-                                    
-                                    # Update target display
-                                    if game_window_rect:
-                                        self.target_var.set(f"({target_x-game_window_rect[0]}, {target_y-game_window_rect[1]})")
-                                    else:
-                                        self.target_var.set(f"({target_x}, {target_y})")
-                        
-                        # If no target zone or it failed, fall back to the ring method
-                        if target_x is None or target_y is None:
+                        # 2. If no target zone or it failed, use the ring method or random targeting
+                        if not using_target_zone and (target_x is None or target_y is None):
                             if target_method == "Ring Around Character" or settings["spellcasting"].get("random_targeting", False):
                                 # Get the radius and change interval
                                 radius = settings["spellcasting"].get("target_radius", 100)
@@ -731,30 +792,32 @@ class BotControllerUI:
                                     self.spells_cast_since_target_change = 0
                                     
                                     # Update target display
-                                    self.target_var.set(f"({self.target_x_offset}, {self.target_y_offset})")
+                                    self.target_var.set(f"R:({self.target_x_offset}, {self.target_y_offset})")
                                 
                                 # Log what we're doing
                                 self.log_callback(f"Casting spell ({spell_key}) with offset ({self.target_x_offset}, {self.target_y_offset})")
                                 logger.info(f"Casting spell with key {spell_key} and offset ({self.target_x_offset}, {self.target_y_offset})")
                                 
                                 # Calculate target coordinates using offsets if we have a game window
-                                if game_window_rect:
+                                if self.game_window_rect:
                                     # Calculate center of game window
-                                    center_x = (game_window_rect[0] + game_window_rect[2]) // 2
-                                    center_y = (game_window_rect[1] + game_window_rect[3]) // 2
+                                    gx1, gy1, gx2, gy2 = self.game_window_rect
+                                    center_x = (gx1 + gx2) // 2
+                                    center_y = (gy1 + gy2) // 2
                                     
                                     # Apply target offsets
                                     target_x = center_x + self.target_x_offset
                                     target_y = center_y + self.target_y_offset
                                     
                                     # Make sure target is within game window
-                                    target_x = max(game_window_rect[0], min(target_x, game_window_rect[2]))
-                                    target_y = max(game_window_rect[1], min(target_y, game_window_rect[3]))
+                                    target_x = max(gx1, min(target_x, gx2))
+                                    target_y = max(gy1, min(target_y, gy2))
                             else:
                                 # Just cast in the middle of the screen if no targeting method is available
-                                if game_window_rect:
-                                    target_x = (game_window_rect[0] + game_window_rect[2]) // 2
-                                    target_y = (game_window_rect[1] + game_window_rect[3]) // 2
+                                if self.game_window_rect:
+                                    gx1, gy1, gx2, gy2 = self.game_window_rect
+                                    target_x = (gx1 + gx2) // 2
+                                    target_y = (gy1 + gy2) // 2
                         
                         # Press the spell key
                         press_key(None, spell_key)
@@ -768,9 +831,9 @@ class BotControllerUI:
                             logger.info(f"Target coordinates: ({target_x}, {target_y})")
                             
                             # Focus the game window if we have a handle
-                            if game_hwnd:
+                            if self.game_hwnd:
                                 try:
-                                    focus_game_window(game_hwnd)
+                                    focus_game_window(self.game_hwnd)
                                     logger.info(f"Focused game window")
                                     time.sleep(0.2)  # Ensure window is focused
                                 except Exception as e:
@@ -814,6 +877,7 @@ class BotControllerUI:
                         else:
                             # If we don't have coordinates, just right-click at current position
                             press_right_mouse(None)
+                            logger.info("Right-clicked at current mouse position (no coordinates available)")
                         
                         # Update state
                         last_spell_cast = current_time

@@ -17,11 +17,11 @@
         "enabled": true,
         "spell_key": "F1",
         "spell_interval": 1.208955223880597,
-        "random_targeting": false,
-        "target_radius": 278,
-        "target_change_interval": 2,
+        "random_targeting": true,
+        "target_radius": 72,
+        "target_change_interval": 1,
         "target_method": "Ring Around Character",
-        "target_points_count": 16
+        "target_points_count": 8
     },
     "bars": {
         "game_window": {

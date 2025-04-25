@@ -3,7 +3,6 @@ Monster Target Zone Selector for Priston Tale Potion Bot
 ------------------------------------------------------
 This module implements a target zone selector that allows the user
 to define an area where monsters typically appear for better spell targeting.
-Save this file as app/target_zone_selector.py
 """
 
 import tkinter as tk
@@ -13,6 +12,7 @@ import os
 import random
 import numpy as np
 import math
+from tkinter import messagebox
 
 class TargetZoneSelector:
     """Class for selecting the monster target zone"""
@@ -44,6 +44,9 @@ class TargetZoneSelector:
         self.target_points = []
         self.num_target_points = 8  # Number of target points to generate
         
+        # Reference to game window (will be populated during selection)
+        self.game_window_rect = None
+        
     def is_setup(self):
         """Check if the target zone is configured"""
         return self.is_configured
@@ -65,20 +68,83 @@ class TargetZoneSelector:
         self.y2 = y2
         self.is_configured = True
         
-        # If target points were provided, use them
+        # If target points were provided and they're valid, use them
         if target_points and isinstance(target_points, list) and len(target_points) > 0:
-            self.target_points = target_points
-        else:
-            # Otherwise generate new target points
+            # Verify each point is a valid tuple
+            valid_points = []
+            for point in target_points:
+                if isinstance(point, tuple) and len(point) == 2:
+                    valid_points.append(point)
+                elif isinstance(point, list) and len(point) == 2:
+                    # Convert lists to tuples for consistency
+                    valid_points.append((point[0], point[1]))
+                    
+            if valid_points:
+                self.target_points = valid_points
+                self.logger.info(f"Loaded {len(valid_points)} target points from saved configuration")
+                
+                # Log the actual points for debugging
+                for i, point in enumerate(self.target_points):
+                    self.logger.debug(f"Target point {i}: ({point[0]}, {point[1]})")
+        
+        # If no valid points were provided or loaded, generate new ones
+        if not self.target_points or len(self.target_points) == 0:
             self.generate_target_points()
+            self.logger.info(f"Generated {len(self.target_points)} new target points")
             
-        self.logger.info(f"Target zone configured from saved coordinates: ({x1},{y1}) to ({x2},{y2})")
-        self.logger.info(f"Target zone contains {len(self.target_points)} targeting points")
         return True
+    
+    def _find_game_window(self):
+        """Find the game window configuration to ensure proper coordinate alignment"""
+        try:
+            # First try to get the game window from the root object
+            for attr_name in dir(self.root):
+                attr = getattr(self.root, attr_name)
+                if hasattr(attr, 'game_window') and hasattr(attr.game_window, 'is_setup') and attr.game_window.is_setup():
+                    game_window = attr.game_window
+                    return (game_window.x1, game_window.y1, game_window.x2, game_window.y2)
+                
+                # Try looking for bar_selector_ui
+                if hasattr(attr, 'bar_selector_ui') and hasattr(attr.bar_selector_ui, 'game_window'):
+                    game_window = attr.bar_selector_ui.game_window
+                    if hasattr(game_window, 'is_setup') and game_window.is_setup():
+                        return (game_window.x1, game_window.y1, game_window.x2, game_window.y2)
+            
+            # If we didn't find it through direct attributes, look within modules
+            from app.config import load_config
+            config = load_config()
+            game_window_config = config.get("bars", {}).get("game_window", {})
+            if game_window_config.get("configured", False):
+                return (
+                    game_window_config.get("x1"),
+                    game_window_config.get("y1"),
+                    game_window_config.get("x2"),
+                    game_window_config.get("y2")
+                )
+                
+            # If still not found, return None to indicate we couldn't find it
+            return None
+        except Exception as e:
+            self.logger.error(f"Error finding game window: {e}")
+            return None
         
     def start_selection(self):
         """Start the target zone selection process"""
         self.logger.info(f"Starting selection: {self.title}")
+        
+        # Try to find the game window first to ensure coordinate alignment
+        self.game_window_rect = self._find_game_window()
+        if self.game_window_rect:
+            self.logger.info(f"Found game window at: {self.game_window_rect}")
+        else:
+            # Warn the user that targeting might not be accurate
+            messagebox.showwarning(
+                "Game Window Not Found",
+                "The game window configuration could not be found. Target coordinates may not align properly. "
+                "Please make sure you've configured the game window first.",
+                parent=self.root
+            )
+            self.logger.warning("Game window not found, targeting may be inaccurate")
         
         # Create selection window that covers the entire screen
         self.selection_window = tk.Toplevel(self.root)
@@ -98,6 +164,25 @@ class TargetZoneSelector:
         self.canvas.pack(fill=tk.BOTH, expand=True)
         self.canvas.create_image(0, 0, image=self.screenshot_tk, anchor=tk.NW)
         
+        # If we have a game window, highlight it
+        if self.game_window_rect:
+            x1, y1, x2, y2 = self.game_window_rect
+            # Draw a rectangle around the game window
+            self.canvas.create_rectangle(
+                x1, y1, x2, y2,
+                outline="yellow",
+                width=3,
+                dash=(5, 5)  # Dashed line
+            )
+            # Add text label
+            self.canvas.create_text(
+                x1 + (x2 - x1) // 2,
+                y1 - 10,
+                text="Game Window",
+                fill="yellow",
+                font=("Arial", 12, "bold")
+            )
+        
         # Bind mouse events
         self.canvas.bind("<ButtonPress-1>", self.on_press)
         self.canvas.bind("<B1-Motion>", self.on_drag)
@@ -112,6 +197,17 @@ class TargetZoneSelector:
             fill="white",
             font=("Arial", 18),
         )
+        
+        # Add additional instruction if game window is found
+        if self.game_window_rect:
+            additional_text = "Make your selection within the yellow-outlined game window"
+            self.canvas.create_text(
+                self.selection_window.winfo_screenwidth() // 2,
+                90,
+                text=additional_text,
+                fill="yellow",
+                font=("Arial", 14)
+            )
         
         # Bind escape key to cancel
         self.selection_window.bind("<Escape>", self._on_escape)
@@ -156,6 +252,47 @@ class TargetZoneSelector:
             self.x1, self.x2 = self.x2, self.x1
         if self.y1 > self.y2:
             self.y1, self.y2 = self.y2, self.y1
+        
+        # Check if selection is within game window bounds (if we have a game window)
+        if self.game_window_rect:
+            gx1, gy1, gx2, gy2 = self.game_window_rect
+            
+            # If selection is completely outside the game window, warn the user
+            if (self.x2 < gx1 or self.x1 > gx2 or self.y2 < gy1 or self.y1 > gy2):
+                warning_result = messagebox.askquestion(
+                    "Warning: Selection Outside Game Window",
+                    "Your selection is outside the game window. Targeting may not work correctly.\n\n"
+                    "Do you want to proceed with this selection anyway?",
+                    icon='warning'
+                )
+                
+                if warning_result != 'yes':
+                    # Reset selection and let them try again
+                    self.canvas.delete(self.selection_rect)
+                    self.is_selecting = False
+                    return
+            
+            # If selection is partially outside, adjust it to fit within game window
+            elif (self.x1 < gx1 or self.x2 > gx2 or self.y1 < gy1 or self.y2 > gy2):
+                adjust_result = messagebox.askquestion(
+                    "Adjust Selection",
+                    "Your selection extends beyond the game window bounds. "
+                    "Would you like to adjust it to fit within the game window?",
+                    icon='question'
+                )
+                
+                if adjust_result == 'yes':
+                    # Adjust selection to fit within game window
+                    old_x1, old_y1, old_x2, old_y2 = self.x1, self.y1, self.x2, self.y2
+                    self.x1 = max(self.x1, gx1)
+                    self.y1 = max(self.y1, gy1)
+                    self.x2 = min(self.x2, gx2)
+                    self.y2 = min(self.y2, gy2)
+                    
+                    # Update rectangle on canvas
+                    self.canvas.coords(self.selection_rect, self.x1, self.y1, self.x2, self.y2)
+                    
+                    self.logger.info(f"Adjusted selection from ({old_x1},{old_y1})-({old_x2},{old_y2}) to ({self.x1},{self.y1})-({self.x2},{self.y2})")
             
         # Display selected area details
         self.canvas.create_text(
@@ -173,7 +310,7 @@ class TargetZoneSelector:
         self._draw_target_points()
         
         # Ask for confirmation
-        confirmation = tk.messagebox.askyesno(
+        confirmation = messagebox.askyesno(
             f"Confirm {self.title} Selection",
             f"Is this the correct area for monster targeting?\nCoordinates: ({self.x1}, {self.y1}) to ({self.x2}, {self.y2})\n\n{len(self.target_points)} target points generated."
         )
@@ -259,9 +396,6 @@ class TargetZoneSelector:
         center_x = (self.x1 + self.x2) // 2
         center_y = (self.y1 + self.y2) // 2
         
-        # Generate target points in a semi-circle pattern in the lower half
-        # of the selection area, similar to the green circles in the screenshot
-        
         # Determine radius based on the smaller dimension, with some margin
         radius = min(width, height) * 0.4
         
@@ -282,10 +416,15 @@ class TargetZoneSelector:
             x = max(self.x1, min(x, self.x2))
             y = max(self.y1, min(y, self.y2))
             
+            # Add the exact coordinates of the point to the target points list
             self.target_points.append((x, y))
         
         self.logger.info(f"Generated {len(self.target_points)} target points")
         
+        # Additional logging to help with debugging
+        for i, point in enumerate(self.target_points):
+            self.logger.debug(f"Target point {i}: ({point[0]}, {point[1]})")
+    
     def get_random_target(self):
         """Get a random target point within the selection
         
@@ -293,8 +432,10 @@ class TargetZoneSelector:
             Tuple of (x, y) coordinates for targeting
         """
         # If we have target points, choose one randomly
-        if self.target_points:
-            return random.choice(self.target_points)
+        if self.target_points and len(self.target_points) > 0:
+            chosen_point = random.choice(self.target_points)
+            self.logger.debug(f"Selected target point: {chosen_point}")
+            return chosen_point
         
         # Fallback: If no target points available, generate a random point
         if not all([self.x1, self.y1, self.x2, self.y2]):
@@ -305,4 +446,16 @@ class TargetZoneSelector:
         x = random.randint(self.x1, self.x2)
         y = random.randint(self.y1, self.y2)
         
+        self.logger.debug(f"Generated fallback point: ({x}, {y})")
         return (x, y)
+        
+    def get_serializable_points(self):
+        """Get target points in a format that can be serialized to JSON
+        
+        Returns:
+            List of [x, y] pairs
+        """
+        serializable_points = []
+        for point in self.target_points:
+            serializable_points.append([point[0], point[1]])
+        return serializable_points
