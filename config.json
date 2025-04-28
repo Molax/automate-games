@@ -16,40 +16,47 @@
     "spellcasting": {
         "enabled": true,
         "spell_key": "F1",
-        "spell_interval": 1.208955223880597,
-        "random_targeting": true,
-        "target_radius": 72,
-        "target_change_interval": 1,
-        "target_method": "Ring Around Character",
-        "target_points_count": 8
+        "spell_interval": 1.4557926829268293,
+        "use_target_zone": false,
+        "target_points_count": 8,
+        "target_zone": {
+            "x1": null,
+            "y1": null,
+            "x2": null,
+            "y2": null,
+            "points": []
+        },
+        "random_targeting": false,
+        "target_radius": 100,
+        "target_change_interval": 5
     },
     "bars": {
         "game_window": {
-            "x1": 225,
-            "y1": 43,
-            "x2": 1552,
-            "y2": 1005,
+            "x1": 156,
+            "y1": 42,
+            "x2": 1432,
+            "y2": 1039,
             "configured": true
         },
         "health_bar": {
-            "x1": 687,
-            "y1": 926,
-            "x2": 696,
-            "y2": 1040,
+            "x1": 555,
+            "y1": 915,
+            "x2": 567,
+            "y2": 1030,
             "configured": true
         },
         "mana_bar": {
-            "x1": 868,
-            "y1": 924,
-            "x2": 881,
-            "y2": 1036,
+            "x1": 738,
+            "y1": 916,
+            "x2": 750,
+            "y2": 1033,
             "configured": true
         },
         "stamina_bar": {
-            "x1": 665,
-            "y1": 947,
-            "x2": 673,
-            "y2": 1042,
+            "x1": 536,
+            "y1": 939,
+            "x2": 541,
+            "y2": 1031,
             "configured": true
         }
     }

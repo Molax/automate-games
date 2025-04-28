@@ -744,7 +744,6 @@ class BotControllerUI:
                     self.sp_potions_used += 1
                     self.sp_potions_var.set(str(self.sp_potions_used))
                 
-                # Check if spellcasting is enabled and it's time to cast
                 if settings["spellcasting"]["enabled"]:
                     spell_interval = settings["spellcasting"]["spell_interval"]
                     if current_time - last_spell_cast > spell_interval:
@@ -753,71 +752,80 @@ class BotControllerUI:
                         # Get targeting method preference
                         target_method = settings["spellcasting"].get("target_method", "Ring Around Character")
                         
+                        # IMPORTANT NEW CHECK: Check if mouse movement is enabled
+                        mouse_targeting_enabled = settings["spellcasting"].get("use_target_zone", True)
+                        
                         # Initialize target coordinates
                         target_x, target_y = None, None
                         using_target_zone = False
                         
-                        # IMPROVED TARGETING PRIORITY:
-                        # 1. First try target zone if configured
-                        if self.target_zone_selector and self.target_zone_selector.is_setup():
-                            # Get a random target from the zone
-                            target_point = self.target_zone_selector.get_random_target()
-                            if target_point:
-                                target_x, target_y = target_point
-                                using_target_zone = True
-                                self.log_callback(f"Targeting at zone point: ({target_x}, {target_y})")
-                                logger.info(f"Using target zone point: ({target_x}, {target_y})")
-                                
-                                # Update target display
-                                if self.game_window_rect:
-                                    gx1, gy1, gx2, gy2 = self.game_window_rect
-                                    rel_x, rel_y = target_x - gx1, target_y - gy1
-                                    self.target_var.set(f"Z:({rel_x}, {rel_y})")
-                                else:
-                                    self.target_var.set(f"Z:({target_x}, {target_y})")
-                        
-                        # 2. If no target zone or it failed, use the ring method or random targeting
-                        if not using_target_zone and (target_x is None or target_y is None):
-                            if target_method == "Ring Around Character" or settings["spellcasting"].get("random_targeting", False):
-                                # Get the radius and change interval
-                                radius = settings["spellcasting"].get("target_radius", 100)
-                                change_interval = settings["spellcasting"].get("target_change_interval", 5)
-                                
-                                # Generate new random target if needed
-                                if change_interval == 1 or self.spells_cast_since_target_change >= change_interval:
-                                    # Generate new random target offset
-                                    self.target_x_offset, self.target_y_offset = self.generate_random_target_offsets(radius)
-                                    self.log_callback(f"New target offset: ({self.target_x_offset}, {self.target_y_offset})")
-                                    logger.info(f"New target offset: ({self.target_x_offset}, {self.target_y_offset})")
-                                    self.spells_cast_since_target_change = 0
+                        # Only calculate target coordinates if mouse targeting is enabled
+                        if mouse_targeting_enabled:
+                            # IMPROVED TARGETING PRIORITY:
+                            # 1. First try target zone if configured
+                            if self.target_zone_selector and self.target_zone_selector.is_setup():
+                                # Get a random target from the zone
+                                target_point = self.target_zone_selector.get_random_target()
+                                if target_point:
+                                    target_x, target_y = target_point
+                                    using_target_zone = True
+                                    self.log_callback(f"Targeting at zone point: ({target_x}, {target_y})")
+                                    logger.info(f"Using target zone point: ({target_x}, {target_y})")
                                     
                                     # Update target display
-                                    self.target_var.set(f"R:({self.target_x_offset}, {self.target_y_offset})")
-                                
-                                # Log what we're doing
-                                self.log_callback(f"Casting spell ({spell_key}) with offset ({self.target_x_offset}, {self.target_y_offset})")
-                                logger.info(f"Casting spell with key {spell_key} and offset ({self.target_x_offset}, {self.target_y_offset})")
-                                
-                                # Calculate target coordinates using offsets if we have a game window
-                                if self.game_window_rect:
-                                    # Calculate center of game window
-                                    gx1, gy1, gx2, gy2 = self.game_window_rect
-                                    center_x = (gx1 + gx2) // 2
-                                    center_y = (gy1 + gy2) // 2
+                                    if self.game_window_rect:
+                                        gx1, gy1, gx2, gy2 = self.game_window_rect
+                                        rel_x, rel_y = target_x - gx1, target_y - gy1
+                                        self.target_var.set(f"Z:({rel_x}, {rel_y})")
+                                    else:
+                                        self.target_var.set(f"Z:({target_x}, {target_y})")
+                            
+                            # 2. If no target zone or it failed, use the ring method or random targeting
+                            if not using_target_zone and (target_x is None or target_y is None):
+                                if target_method == "Ring Around Character" or settings["spellcasting"].get("random_targeting", False):
+                                    # Get the radius and change interval
+                                    radius = settings["spellcasting"].get("target_radius", 100)
+                                    change_interval = settings["spellcasting"].get("target_change_interval", 5)
                                     
-                                    # Apply target offsets
-                                    target_x = center_x + self.target_x_offset
-                                    target_y = center_y + self.target_y_offset
+                                    # Generate new random target if needed
+                                    if change_interval == 1 or self.spells_cast_since_target_change >= change_interval:
+                                        # Generate new random target offset
+                                        self.target_x_offset, self.target_y_offset = self.generate_random_target_offsets(radius)
+                                        self.log_callback(f"New target offset: ({self.target_x_offset}, {self.target_y_offset})")
+                                        logger.info(f"New target offset: ({self.target_x_offset}, {self.target_y_offset})")
+                                        self.spells_cast_since_target_change = 0
+                                        
+                                        # Update target display
+                                        self.target_var.set(f"R:({self.target_x_offset}, {self.target_y_offset})")
                                     
-                                    # Make sure target is within game window
-                                    target_x = max(gx1, min(target_x, gx2))
-                                    target_y = max(gy1, min(target_y, gy2))
-                            else:
-                                # Just cast in the middle of the screen if no targeting method is available
-                                if self.game_window_rect:
-                                    gx1, gy1, gx2, gy2 = self.game_window_rect
-                                    target_x = (gx1 + gx2) // 2
-                                    target_y = (gy1 + gy2) // 2
+                                    # Log what we're doing
+                                    self.log_callback(f"Casting spell ({spell_key}) with offset ({self.target_x_offset}, {self.target_y_offset})")
+                                    logger.info(f"Casting spell with key {spell_key} and offset ({self.target_x_offset}, {self.target_y_offset})")
+                                    
+                                    # Calculate target coordinates using offsets if we have a game window
+                                    if self.game_window_rect:
+                                        # Calculate center of game window
+                                        gx1, gy1, gx2, gy2 = self.game_window_rect
+                                        center_x = (gx1 + gx2) // 2
+                                        center_y = (gy1 + gy2) // 2
+                                        
+                                        # Apply target offsets
+                                        target_x = center_x + self.target_x_offset
+                                        target_y = center_y + self.target_y_offset
+                                        
+                                        # Make sure target is within game window
+                                        target_x = max(gx1, min(target_x, gx2))
+                                        target_y = max(gy1, min(target_y, gy2))
+                                else:
+                                    # Just cast in the middle of the screen if no targeting method is available
+                                    if self.game_window_rect:
+                                        gx1, gy1, gx2, gy2 = self.game_window_rect
+                                        target_x = (gx1 + gx2) // 2
+                                        target_y = (gy1 + gy2) // 2
+                        else:
+                            # If mouse targeting is disabled, log this
+                            self.log_callback(f"Casting spell ({spell_key}) without mouse movement")
+                            logger.info(f"Casting spell with key {spell_key} without mouse movement")
                         
                         # Press the spell key
                         press_key(None, spell_key)
@@ -825,8 +833,8 @@ class BotControllerUI:
                         # Small delay before right-clicking
                         time.sleep(0.1)
                         
-                        # Right-click at target position if we have valid coordinates
-                        if target_x is not None and target_y is not None:
+                        # Right-click at target position only if mouse targeting is enabled
+                        if mouse_targeting_enabled and target_x is not None and target_y is not None:
                             # Log the actual coordinates we're using
                             logger.info(f"Target coordinates: ({target_x}, {target_y})")
                             
@@ -874,10 +882,7 @@ class BotControllerUI:
                                 except Exception as e2:
                                     logger.error(f"Fallback mouse methods also failed: {e2}")
                                     self.log_callback(f"Error with mouse movement: {e2}")
-                        else:
-                            # If we don't have coordinates, just right-click at current position
-                            press_right_mouse(None)
-                            logger.info("Right-clicked at current mouse position (no coordinates available)")
+                        # If mouse targeting disabled, we only used the spell key, but no need for right-click
                         
                         # Update state
                         last_spell_cast = current_time
