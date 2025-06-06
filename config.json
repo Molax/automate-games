@@ -16,9 +16,9 @@
     "spellcasting": {
         "enabled": true,
         "spell_key": "F1",
-        "spell_interval": 1.4557926829268293,
+        "spell_interval": 1.0125899280575539,
         "use_target_zone": false,
-        "target_points_count": 8,
+        "target_points_count": 4,
         "target_zone": {
             "x1": null,
             "y1": null,
@@ -32,31 +32,31 @@
     },
     "bars": {
         "game_window": {
-            "x1": 156,
-            "y1": 42,
-            "x2": 1432,
-            "y2": 1039,
+            "x1": 794,
+            "y1": 70,
+            "x2": 2108,
+            "y2": 1066,
             "configured": true
         },
         "health_bar": {
-            "x1": 555,
-            "y1": 915,
-            "x2": 567,
-            "y2": 1030,
+            "x1": 1236,
+            "y1": 950,
+            "x2": 1247,
+            "y2": 1062,
             "configured": true
         },
         "mana_bar": {
-            "x1": 738,
-            "y1": 916,
-            "x2": 750,
-            "y2": 1033,
+            "x1": 1418,
+            "y1": 948,
+            "x2": 1430,
+            "y2": 1063,
             "configured": true
         },
         "stamina_bar": {
-            "x1": 536,
-            "y1": 939,
-            "x2": 541,
-            "y2": 1031,
+            "x1": 1215,
+            "y1": 969,
+            "x2": 1222,
+            "y2": 1062,
             "configured": true
         }
     }

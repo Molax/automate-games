@@ -744,6 +744,7 @@ class BotControllerUI:
                     self.sp_potions_used += 1
                     self.sp_potions_var.set(str(self.sp_potions_used))
                 
+                # FIXED SPELLCASTING LOGIC
                 if settings["spellcasting"]["enabled"]:
                     spell_interval = settings["spellcasting"]["spell_interval"]
                     if current_time - last_spell_cast > spell_interval:
@@ -752,7 +753,7 @@ class BotControllerUI:
                         # Get targeting method preference
                         target_method = settings["spellcasting"].get("target_method", "Ring Around Character")
                         
-                        # IMPORTANT NEW CHECK: Check if mouse movement is enabled
+                        # Check if mouse movement/targeting is enabled
                         mouse_targeting_enabled = settings["spellcasting"].get("use_target_zone", True)
                         
                         # Initialize target coordinates
@@ -823,9 +824,9 @@ class BotControllerUI:
                                         target_x = (gx1 + gx2) // 2
                                         target_y = (gy1 + gy2) // 2
                         else:
-                            # If mouse targeting is disabled, log this
-                            self.log_callback(f"Casting spell ({spell_key}) without mouse movement")
-                            logger.info(f"Casting spell with key {spell_key} without mouse movement")
+                            # If mouse targeting is disabled, we'll cast at current mouse position
+                            self.log_callback(f"Casting spell ({spell_key}) at current mouse position")
+                            logger.info(f"Casting spell with key {spell_key} at current mouse position")
                         
                         # Press the spell key
                         press_key(None, spell_key)
@@ -833,9 +834,9 @@ class BotControllerUI:
                         # Small delay before right-clicking
                         time.sleep(0.1)
                         
-                        # Right-click at target position only if mouse targeting is enabled
+                        # FIXED: Always right-click, either at calculated position or current mouse position
                         if mouse_targeting_enabled and target_x is not None and target_y is not None:
-                            # Log the actual coordinates we're using
+                            # Move to calculated target position and right-click
                             logger.info(f"Target coordinates: ({target_x}, {target_y})")
                             
                             # Focus the game window if we have a handle
@@ -882,7 +883,27 @@ class BotControllerUI:
                                 except Exception as e2:
                                     logger.error(f"Fallback mouse methods also failed: {e2}")
                                     self.log_callback(f"Error with mouse movement: {e2}")
-                        # If mouse targeting disabled, we only used the spell key, but no need for right-click
+                        else:
+                            # Right-click at current mouse position (no movement)
+                            try:
+                                press_right_mouse(None)
+                                logger.info("Right-clicked at current mouse position")
+                            except Exception as e:
+                                logger.error(f"Error right-clicking at current position: {e}")
+                                
+                                # Fallback right-click method
+                                try:
+                                    import ctypes
+                                    MOUSEEVENTF_RIGHTDOWN = 0x0008
+                                    MOUSEEVENTF_RIGHTUP = 0x0010
+                                    logger.info("Right-clicking using fallback mouse_event")
+                                    ctypes.windll.user32.mouse_event(MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0)
+                                    time.sleep(0.1)
+                                    ctypes.windll.user32.mouse_event(MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0)
+                                    logger.info("Completed fallback right-click")
+                                except Exception as e2:
+                                    logger.error(f"Fallback right-click also failed: {e2}")
+                                    self.log_callback(f"Error with right-click: {e2}")
                         
                         # Update state
                         last_spell_cast = current_time
