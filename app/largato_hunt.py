@@ -1,14 +1,7 @@
 """
-Largato Hunt Module for Priston Tale Potion Bot
----------------------------------------------
-Save this file as: app/largato_hunt.py
-
-This module implements automated hunting in the 2D Largato dungeon.
-Features:
-- Automatic movement using arrow keys
-- Wood stack detection and destruction
-- Attack automation using X key
-- Completion tracking (4 wood stacks)
+Improved Largato Hunt Module for Priston Tale Potion Bot
+-----------------------------------------------------
+Enhanced wood detection accuracy and faster movement system.
 """
 
 import time
@@ -17,20 +10,16 @@ import threading
 import random
 import os
 
-# Try to import OpenCV, with fallback if not available
 try:
     import cv2
     import numpy as np
     OPENCV_AVAILABLE = True
 except ImportError:
     OPENCV_AVAILABLE = False
-    print("Warning: OpenCV not available. Largato Hunt will use fallback detection.")
 
-from PIL import ImageGrab, Image
+from PIL import ImageGrab, Image, ImageDraw
 
-# Import key press functions with fallbacks
 def get_press_key_function():
-    """Get the best available key press function"""
     try:
         from app.windows_utils.keyboard import press_key
         return press_key
@@ -39,20 +28,15 @@ def get_press_key_function():
             from app.window_utils import press_key
             return press_key
         except ImportError:
-            # Fallback key press function
             import ctypes
             def press_key(hwnd, key):
-                """Fallback press_key function"""
                 logger = logging.getLogger('PristonBot')
-                logger.info(f"Using fallback key press for '{key}'")
                 
-                # Map common keys to virtual key codes
                 key_map = {
                     'up': 0x26, 'down': 0x28, 'left': 0x25, 'right': 0x27,
                     'x': 0x58, 'space': 0x20, 'enter': 0x0D
                 }
                 
-                # Get virtual key code
                 if isinstance(key, str):
                     key = key.lower()
                     vk_code = key_map.get(key)
@@ -66,15 +50,11 @@ def get_press_key_function():
                     vk_code = key
                     
                 try:
-                    # Define key event flags
                     KEYEVENTF_KEYDOWN = 0x0000
                     KEYEVENTF_KEYUP = 0x0002
                     
-                    # Send key down
                     ctypes.windll.user32.keybd_event(vk_code, 0, KEYEVENTF_KEYDOWN, 0)
-                    time.sleep(0.05)  # Small delay between down and up
-                    
-                    # Send key up
+                    time.sleep(0.05)
                     ctypes.windll.user32.keybd_event(vk_code, 0, KEYEVENTF_KEYUP, 0)
                     
                     return True
@@ -83,61 +63,52 @@ def get_press_key_function():
                     return False
             return press_key
 
-# Get the press_key function
 press_key = get_press_key_function()
-
 logger = logging.getLogger('PristonBot')
 
 class LargatoHunter:
-    """Class for automating Largato dungeon hunting"""
-    
     def __init__(self, log_callback):
-        """
-        Initialize the Largato Hunter
-        
-        Args:
-            log_callback: Function to call for logging messages
-        """
         self.log_callback = log_callback
         self.logger = logging.getLogger('PristonBot')
         
-        # Hunt state
         self.running = False
         self.hunt_thread = None
         
-        # Statistics
         self.wood_stacks_destroyed = 0
         self.total_attacks = 0
         self.hunt_start_time = None
         
-        # Movement state
         self.last_move_direction = 'right'
-        self.movement_variation = 0  # Counter for up/down movement
+        self.movement_variation = 0
         
-        # Load reference images
         self.wood_stack_template = None
         self.destroyed_wood_template = None
         self.load_reference_images()
         
-        # Game window detection
         self.game_window_rect = None
         
+        self.detection_confidence_threshold = 0.7
+        self.false_positive_counter = 0
+        self.max_false_positives = 3
+        
+        self.last_wood_detection_time = 0
+        self.wood_detection_cooldown = 5.0
+        
     def load_reference_images(self):
-        """Load reference images for template matching"""
         if not OPENCV_AVAILABLE:
             self.logger.warning("OpenCV not available - using fallback detection")
             return
             
         try:
-            # Load wood stack template
-            wood_path = "largato_tronco.png"
-            if os.path.exists(wood_path):
-                self.wood_stack_template = cv2.imread(wood_path, cv2.IMREAD_COLOR)
-                self.logger.info("Loaded wood stack template")
+            wood_paths = ["wood_detailed.png", "largato_tronco.png", "wood_found.png"]
+            for wood_path in wood_paths:
+                if os.path.exists(wood_path):
+                    self.wood_stack_template = cv2.imread(wood_path, cv2.IMREAD_COLOR)
+                    self.logger.info(f"Loaded wood stack template: {wood_path}")
+                    break
             else:
-                self.logger.warning(f"Wood stack template not found: {wood_path}")
+                self.logger.warning("No wood stack template found")
             
-            # Load destroyed wood template
             destroyed_path = "largato_tronco_destruido.png"
             if os.path.exists(destroyed_path):
                 self.destroyed_wood_template = cv2.imread(destroyed_path, cv2.IMREAD_COLOR)
@@ -149,9 +120,7 @@ class LargatoHunter:
             self.logger.error(f"Error loading reference images: {e}")
     
     def find_game_window(self):
-        """Find the game window for screenshot capture"""
         try:
-            # Try to load from config first
             from app.config import load_config
             config = load_config()
             window_config = config.get("bars", {}).get("game_window", {})
@@ -169,22 +138,17 @@ class LargatoHunter:
         except Exception as e:
             self.logger.error(f"Error finding game window: {e}")
         
-        # Fallback to full screen
         self.game_window_rect = None
         self.logger.warning("Using full screen capture as fallback")
         return False
     
     def capture_game_screen(self):
-        """Capture current game screen"""
         try:
             if self.game_window_rect:
-                # Capture specific game window area
                 screenshot = ImageGrab.grab(bbox=self.game_window_rect)
             else:
-                # Capture full screen
                 screenshot = ImageGrab.grab()
             
-            # Convert to OpenCV format if OpenCV is available
             if OPENCV_AVAILABLE:
                 screenshot_cv = cv2.cvtColor(np.array(screenshot), cv2.COLOR_RGB2BGR)
                 return screenshot_cv
@@ -196,143 +160,243 @@ class LargatoHunter:
             return None
     
     def find_wood_stack(self, screenshot):
-        """
-        Find wood stack in the screenshot using template matching or color-based detection
+        screen_height, screen_width = screenshot.shape[:2]
+        self.logger.debug(f"Analyzing screenshot of size {screen_width}x{screen_height}")
         
-        Args:
-            screenshot: OpenCV image of the game screen
-            
-        Returns:
-            Tuple of (found, center_x, center_y, confidence)
-        """
-        # First try OpenCV template matching if available
-        if OPENCV_AVAILABLE and self.wood_stack_template is not None:
-            try:
-                # Perform template matching with multiple scales for better detection
-                scales = [1.0, 0.8, 1.2]  # Try different scales
-                best_match = 0
-                best_location = None
-                
-                for scale in scales:
-                    # Resize template for this scale
-                    if scale != 1.0:
-                        h, w = self.wood_stack_template.shape[:2]
-                        new_h, new_w = int(h * scale), int(w * scale)
-                        scaled_template = cv2.resize(self.wood_stack_template, (new_w, new_h))
-                    else:
-                        scaled_template = self.wood_stack_template
-                    
-                    # Skip if template is larger than screenshot
-                    if (scaled_template.shape[0] > screenshot.shape[0] or 
-                        scaled_template.shape[1] > screenshot.shape[1]):
-                        continue
-                    
-                    # Perform template matching
-                    result = cv2.matchTemplate(screenshot, scaled_template, cv2.TM_CCOEFF_NORMED)
-                    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
-                    
-                    if max_val > best_match:
-                        best_match = max_val
-                        h, w = scaled_template.shape[:2]
-                        center_x = max_loc[0] + w // 2
-                        center_y = max_loc[1] + h // 2
-                        best_location = (center_x, center_y)
-                
-                # Lower threshold for more sensitive detection
-                threshold = 0.5  # Even more sensitive
-                
-                if best_match >= threshold:
-                    self.logger.debug(f"Wood stack found at {best_location} with confidence {best_match:.2f}")
-                    return True, best_location[0], best_location[1], best_match
-                
-                self.logger.debug(f"No wood stack found, best match confidence: {best_match:.2f}")
-                
-            except Exception as e:
-                self.logger.error(f"Error in template matching: {e}")
-        
-        # Enhanced fallback detection - try color-based detection for brown/orange logs
         if OPENCV_AVAILABLE:
             try:
-                # Convert to HSV for better color detection
+                self.logger.debug("Starting template matching...")
+                if self.wood_stack_template is not None:
+                    try:
+                        best_match = 0
+                        best_location = None
+                        best_scale = 1.0
+                        
+                        scales = [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6]
+                        
+                        for scale in scales:
+                            if scale != 1.0:
+                                h, w = self.wood_stack_template.shape[:2]
+                                new_h, new_w = int(h * scale), int(w * scale)
+                                if new_h <= 0 or new_w <= 0 or new_h >= screen_height or new_w >= screen_width:
+                                    continue
+                                scaled_template = cv2.resize(self.wood_stack_template, (new_w, new_h))
+                            else:
+                                scaled_template = self.wood_stack_template
+                            
+                            if (scaled_template.shape[0] >= screenshot.shape[0] or 
+                                scaled_template.shape[1] >= screenshot.shape[1]):
+                                continue
+                            
+                            result = cv2.matchTemplate(screenshot, scaled_template, cv2.TM_CCOEFF_NORMED)
+                            min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+                            
+                            if max_val > best_match:
+                                best_match = max_val
+                                h, w = scaled_template.shape[:2]
+                                center_x = max_loc[0] + w // 2
+                                center_y = max_loc[1] + h // 2
+                                best_location = (center_x, center_y)
+                                best_scale = scale
+                        
+                        if best_match >= 0.25:
+                            self.logger.info(f"WOOD DETECTED by template matching at {best_location}")
+                            self.logger.info(f"Confidence: {best_match:.3f}, Scale: {best_scale:.1f}")
+                            
+                            self.save_detection_debug_image(screenshot, best_location, best_match, "wood_template_detected")
+                            return True, best_location[0], best_location[1], best_match
+                        else:
+                            self.logger.debug(f"Template matching failed, best confidence: {best_match:.3f}")
+                            
+                    except Exception as e:
+                        self.logger.error(f"Template matching error: {e}")
+                
+                self.logger.debug("Starting aggressive wood detection...")
+                
                 hsv = cv2.cvtColor(screenshot, cv2.COLOR_BGR2HSV)
                 
-                # Define range for brown/orange wood colors (based on your image)
-                # Brown/orange logs typically have these HSV ranges
-                lower_brown = np.array([10, 50, 50])   # Lower brown
-                upper_brown = np.array([25, 255, 255]) # Upper brown/orange
+                wood_ranges = [
+                    ([0, 20, 40], [40, 255, 255]),
+                    ([5, 30, 50], [35, 255, 200]),
+                    ([8, 40, 60], [25, 200, 180]),
+                    ([10, 50, 80], [30, 180, 160]),
+                    ([6, 25, 45], [32, 240, 220])
+                ]
                 
-                # Create mask for brown/orange colors
-                mask = cv2.inRange(hsv, lower_brown, upper_brown)
-                
-                # Find contours in the mask
-                contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-                
-                # Look for contours that could be wood stacks
-                for contour in contours:
-                    area = cv2.contourArea(contour)
+                combined_mask = None
+                for i, (lower, upper) in enumerate(wood_ranges):
+                    lower_np = np.array(lower)
+                    upper_np = np.array(upper)
+                    mask = cv2.inRange(hsv, lower_np, upper_np)
                     
-                    # Filter by area - wood stacks should be reasonably large
-                    if area > 500:  # Minimum area for wood stack
-                        # Get bounding rectangle
-                        x, y, w, h = cv2.boundingRect(contour)
+                    if combined_mask is None:
+                        combined_mask = mask
+                    else:
+                        combined_mask = cv2.bitwise_or(combined_mask, mask)
+                
+                kernel = np.ones((2, 2), np.uint8)
+                combined_mask = cv2.morphologyEx(combined_mask, cv2.MORPH_CLOSE, kernel)
+                
+                total_wood_pixels = cv2.countNonZero(combined_mask)
+                self.logger.debug(f"Total wood-colored pixels found: {total_wood_pixels}")
+                
+                if total_wood_pixels > 300:
+                    contours, _ = cv2.findContours(combined_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+                    
+                    valid_wood_areas = []
+                    for contour in contours:
+                        area = cv2.contourArea(contour)
+                        if area > 200:
+                            x, y, w, h = cv2.boundingRect(contour)
+                            
+                            if x > screen_width * 0.6:
+                                center_x = x + w // 2
+                                center_y = y + h // 2
+                                
+                                roi = screenshot[max(0, y-10):min(screen_height, y+h+10), 
+                                                max(0, x-10):min(screen_width, x+w+10)]
+                                
+                                if roi.size > 0:
+                                    hsv_roi = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV)
+                                    brown_mask_roi = cv2.inRange(hsv_roi, np.array([5, 40, 60]), np.array([25, 200, 180]))
+                                    brown_density = cv2.countNonZero(brown_mask_roi) / (roi.shape[0] * roi.shape[1])
+                                    
+                                    if brown_density > 0.2:
+                                        valid_wood_areas.append((center_x, center_y, area, brown_density, w, h))
+                    
+                    if valid_wood_areas:
+                        valid_wood_areas.sort(key=lambda x: x[2], reverse=True)
+                        center_x, center_y, area, density, w, h = valid_wood_areas[0]
                         
-                        # Check aspect ratio - wood stacks are usually taller than wide or square-ish
-                        aspect_ratio = float(w) / h
-                        if 0.3 <= aspect_ratio <= 3.0:  # Reasonable aspect ratio range
-                            center_x = x + w // 2
-                            center_y = y + h // 2
+                        confidence = min(0.9, 0.4 + (area / 1500) + (density * 2))
+                        
+                        self.logger.info(f"WOOD DETECTED by color analysis at ({center_x}, {center_y})")
+                        self.logger.info(f"Area: {area}, Density: {density:.3f}, Size: {w}x{h}, Confidence: {confidence:.3f}")
+                        
+                        self.save_detection_debug_image(screenshot, (center_x, center_y), confidence, "wood_color_detected")
+                        return True, center_x, center_y, confidence
+                
+                self.logger.debug("Trying circle detection for log ends...")
+                gray = cv2.cvtColor(screenshot, cv2.COLOR_BGR2GRAY)
+                
+                circles = cv2.HoughCircles(
+                    gray, cv2.HOUGH_GRADIENT, 1, 15,
+                    param1=50, param2=35, minRadius=8, maxRadius=25
+                )
+                
+                if circles is not None:
+                    circles = np.round(circles[0, :]).astype("int")
+                    self.logger.debug(f"Found {len(circles)} total circles")
+                    
+                    if len(circles) > 100:
+                        self.logger.debug("Too many circles detected, filtering more strictly")
+                        circles = circles[:50]
+                    
+                    wood_circles = []
+                    
+                    for (x, y, r) in circles:
+                        if x > screen_width * 0.6 and x < screen_width and y < screen_height:
+                            roi_margin = 3
+                            roi_x1 = max(0, x - r - roi_margin)
+                            roi_y1 = max(0, y - r - roi_margin)
+                            roi_x2 = min(screen_width, x + r + roi_margin)
+                            roi_y2 = min(screen_height, y + r + roi_margin)
                             
-                            self.logger.debug(f"Wood stack detected by color at ({center_x}, {center_y}), area: {area}")
-                            return True, center_x, center_y, 0.7
-                            
+                            roi = screenshot[roi_y1:roi_y2, roi_x1:roi_x2]
+                            if roi.size > 20:
+                                hsv_roi = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV)
+                                brown_mask = cv2.inRange(hsv_roi, np.array([5, 40, 60]), np.array([25, 200, 180]))
+                                brown_ratio = cv2.countNonZero(brown_mask) / (roi.shape[0] * roi.shape[1])
+                                
+                                if brown_ratio > 0.3:
+                                    wood_circles.append((x, y, r, brown_ratio))
+                    
+                    self.logger.debug(f"Found {len(wood_circles)} valid wood circles")
+                    
+                    if len(wood_circles) >= 5:
+                        wood_circles.sort(key=lambda x: x[3], reverse=True)
+                        
+                        top_circles = wood_circles[:min(8, len(wood_circles))]
+                        avg_x = sum([c[0] for c in top_circles]) // len(top_circles)
+                        avg_y = sum([c[1] for c in top_circles]) // len(top_circles)
+                        
+                        confidence = 0.6 + min(0.3, len(wood_circles) * 0.02)
+                        
+                        self.logger.info(f"WOOD DETECTED by circle analysis at ({avg_x}, {avg_y})")
+                        self.logger.info(f"Found {len(wood_circles)} wood circles, Confidence: {confidence:.3f}")
+                        
+                        self.save_detection_debug_image(screenshot, (avg_x, avg_y), confidence, "wood_circles_detected")
+                        return True, avg_x, avg_y, confidence
+                
+                self.logger.debug("Trying pixel clustering as final attempt...")
+                right_section = screenshot[:, int(screen_width * 0.6):]
+                hsv_right = cv2.cvtColor(right_section, cv2.COLOR_BGR2HSV)
+                
+                brown_mask = cv2.inRange(hsv_right, np.array([5, 40, 60]), np.array([25, 200, 180]))
+                brown_pixels = cv2.countNonZero(brown_mask)
+                
+                self.logger.debug(f"Brown pixels in right section: {brown_pixels}")
+                
+                if brown_pixels > 800:
+                    y_indices, x_indices = np.where(brown_mask > 0)
+                    if len(x_indices) > 0 and len(y_indices) > 0:
+                        center_x = int(np.mean(x_indices)) + int(screen_width * 0.6)
+                        center_y = int(np.mean(y_indices))
+                        
+                        confidence = min(0.7, 0.4 + (brown_pixels / 5000))
+                        
+                        self.logger.info(f"WOOD DETECTED by pixel clustering at ({center_x}, {center_y})")
+                        self.logger.info(f"Brown pixels: {brown_pixels}, Confidence: {confidence:.3f}")
+                        
+                        self.save_detection_debug_image(screenshot, (center_x, center_y), confidence, "wood_pixel_cluster")
+                        return True, center_x, center_y, confidence
+                
             except Exception as e:
-                self.logger.debug(f"Color detection error: {e}")
+                self.logger.error(f"Error in wood detection: {e}", exc_info=True)
         
-        # Fallback detection method for testing - more frequent detection
-        if not hasattr(self, '_fallback_counter'):
-            self._fallback_counter = 0
+        self.logger.debug("ALL DETECTION METHODS FAILED - No wood found")
         
-        self._fallback_counter += 1
-        
-        # Simulate finding wood every 8-15 scans (24-45 seconds of movement) - more frequent
-        if self._fallback_counter >= random.randint(8, 15):
-            self.logger.info("Fallback detection: Simulating wood stack found")
-            self._fallback_counter = 0  # Reset counter
-            
-            # Return center of screen as target
-            if hasattr(screenshot, 'shape'):
-                height, width = screenshot.shape[:2]
-            else:
-                height, width = 600, 800
-            
-            return True, width // 2, height // 2, 0.8
+        try:
+            self.save_detection_debug_image(screenshot, None, 0.0, "no_wood_detected")
+        except:
+            pass
         
         return False, 0, 0, 0
     
     def is_wood_destroyed(self, screenshot):
-        """
-        Check if wood stack is destroyed using template matching
+        screen_height, screen_width = screenshot.shape[:2]
+        right_corner_region = screenshot[:, int(screen_width * 0.65):]
         
-        Args:
-            screenshot: OpenCV image of the game screen
-            
-        Returns:
-            Boolean indicating if wood is destroyed
-        """
         if not OPENCV_AVAILABLE or self.destroyed_wood_template is None:
-            # Fallback: assume destroyed after certain number of attacks
-            return self.total_attacks % 10 == 0  # Every 10 attacks assume destroyed
+            return False
         
         try:
-            # Perform template matching for destroyed wood
-            result = cv2.matchTemplate(screenshot, self.destroyed_wood_template, cv2.TM_CCOEFF_NORMED)
-            min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+            scales = [0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3]
+            best_match = 0
             
-            # Threshold for detection
-            threshold = 0.6
+            for scale in scales:
+                if scale != 1.0:
+                    h, w = self.destroyed_wood_template.shape[:2]
+                    new_h, new_w = int(h * scale), int(w * scale)
+                    scaled_template = cv2.resize(self.destroyed_wood_template, (new_w, new_h))
+                else:
+                    scaled_template = self.destroyed_wood_template
+                
+                if (scaled_template.shape[0] > right_corner_region.shape[0] or 
+                    scaled_template.shape[1] > right_corner_region.shape[1]):
+                    continue
+                
+                result = cv2.matchTemplate(right_corner_region, scaled_template, cv2.TM_CCOEFF_NORMED)
+                min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+                
+                if max_val > best_match:
+                    best_match = max_val
             
-            if max_val >= threshold:
-                self.logger.debug(f"Destroyed wood detected with confidence {max_val:.2f}")
+            threshold = 0.5
+            
+            if best_match >= threshold:
+                self.logger.info(f"Destroyed wood detected with confidence {best_match:.3f}")
+                self.save_detection_debug_image(screenshot, None, best_match, "wood_destroyed")
                 return True
             
             return False
@@ -341,153 +405,302 @@ class LargatoHunter:
             self.logger.error(f"Error in destroyed wood detection: {e}")
             return False
     
-    def get_character_position(self, screenshot):
-        """
-        Estimate character position (center of screen for now)
-        
-        Args:
-            screenshot: OpenCV image of the game screen
+    def save_detection_debug_image(self, screenshot, location, confidence, prefix):
+        try:
+            debug_dir = "debug_images"
+            if not os.path.exists(debug_dir):
+                os.makedirs(debug_dir)
             
-        Returns:
-            Tuple of (x, y) character position
-        """
-        if hasattr(screenshot, 'shape'):
-            height, width = screenshot.shape[:2]
-        else:
-            # Fallback dimensions
-            height, width = 600, 800
-        return width // 2, height // 2
-    
-    def move_towards_target(self, char_x, char_y, target_x, target_y):
-        """
-        Move character towards target location
-        
-        Args:
-            char_x, char_y: Character position
-            target_x, target_y: Target position
-        """
-        # Calculate distance
-        dx = target_x - char_x
-        dy = target_y - char_y
-        
-        # Determine primary movement direction
-        if abs(dx) > abs(dy):
-            # Move horizontally first
-            if dx > 0:
-                self.move_right_with_variation()
+            timestamp = time.strftime("%H%M%S")
+            filename = f"{debug_dir}/{prefix}_{timestamp}_conf{confidence:.2f}.png"
+            
+            if location:
+                debug_img = screenshot.copy()
+                cv2.circle(debug_img, location, 20, (0, 255, 0), 3)
+                cv2.putText(debug_img, f"{confidence:.2f}", 
+                           (location[0] - 30, location[1] - 30), 
+                           cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+                cv2.imwrite(filename, debug_img)
             else:
-                self.move_left_with_variation()
-        else:
-            # Move vertically first
-            if dy > 0:
-                self.move_down_with_variation()
-            else:
-                self.move_up_with_variation()
-    
-    def move_right_with_variation(self):
-        """Move right with up/down variation to avoid getting stuck"""
-        # Press right
-        press_key(None, 'right')
-        time.sleep(0.1)
+                cv2.imwrite(filename, screenshot)
+            
+            self.logger.debug(f"Saved debug image: {filename}")
+            
+        except Exception as e:
+            self.logger.error(f"Error saving debug image: {e}")
+        screen_height, screen_width = screenshot.shape[:2]
+        right_corner_region = screenshot[:, int(screen_width * 0.65):]
         
-        # Add variation every few moves
-        self.movement_variation += 1
-        if self.movement_variation % 3 == 0:
-            # Randomly press up or down
-            variation_key = random.choice(['up', 'down'])
-            press_key(None, variation_key)
-            time.sleep(0.1)
-            self.logger.debug(f"Added movement variation: {variation_key}")
-    
-    def move_left_with_variation(self):
-        """Move left with up/down variation"""
-        press_key(None, 'left')
-        time.sleep(0.1)
+        wood_still_there = False
+        destroyed_wood_there = False
         
-        self.movement_variation += 1
-        if self.movement_variation % 3 == 0:
-            variation_key = random.choice(['up', 'down'])
-            press_key(None, variation_key)
-            time.sleep(0.1)
-            self.logger.debug(f"Added movement variation: {variation_key}")
-    
-    def move_up_with_variation(self):
-        """Move up with left/right variation"""
-        press_key(None, 'up')
-        time.sleep(0.1)
-        
-        self.movement_variation += 1
-        if self.movement_variation % 4 == 0:
-            variation_key = random.choice(['left', 'right'])
-            press_key(None, variation_key)
-            time.sleep(0.1)
-    
-    def move_down_with_variation(self):
-        """Move down with left/right variation"""
-        press_key(None, 'down')
-        time.sleep(0.1)
-        
-        self.movement_variation += 1
-        if self.movement_variation % 4 == 0:
-            variation_key = random.choice(['left', 'right'])
-            press_key(None, variation_key)
-            time.sleep(0.1)
-    
-    def explore_and_search(self):
-        """Explore the dungeon looking for wood stacks"""
-        # Move in a search pattern
-        search_moves = random.randint(5, 10)
-        
-        for _ in range(search_moves):
-            if not self.running:
-                break
+        if OPENCV_AVAILABLE and self.wood_stack_template is not None:
+            try:
+                scales = [0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3]
+                best_match = 0
                 
-            # Alternate between right and down/up movement
-            if random.random() < 0.7:  # 70% chance to move right
-                self.move_right_with_variation()
-            else:
-                move_direction = random.choice(['up', 'down'])
-                if move_direction == 'up':
-                    self.move_up_with_variation()
-                else:
-                    self.move_down_with_variation()
+                for scale in scales:
+                    if scale != 1.0:
+                        h, w = self.wood_stack_template.shape[:2]
+                        new_h, new_w = int(h * scale), int(w * scale)
+                        scaled_template = cv2.resize(self.wood_stack_template, (new_w, new_h))
+                    else:
+                        scaled_template = self.wood_stack_template
+                    
+                    if (scaled_template.shape[0] > right_corner_region.shape[0] or 
+                        scaled_template.shape[1] > right_corner_region.shape[1]):
+                        continue
+                    
+                    result = cv2.matchTemplate(right_corner_region, scaled_template, cv2.TM_CCOEFF_NORMED)
+                    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+                    
+                    if max_val > best_match:
+                        best_match = max_val
+                
+                if best_match >= 0.5:
+                    wood_still_there = True
+                    self.logger.debug(f"Original wood still detected with confidence {best_match:.3f}")
+                
+            except Exception as e:
+                self.logger.error(f"Error checking original wood: {e}")
+        
+        if OPENCV_AVAILABLE and self.destroyed_wood_template is not None:
+            try:
+                scales = [0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3]
+                best_match = 0
+                
+                for scale in scales:
+                    if scale != 1.0:
+                        h, w = self.destroyed_wood_template.shape[:2]
+                        new_h, new_w = int(h * scale), int(w * scale)
+                        scaled_template = cv2.resize(self.destroyed_wood_template, (new_w, new_h))
+                    else:
+                        scaled_template = self.destroyed_wood_template
+                    
+                    if (scaled_template.shape[0] > right_corner_region.shape[0] or 
+                        scaled_template.shape[1] > right_corner_region.shape[1]):
+                        continue
+                    
+                    result = cv2.matchTemplate(right_corner_region, scaled_template, cv2.TM_CCOEFF_NORMED)
+                    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+                    
+                    if max_val > best_match:
+                        best_match = max_val
+                
+                if best_match >= 0.5:
+                    destroyed_wood_there = True
+                    self.logger.debug(f"Destroyed wood detected with confidence {best_match:.3f}")
+                
+            except Exception as e:
+                self.logger.error(f"Error checking destroyed wood: {e}")
+        
+        if destroyed_wood_there:
+            self.logger.info("Wood sprite changed to destroyed state!")
+            return True
+        elif not wood_still_there:
+            hsv = cv2.cvtColor(right_corner_region, cv2.COLOR_BGR2HSV)
+            lower_brown = np.array([8, 40, 60])
+            upper_brown = np.array([30, 255, 220])
+            mask = cv2.inRange(hsv, lower_brown, upper_brown)
+            brown_pixels = cv2.countNonZero(mask)
             
-            time.sleep(0.2)  # Small delay between moves
+            if brown_pixels < 200:
+                self.logger.info("Wood sprite disappeared (no brown pixels detected)!")
+                return True
+            else:
+                self.logger.debug(f"Wood template not found but brown pixels still present ({brown_pixels})")
+                return False
+        else:
+            self.logger.debug("Wood sprite unchanged, continue attacking")
+            return False
+        try:
+            debug_dir = "debug_images"
+            if not os.path.exists(debug_dir):
+                os.makedirs(debug_dir)
+            
+            timestamp = time.strftime("%H%M%S")
+            filename = f"{debug_dir}/{prefix}_{timestamp}_conf{confidence:.2f}.png"
+            
+            if location:
+                debug_img = screenshot.copy()
+                cv2.circle(debug_img, location, 20, (0, 255, 0), 3)
+                cv2.putText(debug_img, f"{confidence:.2f}", 
+                           (location[0] - 30, location[1] - 30), 
+                           cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+                cv2.imwrite(filename, debug_img)
+            else:
+                cv2.imwrite(filename, screenshot)
+            
+            self.logger.debug(f"Saved debug image: {filename}")
+            
+        except Exception as e:
+            self.logger.error(f"Error saving debug image: {e}")
     
-    def attack_wood_stack(self):
-        """Attack the wood stack until it's destroyed"""
+    def move_right_fast(self, duration=0.5):
+        press_key(None, 'right')
+        time.sleep(duration)
+        
+        self.movement_variation += 1
+        if self.movement_variation % 4 == 0:
+            variation_key = random.choice(['up', 'down'])
+            press_key(None, variation_key)
+            time.sleep(0.2)
+            self.logger.debug(f"Added movement variation: {variation_key}")
+    
+    def move_left_fast(self, duration=0.3):
+        press_key(None, 'left')
+        time.sleep(duration)
+    
+    def move_up_fast(self, duration=0.3):
+        press_key(None, 'up')
+        time.sleep(duration)
+    
+    def move_down_fast(self, duration=0.3):
+        press_key(None, 'down')
+        time.sleep(duration)
+    
+    def attack_wood_stack_improved(self):
         attack_count = 0
-        max_attacks = 20  # Maximum attacks before giving up
+        max_attacks = 30
         
         self.log_callback("Attacking wood stack...")
         
         while self.running and attack_count < max_attacks:
-            # Press X to attack
             press_key(None, 'x')
             attack_count += 1
             self.total_attacks += 1
             
             self.logger.debug(f"Attack #{attack_count}")
             
-            # Wait 1 second between attacks
-            time.sleep(1.0)
+            time.sleep(0.8)
             
-            # Check if wood is destroyed every few attacks
             if attack_count % 3 == 0:
                 screenshot = self.capture_game_screen()
-                if screenshot is not None and self.is_wood_destroyed(screenshot):
-                    self.wood_stacks_destroyed += 1
-                    self.log_callback(f"Wood stack destroyed! Total: {self.wood_stacks_destroyed}/4")
-                    self.logger.info(f"Wood stack {self.wood_stacks_destroyed} destroyed after {attack_count} attacks")
-                    return True
+                if screenshot is not None:
+                    if self.check_wood_sprite_changed(screenshot):
+                        self.wood_stacks_destroyed += 1
+                        self.log_callback(f"Wood stack destroyed! Total: {self.wood_stacks_destroyed}/4")
+                        self.logger.info(f"Wood stack {self.wood_stacks_destroyed} destroyed after {attack_count} attacks")
+                        return True
         
-        # If we reach here, assume the wood was destroyed
         self.wood_stacks_destroyed += 1
-        self.log_callback(f"Wood stack destroyed (timeout)! Total: {self.wood_stacks_destroyed}/4")
+        self.log_callback(f"Wood stack destroyed (max attacks reached)! Total: {self.wood_stacks_destroyed}/4")
         return True
     
-    def start_hunt(self):
-        """Start the Largato hunt"""
+    def save_detection_debug_image(self, screenshot, location, confidence, prefix):
+        try:
+            debug_dir = "debug_images"
+            if not os.path.exists(debug_dir):
+                os.makedirs(debug_dir)
+            
+            timestamp = time.strftime("%H%M%S")
+            filename = f"{debug_dir}/{prefix}_{timestamp}_conf{confidence:.2f}.png"
+            
+            if location:
+                debug_img = screenshot.copy()
+                cv2.circle(debug_img, location, 20, (0, 255, 0), 3)
+                cv2.putText(debug_img, f"{confidence:.2f}", 
+                           (location[0] - 30, location[1] - 30), 
+                           cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+                cv2.imwrite(filename, debug_img)
+            else:
+                cv2.imwrite(filename, screenshot)
+            
+            self.logger.debug(f"Saved debug image: {filename}")
+            
+        except Exception as e:
+            self.logger.error(f"Error saving debug image: {e}")
+
+    def check_wood_sprite_changed(self, screenshot):
+        screen_height, screen_width = screenshot.shape[:2]
+        
+        wood_still_there = False
+        destroyed_wood_there = False
+        
+        if OPENCV_AVAILABLE and self.wood_stack_template is not None:
+            try:
+                scales = [0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]
+                best_match = 0
+                
+                for scale in scales:
+                    if scale != 1.0:
+                        h, w = self.wood_stack_template.shape[:2]
+                        new_h, new_w = int(h * scale), int(w * scale)
+                        if new_h <= 0 or new_w <= 0:
+                            continue
+                        scaled_template = cv2.resize(self.wood_stack_template, (new_w, new_h))
+                    else:
+                        scaled_template = self.wood_stack_template
+                    
+                    if (scaled_template.shape[0] > screenshot.shape[0] or 
+                        scaled_template.shape[1] > screenshot.shape[1]):
+                        continue
+                    
+                    result = cv2.matchTemplate(screenshot, scaled_template, cv2.TM_CCOEFF_NORMED)
+                    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+                    
+                    if max_val > best_match:
+                        best_match = max_val
+                
+                if best_match >= 0.25:
+                    wood_still_there = True
+                    self.logger.debug(f"Original wood still detected with confidence {best_match:.3f}")
+                
+            except Exception as e:
+                self.logger.error(f"Error checking original wood: {e}")
+        
+        if OPENCV_AVAILABLE and self.destroyed_wood_template is not None:
+            try:
+                scales = [0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]
+                best_match = 0
+                
+                for scale in scales:
+                    if scale != 1.0:
+                        h, w = self.destroyed_wood_template.shape[:2]
+                        new_h, new_w = int(h * scale), int(w * scale)
+                        if new_h <= 0 or new_w <= 0:
+                            continue
+                        scaled_template = cv2.resize(self.destroyed_wood_template, (new_w, new_h))
+                    else:
+                        scaled_template = self.destroyed_wood_template
+                    
+                    if (scaled_template.shape[0] > screenshot.shape[0] or 
+                        scaled_template.shape[1] > screenshot.shape[1]):
+                        continue
+                    
+                    result = cv2.matchTemplate(screenshot, scaled_template, cv2.TM_CCOEFF_NORMED)
+                    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+                    
+                    if max_val > best_match:
+                        best_match = max_val
+                
+                if best_match >= 0.25:
+                    destroyed_wood_there = True
+                    self.logger.debug(f"Destroyed wood detected with confidence {best_match:.3f}")
+                
+            except Exception as e:
+                self.logger.error(f"Error checking destroyed wood: {e}")
+        
+        if destroyed_wood_there:
+            self.logger.info("Wood sprite changed to destroyed state!")
+            return True
+        elif not wood_still_there:
+            right_section = screenshot[:, int(screen_width * 0.6):]
+            hsv = cv2.cvtColor(right_section, cv2.COLOR_BGR2HSV)
+            lower_brown = np.array([5, 40, 60])
+            upper_brown = np.array([25, 200, 180])
+            mask = cv2.inRange(hsv, lower_brown, upper_brown)
+            brown_pixels = cv2.countNonZero(mask)
+            
+            if brown_pixels < 500:
+                self.logger.info("Wood sprite disappeared (minimal brown pixels detected)!")
+                return True
+            else:
+                self.logger.debug(f"Wood template not found but brown pixels still present ({brown_pixels})")
+                return False
+        else:
+            self.logger.debug("Wood sprite unchanged, continue attacking")
+            return False
         if self.running:
             self.logger.info("Hunt already running")
             return False
@@ -497,8 +710,29 @@ class LargatoHunter:
         self.total_attacks = 0
         self.hunt_start_time = time.time()
         self.movement_variation = 0
+        self.false_positive_counter = 0
+        self.last_wood_detection_time = 0
         
-        # Start hunt thread
+        self.hunt_thread = threading.Thread(target=self.hunt_loop)
+        self.hunt_thread.daemon = True
+        self.hunt_thread.start()
+        
+        self.log_callback("Largato Hunt started!")
+        self.logger.info("Largato hunt thread started")
+        return True
+    
+    def start_hunt(self):
+        if self.running:
+            self.logger.info("Hunt already running")
+            return False
+        
+        self.running = True
+        self.wood_stacks_destroyed = 0
+        self.total_attacks = 0
+        self.hunt_start_time = time.time()
+        self.movement_variation = 0
+        self.false_positive_counter = 0
+        
         self.hunt_thread = threading.Thread(target=self.hunt_loop)
         self.hunt_thread.daemon = True
         self.hunt_thread.start()
@@ -508,7 +742,6 @@ class LargatoHunter:
         return True
     
     def stop_hunt(self):
-        """Stop the Largato hunt"""
         if not self.running:
             self.logger.info("Hunt not running")
             return False
@@ -518,7 +751,6 @@ class LargatoHunter:
             self.hunt_thread.join(1.0)
             self.logger.info("Hunt thread joined")
         
-        # Calculate hunt duration
         if self.hunt_start_time:
             duration = time.time() - self.hunt_start_time
             minutes = int(duration // 60)
@@ -530,24 +762,22 @@ class LargatoHunter:
         return True
     
     def hunt_loop(self):
-        """Main hunt loop - Simplified approach"""
         self.log_callback("Starting Largato dungeon hunt...")
         self.logger.info("Largato hunt loop started")
         
-        # Find game window
         self.find_game_window()
         
-        # Initial delay
-        initial_delay = random.uniform(2.0, 5.0)
+        initial_delay = random.uniform(1.0, 2.0)
         self.log_callback(f"Initial delay: {initial_delay:.1f} seconds...")
         time.sleep(initial_delay)
         
-        hunt_phase = "moving"  # "moving", "approach", "attacking"
+        hunt_phase = "moving"
         last_check_time = 0
-        check_interval = 3.0  # Check for wood every 3 seconds
+        check_interval = 2.0
         wood_found_time = 0
-        approach_duration = 5.0  # Move forward for 5 seconds after finding wood
+        approach_duration = 3.0
         attacks_count = 0
+        movement_duration = 0.8
         
         self.log_callback("Starting movement phase - looking for wood stacks...")
         
@@ -556,10 +786,8 @@ class LargatoHunter:
                 current_time = time.time()
                 
                 if hunt_phase == "moving":
-                    # Keep moving right with variation
-                    self.move_right_with_variation()
+                    self.move_right_fast(movement_duration)
                     
-                    # Check for wood stacks every 3-5 seconds
                     if current_time - last_check_time >= check_interval:
                         self.log_callback("Scanning for wood stacks...")
                         screenshot = self.capture_game_screen()
@@ -567,68 +795,36 @@ class LargatoHunter:
                         if screenshot is not None:
                             found, target_x, target_y, confidence = self.find_wood_stack(screenshot)
                             
-                            if found:
-                                self.log_callback(f"WOOD STACK FOUND! Moving forward for {approach_duration} seconds...")
-                                self.logger.info(f"Wood stack detected with confidence {confidence:.2f}")
+                            if found and confidence >= self.detection_confidence_threshold:
+                                self.log_callback(f"WOOD STACK FOUND! Confidence: {confidence:.2f}, moving forward...")
+                                self.logger.info(f"Wood stack detected with confidence {confidence:.3f}")
                                 hunt_phase = "approach"
                                 wood_found_time = current_time
                             else:
                                 self.log_callback("No wood stack detected, continuing search...")
                         
                         last_check_time = current_time
-                        # Randomize next check interval between 3-5 seconds
-                        check_interval = random.uniform(3.0, 5.0)
-                    
-                    # Small delay between movements
-                    time.sleep(0.3)
+                        check_interval = random.uniform(1.5, 2.5)
                 
                 elif hunt_phase == "approach":
-                    # Keep moving forward for 5 seconds after finding wood
                     elapsed_since_found = current_time - wood_found_time
                     
                     if elapsed_since_found < approach_duration:
-                        # Continue moving right
-                        self.move_right_with_variation()
+                        self.move_right_fast(0.4)
                         remaining = approach_duration - elapsed_since_found
-                        if int(remaining) != int(remaining + 0.3):  # Log every second
+                        if int(remaining) != int(remaining + 0.4):
                             self.log_callback(f"Approaching wood stack... {remaining:.1f}s remaining")
-                        time.sleep(0.3)
                     else:
-                        # Time to position and attack
-                        self.log_callback("Positioning for attack - moving left...")
-                        # Move left to position for attack
-                        for _ in range(3):  # Move left a few times
-                            press_key(None, 'left')
-                            time.sleep(0.2)
-                        
                         hunt_phase = "attacking"
                         attacks_count = 0
                         self.log_callback("Starting attack phase!")
                 
                 elif hunt_phase == "attacking":
-                    # Attack the wood stack
-                    press_key(None, 'x')
-                    attacks_count += 1
-                    self.total_attacks += 1
-                    
-                    self.log_callback(f"Attacking wood stack... (Attack #{attacks_count})")
-                    self.logger.debug(f"Attack #{self.total_attacks}")
-                    
-                    # Check if we should stop attacking (after many attacks, assume destroyed)
-                    if attacks_count >= 15:  # After 15 attacks, assume destroyed
-                        self.wood_stacks_destroyed += 1
-                        self.log_callback(f"Wood stack destroyed! Progress: {self.wood_stacks_destroyed}/4")
-                        self.logger.info(f"Wood stack {self.wood_stacks_destroyed} destroyed after {attacks_count} attacks")
-                        
-                        # Go back to moving/searching
+                    if self.attack_wood_stack_improved():
                         hunt_phase = "moving"
-                        last_check_time = 0  # Reset so we check immediately
+                        last_check_time = 0
                         
-                        # Brief pause before continuing
                         self.log_callback("Continuing search for next wood stack...")
-                        time.sleep(2.0)
-                    else:
-                        # Continue attacking - wait 1 second between attacks
                         time.sleep(1.0)
                 
             except Exception as e:
@@ -636,7 +832,6 @@ class LargatoHunter:
                 self.logger.error(f"Error in hunt loop: {e}", exc_info=True)
                 time.sleep(1.0)
         
-        # Hunt completed
         if self.wood_stacks_destroyed >= 4:
             self.log_callback("Largato Hunt completed! All 4 wood stacks destroyed.")
             self.logger.info("Largato hunt completed successfully")
@@ -644,5 +839,4 @@ class LargatoHunter:
             self.log_callback("Largato Hunt stopped before completion.")
             self.logger.info("Largato hunt stopped by user")
         
-        # Auto-stop the hunt
         self.running = False
